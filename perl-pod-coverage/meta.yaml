@@ -18,10 +18,11 @@ source:
 requirements:
   build:
     - perl
+    - perl-devel-symdump # Devel-Symdump
 
   run:
     - perl
-    - perl-devel-symdump 2.01 # Devel-Symdump
+    - perl-devel-symdump # Devel-Symdump
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

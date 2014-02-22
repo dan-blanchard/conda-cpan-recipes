@@ -18,7 +18,8 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-pod 1.41 # Test-Pod
+    - perl-perlio-utf8_strict # PerlIO-utf8_strict
+    - perl-sub-exporter # Sub-Exporter
 
   run:
     - perl

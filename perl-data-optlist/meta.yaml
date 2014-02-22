@@ -18,12 +18,13 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-pod 1.41 # Test-Pod
+    - perl-params-util # Params-Util
+    - perl-sub-install # Sub-Install
 
   run:
     - perl
     - perl-params-util # Params-Util
-    - perl-sub-install 0.921 # Sub-Install
+    - perl-sub-install # Sub-Install
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

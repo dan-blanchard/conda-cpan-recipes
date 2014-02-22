@@ -18,12 +18,12 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-pod 1.41 # Test-Pod
+    - perl-mixin-linewise # Mixin-Linewise
     - perl-test-deep # Test-Deep
 
   run:
     - perl
-    - perl-mixin-linewise 0.102 # Mixin-Linewise
+    - perl-mixin-linewise # Mixin-Linewise
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

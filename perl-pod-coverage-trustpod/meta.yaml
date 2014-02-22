@@ -18,7 +18,8 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-pod 1.41 # Test-Pod
+    - perl-pod-eventual # Pod-Eventual
+    - perl-pod-coverage # Pod-Coverage
 
   run:
     - perl

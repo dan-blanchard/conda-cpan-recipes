@@ -18,10 +18,11 @@ source:
 requirements:
   build:
     - perl
+    - perl-sub-uplevel # Sub-Uplevel
 
   run:
     - perl
-    - perl-sub-uplevel 0.18 # Sub-Uplevel
+    - perl-sub-uplevel # Sub-Uplevel
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

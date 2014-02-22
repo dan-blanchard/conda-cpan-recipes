@@ -18,7 +18,6 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-pod 1.41 # Test-Pod
 
   run:
     - perl
