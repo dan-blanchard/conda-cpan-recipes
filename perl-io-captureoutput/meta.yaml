@@ -1,0 +1,43 @@
+package:
+  name: perl-io-captureoutput
+  version: !!str 1.1102
+
+source:
+  fn: IO-CaptureOutput-1.1102.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/IO-CaptureOutput-1.1102.tar.gz
+  md5: 367b3c0eb33a4b600de4009b0445ae0d
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/IO-CaptureOutput
+  license: perl_5
+  summary: 'capture STDOUT and STDERR from Perl code, subprocesses or XS'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

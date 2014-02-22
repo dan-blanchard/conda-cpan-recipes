@@ -1,0 +1,53 @@
+package:
+  name: perl-dist-zilla-plugin-test-compile-perfile
+  version: !!str 0.001001
+
+source:
+  fn: Dist-Zilla-Plugin-Test-Compile-PerFile-0.001001.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Dist-Zilla-Plugin-Test-Compile-PerFile-0.001001.tar.gz
+  md5: d21ac83f2f9d406540b30a03948851d7
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-path-tiny # Path-Tiny
+    - perl-moosex-lazyrequire # MooseX-LazyRequire
+    - perl-dist-zilla # Dist-Zilla
+    - perl-file-sharedir # File-ShareDir
+    - perl-moose # Moose
+
+  run:
+    - perl
+    - perl-path-tiny # Path-Tiny
+    - perl-dist-zilla # Dist-Zilla
+    - perl-file-sharedir # File-ShareDir
+    - perl-moose # Moose
+    - perl-moosex-lazyrequire # MooseX-LazyRequire
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/Dist-Zilla-Plugin-Test-Compile-PerFile
+  license: perl_5
+  summary: 'Create a single .t for each compilable file in a distribution'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

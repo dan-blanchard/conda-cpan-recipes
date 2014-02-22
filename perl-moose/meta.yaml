@@ -1,0 +1,81 @@
+package:
+  name: perl-moose
+  version: !!str 2.1204
+
+source:
+  fn: Moose-2.1204.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Moose-2.1204.tar.gz
+  md5: f26ba55a9e72a76cfe78d8f0b5ab6f54
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-devel-stacktrace # Devel-StackTrace
+    - perl-package-stash-xs # Package-Stash-XS
+    - perl-package-deprecationmanager # Package-DeprecationManager
+    - perl-try-tiny # Try-Tiny
+    - perl-list-moreutils # List-MoreUtils
+    - perl-params-util # Params-Util
+    - perl-test-requires # Test-Requires
+    - perl-class-load # Class-Load
+    - perl-class-load-xs # Class-Load-XS
+    - perl-data-optlist # Data-OptList
+    - perl-package-stash # Package-Stash
+    - perl-dist-checkconflicts # Dist-CheckConflicts
+    - perl-mro-compat # MRO-Compat
+    - perl-test-fatal # Test-Fatal
+    - perl-sub-name # Sub-Name
+    - perl-devel-globaldestruction # Devel-GlobalDestruction
+    - perl-sub-exporter # Sub-Exporter
+    - perl-module-runtime # Module-Runtime
+    - perl-task-weaken # Task-Weaken
+    - perl-eval-closure # Eval-Closure
+
+  run:
+    - perl
+    - perl-dist-checkconflicts # Dist-CheckConflicts
+    - perl-package-deprecationmanager # Package-DeprecationManager
+    - perl-mro-compat # MRO-Compat
+    - perl-package-stash-xs # Package-Stash-XS
+    - perl-devel-stacktrace # Devel-StackTrace
+    - perl-class-load-xs # Class-Load-XS
+    - perl-sub-name # Sub-Name
+    - perl-list-moreutils # List-MoreUtils
+    - perl-devel-globaldestruction # Devel-GlobalDestruction
+    - perl-params-util # Params-Util
+    - perl-data-optlist # Data-OptList
+    - perl-sub-exporter # Sub-Exporter
+    - perl-class-load # Class-Load
+    - perl-package-stash # Package-Stash
+    - perl-module-runtime # Module-Runtime
+    - perl-try-tiny # Try-Tiny
+    - perl-task-weaken # Task-Weaken
+    - perl-eval-closure # Eval-Closure
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://moose.perl.org/
+  license: perl_5
+  summary: 'A postmodern object system for Perl 5'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

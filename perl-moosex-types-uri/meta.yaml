@@ -1,0 +1,55 @@
+package:
+  name: perl-moosex-types-uri
+  version: !!str 0.05
+
+source:
+  fn: MooseX-Types-URI-0.05.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-URI-0.05.tar.gz
+  md5: 58c2ab13afbae686d593fe57a74d58ad
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-use-ok # Test-use-ok
+    - perl-moosex-types # MooseX-Types
+    - perl-moose # Moose
+    - perl-uri # URI
+    - perl-uri-fromhash # URI-FromHash
+    - perl-moosex-types-path-class # MooseX-Types-Path-Class
+    - perl-module-build-tiny # Module-Build-Tiny
+
+  run:
+    - perl
+    - perl-moose # Moose
+    - perl-moosex-types # MooseX-Types
+    - perl-moosex-types-path-class # MooseX-Types-Path-Class
+    - perl-uri # URI
+    - perl-uri-fromhash # URI-FromHash
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/moose/MooseX-Types-URI
+  license: p
+  summary: 'URI related types and coercions for Moose'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,53 @@
+package:
+  name: perl-moosex-role-withoverloading
+  version: !!str 0.13
+
+source:
+  fn: MooseX-Role-WithOverloading-0.13.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Role-WithOverloading-0.13.tar.gz
+  md5: 9f00627828c22aece891b016bcf12762
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-nowarnings # Test-NoWarnings
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-aliased # aliased
+    - perl-test-checkdeps # Test-CheckDeps
+    - perl-moose # Moose
+    - perl-namespace-clean # namespace-clean
+
+  run:
+    - perl
+    - perl-aliased # aliased
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-namespace-clean # namespace-clean
+    - perl-moose # Moose
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/release/MooseX-Role-WithOverloading
+  license: perl_5
+  summary: 'Roles which support overloading'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

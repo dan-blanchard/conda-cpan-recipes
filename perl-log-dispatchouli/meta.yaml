@@ -1,0 +1,59 @@
+package:
+  name: perl-log-dispatchouli
+  version: !!str 2.009
+
+source:
+  fn: Log-Dispatchouli-2.009.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Log-Dispatchouli-2.009.tar.gz
+  md5: b219b6e14ae756583097afee3445ef20
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-fatal # Test-Fatal
+    - perl-params-util # Params-Util
+    - perl-try-tiny # Try-Tiny
+    - perl-log-dispatch # Log-Dispatch
+    - perl-test-deep # Test-Deep
+    - perl-log-dispatch-array # Log-Dispatch-Array
+    - perl-sub-exporter-globexporter # Sub-Exporter-GlobExporter
+    - perl-string-flogger # String-Flogger
+    - perl-sub-exporter # Sub-Exporter
+
+  run:
+    - perl
+    - perl-try-tiny # Try-Tiny
+    - perl-log-dispatch-array # Log-Dispatch-Array
+    - perl-params-util # Params-Util
+    - perl-log-dispatch # Log-Dispatch
+    - perl-sub-exporter # Sub-Exporter
+    - perl-sub-exporter-globexporter # Sub-Exporter-GlobExporter
+    - perl-string-flogger # String-Flogger
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Log-Dispatchouli
+  license: perl_5
+  summary: 'a simple wrapper around Log::Dispatch'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,144 @@
+package:
+  name: perl-dist-zilla
+  version: !!str 5.013
+
+source:
+  fn: Dist-Zilla-5.013.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Dist-Zilla-5.013.tar.gz
+  md5: 01f065abb304707aaf5b00d0b47eb3d1
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-moosex-types # MooseX-Types
+    - perl-file-sharedir # File-ShareDir
+    - perl-datetime # DateTime
+    - perl-path-tiny # Path-Tiny
+    - perl-json # JSON
+    - perl-perl-prereqscanner # Perl-PrereqScanner
+    - perl-params-util # Params-Util
+    - perl-termreadkey # TermReadKey
+    - perl-class-load # Class-Load
+    - perl-data-section # Data-Section
+    - perl-software-license # Software-License
+    - perl-log-dispatchouli # Log-Dispatchouli
+    - perl-config-mvp # Config-MVP
+    - perl-file-pushd # File-pushd
+    - perl-test-failwarnings # Test-FailWarnings
+    - perl-moose # Moose
+    - perl-list-moreutils # List-MoreUtils
+    - perl-app-cmd # App-Cmd
+    - perl-pod-eventual # Pod-Eventual
+    - perl-ppi # PPI
+    - perl-file-find-rule # File-Find-Rule
+    - perl-hash-merge-simple # Hash-Merge-Simple
+    - perl-test-deep # Test-Deep
+    - perl-moosex-lazyrequire # MooseX-LazyRequire
+    - perl-moosex-types-path-class # MooseX-Types-Path-Class
+    - perl-text-glob # Text-Glob
+    - perl-sub-exporter # Sub-Exporter
+    - perl-moose-autobox # Moose-Autobox
+    - perl-moosex-role-parameterized # MooseX-Role-Parameterized
+    - perl-test-file-sharedir # Test-File-ShareDir
+    - perl-mixin-linewise # Mixin-Linewise
+    - perl-file-sharedir-install # File-ShareDir-Install
+    - perl-string-formatter # String-Formatter
+    - perl-moosex-types-perl # MooseX-Types-Perl
+    - perl-perl-version # Perl-Version
+    - perl-moosex-setonce # MooseX-SetOnce
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-file-homedir # File-HomeDir
+    - perl-try-tiny # Try-Tiny
+    - perl-text-template # Text-Template
+    - perl-path-class # Path-Class
+    - perl-yaml-tiny # YAML-Tiny
+    - perl-list-allutils # List-AllUtils
+    - perl-test-fatal # Test-Fatal
+    - perl-sub-exporter-formethods # Sub-Exporter-ForMethods
+    - perl-config-mvp-reader-ini # Config-MVP-Reader-INI
+    - perl-config-ini # Config-INI
+    - perl-file-copy-recursive # File-Copy-Recursive
+    - perl-autobox # autobox
+    - perl-string-rewriteprefix # String-RewritePrefix
+    - perl-term-encoding # Term-Encoding
+    - perl-cpan-uploader # CPAN-Uploader
+
+  run:
+    - perl
+    - perl-moosex-types # MooseX-Types
+    - perl-file-sharedir # File-ShareDir
+    - perl-datetime # DateTime
+    - perl-path-tiny # Path-Tiny
+    - perl-json # JSON
+    - perl-params-util # Params-Util
+    - perl-termreadkey # TermReadKey
+    - perl-file-sharedir-install # File-ShareDir-Install
+    - perl-data-section # Data-Section
+    - perl-file-find-rule # File-Find-Rule
+    - perl-log-dispatchouli # Log-Dispatchouli
+    - perl-config-mvp # Config-MVP
+    - perl-file-pushd # File-pushd
+    - perl-file-copy-recursive # File-Copy-Recursive
+    - perl-moosex-role-parameterized # MooseX-Role-Parameterized
+    - perl-software-license # Software-License
+    - perl-moose # Moose
+    - perl-hash-merge-simple # Hash-Merge-Simple
+    - perl-pod-eventual # Pod-Eventual
+    - perl-perl-prereqscanner # Perl-PrereqScanner
+    - perl-app-cmd # App-Cmd
+    - perl-test-deep # Test-Deep
+    - perl-moosex-lazyrequire # MooseX-LazyRequire
+    - perl-moosex-types-path-class # MooseX-Types-Path-Class
+    - perl-string-formatter # String-Formatter
+    - perl-text-glob # Text-Glob
+    - perl-sub-exporter # Sub-Exporter
+    - perl-moose-autobox # Moose-Autobox
+    - perl-path-class # Path-Class
+    - perl-mixin-linewise # Mixin-Linewise
+    - perl-cpan-uploader # CPAN-Uploader
+    - perl-file-homedir # File-HomeDir
+    - perl-moosex-types-perl # MooseX-Types-Perl
+    - perl-perl-version # Perl-Version
+    - perl-moosex-setonce # MooseX-SetOnce
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-list-moreutils # List-MoreUtils
+    - perl-try-tiny # Try-Tiny
+    - perl-text-template # Text-Template
+    - perl-yaml-tiny # YAML-Tiny
+    - perl-list-allutils # List-AllUtils
+    - perl-ppi # PPI
+    - perl-sub-exporter-formethods # Sub-Exporter-ForMethods
+    - perl-config-mvp-reader-ini # Config-MVP-Reader-INI
+    - perl-class-load # Class-Load
+    - perl-config-ini # Config-INI
+    - perl-autobox # autobox
+    - perl-string-rewriteprefix # String-RewritePrefix
+    - perl-term-encoding # Term-Encoding
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://dzil.org/
+  license: perl_5
+  summary: 'distribution builder; installer not included!'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

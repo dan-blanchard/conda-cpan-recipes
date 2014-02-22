@@ -1,0 +1,61 @@
+package:
+  name: perl-dist-zilla-plugin-github
+  version: !!str 0.36
+
+source:
+  fn: Dist-Zilla-Plugin-GitHub-0.36.tar.gz
+  url: http://cpan.metacpan.org/authors/id/A/AL/ALEXBIO/Dist-Zilla-Plugin-GitHub-0.36.tar.gz
+  md5: 7d0feb3ebdf40cb1203b72361170e81f
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-net-ssleay # Net-SSLeay
+    - perl-moose # Moose
+    - perl-git-wrapper # Git-Wrapper
+    - perl-json # JSON
+    - perl-class-load # Class-Load
+    - perl-try-tiny # Try-Tiny
+    - perl-dist-zilla # Dist-Zilla
+    - perl-termreadkey # TermReadKey
+    - perl-io-socket-ssl # IO-Socket-SSL
+
+  run:
+    - perl
+    - perl-net-ssleay # Net-SSLeay
+    - perl-moose # Moose
+    - perl-try-tiny # Try-Tiny
+    - perl-json # JSON
+    - perl-class-load # Class-Load
+    - perl-git-wrapper # Git-Wrapper
+    - perl-dist-zilla # Dist-Zilla
+    - perl-termreadkey # TermReadKey
+    - perl-io-socket-ssl # IO-Socket-SSL
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/release/Dist-Zilla-Plugin-GitHub/
+  license: p
+  summary: 'Plugins to integrate Dist::Zilla with GitHub'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

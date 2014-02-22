@@ -1,0 +1,56 @@
+package:
+  name: perl-dist-zilla-plugin-removephasedprereqs
+  version: !!str 0.002
+
+source:
+  fn: Dist-Zilla-Plugin-RemovePhasedPrereqs-0.002.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Dist-Zilla-Plugin-RemovePhasedPrereqs-0.002.tar.gz
+  md5: 93a2dea93446b82eab06fbeef3336a19
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-moosex-types # MooseX-Types
+    - perl-moose # Moose
+    - perl-moosex-types-perl # MooseX-Types-Perl
+    - perl-json # JSON
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-moose-autobox # Moose-Autobox
+
+  run:
+    - perl
+    - perl-moosex-types # MooseX-Types
+    - perl-moose # Moose
+    - perl-moosex-types-perl # MooseX-Types-Perl
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-moose-autobox # Moose-Autobox
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://metacpan.org/release/Dist-Zilla-Plugin-RemovePhasedPrereqs
+  license: apache_2_0
+  summary: 'Remove gathered prereqs from particular phases'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

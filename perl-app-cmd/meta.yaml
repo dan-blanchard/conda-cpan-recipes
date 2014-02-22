@@ -1,0 +1,60 @@
+package:
+  name: perl-app-cmd
+  version: !!str 0.323
+
+source:
+  fn: App-Cmd-0.323.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/App-Cmd-0.323.tar.gz
+  md5: 2542e858a359b3ecdc8d2e7c60595902
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-data-optlist # Data-OptList
+    - perl-sub-install # Sub-Install
+    - perl-test-fatal # Test-Fatal
+    - perl-getopt-long-descriptive # Getopt-Long-Descriptive
+    - perl-class-load # Class-Load
+    - perl-sub-exporter # Sub-Exporter
+    - perl-string-rewriteprefix # String-RewritePrefix
+    - perl-io-tiecombine # IO-TieCombine
+    - perl-capture-tiny # Capture-Tiny
+
+  run:
+    - perl
+    - perl-data-optlist # Data-OptList
+    - perl-sub-install # Sub-Install
+    - perl-getopt-long-descriptive # Getopt-Long-Descriptive
+    - perl-class-load # Class-Load
+    - perl-sub-exporter # Sub-Exporter
+    - perl-string-rewriteprefix # String-RewritePrefix
+    - perl-io-tiecombine # IO-TieCombine
+    - perl-capture-tiny # Capture-Tiny
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/App-Cmd
+  license: p
+  summary: 'write command line apps with less suffering'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

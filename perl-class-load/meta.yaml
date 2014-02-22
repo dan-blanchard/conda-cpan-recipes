@@ -1,0 +1,56 @@
+package:
+  name: perl-class-load
+  version: !!str 0.21
+
+source:
+  fn: Class-Load-0.21.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Load-0.21.tar.gz
+  md5: 67674318b7b47b519abfd9f16292dc35
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-data-optlist # Data-OptList
+    - perl-test-fatal # Test-Fatal
+    - perl-module-implementation # Module-Implementation
+    - perl-try-tiny # Try-Tiny
+    - perl-test-requires # Test-Requires
+    - perl-module-build-tiny # Module-Build-Tiny
+    - perl-module-runtime # Module-Runtime
+    - perl-package-stash # Package-Stash
+
+  run:
+    - perl
+    - perl-try-tiny # Try-Tiny
+    - perl-module-implementation # Module-Implementation
+    - perl-module-runtime # Module-Runtime
+    - perl-data-optlist # Data-OptList
+    - perl-package-stash # Package-Stash
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/moose/Class-Load
+  license: perl_5
+  summary: 'a working (require "Class::Name") and more'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

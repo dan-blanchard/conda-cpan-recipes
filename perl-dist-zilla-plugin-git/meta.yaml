@@ -1,0 +1,87 @@
+package:
+  name: perl-dist-zilla-plugin-git
+  version: !!str 2.020
+
+source:
+  fn: Dist-Zilla-Plugin-Git-2.020.tar.gz
+  url: http://cpan.metacpan.org/authors/id/C/CJ/CJM/Dist-Zilla-Plugin-Git-2.020.tar.gz
+  md5: b247d2d6e249ec2cc258b2782df3ab65
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-moosex-types # MooseX-Types
+    - perl-devel-simpletrace # Devel-SimpleTrace
+    - perl-datetime # DateTime
+    - perl-path-tiny # Path-Tiny
+    - perl-string-formatter # String-Formatter
+    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
+    - perl-git-wrapper # Git-Wrapper
+    - perl-log-dispatchouli # Log-Dispatchouli
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-moosex-has-sugar # MooseX-Has-Sugar
+    - perl-moosex-types-path-tiny # MooseX-Types-Path-Tiny
+    - perl-try-tiny # Try-Tiny
+    - perl-moose-autobox # Moose-Autobox
+    - perl-file-pushd # File-pushd
+    - perl-file-copy-recursive # File-Copy-Recursive
+    - perl-list-allutils # List-AllUtils
+    - perl-test-fatal # Test-Fatal
+    - perl-file-which # File-Which
+    - perl-file-chdir # File-chdir
+    - perl-version-next # Version-Next
+    - perl-module-runtime # Module-Runtime
+    - perl-ipc-system-simple # IPC-System-Simple
+    - perl-moose # Moose
+    - perl-dist-zilla-plugin-config-git # Dist-Zilla-Plugin-Config-Git
+
+  run:
+    - perl
+    - perl-string-formatter # String-Formatter
+    - perl-moosex-types # MooseX-Types
+    - perl-list-allutils # List-AllUtils
+    - perl-datetime # DateTime
+    - perl-moosex-types-path-tiny # MooseX-Types-Path-Tiny
+    - perl-file-chdir # File-chdir
+    - perl-path-tiny # Path-Tiny
+    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
+    - perl-ipc-system-simple # IPC-System-Simple
+    - perl-git-wrapper # Git-Wrapper
+    - perl-try-tiny # Try-Tiny
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-dist-zilla # Dist-Zilla
+    - perl-version-next # Version-Next
+    - perl-moosex-has-sugar # MooseX-Has-Sugar
+    - perl-moose # Moose
+    - perl-module-runtime # Module-Runtime
+    - perl-moose-autobox # Moose-Autobox
+    - perl-dist-zilla-plugin-config-git # Dist-Zilla-Plugin-Config-Git
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://search.cpan.org/dist/Dist-Zilla-Plugin-Git/
+  license: perl_5
+  summary: 'update your git repository after release'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

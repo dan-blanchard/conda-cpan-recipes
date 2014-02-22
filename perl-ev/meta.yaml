@@ -1,0 +1,45 @@
+package:
+  name: perl-ev
+  version: !!str 4.15
+
+source:
+  fn: EV-4.15.tar.gz
+  url: http://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/EV-4.15.tar.gz
+  md5: 546d10fb5901f2af937e53b41a92b2bb
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-common-sense # common-sense
+
+  run:
+    - perl
+    - perl-common-sense # common-sense
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/EV
+  license: unknown
+  summary: 'perl interface to libev, a high performance full-featured event loop'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

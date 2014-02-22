@@ -1,0 +1,56 @@
+package:
+  name: perl-perl-minimumversion
+  version: !!str 1.32
+
+source:
+  fn: Perl-MinimumVersion-1.32.tar.gz
+  url: http://cpan.metacpan.org/authors/id/C/CH/CHORNY/Perl-MinimumVersion-1.32.tar.gz
+  md5: df44169658c95e8cc94f1e8fdd8f429e
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-ppi # PPI
+    - perl-file-find-rule-perl # File-Find-Rule-Perl
+    - perl-params-util # Params-Util
+    - perl-ppix-regexp # PPIx-Regexp
+    - perl-test-script # Test-Script
+    - perl-perl-critic # Perl-Critic
+    - perl-file-find-rule # File-Find-Rule
+
+  run:
+    - perl
+    - perl-ppi # PPI
+    - perl-params-util # Params-Util
+    - perl-perl-critic # Perl-Critic
+    - perl-file-find-rule # File-Find-Rule
+    - perl-ppix-regexp # PPIx-Regexp
+    - perl-file-find-rule-perl # File-Find-Rule-Perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Perl-MinimumVersion
+  license: perl_5
+  summary: 'Find a minimum required version of perl for Perl code'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

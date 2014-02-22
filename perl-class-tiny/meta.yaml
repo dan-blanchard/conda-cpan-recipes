@@ -1,0 +1,43 @@
+package:
+  name: perl-class-tiny
+  version: !!str 0.014
+
+source:
+  fn: Class-Tiny-0.014.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Class-Tiny-0.014.tar.gz
+  md5: 0d7dcc9d1ee7b10d9227abc262de1e7d
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/dagolden/Class-Tiny
+  license: a
+  summary: 'Minimalist class construction'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

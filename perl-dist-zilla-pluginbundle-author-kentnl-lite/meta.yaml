@@ -1,0 +1,59 @@
+package:
+  name: perl-dist-zilla-pluginbundle-author-kentnl-lite
+  version: !!str 1.7.2
+
+source:
+  fn: Dist-Zilla-PluginBundle-Author-KENTNL-Lite-1.7.2.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Dist-Zilla-PluginBundle-Author-KENTNL-Lite-1.7.2.tar.gz
+  md5: 6d1145ef6e06f692f93c94f097b27d81
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-moose # Moose
+    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
+    - perl-class-load # Class-Load
+    - perl-dist-zilla-plugin-podweaver # Dist-Zilla-Plugin-PodWeaver
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-dist-zilla-plugin-eoltests # Dist-Zilla-Plugin-EOLTests
+    - perl-dist-zilla-plugin-test-compile # Dist-Zilla-Plugin-Test-Compile
+
+  run:
+    - perl
+    - perl-moose # Moose
+    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
+    - perl-class-load # Class-Load
+    - perl-dist-zilla-plugin-podweaver # Dist-Zilla-Plugin-PodWeaver
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-dist-zilla-plugin-eoltests # Dist-Zilla-Plugin-EOLTests
+    - perl-dist-zilla-plugin-test-compile # Dist-Zilla-Plugin-Test-Compile
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/Dist-Zilla-PluginBundle-Author-KENTNL-Lite
+  license: perl_5
+  summary: 'A Minimal Build-Only replacement for @Author::KENTNL for contributors.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

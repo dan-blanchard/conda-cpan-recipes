@@ -1,0 +1,50 @@
+package:
+  name: perl-software-license
+  version: !!str 0.103009
+
+source:
+  fn: Software-License-0.103009.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Software-License-0.103009.tar.gz
+  md5: 56207e8cc99b2a9b4a05a46b730fbca4
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-try-tiny # Try-Tiny
+    - perl-sub-install # Sub-Install
+    - perl-text-template # Text-Template
+    - perl-data-section # Data-Section
+
+  run:
+    - perl
+    - perl-data-section # Data-Section
+    - perl-sub-install # Sub-Install
+    - perl-text-template # Text-Template
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Software-License
+  license: perl_5
+  summary: 'packages that provide templated software licenses'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

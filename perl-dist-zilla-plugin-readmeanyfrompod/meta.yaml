@@ -1,0 +1,65 @@
+package:
+  name: perl-dist-zilla-plugin-readmeanyfrompod
+  version: !!str 0.133360
+
+source:
+  fn: Dist-Zilla-Plugin-ReadmeAnyFromPod-0.133360.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RT/RTHOMPSON/Dist-Zilla-Plugin-ReadmeAnyFromPod-0.133360.tar.gz
+  md5: 73e0f30f1e2ab007cc37b1734f4bc04f
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-moose # Moose
+    - perl-test-fatal # Test-Fatal
+    - perl-dist-zilla-role-file-changenotification # Dist-Zilla-Role-File-ChangeNotification
+    - perl-pod-markdown # Pod-Markdown
+    - perl-ppi # PPI
+    - perl-test-most # Test-Most
+    - perl-moosex-has-sugar # MooseX-Has-Sugar
+    - perl-dist-zilla # Dist-Zilla
+    - perl-test-deep # Test-Deep
+    - perl-path-tiny # Path-Tiny
+    - perl-io-stringy # IO-stringy
+    - perl-moose-autobox # Moose-Autobox
+    - perl-test-requires # Test-Requires
+
+  run:
+    - perl
+    - perl-moose # Moose
+    - perl-dist-zilla-role-file-changenotification # Dist-Zilla-Role-File-ChangeNotification
+    - perl-pod-markdown # Pod-Markdown
+    - perl-path-tiny # Path-Tiny
+    - perl-ppi # PPI
+    - perl-dist-zilla # Dist-Zilla
+    - perl-moosex-has-sugar # MooseX-Has-Sugar
+    - perl-io-stringy # IO-stringy
+    - perl-moose-autobox # Moose-Autobox
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/DarwinAwardWinner/Dist-Zilla-Plugin-ReadmeAnyFromPod
+  license: p
+  summary: 'Automatically convert POD to a README in any format for Dist::Zilla'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

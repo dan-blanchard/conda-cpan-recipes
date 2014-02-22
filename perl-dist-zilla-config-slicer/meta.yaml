@@ -1,0 +1,49 @@
+package:
+  name: perl-dist-zilla-config-slicer
+  version: !!str 0.200
+
+source:
+  fn: Dist-Zilla-Config-Slicer-0.200.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RW/RWSTAUNER/Dist-Zilla-Config-Slicer-0.200.tar.gz
+  md5: 9f06399d82cd98f53440328fd6d45edd
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla # Dist-Zilla
+    - perl-moose # Moose
+    - perl-config-mvp-slicer # Config-MVP-Slicer
+
+  run:
+    - perl
+    - perl-dist-zilla # Dist-Zilla
+    - perl-moose # Moose
+    - perl-config-mvp-slicer # Config-MVP-Slicer
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rwstauner/Dist-Zilla-Config-Slicer
+  license: perl_5
+  summary: 'Config::MVP::Slicer customized for Dist::Zilla'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

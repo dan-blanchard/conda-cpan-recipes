@@ -1,0 +1,55 @@
+package:
+  name: perl-dist-zilla-role-bootstrap
+  version: !!str 0.2.3
+
+source:
+  fn: Dist-Zilla-Role-Bootstrap-0.2.3.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Dist-Zilla-Role-Bootstrap-0.2.3.tar.gz
+  md5: fa09c691e3a7583e1cd22af724749765
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-file-copy-recursive # File-Copy-Recursive
+    - perl-moose # Moose
+    - perl-path-finddev # Path-FindDev
+    - perl-path-tiny # Path-Tiny
+    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
+    - perl-list-utilsby # List-UtilsBy
+    - perl-dist-zilla # Dist-Zilla
+
+  run:
+    - perl
+    - perl-path-tiny # Path-Tiny
+    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
+    - perl-dist-zilla # Dist-Zilla
+    - perl-moose # Moose
+    - perl-list-utilsby # List-UtilsBy
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/Dist-Zilla-Role-Bootstrap
+  license: perl_5
+  summary: 'Shared logic for bootstrap things.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

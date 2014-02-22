@@ -1,0 +1,45 @@
+package:
+  name: perl-exception-class-trycatch
+  version: !!str 1.12
+
+source:
+  fn: Exception-Class-TryCatch-1.12.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Exception-Class-TryCatch-1.12.tar.gz
+  md5: d9943ce5e251437312a11001b9531f43
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-exception-class # Exception-Class
+
+  run:
+    - perl
+    - perl-exception-class # Exception-Class
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Exception-Class-TryCatch
+  license: apache_2_0
+  summary: 'Syntactic trysolcatch sugar for use with Exception::Class'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

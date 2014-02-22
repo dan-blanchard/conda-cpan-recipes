@@ -1,0 +1,47 @@
+package:
+  name: perl-file-find-rule-vcs
+  version: !!str 1.08
+
+source:
+  fn: File-Find-Rule-VCS-1.08.tar.gz
+  url: http://cpan.metacpan.org/authors/id/A/AD/ADAMK/File-Find-Rule-VCS-1.08.tar.gz
+  md5: 2e4031812450dc6510270cf88834d80c
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-text-glob # Text-Glob
+    - perl-file-find-rule # File-Find-Rule
+
+  run:
+    - perl
+    - perl-text-glob # Text-Glob
+    - perl-file-find-rule # File-Find-Rule
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/File-Find-Rule-VCS
+  license: perl_5
+  summary: 'Exclude files/directories for Version Control Systems'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

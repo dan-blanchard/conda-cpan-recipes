@@ -1,0 +1,49 @@
+package:
+  name: perl-dist-zilla-role-pluginbundle-pluginremover
+  version: !!str 0.102
+
+source:
+  fn: Dist-Zilla-Role-PluginBundle-PluginRemover-0.102.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RW/RWSTAUNER/Dist-Zilla-Role-PluginBundle-PluginRemover-0.102.tar.gz
+  md5: 3ddef6aa6f34d259726029718137aa7a
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla # Dist-Zilla
+    - perl-moose # Moose
+    - perl-list-moreutils # List-MoreUtils
+
+  run:
+    - perl
+    - perl-dist-zilla # Dist-Zilla
+    - perl-moose # Moose
+    - perl-list-moreutils # List-MoreUtils
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rwstauner/Dist-Zilla-Role-PluginBundle-PluginRemover
+  license: perl_5
+  summary: "Add '-remove' functionality to a bundle"
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

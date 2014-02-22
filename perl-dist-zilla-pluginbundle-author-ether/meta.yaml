@@ -1,0 +1,166 @@
+package:
+  name: perl-dist-zilla-pluginbundle-author-ether
+  version: !!str 0.050
+
+source:
+  fn: Dist-Zilla-PluginBundle-Author-ETHER-0.050.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-PluginBundle-Author-ETHER-0.050.tar.gz
+  md5: 54dc70cc52c872c7405083bf6af436cd
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pod-weaver # Pod-Weaver
+    - perl-path-tiny # Path-Tiny
+    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
+    - perl-test-portability-files # Test-Portability-Files
+    - perl-dist-zilla-plugin-prereqs-authordeps # Dist-Zilla-Plugin-Prereqs-AuthorDeps
+    - perl-dist-zilla-plugin-test-compile # Dist-Zilla-Plugin-Test-Compile
+    - perl-test-warnings # Test-Warnings
+    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
+    - perl-pod-weaver-plugin-stopwords # Pod-Weaver-Plugin-StopWords
+    - perl-dist-zilla-plugin-modulebuildtiny # Dist-Zilla-Plugin-ModuleBuildTiny
+    - perl-dist-zilla-plugin-github # Dist-Zilla-Plugin-GitHub
+    - perl-dist-zilla-plugin-git-remote-check # Dist-Zilla-Plugin-Git-Remote-Check
+    - perl-pod-markdown # Pod-Markdown
+    - perl-test-spelling # Test-Spelling
+    - perl-dist-zilla-plugin-test-cpan-changes # Dist-Zilla-Plugin-Test-CPAN-Changes
+    - perl-dist-zilla-plugin-mojibaketests # Dist-Zilla-Plugin-MojibakeTests
+    - perl-dist-zilla-plugin-test-podspelling # Dist-Zilla-Plugin-Test-PodSpelling
+    - perl-dist-zilla-plugin-installguide # Dist-Zilla-Plugin-InstallGuide
+    - perl-file-sharedir-install # File-ShareDir-Install
+    - perl-dist-zilla-config-slicer # Dist-Zilla-Config-Slicer
+    - perl-dist-zilla-plugin-test-portability # Dist-Zilla-Plugin-Test-Portability
+    - perl-dist-zilla-plugin-eoltests # Dist-Zilla-Plugin-EOLTests
+    - perl-dist-zilla-plugin-makemaker-fallback # Dist-Zilla-Plugin-MakeMaker-Fallback
+    - perl-dist-zilla-plugin-copyfilesfromrelease # Dist-Zilla-Plugin-CopyFilesFromRelease
+    - perl-test-fatal # Test-Fatal
+    - perl-file-sharedir # File-ShareDir
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-dist-zilla-plugin-test-unusedvars # Dist-Zilla-Plugin-Test-UnusedVars
+    - perl-dist-zilla-plugin-test-pod-no404s # Dist-Zilla-Plugin-Test-Pod-No404s
+    - perl-dist-zilla-plugin-checkprereqsindexed # Dist-Zilla-Plugin-CheckPrereqsIndexed
+    - perl-dist-zilla-plugin-readmeanyfrompod # Dist-Zilla-Plugin-ReadmeAnyFromPod
+    - perl-dist-zilla-plugin-checkselfdependency # Dist-Zilla-Plugin-CheckSelfDependency
+    - perl-cpan-changes # CPAN-Changes
+    - perl-pod-elemental-transformer-list # Pod-Elemental-Transformer-List
+    - perl-dist-zilla-plugin-checkextratests # Dist-Zilla-Plugin-CheckExtraTests
+    - perl-dist-zilla-plugin-generatefile-sharedir # Dist-Zilla-Plugin-GenerateFile-ShareDir
+    - perl-json # JSON
+    - perl-pod-elemental-perlmunger # Pod-Elemental-PerlMunger
+    - perl-dist-zilla-plugin-podweaver # Dist-Zilla-Plugin-PodWeaver
+    - perl-test-vars # Test-Vars
+    - perl-dist-zilla-plugin-test-version # Dist-Zilla-Plugin-Test-Version
+    - perl-dist-zilla-plugin-git-pushinitial # Dist-Zilla-Plugin-Git-PushInitial
+    - perl-dist-zilla-plugin-promptifstale # Dist-Zilla-Plugin-PromptIfStale
+    - perl-dist-zilla-role-pluginbundle-pluginremover # Dist-Zilla-Role-PluginBundle-PluginRemover
+    - perl-test-file-sharedir # Test-File-ShareDir
+    - perl-moose # Moose
+    - perl-dist-zilla-plugin-minimumperl # Dist-Zilla-Plugin-MinimumPerl
+    - perl-test-deep # Test-Deep
+    - perl-dist-zilla-plugin-git-describe # Dist-Zilla-Plugin-Git-Describe
+    - perl-dist-zilla-plugin-checkchangeshascontent # Dist-Zilla-Plugin-CheckChangesHasContent
+    - perl-module-runtime # Module-Runtime
+    - perl-dist-zilla-plugin-test-kwalitee # Dist-Zilla-Plugin-Test-Kwalitee
+    - perl-dist-zilla-plugin-metaprovides-package # Dist-Zilla-Plugin-MetaProvides-Package
+    - perl-dist-zilla-plugin-installrelease # Dist-Zilla-Plugin-InstallRelease
+    - perl-list-moreutils # List-MoreUtils
+    - perl-dist-zilla-plugin-test-notabs # Dist-Zilla-Plugin-Test-NoTabs
+    - perl-dist-zilla # Dist-Zilla
+    - perl-test-requires # Test-Requires
+    - perl-dist-zilla-plugin-authority # Dist-Zilla-Plugin-Authority
+    - perl-path-class # Path-Class
+    - perl-dist-zilla-plugin-test-minimumversion # Dist-Zilla-Plugin-Test-MinimumVersion
+    - perl-test-deep-json # Test-Deep-JSON
+    - perl-dist-zilla-plugin-run # Dist-Zilla-Plugin-Run
+    - perl-dist-zilla-pluginbundle-git-checkfor # Dist-Zilla-PluginBundle-Git-CheckFor
+    - perl-module-build-tiny # Module-Build-Tiny
+    - perl-dist-zilla-plugin-autometaresources # Dist-Zilla-Plugin-AutoMetaResources
+    - perl-dist-zilla-plugin-test-reportprereqs # Dist-Zilla-Plugin-Test-ReportPrereqs
+
+  run:
+    - perl
+    - perl-pod-elemental-transformer-list # Pod-Elemental-Transformer-List
+    - perl-dist-zilla-plugin-metaprovides-package # Dist-Zilla-Plugin-MetaProvides-Package
+    - perl-pod-weaver # Pod-Weaver
+    - perl-dist-zilla-plugin-test-kwalitee # Dist-Zilla-Plugin-Test-Kwalitee
+    - perl-dist-zilla-plugin-minimumperl # Dist-Zilla-Plugin-MinimumPerl
+    - perl-dist-zilla-config-slicer # Dist-Zilla-Config-Slicer
+    - perl-dist-zilla-plugin-test-compile # Dist-Zilla-Plugin-Test-Compile
+    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
+    - perl-dist-zilla-plugin-test-podspelling # Dist-Zilla-Plugin-Test-PodSpelling
+    - perl-pod-elemental-perlmunger # Pod-Elemental-PerlMunger
+    - perl-dist-zilla-plugin-podweaver # Dist-Zilla-Plugin-PodWeaver
+    - perl-test-vars # Test-Vars
+    - perl-dist-zilla-plugin-test-version # Dist-Zilla-Plugin-Test-Version
+    - perl-dist-zilla-plugin-git-pushinitial # Dist-Zilla-Plugin-Git-PushInitial
+    - perl-dist-zilla-plugin-promptifstale # Dist-Zilla-Plugin-PromptIfStale
+    - perl-dist-zilla-role-pluginbundle-pluginremover # Dist-Zilla-Role-PluginBundle-PluginRemover
+    - perl-dist-zilla-plugin-modulebuildtiny # Dist-Zilla-Plugin-ModuleBuildTiny
+    - perl-dist-zilla-plugin-test-reportprereqs # Dist-Zilla-Plugin-Test-ReportPrereqs
+    - perl-moose # Moose
+    - perl-dist-zilla-plugin-github # Dist-Zilla-Plugin-GitHub
+    - perl-dist-zilla-plugin-git-remote-check # Dist-Zilla-Plugin-Git-Remote-Check
+    - perl-pod-markdown # Pod-Markdown
+    - perl-test-spelling # Test-Spelling
+    - perl-dist-zilla-plugin-checkselfdependency # Dist-Zilla-Plugin-CheckSelfDependency
+    - perl-dist-zilla-plugin-test-cpan-changes # Dist-Zilla-Plugin-Test-CPAN-Changes
+    - perl-dist-zilla-plugin-installrelease # Dist-Zilla-Plugin-InstallRelease
+    - perl-dist-zilla-plugin-checkchangeshascontent # Dist-Zilla-Plugin-CheckChangesHasContent
+    - perl-dist-zilla-plugin-copyfilesfromrelease # Dist-Zilla-Plugin-CopyFilesFromRelease
+    - perl-dist-zilla-plugin-generatefile-sharedir # Dist-Zilla-Plugin-GenerateFile-ShareDir
+    - perl-dist-zilla-plugin-git-describe # Dist-Zilla-Plugin-Git-Describe
+    - perl-path-class # Path-Class
+    - perl-dist-zilla-plugin-checkextratests # Dist-Zilla-Plugin-CheckExtraTests
+    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
+    - perl-dist-zilla-plugin-installguide # Dist-Zilla-Plugin-InstallGuide
+    - perl-list-moreutils # List-MoreUtils
+    - perl-dist-zilla-plugin-test-notabs # Dist-Zilla-Plugin-Test-NoTabs
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-dist-zilla-plugin-checkprereqsindexed # Dist-Zilla-Plugin-CheckPrereqsIndexed
+    - perl-pod-weaver-plugin-stopwords # Pod-Weaver-Plugin-StopWords
+    - perl-dist-zilla-plugin-test-portability # Dist-Zilla-Plugin-Test-Portability
+    - perl-dist-zilla-plugin-eoltests # Dist-Zilla-Plugin-EOLTests
+    - perl-test-portability-files # Test-Portability-Files
+    - perl-dist-zilla-plugin-makemaker-fallback # Dist-Zilla-Plugin-MakeMaker-Fallback
+    - perl-dist-zilla-plugin-test-minimumversion # Dist-Zilla-Plugin-Test-MinimumVersion
+    - perl-dist-zilla-plugin-prereqs-authordeps # Dist-Zilla-Plugin-Prereqs-AuthorDeps
+    - perl-file-sharedir # File-ShareDir
+    - perl-dist-zilla-plugin-run # Dist-Zilla-Plugin-Run
+    - perl-dist-zilla-plugin-test-unusedvars # Dist-Zilla-Plugin-Test-UnusedVars
+    - perl-dist-zilla-pluginbundle-git-checkfor # Dist-Zilla-PluginBundle-Git-CheckFor
+    - perl-dist-zilla-plugin-authority # Dist-Zilla-Plugin-Authority
+    - perl-dist-zilla-plugin-readmeanyfrompod # Dist-Zilla-Plugin-ReadmeAnyFromPod
+    - perl-dist-zilla-plugin-mojibaketests # Dist-Zilla-Plugin-MojibakeTests
+    - perl-dist-zilla-plugin-test-pod-no404s # Dist-Zilla-Plugin-Test-Pod-No404s
+    - perl-dist-zilla-plugin-autometaresources # Dist-Zilla-Plugin-AutoMetaResources
+    - perl-cpan-changes # CPAN-Changes
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-PluginBundle-Author-ETHER
+  license: perl_5
+  summary: 'A plugin bundle for distributions built by ETHER'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

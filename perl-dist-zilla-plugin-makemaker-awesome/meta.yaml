@@ -1,0 +1,56 @@
+package:
+  name: perl-dist-zilla-plugin-makemaker-awesome
+  version: !!str 0.20
+
+source:
+  fn: Dist-Zilla-Plugin-MakeMaker-Awesome-0.20.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-MakeMaker-Awesome-0.20.tar.gz
+  md5: bcf57a264ae642ad6d9bdf549e2aa516
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-moosex-types # MooseX-Types
+    - perl-moose # Moose
+    - perl-path-tiny # Path-Tiny
+    - perl-dist-zilla # Dist-Zilla
+    - perl-test-deep # Test-Deep
+    - perl-module-build-tiny # Module-Build-Tiny
+    - perl-moose-autobox # Moose-Autobox
+    - perl-namespace-autoclean # namespace-autoclean
+
+  run:
+    - perl
+    - perl-moose # Moose
+    - perl-moosex-types # MooseX-Types
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-dist-zilla # Dist-Zilla
+    - perl-moose-autobox # Moose-Autobox
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/avar/dist-zilla-plugin-makemaker-awesome
+  license: perl_5
+  summary: 'A more awesome MakeMaker plugin for Dist::Zilla'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

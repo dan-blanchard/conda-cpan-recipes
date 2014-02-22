@@ -1,0 +1,45 @@
+package:
+  name: perl-file-which
+  version: !!str 1.09
+
+source:
+  fn: File-Which-1.09.tar.gz
+  url: http://cpan.metacpan.org/authors/id/A/AD/ADAMK/File-Which-1.09.tar.gz
+  md5: b9429edaad7f45caafa4d458afcfd8af
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-script # Test-Script
+
+  run:
+    - perl
+    - perl-test-script # Test-Script
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/File-Which
+  license: perl_5
+  summary: 'Portable implementation of the "which" utility'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

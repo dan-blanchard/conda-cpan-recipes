@@ -1,0 +1,51 @@
+package:
+  name: perl-dist-zilla-role-version-sanitize
+  version: !!str 0.001002
+
+source:
+  fn: Dist-Zilla-Role-Version-Sanitize-0.001002.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Dist-Zilla-Role-Version-Sanitize-0.001002.tar.gz
+  md5: a8ded71377423c30cd1bbb0baa004f8c
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-file-copy-recursive # File-Copy-Recursive
+    - perl-dist-zilla # Dist-Zilla
+    - perl-file-sharedir # File-ShareDir
+    - perl-test-fatal # Test-Fatal
+    - perl-path-tiny # Path-Tiny
+    - perl-dist-zilla-plugin-bootstrap-lib # Dist-Zilla-Plugin-Bootstrap-lib
+    - perl-moose # Moose
+
+  run:
+    - perl
+    - perl-moose # Moose
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/Dist-Zilla-Role-Version-Sanitize
+  license: p
+  summary: 'Sanitize a version from a plugin'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

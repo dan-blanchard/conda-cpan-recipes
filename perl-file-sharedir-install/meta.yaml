@@ -1,0 +1,43 @@
+package:
+  name: perl-file-sharedir-install
+  version: !!str 0.08
+
+source:
+  fn: File-ShareDir-Install-0.08.tar.gz
+  url: http://cpan.metacpan.org/authors/id/G/GW/GWYN/File-ShareDir-Install-0.08.tar.gz
+  md5: bdda798a8582d6d1d2f8149cb738e822
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/File-ShareDir-Install
+  license: perl_5
+  summary: 'Install shared files'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

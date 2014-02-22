@@ -1,0 +1,76 @@
+package:
+  name: perl-pod-weaver
+  version: !!str 4.006
+
+source:
+  fn: Pod-Weaver-4.006.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Pod-Weaver-4.006.tar.gz
+  md5: cb0a5b3a3b0fb739a41f77bcadec896c
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-datetime # DateTime
+    - perl-mixin-linewise # Mixin-Linewise
+    - perl-string-formatter # String-Formatter
+    - perl-test-differences # Test-Differences
+    - perl-ppi # PPI
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-string-flogger # String-Flogger
+    - perl-software-license # Software-License
+    - perl-log-dispatchouli # Log-Dispatchouli
+    - perl-moose-autobox # Moose-Autobox
+    - perl-moose # Moose
+    - perl-pod-elemental # Pod-Elemental
+    - perl-list-moreutils # List-MoreUtils
+    - perl-params-util # Params-Util
+    - perl-config-mvp-reader-ini # Config-MVP-Reader-INI
+    - perl-config-mvp # Config-MVP
+    - perl-string-rewriteprefix # String-RewritePrefix
+    - perl-module-runtime # Module-Runtime
+
+  run:
+    - perl
+    - perl-string-formatter # String-Formatter
+    - perl-moose-autobox # Moose-Autobox
+    - perl-pod-elemental # Pod-Elemental
+    - perl-datetime # DateTime
+    - perl-params-util # Params-Util
+    - perl-mixin-linewise # Mixin-Linewise
+    - perl-config-mvp-reader-ini # Config-MVP-Reader-INI
+    - perl-list-moreutils # List-MoreUtils
+    - perl-log-dispatchouli # Log-Dispatchouli
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-string-rewriteprefix # String-RewritePrefix
+    - perl-string-flogger # String-Flogger
+    - perl-module-runtime # Module-Runtime
+    - perl-config-mvp # Config-MVP
+    - perl-moose # Moose
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Pod-Weaver
+  license: perl_5
+  summary: 'weave together a Pod document from an outline'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,45 @@
+package:
+  name: perl-tie-toobject
+  version: !!str 0.03
+
+source:
+  fn: Tie-ToObject-0.03.tar.gz
+  url: http://cpan.metacpan.org/authors/id/N/NU/NUFFIN/Tie-ToObject-0.03.tar.gz
+  md5: b4f434992c286d531f26893c78541456
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-use-ok # Test-use-ok
+
+  run:
+    - perl
+    - perl-test-use-ok # Test-use-ok
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Tie-ToObject
+  license: unknown
+  summary: 'Tie to an existing object.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

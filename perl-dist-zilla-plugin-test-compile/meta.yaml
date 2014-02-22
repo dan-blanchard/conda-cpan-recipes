@@ -1,0 +1,63 @@
+package:
+  name: perl-dist-zilla-plugin-test-compile
+  version: !!str 2.039
+
+source:
+  fn: Dist-Zilla-Plugin-Test-Compile-2.039.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-Test-Compile-2.039.tar.gz
+  md5: b047972c823ab6e36866f14ff8b7cf08
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-data-section # Data-Section
+    - perl-dist-checkconflicts # Dist-CheckConflicts
+    - perl-sub-exporter-formethods # Sub-Exporter-ForMethods
+    - perl-moose # Moose
+    - perl-path-tiny # Path-Tiny
+    - perl-test-deep-json # Test-Deep-JSON
+    - perl-perl-prereqscanner # Perl-PrereqScanner
+    - perl-dist-zilla # Dist-Zilla
+    - perl-test-deep # Test-Deep
+    - perl-test-warnings # Test-Warnings
+    - perl-module-build-tiny # Module-Build-Tiny
+    - perl-test-minimumversion # Test-MinimumVersion
+    - perl-namespace-autoclean # namespace-autoclean
+
+  run:
+    - perl
+    - perl-dist-checkconflicts # Dist-CheckConflicts
+    - perl-moose # Moose
+    - perl-path-tiny # Path-Tiny
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-sub-exporter-formethods # Sub-Exporter-ForMethods
+    - perl-data-section # Data-Section
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-Test-Compile
+  license: p
+  summary: 'common tests to check syntax of your modules, only using core modules'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,142 @@
+package:
+  name: perl-dist-zilla-pluginbundle-author-kentnl
+  version: !!str 2.012000
+
+source:
+  fn: Dist-Zilla-PluginBundle-Author-KENTNL-2.012000.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Dist-Zilla-PluginBundle-Author-KENTNL-2.012000.tar.gz
+  md5: e068358cf62d5eba2ed0be4c7afe839b
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla-plugin-prereqs-matchinstalled # Dist-Zilla-Plugin-Prereqs-MatchInstalled
+    - perl-dist-zilla-plugin-metaprovides-package # Dist-Zilla-Plugin-MetaProvides-Package
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
+    - perl-dist-zilla-plugin-checkextratests # Dist-Zilla-Plugin-CheckExtraTests
+    - perl-path-tiny # Path-Tiny
+    - perl-dist-zilla-plugin-twitter # Dist-Zilla-Plugin-Twitter
+    - perl-json # JSON
+    - perl-pod-elemental-perlmunger # Pod-Elemental-PerlMunger
+    - perl-dist-zilla-plugin-podweaver # Dist-Zilla-Plugin-PodWeaver
+    - perl-git-wrapper # Git-Wrapper
+    - perl-moosex-types # MooseX-Types
+    - perl-lwp-protocol-https # LWP-Protocol-https
+    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
+    - perl-file-pushd # File-pushd
+    - perl-dist-zilla-plugin-git-nextversion-sanitized # Dist-Zilla-Plugin-Git-NextVersion-Sanitized
+    - perl-test-file-sharedir # Test-File-ShareDir
+    - perl-string-formatter # String-Formatter
+    - perl-moose # Moose
+    - perl-test-perl-critic # Test-Perl-Critic
+    - perl-dist-zilla-plugin-test-perl-critic # Dist-Zilla-Plugin-Test-Perl-Critic
+    - perl-dist-zilla-plugin-minimumperl # Dist-Zilla-Plugin-MinimumPerl
+    - perl-perl-prereqscanner # Perl-PrereqScanner
+    - perl-dist-zilla-plugin-test-cpan-changes # Dist-Zilla-Plugin-Test-CPAN-Changes
+    - perl-dist-zilla-role-bundledeps # Dist-Zilla-Role-BundleDeps
+    - perl-dist-zilla-plugin-git-nextrelease # Dist-Zilla-Plugin-Git-NextRelease
+    - perl-test-pod-coverage # Test-Pod-Coverage
+    - perl-test-output # Test-Output
+    - perl-moosex-strictconstructor # MooseX-StrictConstructor
+    - perl-dist-zilla-plugin-test-kwalitee # Dist-Zilla-Plugin-Test-Kwalitee
+    - perl-net-ssleay # Net-SSLeay
+    - perl-path-class # Path-Class
+    - perl-dist-zilla-plugin-metadata-builtwith # Dist-Zilla-Plugin-MetaData-BuiltWith
+    - perl-test-pod # Test-Pod
+    - perl-file-sharedir-install # File-ShareDir-Install
+    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
+    - perl-dist-zilla-plugin-bootstrap-lib # Dist-Zilla-Plugin-Bootstrap-lib
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-moosex-has-sugar # MooseX-Has-Sugar
+    - perl-dist-zilla-plugin-eoltests # Dist-Zilla-Plugin-EOLTests
+    - perl-capture-tiny # Capture-Tiny
+    - perl-dist-zilla-plugin-test-compile-perfile # Dist-Zilla-Plugin-Test-Compile-PerFile
+    - perl-dist-zilla-plugin-test-minimumversion # Dist-Zilla-Plugin-Test-MinimumVersion
+    - perl-dist-zilla-plugin-perltidy # Dist-Zilla-Plugin-PerlTidy
+    - perl-test-fatal # Test-Fatal
+    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
+    - perl-test-eol # Test-EOL
+    - perl-dist-zilla-plugin-readmefrompod # Dist-Zilla-Plugin-ReadmeFromPod
+    - perl-dist-zilla-util-emulatephase # Dist-Zilla-Util-EmulatePhase
+    - perl-dist-zilla-plugin-prereqs-recommend-matchinstalled # Dist-Zilla-Plugin-Prereqs-Recommend-MatchInstalled
+    - perl-dist-zilla-plugin-authority # Dist-Zilla-Plugin-Authority
+    - perl-dist-zilla-plugin-readmeanyfrompod # Dist-Zilla-Plugin-ReadmeAnyFromPod
+    - perl-io-socket-ssl # IO-Socket-SSL
+    - perl-dist-zilla-plugin-test-reportprereqs # Dist-Zilla-Plugin-Test-ReportPrereqs
+
+  run:
+    - perl
+    - perl-dist-zilla-plugin-metaprovides-package # Dist-Zilla-Plugin-MetaProvides-Package
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-dist-zilla-plugin-checkextratests # Dist-Zilla-Plugin-CheckExtraTests
+    - perl-dist-zilla-plugin-minimumperl # Dist-Zilla-Plugin-MinimumPerl
+    - perl-test-pod-coverage # Test-Pod-Coverage
+    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
+    - perl-pod-elemental-perlmunger # Pod-Elemental-PerlMunger
+    - perl-dist-zilla-plugin-podweaver # Dist-Zilla-Plugin-PodWeaver
+    - perl-moosex-types # MooseX-Types
+    - perl-lwp-protocol-https # LWP-Protocol-https
+    - perl-moosex-strictconstructor # MooseX-StrictConstructor
+    - perl-string-formatter # String-Formatter
+    - perl-moose # Moose
+    - perl-test-perl-critic # Test-Perl-Critic
+    - perl-test-pod # Test-Pod
+    - perl-dist-zilla-plugin-test-perl-critic # Dist-Zilla-Plugin-Test-Perl-Critic
+    - perl-dist-zilla-plugin-git-nextversion-sanitized # Dist-Zilla-Plugin-Git-NextVersion-Sanitized
+    - perl-perl-prereqscanner # Perl-PrereqScanner
+    - perl-dist-zilla-plugin-test-cpan-changes # Dist-Zilla-Plugin-Test-CPAN-Changes
+    - perl-dist-zilla-role-bundledeps # Dist-Zilla-Role-BundleDeps
+    - perl-dist-zilla-plugin-git-nextrelease # Dist-Zilla-Plugin-Git-NextRelease
+    - perl-dist-zilla-plugin-test-reportprereqs # Dist-Zilla-Plugin-Test-ReportPrereqs
+    - perl-dist-zilla-plugin-perltidy # Dist-Zilla-Plugin-PerlTidy
+    - perl-dist-zilla-plugin-test-kwalitee # Dist-Zilla-Plugin-Test-Kwalitee
+    - perl-net-ssleay # Net-SSLeay
+    - perl-dist-zilla-plugin-metadata-builtwith # Dist-Zilla-Plugin-MetaData-BuiltWith
+    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
+    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
+    - perl-dist-zilla-plugin-bootstrap-lib # Dist-Zilla-Plugin-Bootstrap-lib
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-moosex-has-sugar # MooseX-Has-Sugar
+    - perl-dist-zilla-plugin-eoltests # Dist-Zilla-Plugin-EOLTests
+    - perl-io-socket-ssl # IO-Socket-SSL
+    - perl-dist-zilla-plugin-test-compile-perfile # Dist-Zilla-Plugin-Test-Compile-PerFile
+    - perl-dist-zilla-plugin-test-minimumversion # Dist-Zilla-Plugin-Test-MinimumVersion
+    - perl-test-eol # Test-EOL
+    - perl-dist-zilla-plugin-readmefrompod # Dist-Zilla-Plugin-ReadmeFromPod
+    - perl-dist-zilla-util-emulatephase # Dist-Zilla-Util-EmulatePhase
+    - perl-dist-zilla-plugin-prereqs-recommend-matchinstalled # Dist-Zilla-Plugin-Prereqs-Recommend-MatchInstalled
+    - perl-dist-zilla-plugin-authority # Dist-Zilla-Plugin-Authority
+    - perl-dist-zilla-plugin-readmeanyfrompod # Dist-Zilla-Plugin-ReadmeAnyFromPod
+    - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
+    - perl-dist-zilla-plugin-twitter # Dist-Zilla-Plugin-Twitter
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/Dist-Zilla-PluginBundle-Author-KENTNL
+  license: perl_5
+  summary: 'BeLike::KENTNL when you build your distributions.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

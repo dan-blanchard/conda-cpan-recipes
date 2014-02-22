@@ -1,0 +1,44 @@
+package:
+  name: perl-hash-util-fieldhash-compat
+  version: !!str 0.05
+
+source:
+  fn: Hash-Util-FieldHash-Compat-0.05.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Hash-Util-FieldHash-Compat-0.05.tar.gz
+  md5: b45b7f5881df812391be057e9e800cbf
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-use-ok # Test-use-ok
+
+  run:
+    - perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Hash-Util-FieldHash-Compat
+  license: perl_5
+  summary: 'Use Hash::Util::FieldHash or ties, depending on availability.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

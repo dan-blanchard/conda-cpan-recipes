@@ -1,0 +1,54 @@
+package:
+  name: perl-dist-zilla-plugin-prereqs-matchinstalled-all
+  version: !!str 0.1.2
+
+source:
+  fn: Dist-Zilla-Plugin-Prereqs-MatchInstalled-All-0.1.2.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All-0.1.2.tar.gz
+  md5: 3f67164912cfbb26b5fb25834ee7d85f
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-path-finddev # Path-FindDev
+    - perl-moosex-types # MooseX-Types
+    - perl-moose # Moose
+    - perl-file-copy-recursive # File-Copy-Recursive
+    - perl-path-tiny # Path-Tiny
+    - perl-test-fatal # Test-Fatal
+    - perl-dist-zilla # Dist-Zilla
+    - perl-dist-zilla-plugin-prereqs-matchinstalled # Dist-Zilla-Plugin-Prereqs-MatchInstalled
+
+  run:
+    - perl
+    - perl-dist-zilla-plugin-prereqs-matchinstalled # Dist-Zilla-Plugin-Prereqs-MatchInstalled
+    - perl-moosex-types # MooseX-Types
+    - perl-moose # Moose
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/Dist-Zilla-Plugin-Prereqs-MatchInstalled-All
+  license: perl_5
+  summary: 'Upgrade ALL your dependencies to the ones you have installed.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

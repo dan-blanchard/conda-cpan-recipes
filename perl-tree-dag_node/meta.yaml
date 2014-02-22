@@ -1,0 +1,45 @@
+package:
+  name: perl-tree-dag_node
+  version: !!str 1.22
+
+source:
+  fn: Tree-DAG_Node-1.22.tgz
+  url: http://cpan.metacpan.org/authors/id/R/RS/RSAVAGE/Tree-DAG_Node-1.22.tgz
+  md5: 71ab3d930767e2c849b51d805965977b
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-file-slurp-tiny # File-Slurp-Tiny
+
+  run:
+    - perl
+    - perl-file-slurp-tiny # File-Slurp-Tiny
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Tree-DAG_Node
+  license: artistic_2
+  summary: 'An N-ary tree'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

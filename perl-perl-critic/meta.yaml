@@ -1,0 +1,72 @@
+package:
+  name: perl-perl-critic
+  version: !!str 1.121
+
+source:
+  fn: Perl-Critic-1.121.tar.gz
+  url: http://cpan.metacpan.org/authors/id/T/TH/THALJEF/Perl-Critic-1.121.tar.gz
+  md5: d14676d579c4fbc2736106f9863d4d1f
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pod-spell # Pod-Spell
+    - perl-ppix-utilities # PPIx-Utilities
+    - perl-ppix-regexp # PPIx-Regexp
+    - perl-string-format # String-Format
+    - perl-ppi # PPI
+    - perl-email-address # Email-Address
+    - perl-perl-tidy # Perl-Tidy
+    - perl-io-string # IO-String
+    - perl-config-tiny # Config-Tiny
+    - perl-b-keywords # B-Keywords
+    - perl-test-deep # Test-Deep
+    - perl-exception-class # Exception-Class
+    - perl-list-moreutils # List-MoreUtils
+    - perl-task-weaken # Task-Weaken
+    - perl-readonly # Readonly
+
+  run:
+    - perl
+    - perl-pod-spell # Pod-Spell
+    - perl-email-address # Email-Address
+    - perl-config-tiny # Config-Tiny
+    - perl-ppix-utilities # PPIx-Utilities
+    - perl-ppix-regexp # PPIx-Regexp
+    - perl-string-format # String-Format
+    - perl-io-string # IO-String
+    - perl-list-moreutils # List-MoreUtils
+    - perl-ppi # PPI
+    - perl-b-keywords # B-Keywords
+    - perl-readonly # Readonly
+    - perl-exception-class # Exception-Class
+    - perl-task-weaken # Task-Weaken
+    - perl-perl-tidy # Perl-Tidy
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://perlcritic.com
+  license: perl_5
+  summary: 'Critique Perl source code for best-practices.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

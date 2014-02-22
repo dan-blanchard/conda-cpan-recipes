@@ -1,0 +1,47 @@
+package:
+  name: perl-array-diff
+  version: !!str 0.07
+
+source:
+  fn: Array-Diff-0.07.tar.gz
+  url: http://cpan.metacpan.org/authors/id/T/TY/TYPESTER/Array-Diff-0.07.tar.gz
+  md5: 031adfbe03c18fb04dcf6f071471dbc5
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-class-accessor # Class-Accessor
+    - perl-algorithm-diff # Algorithm-Diff
+
+  run:
+    - perl
+    - perl-class-accessor # Class-Accessor
+    - perl-algorithm-diff # Algorithm-Diff
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Array-Diff
+  license: perl_5
+  summary: 'Find the differences between two arrays'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

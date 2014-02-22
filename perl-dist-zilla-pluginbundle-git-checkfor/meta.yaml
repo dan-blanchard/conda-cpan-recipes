@@ -1,0 +1,72 @@
+package:
+  name: perl-dist-zilla-pluginbundle-git-checkfor
+  version: !!str 0.009
+
+source:
+  fn: Dist-Zilla-PluginBundle-Git-CheckFor-0.009.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RS/RSRCHBOY/Dist-Zilla-PluginBundle-Git-CheckFor-0.009.tar.gz
+  md5: f2befe697ad0dc0ac723d74c4356e7d3
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-moose-autobox # Moose-Autobox
+    - perl-path-class # Path-Class
+    - perl-list-moreutils # List-MoreUtils
+    - perl-test-fatal # Test-Fatal
+    - perl-file-chdir # File-chdir
+    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
+    - perl-env-path # Env-Path
+    - perl-git-wrapper # Git-Wrapper
+    - perl-test-most # Test-Most
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-dist-zilla # Dist-Zilla
+    - perl-test-moose-more # Test-Moose-More
+    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
+    - perl-test-tempdir # Test-TempDir
+    - perl-test-checkdeps # Test-CheckDeps
+    - perl-try-tiny # Try-Tiny
+    - perl-ipc-system-simple # IPC-System-Simple
+    - perl-moose # Moose
+    - perl-capture-tiny # Capture-Tiny
+
+  run:
+    - perl
+    - perl-ipc-system-simple # IPC-System-Simple
+    - perl-moose # Moose
+    - perl-try-tiny # Try-Tiny
+    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
+    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
+    - perl-list-moreutils # List-MoreUtils
+    - perl-git-wrapper # Git-Wrapper
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-moose-autobox # Moose-Autobox
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/release/Dist-Zilla-PluginBundle-Git-CheckFor/
+  license: lgpl_2_1
+  summary: 'All Git::CheckFor plugins at once'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

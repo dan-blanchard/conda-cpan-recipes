@@ -1,0 +1,43 @@
+package:
+  name: perl-list-moreutils
+  version: !!str 0.33
+
+source:
+  fn: List-MoreUtils-0.33.tar.gz
+  url: http://cpan.metacpan.org/authors/id/A/AD/ADAMK/List-MoreUtils-0.33.tar.gz
+  md5: 8a33c84028cc2ff3e92c92434b326c0f
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/List-MoreUtils
+  license: perl_5
+  summary: 'Provide the stuff missing in List::Util'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

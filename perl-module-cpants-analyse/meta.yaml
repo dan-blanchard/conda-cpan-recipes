@@ -1,0 +1,66 @@
+package:
+  name: perl-module-cpants-analyse
+  version: !!str 0.92
+
+source:
+  fn: Module-CPANTS-Analyse-0.92.tar.gz
+  url: http://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/Module-CPANTS-Analyse-0.92.tar.gz
+  md5: 449a37fb8491af507afac51a317f59ec
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-nowarnings # Test-NoWarnings
+    - perl-file-find-rule-vcs # File-Find-Rule-VCS
+    - perl-yaml # YAML
+    - perl-class-accessor # Class-Accessor
+    - perl-array-diff # Array-Diff
+    - perl-io-capture # IO-Capture
+    - perl-test-deep # Test-Deep
+    - perl-set-scalar # Set-Scalar
+    - perl-archive-any-lite # Archive-Any-Lite
+    - perl-software-license # Software-License
+    - perl-cpan-distnameinfo # CPAN-DistnameInfo
+    - perl-test-warn # Test-Warn
+    - perl-module-extractuse # Module-ExtractUse
+
+  run:
+    - perl
+    - perl-class-accessor # Class-Accessor
+    - perl-module-extractuse # Module-ExtractUse
+    - perl-yaml # YAML
+    - perl-set-scalar # Set-Scalar
+    - perl-io-capture # IO-Capture
+    - perl-cpan-distnameinfo # CPAN-DistnameInfo
+    - perl-array-diff # Array-Diff
+    - perl-archive-any-lite # Archive-Any-Lite
+    - perl-software-license # Software-License
+    - perl-file-find-rule-vcs # File-Find-Rule-VCS
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://cpants.cpanauthors.org
+  license: perl_5
+  summary: 'Generate Kwalitee ratings for a distribution'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

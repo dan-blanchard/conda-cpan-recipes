@@ -1,0 +1,48 @@
+package:
+  name: perl-moosex-strictconstructor
+  version: !!str 0.19
+
+source:
+  fn: MooseX-StrictConstructor-0.19.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/MooseX-StrictConstructor-0.19.tar.gz
+  md5: 66cd34ce309c16e2cfe44ba626916bbb
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-moose # Moose
+    - perl-test-fatal # Test-Fatal
+
+  run:
+    - perl
+    - perl-moose # Moose
+    - perl-namespace-autoclean # namespace-autoclean
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/MooseX-StrictConstructor
+  license: artistic_2
+  summary: 'Make your object constructors blow up on unknown attributes'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

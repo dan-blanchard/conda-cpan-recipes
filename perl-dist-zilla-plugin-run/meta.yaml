@@ -1,0 +1,56 @@
+package:
+  name: perl-dist-zilla-plugin-run
+  version: !!str 0.020
+
+source:
+  fn: Dist-Zilla-Plugin-Run-0.020.tar.gz
+  url: http://cpan.metacpan.org/authors/id/G/GE/GETTY/Dist-Zilla-Plugin-Run-0.020.tar.gz
+  md5: 0fe749b92ad9b2d5e4d8da1c8df9b082
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-file-sharedir # Test-File-ShareDir
+    - perl-dist-zilla # Dist-Zilla
+    - perl-moose # Moose
+    - perl-test-loadallmodules # Test-LoadAllModules
+    - perl-string-formatter # String-Formatter
+    - perl-path-class # Path-Class
+    - perl-namespace-autoclean # namespace-autoclean
+
+  run:
+    - perl
+    - perl-test-file-sharedir # Test-File-ShareDir
+    - perl-moose # Moose
+    - perl-string-formatter # String-Formatter
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-path-class # Path-Class
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/Getty/p5-dist-zilla-plugin-run
+  license: perl_5
+  summary: 'Run external commands at specific phases of Dist::Zilla'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

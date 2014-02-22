@@ -1,0 +1,57 @@
+package:
+  name: perl-dist-zilla-plugin-generatefile-sharedir
+  version: !!str 0.005
+
+source:
+  fn: Dist-Zilla-Plugin-GenerateFile-ShareDir-0.005.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-GenerateFile-ShareDir-0.005.tar.gz
+  md5: 937ac15ddfc13e8a983ca1eccf4ae978
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-file-sharedir # Test-File-ShareDir
+    - perl-file-sharedir # File-ShareDir
+    - perl-path-tiny # Path-Tiny
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-module-build-tiny # Module-Build-Tiny
+    - perl-moose # Moose
+    - perl-moosex-slurpyconstructor # MooseX-SlurpyConstructor
+
+  run:
+    - perl
+    - perl-file-sharedir # File-ShareDir
+    - perl-path-tiny # Path-Tiny
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-moosex-slurpyconstructor # MooseX-SlurpyConstructor
+    - perl-moose # Moose
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-GenerateFile-ShareDir
+  license: perl_5
+  summary: 'Create files in the build, based on a template located in a dist sharedir'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

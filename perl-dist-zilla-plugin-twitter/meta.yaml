@@ -1,0 +1,63 @@
+package:
+  name: perl-dist-zilla-plugin-twitter
+  version: !!str 0.025
+
+source:
+  fn: Dist-Zilla-Plugin-Twitter-0.025.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DO/DOHERTY/Dist-Zilla-Plugin-Twitter-0.025.tar.gz
+  md5: 6f657e82b5590af036679dbbcf4a1e2a
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-net-twitter # Net-Twitter
+    - perl-www-shorten # WWW-Shorten
+    - perl-moose # Moose
+    - perl-try-tiny # Try-Tiny
+    - perl-www-shorten-simple # WWW-Shorten-Simple
+    - perl-http-message # HTTP-Message
+    - perl-params-util # Params-Util
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-dist-zilla # Dist-Zilla
+    - perl-libwww-perl # libwww-perl
+    - perl-config-ini # Config-INI
+    - perl-sub-exporter # Sub-Exporter
+
+  run:
+    - perl
+    - perl-net-twitter # Net-Twitter
+    - perl-moose # Moose
+    - perl-www-shorten-simple # WWW-Shorten-Simple
+    - perl-dist-zilla # Dist-Zilla
+    - perl-try-tiny # Try-Tiny
+    - perl-config-ini # Config-INI
+    - perl-www-shorten # WWW-Shorten
+    - perl-namespace-autoclean # namespace-autoclean
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/release/Dist-Zilla-Plugin-Twitter/
+  license: apache_2_0
+  summary: 'Twitter when you release with Dist::Zilla'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

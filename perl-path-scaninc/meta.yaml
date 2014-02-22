@@ -1,0 +1,52 @@
+package:
+  name: perl-path-scaninc
+  version: !!str 0.011
+
+source:
+  fn: Path-ScanINC-0.011.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Path-ScanINC-0.011.tar.gz
+  md5: 710ec3e0a35e38f2624a0de08e20ed9b
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-try-tiny # Try-Tiny
+    - perl-class-tiny # Class-Tiny
+    - perl-path-tiny # Path-Tiny
+    - perl-data-dump # Data-Dump
+    - perl-test-fatal # Test-Fatal
+
+  run:
+    - perl
+    - perl-try-tiny # Try-Tiny
+    - perl-class-tiny # Class-Tiny
+    - perl-data-dump # Data-Dump
+    - perl-path-tiny # Path-Tiny
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/Path-ScanINC
+  license: perl_5
+  summary: 'Emulate Perls internal handling of @INC.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,53 @@
+package:
+  name: perl-test-kwalitee
+  version: !!str 1.18
+
+source:
+  fn: Test-Kwalitee-1.18.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Kwalitee-1.18.tar.gz
+  md5: c82ee309027c8e160e8c17e91eedac35
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-checkconflicts # Dist-CheckConflicts
+    - perl-namespace-clean # namespace-clean
+    - perl-module-cpants-analyse # Module-CPANTS-Analyse
+    - perl-test-deep # Test-Deep
+    - perl-test-warnings # Test-Warnings
+    - perl-module-build-tiny # Module-Build-Tiny
+    - perl-test-tester # Test-Tester
+
+  run:
+    - perl
+    - perl-module-cpants-analyse # Module-CPANTS-Analyse
+    - perl-namespace-clean # namespace-clean
+    - perl-dist-checkconflicts # Dist-CheckConflicts
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Test-Kwalitee
+  license: perl_5
+  summary: 'test the Kwalitee of a distribution before you release it'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,48 @@
+package:
+  name: perl-sub-exporter-formethods
+  version: !!str 0.100051
+
+source:
+  fn: Sub-Exporter-ForMethods-0.100051.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Sub-Exporter-ForMethods-0.100051.tar.gz
+  md5: 30612b05a2a3e9a2c31174daa858befb
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-sub-name # Sub-Name
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-sub-exporter # Sub-Exporter
+
+  run:
+    - perl
+    - perl-sub-name # Sub-Name
+    - perl-sub-exporter # Sub-Exporter
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Sub-Exporter-ForMethods
+  license: perl_5
+  summary: 'helper routines for using Sub::Exporter to build methods'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,55 @@
+package:
+  name: perl-file-sharedir-projectdistdir
+  version: !!str 0.5.2
+
+source:
+  fn: File-ShareDir-ProjectDistDir-0.5.2.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/File-ShareDir-ProjectDistDir-0.5.2.tar.gz
+  md5: a20a0c8b8116fa4e0033e23a95c7b272
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-path-finddev # Path-FindDev
+    - perl-path-isdev # Path-IsDev
+    - perl-path-class # Path-Class
+    - perl-path-tiny # Path-Tiny
+    - perl-file-sharedir # File-ShareDir
+    - perl-sub-exporter # Sub-Exporter
+
+  run:
+    - perl
+    - perl-path-finddev # Path-FindDev
+    - perl-path-isdev # Path-IsDev
+    - perl-path-class # Path-Class
+    - perl-path-tiny # Path-Tiny
+    - perl-sub-exporter # Sub-Exporter
+    - perl-file-sharedir # File-ShareDir
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/File-ShareDir-ProjectDistDir
+  license: perl_5
+  summary: "Simple set-and-forget using of a '/share' directory in your projects root"
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

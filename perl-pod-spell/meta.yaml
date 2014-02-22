@@ -1,0 +1,51 @@
+package:
+  name: perl-pod-spell
+  version: !!str 1.14
+
+source:
+  fn: Pod-Spell-1.14.tar.gz
+  url: http://cpan.metacpan.org/authors/id/X/XE/XENO/Pod-Spell-1.14.tar.gz
+  md5: 3923e820f247b8d1fd59b39ffdaa9185
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-lingua-en-inflect # Lingua-EN-Inflect
+    - perl-class-tiny # Class-Tiny
+    - perl-file-sharedir-projectdistdir # File-ShareDir-ProjectDistDir
+    - perl-test-deep # Test-Deep
+    - perl-file-sharedir-install # File-ShareDir-Install
+
+  run:
+    - perl
+    - perl-lingua-en-inflect # Lingua-EN-Inflect
+    - perl-class-tiny # Class-Tiny
+    - perl-file-sharedir-projectdistdir # File-ShareDir-ProjectDistDir
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://metacpan.org/dist/Pod-Spell
+  license: artistic_2
+  summary: 'a formatter for spellchecking Pod'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

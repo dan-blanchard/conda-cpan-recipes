@@ -1,0 +1,50 @@
+package:
+  name: perl-dist-zilla-plugin-prepender
+  version: !!str 1.112280
+
+source:
+  fn: Dist-Zilla-Plugin-Prepender-1.112280.tar.gz
+  url: http://cpan.metacpan.org/authors/id/J/JQ/JQUELIN/Dist-Zilla-Plugin-Prepender-1.112280.tar.gz
+  md5: e71ad6a1f40f1c6abd8c1b3405e2f300
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-moosex-has-sugar # MooseX-Has-Sugar
+    - perl-dist-zilla # Dist-Zilla
+    - perl-path-class # Path-Class
+    - perl-moose # Moose
+
+  run:
+    - perl
+    - perl-dist-zilla # Dist-Zilla
+    - perl-moose # Moose
+    - perl-moosex-has-sugar # MooseX-Has-Sugar
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://search.cpan.org/dist/Dist-Zilla-Plugin-Prepender/
+  license: perl_5
+  summary: 'prepend lines at the top of your perl files'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

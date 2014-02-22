@@ -1,0 +1,49 @@
+package:
+  name: perl-test-deep-json
+  version: !!str 0.02
+
+source:
+  fn: Test-Deep-JSON-0.02.tar.gz
+  url: http://cpan.metacpan.org/authors/id/M/MO/MOTEMEN/Test-Deep-JSON-0.02.tar.gz
+  md5: 90b2f60664e8fb3ef3eae5669b4970df
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-json # JSON
+    - perl-test-deep # Test-Deep
+    - perl-exporter-lite # Exporter-Lite
+
+  run:
+    - perl
+    - perl-test-deep # Test-Deep
+    - perl-exporter-lite # Exporter-Lite
+    - perl-json # JSON
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Test-Deep-JSON
+  license: perl_5
+  summary: 'Compare JSON with Test::Deep'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
