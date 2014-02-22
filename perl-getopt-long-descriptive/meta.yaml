@@ -1,0 +1,49 @@
+package:
+  name: perl-getopt-long-descriptive
+  version: !!str 0.096
+
+source:
+  fn: Getopt-Long-Descriptive-0.096.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Getopt-Long-Descriptive-0.096.tar.gz
+  md5: 78708f771a8a5e43824591758e2f5325
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-test-warnings 0.005 # Test-Warnings
+    - perl-test-fatal # Test-Fatal
+
+  run:
+    - perl
+    - perl-sub-exporter 0.972 # Sub-Exporter
+    - perl-params-validate 0.97 # Params-Validate
+    - perl-sub-exporter # Sub-Exporter
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Getopt-Long-Descriptive
+  license: perl_5
+  summary: 'Getopt::Long, but simpler and more powerful'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

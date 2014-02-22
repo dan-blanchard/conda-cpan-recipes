@@ -1,0 +1,67 @@
+package:
+  name: perl-dist-zilla-plugin-checkselfdependency
+  version: !!str 0.007
+
+source:
+  fn: Dist-Zilla-Plugin-CheckSelfDependency-0.007.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-CheckSelfDependency-0.007.tar.gz
+  md5: c26dd49dc1a16e379fb8a02cea12861c
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla-plugin-modulebuildtiny 0.004 # Dist-Zilla-Plugin-ModuleBuildTiny
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-dist-zilla-pluginbundle-author-ether 0.031 # Dist-Zilla-PluginBundle-Author-ETHER
+    - perl-dist-zilla-plugin-github # Dist-Zilla-Plugin-GitHub
+    - perl-cpan-changes 0.19 # CPAN-Changes
+    - perl-path-tiny # Path-Tiny
+    - perl-test-fatal # Test-Fatal
+    - perl-dist-zilla 5.012 # Dist-Zilla
+    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
+    - perl-test-cleannamespaces # Test-CleanNamespaces
+    - perl-module-build-tiny 0.034 # Module-Build-Tiny
+    - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
+    - perl-test-kwalitee 1.12 # Test-Kwalitee
+    - perl-dist-zilla # Dist-Zilla
+    - perl-test-notabs # Test-NoTabs
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-test-warnings # Test-Warnings
+    - perl-dist-zilla-plugin-bootstrap-lib # Dist-Zilla-Plugin-Bootstrap-lib
+    - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
+    - perl-dist-zilla-plugin-makemaker-fallback # Dist-Zilla-Plugin-MakeMaker-Fallback
+
+  run:
+    - perl
+    - perl-dist-zilla 5 # Dist-Zilla
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-moose # Moose
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-CheckSelfDependency
+  license: perl_5
+  summary: 'Check if your distribution declares a dependency on itself'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

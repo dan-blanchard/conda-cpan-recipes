@@ -18,26 +18,20 @@ source:
 requirements:
   build:
     - perl
-    - perl-module-build 0.34 # Module-Build
     - perl-test-deep # Test-Deep
 
   run:
     - perl
     - perl-ppix-regexp 0.027 # PPIx-Regexp
     - perl-exception-class 1.23 # Exception-Class
-    - perl-version 0.77 # version
     - perl-perl-tidy # Perl-Tidy
     - perl-b-keywords 1.05 # B-Keywords
-    - perl-text-parsewords 3 # Text-ParseWords
     - perl-ppi 1.215 # PPI
     - perl-io-string # IO-String
     - perl-email-address 1.889 # Email-Address
     - perl-ppix-utilities 1.001 # PPIx-Utilities
     - perl-pod-spell 1 # Pod-Spell
     - perl-config-tiny 2 # Config-Tiny
-    - perl-module-pluggable 3.1 # Module-Pluggable
-    - perl-test-simple 0.92 # Test-Simple
-    - perl-exporter 5.63 # Exporter
     - perl-string-format 1.13 # String-Format
     - perl-list-moreutils 0.19 # List-MoreUtils
     - perl-task-weaken # Task-Weaken

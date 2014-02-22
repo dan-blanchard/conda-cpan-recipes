@@ -18,14 +18,10 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-simple 1.02 # Test-Simple
-    - perl-extutils-makemaker 6.42 # ExtUtils-MakeMaker
 
   run:
     - perl
-    - perl-test-simple 0.42 # Test-Simple
     - perl-hook-lexwrap 0.20 # Hook-LexWrap
-    - perl-pathtools 0.80 # PathTools
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

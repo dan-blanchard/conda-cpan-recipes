@@ -19,8 +19,6 @@ requirements:
   build:
     - perl
     - perl-dist-zilla # Dist-Zilla
-    - perl-test-simple 0.96 # Test-Simple
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
 
   run:
     - perl

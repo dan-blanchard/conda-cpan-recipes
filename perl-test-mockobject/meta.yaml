@@ -1,0 +1,49 @@
+package:
+  name: perl-test-mockobject
+  version: !!str 1.20120301
+
+source:
+  fn: Test-MockObject-1.20120301.tar.gz
+  url: http://cpan.metacpan.org/authors/id/C/CH/CHROMATIC/Test-MockObject-1.20120301.tar.gz
+  md5: 020ee433827e4e33ffe873eeb3e16048
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-exception # Test-Exception
+    - perl-test-warn 0.23 # Test-Warn
+
+  run:
+    - perl
+    - perl-universal-isa 1.20110614 # UNIVERSAL-isa
+    - perl-universal-can 1.20110617 # UNIVERSAL-can
+    - perl-test-warn 0.23 # Test-Warn
+    - perl-test-exception 0.31 # Test-Exception
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Test-MockObject
+  license: perl_5
+  summary: 'Perl extension for emulating troublesome interfaces'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

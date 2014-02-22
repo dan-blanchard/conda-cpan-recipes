@@ -1,0 +1,56 @@
+package:
+  name: perl-config-mvp
+  version: !!str 2.200007
+
+source:
+  fn: Config-MVP-2.200007.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Config-MVP-2.200007.tar.gz
+  md5: 6890447ae38d453e0125f953885a3722
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-test-fatal # Test-Fatal
+
+  run:
+    - perl
+    - perl-moose # Moose
+    - perl-try-tiny # Try-Tiny
+    - perl-tie-ixhash # Tie-IxHash
+    - perl-params-util # Params-Util
+    - perl-role-hasmessage # Role-HasMessage
+    - perl-class-load 0.17 # Class-Load
+    - perl-role-identifiable # Role-Identifiable
+    - perl-throwable # Throwable
+    - perl-module-runtime # Module-Runtime
+    - perl-moosex-oneargnew # MooseX-OneArgNew
+    - perl-moose 0.91 # Moose
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Config-MVP
+  license: perl_5
+  summary: 'multivalue-property package-oriented configuration'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

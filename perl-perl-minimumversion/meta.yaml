@@ -19,9 +19,6 @@ requirements:
   build:
     - perl
     - perl-test-script 1.03 # Test-Script
-    - perl-pathtools 0.80 # PathTools
-    - perl-extutils-makemaker 6.59 # ExtUtils-MakeMaker
-    - perl-test-simple 0.47 # Test-Simple
 
   run:
     - perl
@@ -30,8 +27,6 @@ requirements:
     - perl-ppix-regexp 0.029 # PPIx-Regexp
     - perl-params-util 0.25 # Params-Util
     - perl-ppi 1.215 # PPI
-    - perl-scalar-list-utils 1.20 # Scalar-List-Utils
-    - perl-version 0.76 # version
     - perl-file-find-rule-perl 1.04 # File-Find-Rule-Perl
 
 # test:

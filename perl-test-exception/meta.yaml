@@ -18,13 +18,9 @@ source:
 requirements:
   build:
     - perl
-    - perl-module-build 0.38 # Module-Build
 
   run:
     - perl
-    - perl-test-simple 1.07 # Test-Simple
-    - perl-test-harness 2.03 # Test-Harness
-    - perl-test-simple 0.7 # Test-Simple
     - perl-sub-uplevel 0.18 # Sub-Uplevel
 
 # test:

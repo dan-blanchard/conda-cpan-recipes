@@ -20,7 +20,6 @@ requirements:
     - perl
     - perl-dist-zilla 5.006 # Dist-Zilla
     - perl-test-cpan-meta # Test-CPAN-Meta
-    - perl-test-simple 0.94 # Test-Simple
     - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
     - perl-dist-zilla-pluginbundle-author-ether 0.021 # Dist-Zilla-PluginBundle-Author-ETHER
     - perl-dist-zilla-plugin-surgicalpodweaver # Dist-Zilla-Plugin-SurgicalPodWeaver
@@ -39,7 +38,6 @@ requirements:
     - perl-test-fatal # Test-Fatal
     - perl-cpan-changes 0.19 # CPAN-Changes
     - perl-dist-zilla-plugin-contributorsfromgit # Dist-Zilla-Plugin-ContributorsFromGit
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
     - perl-pod-coverage-moose 0.02 # Pod-Coverage-Moose
     - perl-test-notabs # Test-NoTabs
 
@@ -51,7 +49,6 @@ requirements:
     - perl-namespace-autoclean 0.08 # namespace-autoclean
     - perl-moose 1.06 # Moose
     - perl-module-runtime # Module-Runtime
-    - perl-scalar-list-utils 1.19 # Scalar-List-Utils
     - perl-sub-exporter # Sub-Exporter
 
 # test:

@@ -1,0 +1,43 @@
+package:
+  name: perl-http-date
+  version: !!str 6.02
+
+source:
+  fn: HTTP-Date-6.02.tar.gz
+  url: http://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Date-6.02.tar.gz
+  md5: 52b7a0d5982d61be1edb217751d7daba
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/HTTP-Date
+  license: perl_5
+  summary: 'date conversion routines'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

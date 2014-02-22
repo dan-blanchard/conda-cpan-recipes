@@ -19,23 +19,17 @@ requirements:
   build:
     - perl
     - perl-test-object 0.07 # Test-Object
-    - perl-extutils-makemaker 6.42 # ExtUtils-MakeMaker
-    - perl-class-inspector 1.22 # Class-Inspector
-    - perl-test-simple 0.86 # Test-Simple
-    - perl-file-remove 1.42 # File-Remove
     - perl-test-nowarnings 0.084 # Test-NoWarnings
+    - perl-file-remove 1.42 # File-Remove
     - perl-test-subcalls 1.07 # Test-SubCalls
+    - perl-class-inspector 1.22 # Class-Inspector
 
   run:
     - perl
-    - perl-clone 0.30 # Clone
     - perl-list-moreutils 0.16 # List-MoreUtils
-    - perl-digest-md5 2.35 # Digest-MD5
-    - perl-pathtools 0.84 # PathTools
-    - perl-scalar-list-utils 1.20 # Scalar-List-Utils
     - perl-io-string 1.07 # IO-String
     - perl-params-util 1.00 # Params-Util
-    - perl-storable 2.17 # Storable
+    - perl-clone 0.30 # Clone
     - perl-task-weaken # Task-Weaken
 
 # test:

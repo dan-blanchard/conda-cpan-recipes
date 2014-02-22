@@ -23,13 +23,11 @@ requirements:
     - perl-dist-zilla 5.012 # Dist-Zilla
     - perl-path-tiny # Path-Tiny
     - perl-dist-zilla-plugin-bootstrap-lib # Dist-Zilla-Plugin-Bootstrap-lib
-    - perl-extutils-makemaker 6.17 # ExtUtils-MakeMaker
     - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
     - perl-dist-zilla # Dist-Zilla
-    - perl-file-pushd # File-pushd
     - perl-test-pod 1.41 # Test-Pod
     - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
-    - perl-test-simple 0.96 # Test-Simple
+    - perl-file-pushd # File-pushd
 
   run:
     - perl
@@ -41,7 +39,6 @@ requirements:
     - perl-dist-zilla-plugin-checkprereqsindexed 0.002 # Dist-Zilla-Plugin-CheckPrereqsIndexed
     - perl-dist-zilla-plugin-podweaver # Dist-Zilla-Plugin-PodWeaver
     - perl-pod-elemental-transformer-list 0.102000 # Pod-Elemental-Transformer-List
-    - perl-autodie 2.00 # autodie
     - perl-dist-zilla-plugin-test-version # Dist-Zilla-Plugin-Test-Version
     - perl-moose-autobox # Moose-Autobox
     - perl-dist-zilla-plugin-checkextratests # Dist-Zilla-Plugin-CheckExtraTests

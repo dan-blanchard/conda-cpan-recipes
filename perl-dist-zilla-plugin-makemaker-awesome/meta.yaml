@@ -20,7 +20,6 @@ requirements:
     - perl
     - perl-test-cpan-meta # Test-CPAN-Meta
     - perl-path-tiny # Path-Tiny
-    - perl-test-simple 0.94 # Test-Simple
     - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
     - perl-dist-zilla-plugin-modulebuildtiny 0.004 # Dist-Zilla-Plugin-ModuleBuildTiny
     - perl-dist-zilla 5.012 # Dist-Zilla
@@ -31,7 +30,6 @@ requirements:
     - perl-test-kwalitee 1.12 # Test-Kwalitee
     - perl-pod-weaver 4 # Pod-Weaver
     - perl-test-deep # Test-Deep
-    - perl-test-simple 0.88 # Test-Simple
     - perl-pod-weaver-section-contributors # Pod-Weaver-Section-Contributors
     - perl-dist-zilla-plugin-bootstrap-lib # Dist-Zilla-Plugin-Bootstrap-lib
     - perl-dist-zilla # Dist-Zilla
@@ -40,15 +38,13 @@ requirements:
     - perl-dist-zilla-plugin-makemaker-fallback # Dist-Zilla-Plugin-MakeMaker-Fallback
     - perl-cpan-changes 0.19 # CPAN-Changes
     - perl-dist-zilla-plugin-contributorsfromgit # Dist-Zilla-Plugin-ContributorsFromGit
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
     - perl-test-notabs # Test-NoTabs
     - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
 
   run:
     - perl
-    - perl-dist-zilla 5.001 # Dist-Zilla
     - perl-moose # Moose
-    - perl-cpan-meta-requirements 2.121 # CPAN-Meta-Requirements
+    - perl-dist-zilla 5.001 # Dist-Zilla
     - perl-moosex-types # MooseX-Types
     - perl-namespace-autoclean # namespace-autoclean
     - perl-moose-autobox # Moose-Autobox

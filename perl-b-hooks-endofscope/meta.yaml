@@ -19,19 +19,15 @@ requirements:
   build:
     - perl
     - perl-dist-zilla 5.008 # Dist-Zilla
-    - perl-extutils-cbuilder 0.26 # ExtUtils-CBuilder
     - perl-test-cpan-meta # Test-CPAN-Meta
     - perl-dist-zilla-plugin-github # Dist-Zilla-Plugin-GitHub
     - perl-cpan-changes 0.19 # CPAN-Changes
     - perl-pod-weaver-section-contributors # Pod-Weaver-Section-Contributors
-    - perl-test-simple 0.94 # Test-Simple
     - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
     - perl-dist-zilla-plugin-meta-dynamic-config # Dist-Zilla-Plugin-Meta-Dynamic-Config
     - perl-dist-zilla-pluginbundle-author-ether # Dist-Zilla-PluginBundle-Author-ETHER
     - perl-test-kwalitee 1.12 # Test-Kwalitee
     - perl-dist-zilla # Dist-Zilla
-    - perl-test-simple 0.88 # Test-Simple
     - perl-dist-zilla-plugin-contributorsfromgit # Dist-Zilla-Plugin-ContributorsFromGit
     - perl-dist-zilla-plugin-surgicalpodweaver # Dist-Zilla-Plugin-SurgicalPodWeaver
     - perl-test-pod 1.41 # Test-Pod

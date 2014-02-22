@@ -18,8 +18,6 @@ source:
 requirements:
   build:
     - perl
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
-    - perl-test-simple 0.96 # Test-Simple
     - perl-test-fatal # Test-Fatal
 
   run:

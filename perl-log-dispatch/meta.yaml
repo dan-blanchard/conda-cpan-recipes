@@ -1,0 +1,48 @@
+package:
+  name: perl-log-dispatch
+  version: !!str 2.41
+
+source:
+  fn: Log-Dispatch-2.41.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Log-Dispatch-2.41.tar.gz
+  md5: 85a384db37c7fe4e5db90c0bbc376da2
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-dist-checkconflicts 0.02 # Dist-CheckConflicts
+
+  run:
+    - perl
+    - perl-dist-checkconflicts 0.02 # Dist-CheckConflicts
+    - perl-params-validate 0.15 # Params-Validate
+    - perl-class-load # Class-Load
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Log-Dispatch
+  license: artistic_2
+  summary: 'Dispatches messages to one or more outputs'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

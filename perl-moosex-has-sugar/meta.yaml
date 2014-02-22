@@ -1,0 +1,77 @@
+package:
+  name: perl-moosex-has-sugar
+  version: !!str 1.000000
+
+source:
+  fn: MooseX-Has-Sugar-1.000000.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/MooseX-Has-Sugar-1.000000.tar.gz
+  md5: a85817c205b14c026587113625e91203
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-dist-zilla-plugin-checkextratests # Dist-Zilla-Plugin-CheckExtraTests
+    - perl-dist-zilla-pluginbundle-author-kentnl 2.012000 # Dist-Zilla-PluginBundle-Author-KENTNL
+    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
+    - perl-dist-zilla-plugin-minimumperl # Dist-Zilla-Plugin-MinimumPerl
+    - perl-dist-zilla-plugin-podweaver # Dist-Zilla-Plugin-PodWeaver
+    - perl-moosex-types # MooseX-Types
+    - perl-dist-zilla-plugin-metaprovides-package 1.14000001 # Dist-Zilla-Plugin-MetaProvides-Package
+    - perl-dist-zilla-plugin-metadata-builtwith # Dist-Zilla-Plugin-MetaData-BuiltWith
+    - perl-moose # Moose
+    - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
+    - perl-dist-zilla-plugin-test-perl-critic # Dist-Zilla-Plugin-Test-Perl-Critic
+    - perl-dist-zilla-plugin-git-nextversion-sanitized # Dist-Zilla-Plugin-Git-NextVersion-Sanitized
+    - perl-dist-zilla-plugin-test-cpan-changes # Dist-Zilla-Plugin-Test-CPAN-Changes
+    - perl-test-kwalitee 1.12 # Test-Kwalitee
+    - perl-dist-zilla-plugin-git-nextrelease # Dist-Zilla-Plugin-Git-NextRelease
+    - perl-dist-zilla-plugin-test-kwalitee # Dist-Zilla-Plugin-Test-Kwalitee
+    - perl-dist-zilla-plugin-test-minimumversion # Dist-Zilla-Plugin-Test-MinimumVersion
+    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
+    - perl-dist-zilla # Dist-Zilla
+    - perl-dist-zilla-plugin-twitter # Dist-Zilla-Plugin-Twitter
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-dist-zilla-plugin-eoltests # Dist-Zilla-Plugin-EOLTests
+    - perl-dist-zilla-plugin-authority 1.006 # Dist-Zilla-Plugin-Authority
+    - perl-namespace-clean # namespace-clean
+    - perl-dist-zilla-plugin-test-compile-perfile # Dist-Zilla-Plugin-Test-Compile-PerFile
+    - perl-dist-zilla-plugin-readmeanyfrompod # Dist-Zilla-Plugin-ReadmeAnyFromPod
+    - perl-test-fatal # Test-Fatal
+    - perl-cpan-changes 0.19 # CPAN-Changes
+    - perl-dist-zilla-plugin-readmefrompod # Dist-Zilla-Plugin-ReadmeFromPod
+    - perl-dist-zilla-plugin-prereqs-recommend-matchinstalled # Dist-Zilla-Plugin-Prereqs-Recommend-MatchInstalled
+    - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
+    - perl-dist-zilla-plugin-test-reportprereqs # Dist-Zilla-Plugin-Test-ReportPrereqs
+
+  run:
+    - perl
+    - perl-sub-exporter-progressive # Sub-Exporter-Progressive
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/MooseX-Has-Sugar
+  license: perl_5
+  summary: "Sugar Syntax for moose 'has' fields"
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

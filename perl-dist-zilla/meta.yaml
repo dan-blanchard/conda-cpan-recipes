@@ -19,12 +19,9 @@ requirements:
   build:
     - perl
     - perl-test-failwarnings # Test-FailWarnings
-    - perl-test-simple 0.96 # Test-Simple
-    - perl-test-fatal # Test-Fatal
     - perl-test-file-sharedir # Test-File-ShareDir
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
     - perl-file-sharedir-install 0.03 # File-ShareDir-Install
-    - perl-version 0.9901 # version
+    - perl-test-fatal # Test-Fatal
     - perl-test-pod 1.41 # Test-Pod
     - perl-software-license # Software-License
 
@@ -35,7 +32,6 @@ requirements:
     - perl-path-tiny # Path-Tiny
     - perl-moose 0.92 # Moose
     - perl-datetime 0.44 # DateTime
-    - perl-cpan-meta-requirements 2.121 # CPAN-Meta-Requirements
     - perl-autobox 2.53 # autobox
     - perl-params-util # Params-Util
     - perl-termreadkey # TermReadKey
@@ -48,10 +44,8 @@ requirements:
     - perl-file-copy-recursive # File-Copy-Recursive
     - perl-software-license # Software-License
     - perl-moose # Moose
-    - perl-cpan-meta 2.120630 # CPAN-Meta
     - perl-file-sharedir-install 0.03 # File-ShareDir-Install
     - perl-json 2 # JSON
-    - perl-class-load 0.17 # Class-Load
     - perl-config-mvp-reader-ini 2 # Config-MVP-Reader-INI
     - perl-perl-prereqscanner 1.016 # Perl-PrereqScanner
     - perl-software-license 0.101370 # Software-License
@@ -65,7 +59,6 @@ requirements:
     - perl-sub-exporter # Sub-Exporter
     - perl-pod-eventual 0.091480 # Pod-Eventual
     - perl-moosex-role-parameterized # MooseX-Role-Parameterized
-    - perl-extutils-manifest 1.54 # ExtUtils-Manifest
     - perl-moose-autobox 0.10 # Moose-Autobox
     - perl-data-section 0.200002 # Data-Section
     - perl-mixin-linewise 0.100 # Mixin-Linewise
@@ -84,7 +77,7 @@ requirements:
     - perl-list-allutils # List-AllUtils
     - perl-ppi # PPI
     - perl-sub-exporter-formethods # Sub-Exporter-ForMethods
-    - perl-cpan-meta 2.101550 # CPAN-Meta
+    - perl-class-load 0.17 # Class-Load
     - perl-app-cmd 0.309 # App-Cmd
     - perl-app-cmd 0.306 # App-Cmd
     - perl-text-glob 0.08 # Text-Glob

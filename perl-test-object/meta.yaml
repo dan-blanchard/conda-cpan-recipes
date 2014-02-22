@@ -21,11 +21,6 @@ requirements:
 
   run:
     - perl
-    - perl-test-simple 0.33 # Test-Simple
-    - perl-test-simple 0.42 # Test-Simple
-    - perl-pathtools 0.80 # PathTools
-    - perl-scalar-list-utils 1.16 # Scalar-List-Utils
-    - perl-test-simple 1.02 # Test-Simple
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

@@ -19,8 +19,6 @@ requirements:
   build:
     - perl
     - perl-test-pod 1.41 # Test-Pod
-    - perl-test-simple 0.88 # Test-Simple
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
     - perl-test-requires 0.07 # Test-Requires
 
   run:

@@ -18,11 +18,9 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-simple 0.70 # Test-Simple
 
   run:
     - perl
-    - perl-parse-cpan-meta 0.02 # Parse-CPAN-Meta
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

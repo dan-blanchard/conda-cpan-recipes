@@ -19,9 +19,7 @@ requirements:
   build:
     - perl
     - perl-test-cpan-meta # Test-CPAN-Meta
-    - perl-test-simple 0.94 # Test-Simple
     - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
     - perl-dist-zilla-pluginbundle-author-ether 0.041 # Dist-Zilla-PluginBundle-Author-ETHER
     - perl-dist-zilla 5.013 # Dist-Zilla
     - perl-file-pushd # File-pushd
@@ -42,8 +40,6 @@ requirements:
     - perl-test-fatal # Test-Fatal
     - perl-cpan-changes 0.19 # CPAN-Changes
     - perl-dist-zilla-plugin-contributorsfromgit # Dist-Zilla-Plugin-ContributorsFromGit
-    - perl-test-simple 0.96 # Test-Simple
-    - perl-file-temp 0.18 # File-Temp
     - perl-test-notabs # Test-NoTabs
     - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
 

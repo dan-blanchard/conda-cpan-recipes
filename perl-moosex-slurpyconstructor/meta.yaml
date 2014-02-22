@@ -1,0 +1,47 @@
+package:
+  name: perl-moosex-slurpyconstructor
+  version: !!str 1.2
+
+source:
+  fn: MooseX-SlurpyConstructor-1.2.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-SlurpyConstructor-1.2.tar.gz
+  md5: 87e89d27f0d1b23cca7be5f2f51699f8
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-deep # Test-Deep
+    - perl-test-fatal # Test-Fatal
+
+  run:
+    - perl
+    - perl-moose 0.94 # Moose
+    - perl-namespace-autoclean # namespace-autoclean
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/MooseX-SlurpyConstructor
+  license: perl_5
+  summary: 'Make your object constructor collect all unknown attributes'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

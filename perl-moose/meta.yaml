@@ -24,7 +24,6 @@ requirements:
     - perl-padwalker # PadWalker
     - perl-datetime # DateTime
     - perl-path-tiny # Path-Tiny
-    - perl-test-simple 0.94 # Test-Simple
     - perl-dist-zilla-plugin-test-notabs # Dist-Zilla-Plugin-Test-NoTabs
     - perl-dist-zilla-plugin-metaprovides-package 1.15000002 # Dist-Zilla-Plugin-MetaProvides-Package
     - perl-dist-zilla-plugin-prereqs-authordeps # Dist-Zilla-Plugin-Prereqs-AuthorDeps
@@ -49,7 +48,6 @@ requirements:
     - perl-ipc-system-simple # IPC-System-Simple
     - perl-test-notabs # Test-NoTabs
     - perl-dist-zilla-plugin-test-kwalitee # Dist-Zilla-Plugin-Test-Kwalitee
-    - perl-extutils-cbuilder 0.27 # ExtUtils-CBuilder
     - perl-dist-zilla-plugin-checkextratests # Dist-Zilla-Plugin-CheckExtraTests
     - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
     - perl-dist-zilla-plugin-promptifstale # Dist-Zilla-Plugin-PromptIfStale
@@ -74,9 +72,7 @@ requirements:
     - perl-cpan-changes 0.19 # CPAN-Changes
     - perl-moosex-nonmoose # MooseX-NonMoose
     - perl-dist-zilla-plugin-test-compile 2.037 # Dist-Zilla-Plugin-Test-Compile
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
     - perl-regexp-common # Regexp-Common
-    - perl-test-simple 0.88 # Test-Simple
     - perl-pod-elemental-perlmunger 0.200001 # Pod-Elemental-PerlMunger
     - perl-dist-zilla-plugin-podweaver 4.004 # Dist-Zilla-Plugin-PodWeaver
     - perl-super # SUPER
@@ -98,19 +94,16 @@ requirements:
     - perl-list-moreutils 0.28 # List-MoreUtils
     - perl-class-load 0.09 # Class-Load
     - perl-module-runtime 0.014 # Module-Runtime
-    - perl-mro-compat 0.05 # MRO-Compat
     - perl-try-tiny 0.02 # Try-Tiny
     - perl-package-stash 0.32 # Package-Stash
-    - perl-task-weaken # Task-Weaken
+    - perl-mro-compat 0.05 # MRO-Compat
     - perl-dist-checkconflicts 0.02 # Dist-CheckConflicts
     - perl-devel-stacktrace 1.30 # Devel-StackTrace
     - perl-params-util 1.00 # Params-Util
     - perl-sub-name 0.05 # Sub-Name
     - perl-package-stash-xs 0.24 # Package-Stash-XS
-    - perl-parent 0.223 # parent
     - perl-data-optlist 0.107 # Data-OptList
-    - perl-scalar-list-utils 1.19 # Scalar-List-Utils
-    - perl-carp 1.22 # Carp
+    - perl-task-weaken # Task-Weaken
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

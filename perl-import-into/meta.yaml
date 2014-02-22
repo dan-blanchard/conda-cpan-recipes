@@ -1,0 +1,43 @@
+package:
+  name: perl-import-into
+  version: !!str 1.002000
+
+source:
+  fn: Import-Into-1.002000.tar.gz
+  url: http://cpan.metacpan.org/authors/id/H/HA/HAARG/Import-Into-1.002000.tar.gz
+  md5: 6c51779d26d665d9858a71117d52e8a5
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Import-Into
+  license: p
+  summary: 'import packages into other packages'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

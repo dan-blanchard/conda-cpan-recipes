@@ -20,7 +20,6 @@ requirements:
     - perl
     - perl-test-cpan-meta # Test-CPAN-Meta
     - perl-path-tiny # Path-Tiny
-    - perl-test-simple 0.94 # Test-Simple
     - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
     - perl-test-warnings # Test-Warnings
     - perl-dist-zilla-plugin-modulebuildtiny # Dist-Zilla-Plugin-ModuleBuildTiny
@@ -39,7 +38,6 @@ requirements:
     - perl-dist-zilla-plugin-makemaker-fallback # Dist-Zilla-Plugin-MakeMaker-Fallback
     - perl-test-fatal # Test-Fatal
     - perl-cpan-changes 0.19 # CPAN-Changes
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
     - perl-test-notabs # Test-NoTabs
     - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
 

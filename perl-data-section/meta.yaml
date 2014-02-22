@@ -1,0 +1,47 @@
+package:
+  name: perl-data-section
+  version: !!str 0.200005
+
+source:
+  fn: Data-Section-0.200005.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Data-Section-0.200005.tar.gz
+  md5: 2913d322fc927799150f37c51f2ff9a5
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-test-failwarnings # Test-FailWarnings
+
+  run:
+    - perl
+    - perl-mro-compat 0.09 # MRO-Compat
+    - perl-sub-exporter 0.979 # Sub-Exporter
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Data-Section
+  license: p
+  summary: 'read multiple hunks of data out of your DATA section'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

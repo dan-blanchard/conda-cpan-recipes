@@ -1,0 +1,45 @@
+package:
+  name: perl-uri-find
+  version: !!str 20111103
+
+source:
+  fn: URI-Find-20111103.tar.gz
+  url: http://cpan.metacpan.org/authors/id/M/MS/MSCHWERN/URI-Find-20111103.tar.gz
+  md5: 7129448917d708aeaab2153a5adfbf0d
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+    - perl-uri 1.00 # URI
+    - perl-uri 5.00 # URI
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://search.cpan.org/dist/URI-Find
+  license: perl_5
+  summary: 'Find URIs in arbitrary text'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

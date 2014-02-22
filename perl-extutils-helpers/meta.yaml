@@ -21,12 +21,9 @@ requirements:
     - perl-test-pod 1.41 # Test-Pod
     - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
     - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
 
   run:
     - perl
-    - perl-exporter 5.57 # Exporter
-    - perl-text-parsewords 3.24 # Text-ParseWords
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

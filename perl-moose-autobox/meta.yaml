@@ -18,7 +18,6 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-simple 0.89 # Test-Simple
     - perl-test-exception 0.21 # Test-Exception
 
   run:

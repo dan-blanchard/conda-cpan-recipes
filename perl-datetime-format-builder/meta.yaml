@@ -1,0 +1,48 @@
+package:
+  name: perl-datetime-format-builder
+  version: !!str 0.81
+
+source:
+  fn: DateTime-Format-Builder-0.81.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-Builder-0.81.tar.gz
+  md5: 21d950a9425c0173d6191697bf9dc4dc
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-pod 1.41 # Test-Pod
+
+  run:
+    - perl
+    - perl-datetime-format-strptime 1.04 # DateTime-Format-Strptime
+    - perl-params-validate 0.72 # Params-Validate
+    - perl-class-factory-util 1.6 # Class-Factory-Util
+    - perl-datetime 1.00 # DateTime
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/DateTime-Format-Builder
+  license: artistic_2
+  summary: 'Create DateTime parser classes and objects.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

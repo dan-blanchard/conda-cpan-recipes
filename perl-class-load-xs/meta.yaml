@@ -1,0 +1,64 @@
+package:
+  name: perl-class-load-xs
+  version: !!str 0.08
+
+source:
+  fn: Class-Load-XS-0.08.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Load-XS-0.08.tar.gz
+  md5: c4d992d7023fa3015322916850ee95d9
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-module-implementation 0.04 # Module-Implementation
+    - perl-dist-zilla-pluginbundle-author-ether # Dist-Zilla-PluginBundle-Author-ETHER
+    - perl-cpan-changes 0.19 # CPAN-Changes
+    - perl-dist-zilla-plugin-contributorsfromgit # Dist-Zilla-Plugin-ContributorsFromGit
+    - perl-dist-zilla-plugin-ppport # Dist-Zilla-Plugin-PPPort
+    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
+    - perl-test-fatal # Test-Fatal
+    - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
+    - perl-test-kwalitee 1.12 # Test-Kwalitee
+    - perl-dist-zilla # Dist-Zilla
+    - perl-test-requires # Test-Requires
+    - perl-dist-zilla 5.013 # Dist-Zilla
+    - perl-test-without-module # Test-Without-Module
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-dist-zilla-plugin-surgicalpodweaver # Dist-Zilla-Plugin-SurgicalPodWeaver
+    - perl-dist-zilla-plugin-github # Dist-Zilla-Plugin-GitHub
+    - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
+    - perl-extutils-makemaker-dist-zilla-develop # ExtUtils-MakeMaker-Dist-Zilla-Develop
+    - perl-test-notabs # Test-NoTabs
+
+  run:
+    - perl
+    - perl-class-load 0.20 # Class-Load
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/moose/Class-Load-XS
+  license: artistic_2
+  summary: 'XS implementation of parts of Class::Load'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

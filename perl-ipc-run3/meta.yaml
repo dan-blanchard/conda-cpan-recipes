@@ -21,7 +21,6 @@ requirements:
 
   run:
     - perl
-    - perl-test-simple 0.31 # Test-Simple
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

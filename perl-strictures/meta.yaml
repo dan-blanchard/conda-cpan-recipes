@@ -1,0 +1,46 @@
+package:
+  name: perl-strictures
+  version: !!str 1.005003
+
+source:
+  fn: strictures-1.005003.tar.gz
+  url: http://cpan.metacpan.org/authors/id/H/HA/HAARG/strictures-1.005003.tar.gz
+  md5: 60dd1f1fab70a9da8494449dbb1130fb
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+    - perl-bareword-filehandles # bareword-filehandles
+    - perl-multidimensional # multidimensional
+    - perl-indirect # indirect
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/strictures
+  license: perl_5
+  summary: 'turn on strict and make all warnings fatal'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

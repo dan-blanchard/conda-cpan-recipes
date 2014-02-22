@@ -1,0 +1,60 @@
+package:
+  name: perl-test-tempdir
+  version: !!str 0.08
+
+source:
+  fn: Test-TempDir-0.08.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-TempDir-0.08.tar.gz
+  md5: 81542818c02d82caecfdfe14ccb4d281
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-use-ok # Test-use-ok
+    - perl-test-checkdeps 0.007 # Test-CheckDeps
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-cpan-changes 0.19 # CPAN-Changes
+    - perl-dist-zilla-pluginbundle-author-ether # Dist-Zilla-PluginBundle-Author-ETHER
+    - perl-dist-zilla # Dist-Zilla
+    - perl-test-requires # Test-Requires
+    - perl-test-kwalitee 1.08 # Test-Kwalitee
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-test-notabs # Test-NoTabs
+    - perl-dist-zilla 4.300039 # Dist-Zilla
+
+  run:
+    - perl
+    - perl-path-class # Path-Class
+    - perl-namespace-autoclean 0.08 # namespace-autoclean
+    - perl-sub-exporter # Sub-Exporter
+    - perl-moosex-types-path-class # MooseX-Types-Path-Class
+    - perl-moose # Moose
+    - perl-file-nfslock # File-NFSLock
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Test-TempDir
+  license: perl_5
+  summary: 'Temporary files support for testing.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

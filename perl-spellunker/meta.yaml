@@ -18,16 +18,13 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-cpan-meta # Test-CPAN-Meta
-    - perl-module-build 0.38 # Module-Build
-    - perl-test-simple 0.98 # Test-Simple
-    - perl-spellunker v0.2.7 # Spellunker
-    - perl-test-minimumversion 0.10108 # Test-MinimumVersion
     - perl-test-pod 1.41 # Test-Pod
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-test-minimumversion 0.10108 # Test-MinimumVersion
+    - perl-spellunker v0.2.7 # Spellunker
 
   run:
     - perl
-    - perl-pod-simple 3.26 # Pod-Simple
     - perl-regexp-common # Regexp-Common
     - perl-file-sharedir # File-ShareDir
 

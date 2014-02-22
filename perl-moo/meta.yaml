@@ -1,0 +1,56 @@
+package:
+  name: perl-moo
+  version: !!str 1.004002
+
+source:
+  fn: Moo-1.004002.tar.gz
+  url: http://cpan.metacpan.org/authors/id/H/HA/HAARG/Moo-1.004002.tar.gz
+  md5: 9eea0ee548baa8f1b6c42e5753e6290f
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-bareword-filehandles # bareword-filehandles
+    - perl-class-xsaccessor # Class-XSAccessor
+    - perl-test-fatal 0.003 # Test-Fatal
+    - perl-dist-checkconflicts 0.02 # Dist-CheckConflicts
+    - perl-multidimensional # multidimensional
+    - perl-indirect # indirect
+
+  run:
+    - perl
+    - perl-devel-globaldestruction 0.11 # Devel-GlobalDestruction
+    - perl-strictures 1.004003 # strictures
+    - perl-module-runtime 0.012 # Module-Runtime
+    - perl-role-tiny 1.003002 # Role-Tiny
+    - perl-class-method-modifiers 1.1 # Class-Method-Modifiers
+    - perl-dist-checkconflicts 0.02 # Dist-CheckConflicts
+    - perl-import-into 1.002 # Import-Into
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Moo
+  license: p
+  summary: 'Minimalist Object Orientation (with Moose compatibility)'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,50 @@
+package:
+  name: perl-dist-zilla-plugin-authority
+  version: !!str 1.006
+
+source:
+  fn: Dist-Zilla-Plugin-Authority-1.006.tar.gz
+  url: http://cpan.metacpan.org/authors/id/A/AP/APOCAL/Dist-Zilla-Plugin-Authority-1.006.tar.gz
+  md5: 394620cb354019145480a64da5ca2cec
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+    - perl-dist-zilla 4.300001 # Dist-Zilla
+    - perl-moose 1.01 # Moose
+    - perl-ppi 1.206 # PPI
+    - perl-file-homedir # File-HomeDir
+    - perl-moose 1.03 # Moose
+    - perl-dist-zilla # Dist-Zilla
+    - perl-dist-zilla 4.102345 # Dist-Zilla
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://search.cpan.org/dist/Dist-Zilla-Plugin-Authority/
+  license: perl_5
+  summary: 'Add the $AUTHORITY variable and metadata to your distribution'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

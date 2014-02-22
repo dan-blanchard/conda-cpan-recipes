@@ -1,0 +1,54 @@
+package:
+  name: perl-test-inline
+  version: !!str 2.213
+
+source:
+  fn: Test-Inline-2.213.tar.gz
+  url: http://cpan.metacpan.org/authors/id/A/AD/ADAMK/Test-Inline-2.213.tar.gz
+  md5: 1e83ff6f3157602f02ff81c2d0cbecc5
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-script 1.02 # Test-Script
+    - perl-test-classapi 1.02 # Test-ClassAPI
+
+  run:
+    - perl
+    - perl-file-find-rule 0.26 # File-Find-Rule
+    - perl-pod-tests 0.18 # Pod-Tests
+    - perl-file-slurp 9999.04 # File-Slurp
+    - perl-algorithm-dependency 1.02 # Algorithm-Dependency
+    - perl-file-flat 1.00 # File-Flat
+    - perl-file-chmod 0.31 # File-chmod
+    - perl-params-util 0.21 # Params-Util
+    - perl-config-tiny 2.00 # Config-Tiny
+    - perl-file-remove 0.37 # File-Remove
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Test-Inline
+  license: perl_5
+  summary: 'Embed your tests in your code, next to what is being tested'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

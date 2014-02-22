@@ -18,25 +18,16 @@ source:
 requirements:
   build:
     - perl
-    - perl-getopt-long 2.36 # Getopt-Long
-    - perl-extutils-helpers 0.020 # ExtUtils-Helpers
-    - perl-test-simple 0.88 # Test-Simple
-    - perl-extutils-config 0.003 # ExtUtils-Config
-    - perl-json-pp 2 # JSON-PP
-    - perl-extutils-installpaths 0.002 # ExtUtils-InstallPaths
     - perl-test-pod 1.41 # Test-Pod
-    - perl-exporter 5.57 # Exporter
-    - perl-test-harness # Test-Harness
+    - perl-extutils-installpaths 0.002 # ExtUtils-InstallPaths
+    - perl-extutils-config 0.003 # ExtUtils-Config
+    - perl-extutils-helpers 0.020 # ExtUtils-Helpers
 
   run:
     - perl
-    - perl-getopt-long 2.36 # Getopt-Long
-    - perl-extutils-helpers 0.020 # ExtUtils-Helpers
-    - perl-extutils-config 0.003 # ExtUtils-Config
-    - perl-json-pp 2 # JSON-PP
     - perl-extutils-installpaths 0.002 # ExtUtils-InstallPaths
-    - perl-exporter 5.57 # Exporter
-    - perl-test-harness # Test-Harness
+    - perl-extutils-config 0.003 # ExtUtils-Config
+    - perl-extutils-helpers 0.020 # ExtUtils-Helpers
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

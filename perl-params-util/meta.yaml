@@ -18,14 +18,9 @@ source:
 requirements:
   build:
     - perl
-    - perl-extutils-cbuilder 0.27 # ExtUtils-CBuilder
-    - perl-test-simple 0.42 # Test-Simple
-    - perl-extutils-makemaker 6.52 # ExtUtils-MakeMaker
-    - perl-pathtools 0.80 # PathTools
 
   run:
     - perl
-    - perl-scalar-list-utils 1.18 # Scalar-List-Utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

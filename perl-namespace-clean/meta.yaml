@@ -18,8 +18,6 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-simple 0.88 # Test-Simple
-    - perl-extutils-cbuilder 0.27 # ExtUtils-CBuilder
 
   run:
     - perl

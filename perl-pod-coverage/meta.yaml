@@ -21,9 +21,7 @@ requirements:
 
   run:
     - perl
-    - perl-pod-parser 0.21 # Pod-Parser
     - perl-devel-symdump 2.01 # Devel-Symdump
-    - perl-pod-parser 1.13 # Pod-Parser
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

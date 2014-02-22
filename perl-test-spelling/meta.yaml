@@ -1,0 +1,46 @@
+package:
+  name: perl-test-spelling
+  version: !!str 0.19
+
+source:
+  fn: Test-Spelling-0.19.tar.gz
+  url: http://cpan.metacpan.org/authors/id/S/SA/SARTAK/Test-Spelling-0.19.tar.gz
+  md5: 32ac3fcbd8f4f80a8b035c15feaab353
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-tester # Test-Tester
+
+  run:
+    - perl
+    - perl-pod-spell 1.01 # Pod-Spell
+    - perl-ipc-run3 0.044 # IPC-Run3
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/sartak/test-spelling/tree
+  license: perl_5
+  summary: 'check for spelling errors in POD files'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

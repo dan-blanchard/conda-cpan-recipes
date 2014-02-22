@@ -18,12 +18,9 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-simple 0.96 # Test-Simple
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
-    - perl-test-differences # Test-Differences
-    - perl-test-deep # Test-Deep
-    - perl-version 0.9901 # version
     - perl-test-pod 1.41 # Test-Pod
+    - perl-test-deep # Test-Deep
+    - perl-test-differences # Test-Differences
 
   run:
     - perl

@@ -1,0 +1,57 @@
+package:
+  name: perl-hash-util-fieldhash-compat
+  version: !!str 0.05
+
+source:
+  fn: Hash-Util-FieldHash-Compat-0.05.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Hash-Util-FieldHash-Compat-0.05.tar.gz
+  md5: b45b7f5881df812391be057e9e800cbf
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-use-ok # Test-use-ok
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-dist-zilla-plugin-github # Dist-Zilla-Plugin-GitHub
+    - perl-cpan-changes 0.19 # CPAN-Changes
+    - perl-dist-zilla-plugin-contributorsfromgit # Dist-Zilla-Plugin-ContributorsFromGit
+    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
+    - perl-dist-zilla-pluginbundle-author-ether # Dist-Zilla-PluginBundle-Author-ETHER
+    - perl-test-kwalitee 1.12 # Test-Kwalitee
+    - perl-dist-zilla # Dist-Zilla
+    - perl-dist-zilla 5.013 # Dist-Zilla
+    - perl-test-notabs # Test-NoTabs
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-dist-zilla-plugin-meta-dynamic-config # Dist-Zilla-Plugin-Meta-Dynamic-Config
+    - perl-tie-refhash-weak 0.08 # Tie-RefHash-Weak
+
+  run:
+    - perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Hash-Util-FieldHash-Compat
+  license: perl_5
+  summary: 'Use Hash::Util::FieldHash or ties, depending on availability.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

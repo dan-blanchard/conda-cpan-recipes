@@ -1,0 +1,44 @@
+package:
+  name: perl-test-perl-critic
+  version: !!str 1.02
+
+source:
+  fn: Test-Perl-Critic-1.02.tar.gz
+  url: http://cpan.metacpan.org/authors/id/T/TH/THALJEF/Test-Perl-Critic-1.02.tar.gz
+  md5: 7f1e75cc3d933e4deab5097c5b8c812d
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+    - perl-perl-critic 1.105 # Perl-Critic
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://perlcritic.com
+  license: perl_5
+  summary: 'Use Perl::Critic in test programs.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

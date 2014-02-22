@@ -18,13 +18,10 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-simple 0.96 # Test-Simple
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
-    - perl-test-differences # Test-Differences
-    - perl-ppi # PPI
-    - perl-version 0.9901 # version
     - perl-test-pod 1.41 # Test-Pod
+    - perl-ppi # PPI
     - perl-software-license # Software-License
+    - perl-test-differences # Test-Differences
 
   run:
     - perl

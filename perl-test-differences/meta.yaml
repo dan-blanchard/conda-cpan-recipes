@@ -18,12 +18,10 @@ source:
 requirements:
   build:
     - perl
-    - perl-module-build 0.36 # Module-Build
 
   run:
     - perl
     - perl-text-diff 0.35 # Text-Diff
-    - perl-data-dumper 2.126 # Data-Dumper
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

@@ -18,16 +18,11 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-simple 0.32 # Test-Simple
-    - perl-test-simple 1.02 # Test-Simple
-    - perl-extutils-makemaker 6.42 # ExtUtils-MakeMaker
 
   run:
     - perl
     - perl-ipc-run3 0.034 # IPC-Run3
     - perl-probe-perl 0.01 # Probe-Perl
-    - perl-test-simple 0.62 # Test-Simple
-    - perl-pathtools 0.80 # PathTools
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

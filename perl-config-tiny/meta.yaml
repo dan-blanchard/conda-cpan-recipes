@@ -18,10 +18,6 @@ source:
 requirements:
   build:
     - perl
-    - perl-file-temp 0.22 # File-Temp
-    - perl-pathtools 3.3 # PathTools
-    - perl-module-build 0.34 # Module-Build
-    - perl-test-simple 0.47 # Test-Simple
 
   run:
     - perl

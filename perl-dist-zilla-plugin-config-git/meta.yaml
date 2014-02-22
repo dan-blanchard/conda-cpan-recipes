@@ -1,0 +1,54 @@
+package:
+  name: perl-dist-zilla-plugin-config-git
+  version: !!str 0.92
+
+source:
+  fn: Dist-Zilla-Plugin-Config-Git-0.92.tar.gz
+  url: http://cpan.metacpan.org/authors/id/B/BB/BBYRD/Dist-Zilla-Plugin-Config-Git-0.92.tar.gz
+  md5: f8a4b2013eb31cbed150bc8850d9b13a
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-checkdeps 0.010 # Test-CheckDeps
+    - perl-cpan-changes 0.19 # CPAN-Changes
+    - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-test-notabs # Test-NoTabs
+    - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
+
+  run:
+    - perl
+    - perl-moosex-types 0.06 # MooseX-Types
+    - perl-string-errf 0.001 # String-Errf
+    - perl-dist-zilla 1.000 # Dist-Zilla
+    - perl-moose 0.34 # Moose
+    - perl-namespace-clean 0.06 # namespace-clean
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/SineSwiper/Dist-Zilla-Plugin-Config-Git
+  license: a
+  summary: 'Plugin configuration containing settings for a Git repo'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

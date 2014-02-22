@@ -1,0 +1,64 @@
+package:
+  name: perl-moosex-types-common
+  version: !!str 0.001012
+
+source:
+  fn: MooseX-Types-Common-0.001012.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-Common-0.001012.tar.gz
+  md5: 9acfbf718d46a9ee1d2198d6b59e40fa
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla-plugin-modulebuildtiny 0.004 # Dist-Zilla-Plugin-ModuleBuildTiny
+    - perl-dist-zilla 5.006 # Dist-Zilla
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-dist-zilla-plugin-github # Dist-Zilla-Plugin-GitHub
+    - perl-cpan-changes 0.19 # CPAN-Changes
+    - perl-pod-weaver-section-contributors # Pod-Weaver-Section-Contributors
+    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
+    - perl-module-build-tiny 0.030 # Module-Build-Tiny
+    - perl-test-warnings 0.005 # Test-Warnings
+    - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
+    - perl-test-kwalitee 1.12 # Test-Kwalitee
+    - perl-dist-zilla # Dist-Zilla
+    - perl-dist-zilla-pluginbundle-author-ether 0.021 # Dist-Zilla-PluginBundle-Author-ETHER
+    - perl-test-deep # Test-Deep
+    - perl-dist-zilla-plugin-contributorsfromgit # Dist-Zilla-Plugin-ContributorsFromGit
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-test-warnings # Test-Warnings
+    - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
+    - perl-test-notabs # Test-NoTabs
+    - perl-dist-zilla-plugin-makemaker-fallback # Dist-Zilla-Plugin-MakeMaker-Fallback
+
+  run:
+    - perl
+    - perl-moosex-types # MooseX-Types
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/moose/MooseX-Types-Common
+  license: p
+  summary: 'A library of commonly used type constraints'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

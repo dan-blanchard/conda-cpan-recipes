@@ -18,8 +18,6 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-simple 0.94 # Test-Simple
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
 
   run:
     - perl

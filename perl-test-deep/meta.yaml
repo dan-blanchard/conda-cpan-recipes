@@ -23,7 +23,6 @@ requirements:
     - perl
     - perl-test-nowarnings 0.02 # Test-NoWarnings
     - perl-test-tester 0.04 # Test-Tester
-    - perl-scalar-list-utils 1.09 # Scalar-List-Utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

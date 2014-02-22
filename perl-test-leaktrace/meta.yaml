@@ -18,12 +18,9 @@ source:
 requirements:
   build:
     - perl
-    - perl-extutils-makemaker 6.42 # ExtUtils-MakeMaker
 
   run:
     - perl
-    - perl-exporter 5.57 # Exporter
-    - perl-test-simple 0.62 # Test-Simple
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

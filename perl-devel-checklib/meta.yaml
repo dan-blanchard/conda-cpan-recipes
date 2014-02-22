@@ -18,12 +18,10 @@ source:
 requirements:
   build:
     - perl
-    - perl-test-simple 0.62 # Test-Simple
     - perl-io-captureoutput 1.0801 # IO-CaptureOutput
 
   run:
     - perl
-    - perl-file-temp 0.16 # File-Temp
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

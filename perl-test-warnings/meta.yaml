@@ -24,9 +24,7 @@ requirements:
     - perl-dist-zilla-plugin-github # Dist-Zilla-Plugin-GitHub
     - perl-cpan-changes 0.19 # CPAN-Changes
     - perl-pod-weaver-section-contributors # Pod-Weaver-Section-Contributors
-    - perl-test-simple 0.94 # Test-Simple
     - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
     - perl-test-tester 0.108 # Test-Tester
     - perl-test-kwalitee 1.12 # Test-Kwalitee
     - perl-pod-weaver 4 # Pod-Weaver

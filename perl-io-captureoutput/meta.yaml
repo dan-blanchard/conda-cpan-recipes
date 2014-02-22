@@ -18,13 +18,9 @@ source:
 requirements:
   build:
     - perl
-    - perl-module-build 0.36 # Module-Build
-    - perl-test-simple 0.62 # Test-Simple
-    - perl-pathtools 3.27 # PathTools
 
   run:
     - perl
-    - perl-file-temp 0.16 # File-Temp
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

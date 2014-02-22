@@ -20,9 +20,7 @@ requirements:
     - perl
     - perl-dist-zilla 5.006 # Dist-Zilla
     - perl-test-cpan-meta # Test-CPAN-Meta
-    - perl-test-simple 0.96 # Test-Simple
     - perl-dist-zilla-plugin-perlversionprereqs # Dist-Zilla-Plugin-PerlVersionPrereqs
-    - perl-extutils-makemaker 6.17 # ExtUtils-MakeMaker
     - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
     - perl-dist-zilla-plugin-onlycoreprereqs 0.003 # Dist-Zilla-Plugin-OnlyCorePrereqs
     - perl-dist-zilla # Dist-Zilla

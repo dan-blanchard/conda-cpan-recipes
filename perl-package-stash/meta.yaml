@@ -20,8 +20,6 @@ requirements:
     - perl
     - perl-test-leaktrace # Test-LeakTrace
     - perl-test-fatal # Test-Fatal
-    - perl-test-simple 0.88 # Test-Simple
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
     - perl-dist-checkconflicts 0.02 # Dist-CheckConflicts
     - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
     - perl-test-requires # Test-Requires

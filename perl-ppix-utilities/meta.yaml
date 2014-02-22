@@ -19,7 +19,6 @@ requirements:
   build:
     - perl
     - perl-ppi 1.208 # PPI
-    - perl-module-build 0.36 # Module-Build
     - perl-test-deep # Test-Deep
 
   run:

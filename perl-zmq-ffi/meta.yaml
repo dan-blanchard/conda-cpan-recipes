@@ -21,7 +21,6 @@ requirements:
     - perl-test-exception # Test-Exception
     - perl-ev # EV
     - perl-anyevent # AnyEvent
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
     - zeromq
 
   run:

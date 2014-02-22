@@ -1,0 +1,45 @@
+package:
+  name: perl-datetime-format-mysql
+  version: !!str 0.04
+
+source:
+  fn: DateTime-Format-MySQL-0.04.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-Format-MySQL-0.04.tar.gz
+  md5: f52377ecdeb19055ae64037fb1ef530e
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+    - perl-datetime-format-builder 0.6 # DateTime-Format-Builder
+    - perl-datetime # DateTime
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/DateTime-Format-MySQL
+  license: perl_5
+  summary: 'Parse and format MySQL dates and times'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

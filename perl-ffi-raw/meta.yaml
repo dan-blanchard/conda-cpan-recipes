@@ -22,7 +22,6 @@ requirements:
     - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
     - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
     - perl-devel-checklib # Devel-CheckLib
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
 
   run:
     - perl

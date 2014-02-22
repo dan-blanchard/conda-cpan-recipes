@@ -18,7 +18,6 @@ source:
 requirements:
   build:
     - perl
-    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
 
   run:
     - perl

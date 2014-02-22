@@ -18,15 +18,9 @@ source:
 requirements:
   build:
     - perl
-    - perl-module-build 0.30 # Module-Build
-    - perl-pod-simple 3.05 # Pod-Simple
-    - perl-test-simple 0.62 # Test-Simple
 
   run:
     - perl
-    - perl-pod-simple 3.05 # Pod-Simple
-    - perl-test-simple 0.62 # Test-Simple
-    - perl-test-simple 1.02 # Test-Simple
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm
