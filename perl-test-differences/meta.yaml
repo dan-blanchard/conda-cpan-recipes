@@ -1,0 +1,46 @@
+package:
+  name: perl-test-differences
+  version: !!str 0.61
+
+source:
+  fn: Test-Differences-0.61.tar.gz
+  url: http://cpan.metacpan.org/authors/id/O/OV/OVID/Test-Differences-0.61.tar.gz
+  md5: 8728047fbd04a32ffdbbc4304d635eb1
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-module-build 0.36 # Module-Build
+
+  run:
+    - perl
+    - perl-text-diff 0.35 # Text-Diff
+    - perl-data-dumper 2.126 # Data-Dumper
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Test-Differences
+  license: perl_5
+  summary: 'Test strings and data structures and show differences if not ok'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

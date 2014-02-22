@@ -1,0 +1,71 @@
+package:
+  name: perl-dist-zilla-plugin-makemaker-fallback
+  version: !!str 0.006
+
+source:
+  fn: Dist-Zilla-Plugin-MakeMaker-Fallback-0.006.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-MakeMaker-Fallback-0.006.tar.gz
+  md5: 795d3e6702db12bfcbb932e69046516a
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-path-tiny # Path-Tiny
+    - perl-test-simple 0.94 # Test-Simple
+    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
+    - perl-test-warnings # Test-Warnings
+    - perl-dist-zilla-plugin-modulebuildtiny # Dist-Zilla-Plugin-ModuleBuildTiny
+    - perl-dist-zilla 5.012 # Dist-Zilla
+    - perl-dist-zilla-plugin-github # Dist-Zilla-Plugin-GitHub
+    - perl-test-cleannamespaces # Test-CleanNamespaces
+    - perl-module-build-tiny 0.034 # Module-Build-Tiny
+    - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
+    - perl-test-kwalitee 1.12 # Test-Kwalitee
+    - perl-test-deep # Test-Deep
+    - perl-dist-zilla-pluginbundle-author-ether 0.024 # Dist-Zilla-PluginBundle-Author-ETHER
+    - perl-dist-zilla-plugin-mungefile-withdatasection 0.003 # Dist-Zilla-Plugin-MungeFile-WithDataSection
+    - perl-dist-zilla-plugin-bootstrap-lib # Dist-Zilla-Plugin-Bootstrap-lib
+    - perl-dist-zilla # Dist-Zilla
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-dist-zilla-plugin-makemaker-fallback # Dist-Zilla-Plugin-MakeMaker-Fallback
+    - perl-test-fatal # Test-Fatal
+    - perl-cpan-changes 0.19 # CPAN-Changes
+    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
+    - perl-test-notabs # Test-NoTabs
+    - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
+
+  run:
+    - perl
+    - perl-dist-zilla-plugin-makemaker-awesome 0.13 # Dist-Zilla-Plugin-MakeMaker-Awesome
+    - perl-dist-zilla # Dist-Zilla
+    - perl-namespace-autoclean # namespace-autoclean
+    - perl-moose # Moose
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-MakeMaker-Fallback
+  license: perl_5
+  summary: 'Generate a Makefile.PL containing a warning for legacy users'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

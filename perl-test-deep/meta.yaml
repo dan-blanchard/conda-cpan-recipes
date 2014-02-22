@@ -1,0 +1,46 @@
+package:
+  name: perl-test-deep
+  version: !!str 0.112
+
+source:
+  fn: Test-Deep-0.112.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-Deep-0.112.tar.gz
+  md5: 8568575c2ebfd793574250ddb7da6ac8
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+    - perl-test-nowarnings 0.02 # Test-NoWarnings
+    - perl-test-tester 0.04 # Test-Tester
+    - perl-scalar-list-utils 1.09 # Scalar-List-Utils
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://github.com/rjbs/Test-Deep/
+  license: u
+  summary: 'Extremely flexible deep comparison'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

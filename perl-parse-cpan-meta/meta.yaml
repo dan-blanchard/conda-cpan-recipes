@@ -1,0 +1,58 @@
+package:
+  name: perl-parse-cpan-meta
+  version: !!str 1.4413
+
+source:
+  fn: Parse-CPAN-Meta-1.4413.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Parse-CPAN-Meta-1.4413.tar.gz
+  md5: e0fcfd402ca31bbe4ebcd52f92198ed9
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla-pluginbundle-dagolden 0.053 # Dist-Zilla-PluginBundle-DAGOLDEN
+    - perl-dist-zilla-plugin-makemaker-highlander 0.003 # Dist-Zilla-Plugin-MakeMaker-Highlander
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-pathtools 0.80 # PathTools
+    - perl-dist-zilla-plugin-duallife # Dist-Zilla-Plugin-DualLife
+    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
+    - perl-test-simple 0.47 # Test-Simple
+    - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
+    - perl-dist-zilla # Dist-Zilla
+    - perl-dist-zilla 5.013 # Dist-Zilla
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
+
+  run:
+    - perl
+    - perl-cpan-meta-yaml 0.011 # CPAN-Meta-YAML
+    - perl-json-pp 2.27200 # JSON-PP
+    - perl-pathtools 0.80 # PathTools
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/Perl-Toolchain-Gang/Parse-CPAN-Meta
+  license: perl_5
+  summary: 'Parse META.yml and META.json CPAN metadata files'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

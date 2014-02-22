@@ -1,0 +1,66 @@
+package:
+  name: perl-b-hooks-endofscope
+  version: !!str 0.13
+
+source:
+  fn: B-Hooks-EndOfScope-0.13.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/B-Hooks-EndOfScope-0.13.tar.gz
+  md5: 6cdaaa88a39054cd13aacad7bd2171da
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla 5.008 # Dist-Zilla
+    - perl-extutils-cbuilder 0.26 # ExtUtils-CBuilder
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-dist-zilla-plugin-github # Dist-Zilla-Plugin-GitHub
+    - perl-cpan-changes 0.19 # CPAN-Changes
+    - perl-pod-weaver-section-contributors # Pod-Weaver-Section-Contributors
+    - perl-test-simple 0.94 # Test-Simple
+    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
+    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
+    - perl-dist-zilla-plugin-meta-dynamic-config # Dist-Zilla-Plugin-Meta-Dynamic-Config
+    - perl-dist-zilla-pluginbundle-author-ether # Dist-Zilla-PluginBundle-Author-ETHER
+    - perl-test-kwalitee 1.12 # Test-Kwalitee
+    - perl-dist-zilla # Dist-Zilla
+    - perl-test-simple 0.88 # Test-Simple
+    - perl-dist-zilla-plugin-contributorsfromgit # Dist-Zilla-Plugin-ContributorsFromGit
+    - perl-dist-zilla-plugin-surgicalpodweaver # Dist-Zilla-Plugin-SurgicalPodWeaver
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-devel-hide 0.0007 # Devel-Hide
+    - perl-dist-zilla-plugins-cjm # Dist-Zilla-Plugins-CJM
+    - perl-test-notabs # Test-NoTabs
+
+  run:
+    - perl
+    - perl-sub-exporter-progressive 0.001006 # Sub-Exporter-Progressive
+    - perl-module-runtime 0.012 # Module-Runtime
+    - perl-module-implementation 0.05 # Module-Implementation
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/B-Hooks-EndOfScope
+  license: perl_5
+  summary: 'Execute code after a scope finished compilation'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

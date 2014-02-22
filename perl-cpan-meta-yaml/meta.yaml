@@ -1,0 +1,53 @@
+package:
+  name: perl-cpan-meta-yaml
+  version: !!str 0.011
+
+source:
+  fn: CPAN-Meta-YAML-0.011.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-YAML-0.011.tar.gz
+  md5: a147b4a7218af8137f09f3f72364cb25
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla-plugin-makemaker-highlander 0.003 # Dist-Zilla-Plugin-MakeMaker-Highlander
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-test-simple 0.99 # Test-Simple
+    - perl-dist-zilla-pluginbundle-dagolden 0.060 # Dist-Zilla-PluginBundle-DAGOLDEN
+    - perl-extutils-makemaker 6.17 # ExtUtils-MakeMaker
+    - perl-dist-zilla 5.013 # Dist-Zilla
+    - perl-dist-zilla # Dist-Zilla
+    - perl-dist-zilla-plugin-doppelgaenger 0.007 # Dist-Zilla-Plugin-Doppelgaenger
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-dist-zilla-plugin-appendexternaldata # Dist-Zilla-Plugin-AppendExternalData
+
+  run:
+    - perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/dagolden/CPAN-Meta-YAML
+  license: perl_5
+  summary: 'Read and write a subset of YAML for CPAN Meta files'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

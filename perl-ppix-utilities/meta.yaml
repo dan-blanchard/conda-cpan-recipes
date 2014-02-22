@@ -1,0 +1,50 @@
+package:
+  name: perl-ppix-utilities
+  version: !!str 1.001000
+
+source:
+  fn: PPIx-Utilities-1.001000.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/EL/ELLIOTJS/PPIx-Utilities-1.001000.tar.gz
+  md5: 4dc113960205173cf114ae3bdaa37f61
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-ppi 1.208 # PPI
+    - perl-module-build 0.36 # Module-Build
+    - perl-test-deep # Test-Deep
+
+  run:
+    - perl
+    - perl-exception-class # Exception-Class
+    - perl-ppi 1.208 # PPI
+    - perl-readonly # Readonly
+    - perl-task-weaken # Task-Weaken
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/PPIx-Utilities
+  license: perl_5
+  summary: 'Extensions to PPI.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

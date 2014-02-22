@@ -1,0 +1,43 @@
+package:
+  name: perl-carp
+  version: !!str 1.32
+
+source:
+  fn: Carp-1.32.tar.gz
+  url: http://cpan.metacpan.org/authors/id/Z/ZE/ZEFRAM/Carp-1.32.tar.gz
+  md5: 5444092be474f23cda4c3d7ef8bf8c33
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Carp
+  license: perl_5
+  summary: 'alternative warn and die for modules'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

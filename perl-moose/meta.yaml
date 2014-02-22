@@ -1,0 +1,133 @@
+package:
+  name: perl-moose
+  version: !!str 2.1204
+
+source:
+  fn: Moose-2.1204.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Moose-2.1204.tar.gz
+  md5: f26ba55a9e72a76cfe78d8f0b5ab6f54
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-test-fatal 0.001 # Test-Fatal
+    - perl-locale-us # Locale-US
+    - perl-padwalker # PadWalker
+    - perl-datetime # DateTime
+    - perl-path-tiny # Path-Tiny
+    - perl-test-simple 0.94 # Test-Simple
+    - perl-dist-zilla-plugin-test-notabs # Dist-Zilla-Plugin-Test-NoTabs
+    - perl-dist-zilla-plugin-metaprovides-package 1.15000002 # Dist-Zilla-Plugin-MetaProvides-Package
+    - perl-dist-zilla-plugin-prereqs-authordeps # Dist-Zilla-Plugin-Prereqs-AuthorDeps
+    - perl-test-dependentmodules 0.13 # Test-DependentModules
+    - perl-algorithm-c3 # Algorithm-C3
+    - perl-declare-constraints-simple # Declare-Constraints-Simple
+    - perl-test-leaktrace # Test-LeakTrace
+    - perl-test-inline # Test-Inline
+    - perl-file-pushd # File-pushd
+    - perl-dist-zilla-plugin-eoltests # Dist-Zilla-Plugin-EOLTests
+    - perl-datetime-format-mysql # DateTime-Format-MySQL
+    - perl-file-find-rule # File-Find-Rule
+    - perl-module-refresh # Module-Refresh
+    - perl-dbm-deep # DBM-Deep
+    - perl-dist-zilla-plugin-git-remote-check # Dist-Zilla-Plugin-Git-Remote-Check
+    - perl-test-spelling # Test-Spelling
+    - perl-module-cpants-analyse 0.92 # Module-CPANTS-Analyse
+    - perl-dist-zilla-plugin-test-cpan-changes # Dist-Zilla-Plugin-Test-CPAN-Changes
+    - perl-test-deep # Test-Deep
+    - perl-test-kwalitee 1.15 # Test-Kwalitee
+    - perl-test-output # Test-Output
+    - perl-ipc-system-simple # IPC-System-Simple
+    - perl-test-notabs # Test-NoTabs
+    - perl-dist-zilla-plugin-test-kwalitee # Dist-Zilla-Plugin-Test-Kwalitee
+    - perl-extutils-cbuilder 0.27 # ExtUtils-CBuilder
+    - perl-dist-zilla-plugin-checkextratests # Dist-Zilla-Plugin-CheckExtraTests
+    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
+    - perl-dist-zilla-plugin-promptifstale # Dist-Zilla-Plugin-PromptIfStale
+    - perl-data-visitor # Data-Visitor
+    - perl-http-message # HTTP-Message
+    - perl-uri # URI
+    - perl-dist-checkconflicts 0.02 # Dist-CheckConflicts
+    - perl-datetime-calendar-mayan # DateTime-Calendar-Mayan
+    - perl-dist-zilla # Dist-Zilla
+    - perl-dist-zilla-pluginbundle-git-checkfor # Dist-Zilla-PluginBundle-Git-CheckFor
+    - perl-dist-zilla-plugin-contributorsfromgit # Dist-Zilla-Plugin-ContributorsFromGit
+    - perl-dist-zilla-plugin-checkchangeshascontent # Dist-Zilla-Plugin-CheckChangesHasContent
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-dist-zilla-plugin-conflicts # Dist-Zilla-Plugin-Conflicts
+    - perl-specio 0.07 # Specio
+    - perl-test-requires 0.05 # Test-Requires
+    - perl-dist-zilla-plugin-mojibaketests # Dist-Zilla-Plugin-MojibakeTests
+    - perl-class-load 0.07 # Class-Load
+    - perl-module-info # Module-Info
+    - perl-dist-zilla 5.012 # Dist-Zilla
+    - perl-dist-zilla-plugin-makemaker-awesome # Dist-Zilla-Plugin-MakeMaker-Awesome
+    - perl-cpan-changes 0.19 # CPAN-Changes
+    - perl-moosex-nonmoose # MooseX-NonMoose
+    - perl-dist-zilla-plugin-test-compile 2.037 # Dist-Zilla-Plugin-Test-Compile
+    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
+    - perl-regexp-common # Regexp-Common
+    - perl-test-simple 0.88 # Test-Simple
+    - perl-pod-elemental-perlmunger 0.200001 # Pod-Elemental-PerlMunger
+    - perl-dist-zilla-plugin-podweaver 4.004 # Dist-Zilla-Plugin-PodWeaver
+    - perl-super # SUPER
+    - perl-dist-zilla-plugin-surgicalpodweaver # Dist-Zilla-Plugin-SurgicalPodWeaver
+    - perl-test-memory-cycle # Test-Memory-Cycle
+    - perl-dist-zilla-plugin-authority # Dist-Zilla-Plugin-Authority
+    - perl-params-coerce # Params-Coerce
+    - perl-extutils-makemaker-dist-zilla-develop # ExtUtils-MakeMaker-Dist-Zilla-Develop
+    - perl-io-string # IO-String
+    - perl-dist-zilla-plugin-test-reportprereqs # Dist-Zilla-Plugin-Test-ReportPrereqs
+
+  run:
+    - perl
+    - perl-sub-exporter 0.980 # Sub-Exporter
+    - perl-package-deprecationmanager 0.11 # Package-DeprecationManager
+    - perl-class-load-xs 0.01 # Class-Load-XS
+    - perl-eval-closure 0.04 # Eval-Closure
+    - perl-devel-globaldestruction # Devel-GlobalDestruction
+    - perl-list-moreutils 0.28 # List-MoreUtils
+    - perl-class-load 0.09 # Class-Load
+    - perl-module-runtime 0.014 # Module-Runtime
+    - perl-mro-compat 0.05 # MRO-Compat
+    - perl-try-tiny 0.02 # Try-Tiny
+    - perl-package-stash 0.32 # Package-Stash
+    - perl-task-weaken # Task-Weaken
+    - perl-dist-checkconflicts 0.02 # Dist-CheckConflicts
+    - perl-devel-stacktrace 1.30 # Devel-StackTrace
+    - perl-params-util 1.00 # Params-Util
+    - perl-sub-name 0.05 # Sub-Name
+    - perl-package-stash-xs 0.24 # Package-Stash-XS
+    - perl-parent 0.223 # parent
+    - perl-data-optlist 0.107 # Data-OptList
+    - perl-scalar-list-utils 1.19 # Scalar-List-Utils
+    - perl-carp 1.22 # Carp
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://moose.perl.org/
+  license: perl_5
+  summary: 'A postmodern object system for Perl 5'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

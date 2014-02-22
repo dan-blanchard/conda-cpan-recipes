@@ -1,0 +1,46 @@
+package:
+  name: perl-pod-coverage
+  version: !!str 0.23
+
+source:
+  fn: Pod-Coverage-0.23.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Pod-Coverage-0.23.tar.gz
+  md5: 12229e553ee7887680ee3db11da5ee52
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+    - perl-pod-parser 0.21 # Pod-Parser
+    - perl-devel-symdump 2.01 # Devel-Symdump
+    - perl-pod-parser 1.13 # Pod-Parser
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Pod-Coverage
+  license: unknown
+  summary: 'Checks if the documentation of a module is comprehensive'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

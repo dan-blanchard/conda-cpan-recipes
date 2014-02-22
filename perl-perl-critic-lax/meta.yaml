@@ -1,0 +1,49 @@
+package:
+  name: perl-perl-critic-lax
+  version: !!str 0.010
+
+source:
+  fn: Perl-Critic-Lax-0.010.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Perl-Critic-Lax-0.010.tar.gz
+  md5: 34b2deb01e16d4d31b587782afd0c1c8
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-perl-critic # Perl-Critic
+    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
+    - perl-test-simple 0.96 # Test-Simple
+    - perl-version 0.9901 # version
+
+  run:
+    - perl
+    - perl-perl-critic # Perl-Critic
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Perl-Critic-Lax
+  license: perl_5
+  summary: 'policies that let you slide on common exceptions'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

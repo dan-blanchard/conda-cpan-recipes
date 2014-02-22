@@ -1,0 +1,70 @@
+package:
+  name: perl-class-load
+  version: !!str 0.21
+
+source:
+  fn: Class-Load-0.21.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Load-0.21.tar.gz
+  md5: 67674318b7b47b519abfd9f16292dc35
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-cpan-meta # Test-CPAN-Meta
+    - perl-test-simple 0.94 # Test-Simple
+    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
+    - perl-dist-zilla-pluginbundle-author-ether # Dist-Zilla-PluginBundle-Author-ETHER
+    - perl-dist-zilla 5.013 # Dist-Zilla
+    - perl-dist-zilla-plugin-surgicalpodweaver # Dist-Zilla-Plugin-SurgicalPodWeaver
+    - perl-dist-zilla-plugin-modulebuildtiny 0.004 # Dist-Zilla-Plugin-ModuleBuildTiny
+    - perl-dist-zilla-plugin-github # Dist-Zilla-Plugin-GitHub
+    - perl-module-build-tiny 0.034 # Module-Build-Tiny
+    - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
+    - perl-test-kwalitee 1.12 # Test-Kwalitee
+    - perl-test-simple 0.88 # Test-Simple
+    - perl-dist-zilla # Dist-Zilla
+    - perl-test-requires # Test-Requires
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-test-without-module # Test-Without-Module
+    - perl-dist-zilla-plugin-makemaker-fallback # Dist-Zilla-Plugin-MakeMaker-Fallback
+    - perl-test-fatal # Test-Fatal
+    - perl-cpan-changes 0.19 # CPAN-Changes
+    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
+    - perl-test-notabs # Test-NoTabs
+    - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
+
+  run:
+    - perl
+    - perl-module-implementation 0.04 # Module-Implementation
+    - perl-try-tiny # Try-Tiny
+    - perl-data-optlist # Data-OptList
+    - perl-module-runtime 0.012 # Module-Runtime
+    - perl-package-stash 0.14 # Package-Stash
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/moose/Class-Load
+  license: perl_5
+  summary: 'a working (require "Class::Name") and more'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

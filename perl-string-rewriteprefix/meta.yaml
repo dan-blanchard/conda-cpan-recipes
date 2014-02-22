@@ -1,0 +1,48 @@
+package:
+  name: perl-string-rewriteprefix
+  version: !!str 0.007
+
+source:
+  fn: String-RewritePrefix-0.007.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/String-RewritePrefix-0.007.tar.gz
+  md5: 7135a69bd8cf74cf17dba857b2372d16
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-extutils-makemaker 6.30 # ExtUtils-MakeMaker
+    - perl-test-simple 0.96 # Test-Simple
+    - perl-version 0.9901 # version
+
+  run:
+    - perl
+    - perl-sub-exporter 0.972 # Sub-Exporter
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/String-RewritePrefix
+  license: perl_5
+  summary: 'rewrite strings based on a set of known prefixes'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

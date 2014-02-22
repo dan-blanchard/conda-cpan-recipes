@@ -1,0 +1,59 @@
+package:
+  name: perl-module-build-tiny
+  version: !!str 0.035
+
+source:
+  fn: Module-Build-Tiny-0.035.tar.gz
+  url: http://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.035.tar.gz
+  md5: b47f196d2611c0eb99e8ff19acc30f31
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-getopt-long 2.36 # Getopt-Long
+    - perl-extutils-helpers 0.020 # ExtUtils-Helpers
+    - perl-test-simple 0.88 # Test-Simple
+    - perl-extutils-config 0.003 # ExtUtils-Config
+    - perl-json-pp 2 # JSON-PP
+    - perl-extutils-installpaths 0.002 # ExtUtils-InstallPaths
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-exporter 5.57 # Exporter
+    - perl-test-harness # Test-Harness
+
+  run:
+    - perl
+    - perl-getopt-long 2.36 # Getopt-Long
+    - perl-extutils-helpers 0.020 # ExtUtils-Helpers
+    - perl-extutils-config 0.003 # ExtUtils-Config
+    - perl-json-pp 2 # JSON-PP
+    - perl-extutils-installpaths 0.002 # ExtUtils-InstallPaths
+    - perl-exporter 5.57 # Exporter
+    - perl-test-harness # Test-Harness
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Module-Build-Tiny
+  license: perl_5
+  summary: 'A tiny replacement for Module::Build'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

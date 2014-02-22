@@ -1,0 +1,46 @@
+package:
+  name: perl-module-pluggable
+  version: !!str 5.1
+
+source:
+  fn: Module-Pluggable-5.1.tar.gz
+  url: http://cpan.metacpan.org/authors/id/S/SI/SIMONW/Module-Pluggable-5.1.tar.gz
+  md5: 1b71ed7a67ad8c048d1499540bc892ba
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-module-build 0.38 # Module-Build
+    - perl-test-simple 0.62 # Test-Simple
+
+  run:
+    - perl
+    - perl-pathtools 3.00 # PathTools
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Module-Pluggable
+  license: perl_5
+  summary: 'automatically give your module the ability to have plugins'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

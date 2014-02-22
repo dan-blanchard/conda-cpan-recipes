@@ -1,0 +1,49 @@
+package:
+  name: perl-perlio-utf8_strict
+  version: !!str 0.004
+
+source:
+  fn: PerlIO-utf8_strict-0.004.tar.gz
+  url: http://cpan.metacpan.org/authors/id/L/LE/LEONT/PerlIO-utf8_strict-0.004.tar.gz
+  md5: b631c8a8a674e4f41a47307bc56a7f0b
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-exception # Test-Exception
+    - perl-test-simple 0.88 # Test-Simple
+    - perl-pod-coverage-trustpod # Pod-Coverage-TrustPod
+    - perl-test-pod 1.41 # Test-Pod
+    - perl-test-pod-coverage 1.08 # Test-Pod-Coverage
+    - perl-module-build 0.3601 # Module-Build
+
+  run:
+    - perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/PerlIO-utf8_strict
+  license: perl_5
+  summary: 'Fast and correct UTF-8 IO'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
