@@ -6,14 +6,14 @@ source:
   fn: ZMQ-FFI-0.11.tar.gz
   url: http://cpan.metacpan.org/authors/id/C/CA/CALID/ZMQ-FFI-0.11.tar.gz
   md5: a3c1826eaf8d44c80253513ce453b5b2
-#  patches:
-   # List any patch files here
-   # - fix.patch
+  # patches:
+    # List any patch files here
+    # - util.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 3
 
 requirements:
   build:

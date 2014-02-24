@@ -1,16 +1,15 @@
 #!/bin/bash
 
-# Check for Mac vs Linux
-if [[ -z "$OSX_ARCH" ]]; then
-	export LD_LIBRARY_PATH=$PREFIX/lib
-else
-	export DYLD_FALLBACK_LIBRARY_PATH=$PREFIX/lib
-fi
+# Linux
+OLD_LD_LIBRARY_PATH=$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=$PREFIX/lib
+
+# OS X
+OLD_DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH
+export DYLD_FALLBACK_LIBRARY_PATH=$PREFIX/lib
 
 cpanm .
 
-# Add more build steps here, if they are necessary.
-
-# See
-# http://docs.continuum.io/conda/build.html
-# for a list of environment variables that are set during the build process.
+# Set these back after the build for the test phase
+export LD_LIBRARY_PATH=$OLD_LD_LIBRARY_PATH
+export DYLD_FALLBACK_LIBRARY_PATH=$OLD_DYLD_FALLBACK_LIBRARY_PATH
