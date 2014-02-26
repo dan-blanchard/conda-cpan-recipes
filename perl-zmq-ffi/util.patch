@@ -1,0 +1,24 @@
+--- lib/ZMQ/FFI/Util.pm
++++ lib/ZMQ/FFI/Util.pm.2
+@@ -8,6 +8,7 @@ package ZMQ::FFI::Util;
+ use strict;
+ use warnings;
+
++use File::Spec;
+ use FFI::Raw;
+ use Carp;
+ use Try::Tiny;
+@@ -38,6 +39,13 @@ sub zmq_soname {
+         libzmq.dylib libzmq.3.dylib libzmq.1.dylib
+     );
+
++    # Conda prefix (hard-coded but will handled by conda build)
++    my $conda_prefix = 'CONDA_PREFIX_PLACEHOLDER';
++    # Add prefix to each entry in soname list
++     for (@sonames) {
++        $_ = File::Spec->catfile($conda_prefix, $_);
++    }
++
+     my $soname;
+     FIND_SONAME:
+     for (@sonames) {

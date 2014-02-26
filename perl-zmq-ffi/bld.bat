@@ -1,3 +1,6 @@
+:: Use sed, assuming cygwin is installed
+sed -i -e "s,CONDA_PREFIX_PLACEHOLDER,$PREFIX\lib," .\lib\ZMQ\FFI\Util.pm
+
 cpanm .
 if errorlevel 1 exit 1
 

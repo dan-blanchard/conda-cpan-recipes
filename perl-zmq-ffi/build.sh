@@ -1,15 +1,6 @@
 #!/bin/bash
 
-# Linux
-OLD_LD_LIBRARY_PATH=$LD_LIBRARY_PATH
-export LD_LIBRARY_PATH=$PREFIX/lib
-
-# OS X
-OLD_DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH
-export DYLD_FALLBACK_LIBRARY_PATH=$PREFIX/lib
+# Hard-code environment prefix in Util.pm so that it gets replaced later.
+sed -i -e "s,CONDA_PREFIX_PLACEHOLDER,$PREFIX/lib," ./lib/ZMQ/FFI/Util.pm
 
 cpanm .
-
-# Set these back after the build for the test phase
-export LD_LIBRARY_PATH=$OLD_LD_LIBRARY_PATH
-export DYLD_FALLBACK_LIBRARY_PATH=$OLD_DYLD_FALLBACK_LIBRARY_PATH
