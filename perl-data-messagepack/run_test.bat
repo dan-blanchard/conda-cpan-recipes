@@ -1,2 +1,2 @@
-cpaperl -e 'use Data::MessagePack'
+perl -e 'use Data::MessagePack'
 if errorlevel 1 exit 1
