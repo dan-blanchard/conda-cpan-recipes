@@ -1,0 +1,43 @@
+package:
+  name: perl-object-tiny
+  version: !!str 1.08
+
+source:
+  fn: Object-Tiny-1.08.tar.gz
+  url: http://cpan.metacpan.org/authors/id/A/AD/ADAMK/Object-Tiny-1.08.tar.gz
+  md5: 01faa01e179ea95ec9e792dd0ead64f0
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Object-Tiny
+  license: perl_5
+  summary: 'Class building as simple as it gets'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
