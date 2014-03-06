@@ -7,37 +7,46 @@ source:
   url: http://cpan.metacpan.org/authors/id/C/CA/CALID/ZMQ-FFI-0.11.tar.gz
   md5: a3c1826eaf8d44c80253513ce453b5b2
   patches:
-    # List any patch files here
-    - util.patch
+   # List any patch files here
+   - util.patch
 
 build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 4
+  number: 6
 
 requirements:
   build:
     - perl
-    - perl-moo # Moo
-    - perl-anyevent # AnyEvent
-    - perl-try-tiny # Try-Tiny
-    - perl-math-int64 # Math-Int64
-    - perl-test-exception # Test-Exception
-    - perl-sub-exporter # Sub-Exporter
-    - perl-ev # EV
-    - perl-ffi-raw # FFI-Raw
-    - perl-namespace-autoclean # namespace-autoclean
-    - zeromq
+    - perl-extutils-makemaker
+    - perl-test-exception
+    - perl-math-bigint
+    - perl-if
+    - perl-ffi-raw
+    - perl-exporter
+    - perl-math-int64
+    - perl-moo
+    - perl-ev
+    - perl-anyevent
+    - perl-sub-exporter
+    - perl-time-hires
+    - perl-try-tiny
+    - perl-scalar-list-utils
+    - perl-namespace-autoclean
+    - perl-carp
+    - perl-test-simple
 
   run:
     - perl
-    - perl-moo # Moo
-    - perl-math-int64 # Math-Int64
-    - perl-try-tiny # Try-Tiny
-    - perl-sub-exporter # Sub-Exporter
-    - perl-ffi-raw # FFI-Raw
-    - perl-namespace-autoclean # namespace-autoclean
-    - zeromq
+    - perl-if
+    - perl-ffi-raw
+    - perl-exporter
+    - perl-math-int64
+    - perl-carp
+    - perl-sub-exporter
+    - perl-try-tiny
+    - perl-moo
+    - perl-namespace-autoclean
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm
