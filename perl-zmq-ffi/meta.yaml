@@ -7,8 +7,7 @@ source:
   url: http://cpan.metacpan.org/authors/id/C/CA/CALID/ZMQ-FFI-0.11.tar.gz
   md5: a3c1826eaf8d44c80253513ce453b5b2
   patches:
-   # List any patch files here
-   - util.patch
+    - util.patch
 
 build:
   # If this is a new build for the same version, increment the build
@@ -35,6 +34,7 @@ requirements:
     - perl-namespace-autoclean
     - perl-carp
     - perl-test-simple
+    - zeromq
 
   run:
     - perl
@@ -47,6 +47,7 @@ requirements:
     - perl-try-tiny
     - perl-moo
     - perl-namespace-autoclean
+    - zeromq
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm
