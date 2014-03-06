@@ -10,31 +10,39 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-moo # Moo
-    - perl-test-fatal # Test-Fatal
-    - perl-path-tiny # Path-Tiny
-    - perl-git-wrapper # Git-Wrapper
-    - perl-try-tiny # Try-Tiny
-    - perl-test-requires # Test-Requires
-    - perl-sub-exporter-progressive # Sub-Exporter-Progressive
-    - perl-sort-versions # Sort-Versions
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-git-wrapper
+    - perl-moo
+    - perl-path-tiny
+    - perl-sub-exporter-progressive
+    - perl-version
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-sort-versions
+    - perl-test-simple
+    - perl-carp
+    - perl-scalar-list-utils
 
   run:
     - perl
-    - perl-moo # Moo
-    - perl-try-tiny # Try-Tiny
-    - perl-path-tiny # Path-Tiny
-    - perl-git-wrapper # Git-Wrapper
-    - perl-sub-exporter-progressive # Sub-Exporter-Progressive
-    - perl-sort-versions # Sort-Versions
+    - perl-sub-exporter-progressive
+    - perl-path-tiny
+    - perl-carp
+    - perl-git-wrapper
+    - perl-try-tiny
+    - perl-sort-versions
+    - perl-moo
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

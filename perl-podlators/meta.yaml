@@ -1,0 +1,50 @@
+package:
+  name: perl-podlators
+  version: !!str v2.5.3
+
+source:
+  fn: podlators-2.5.3.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RR/RRA/podlators-2.5.3.tar.gz
+  md5: b7418e350400592021ff2de1d6212edd
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-encode
+    - perl-extutils-makemaker
+    - perl-pod-simple
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-encode
+    - perl-pod-simple
+
+# test:
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/podlators
+  license: perl_5
+  summary: 'Convert POD data to various other formats'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

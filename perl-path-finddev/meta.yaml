@@ -1,34 +1,42 @@
 package:
   name: perl-path-finddev
-  version: !!str 0.4.2
+  version: !!str 0.5.0
 
 source:
-  fn: Path-FindDev-0.4.2.tar.gz
-  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Path-FindDev-0.4.2.tar.gz
-  md5: 8f95bc7519db7d107ca9dad0b7c481cc
+  fn: Path-FindDev-0.5.0.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Path-FindDev-0.5.0.tar.gz
+  md5: e44e0ccec89b13d8efb187a6ef76c9c9
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-path-tiny # Path-Tiny
-    - perl-path-isdev # Path-IsDev
-    - perl-sub-exporter # Sub-Exporter
-    - perl-class-tiny # Class-Tiny
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-path-isdev
+    - perl-path-tiny
+    - perl-carp
+    - perl-version
+    - perl-sub-exporter
+    - perl-class-tiny
+    - perl-scalar-list-utils
+    - perl-test-simple
 
   run:
     - perl
-    - perl-path-tiny # Path-Tiny
-    - perl-path-isdev # Path-IsDev
-    - perl-sub-exporter # Sub-Exporter
-    - perl-class-tiny # Class-Tiny
+    - perl-path-isdev
+    - perl-path-tiny
+    - perl-carp
+    - perl-sub-exporter
+    - perl-class-tiny
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

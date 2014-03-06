@@ -1,29 +1,40 @@
 package:
   name: perl-test-warnings
-  version: !!str 0.013
+  version: !!str 0.014
 
 source:
-  fn: Test-Warnings-0.013.tar.gz
-  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Warnings-0.013.tar.gz
-  md5: 417033144b2fc373830a3547e9f96fab
+  fn: Test-Warnings-0.014.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-Warnings-0.014.tar.gz
+  md5: d8fed8dc1790bb76cc828ba354fb3a8c
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-module-build-tiny # Module-Build-Tiny
-    - perl-test-tester # Test-Tester
-    - perl-test-deep # Test-Deep
+    - perl-test-tester
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-exporter
+    - perl-test-deep
+    - perl-parent
+    - perl-version
+    - perl-module-build-tiny
+    - perl-test-simple
+    - perl-scalar-list-utils
 
   run:
     - perl
+    - perl-exporter
+    - perl-test-simple
+    - perl-parent
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm
@@ -38,7 +49,7 @@ requirements:
 
 about:
   home: https://github.com/karenetheridge/Test-Warnings
-  license: p
+  license: perl_5
   summary: 'Test for warnings and the lack of them'
 
 # See

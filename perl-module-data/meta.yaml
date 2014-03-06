@@ -10,27 +10,32 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-moo # Moo
-    - perl-data-dump # Data-Dump
-    - perl-test-fatal # Test-Fatal
-    - perl-module-runtime # Module-Runtime
-    - perl-path-scaninc # Path-ScanINC
-    - perl-path-class # Path-Class
+    - perl-path-class
+    - perl-module-build
+    - perl-module-runtime
+    - perl-path-scaninc
+    - perl-module-metadata
+    - perl-carp
+    - perl-test-fatal
+    - perl-data-dump
+    - perl-moo
+    - perl-test-simple
 
   run:
     - perl
-    - perl-moo # Moo
-    - perl-module-runtime # Module-Runtime
-    - perl-path-class # Path-Class
-    - perl-path-scaninc # Path-ScanINC
+    - perl-path-class
+    - perl-moo
+    - perl-module-runtime
+    - perl-module-metadata
+    - perl-path-scaninc
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

@@ -1,26 +1,26 @@
 package:
   name: perl-module-pluggable
-  version: !!str 5.1
+  version: !!str 4.7
 
 source:
-  fn: Module-Pluggable-5.1.tar.gz
-  url: http://cpan.metacpan.org/authors/id/S/SI/SIMONW/Module-Pluggable-5.1.tar.gz
-  md5: 1b71ed7a67ad8c048d1499540bc892ba
+  #fn: Module-Pluggable-4.7.tar.gz
+  #url: http://cpan.metacpan.org/authors/id/S/SI/SIMONW/Module-Pluggable-4.7.tar.gz
+  #md5: bde569c825bae9fe4a1cf06a7475f741
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
-    - perl
+    - perl 5.18.2
 
   run:
-    - perl
+    - perl 5.18.2
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

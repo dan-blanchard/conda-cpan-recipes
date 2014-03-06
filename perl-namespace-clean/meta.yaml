@@ -1,30 +1,32 @@
 package:
   name: perl-namespace-clean
-  version: !!str 0.24
+  version: !!str 0.25
 
 source:
-  fn: namespace-clean-0.24.tar.gz
-  url: http://cpan.metacpan.org/authors/id/R/RI/RIBASUSHI/namespace-clean-0.24.tar.gz
-  md5: bb6f2e2bba5f028a0e939cc6f2639fba
+  fn: namespace-clean-0.25.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RI/RIBASUSHI/namespace-clean-0.25.tar.gz
+  md5: da81d44f114a947b873f8df11a3c02ec
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-package-stash # Package-Stash
-    - perl-b-hooks-endofscope # B-Hooks-EndOfScope
+    - perl-extutils-cbuilder
+    - perl-b-hooks-endofscope
+    - perl-package-stash
+    - perl-test-simple
 
   run:
     - perl
-    - perl-package-stash # Package-Stash
-    - perl-b-hooks-endofscope # B-Hooks-EndOfScope
+    - perl-b-hooks-endofscope
+    - perl-package-stash
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

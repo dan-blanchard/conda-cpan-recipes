@@ -10,54 +10,71 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-devel-stacktrace # Devel-StackTrace
-    - perl-moosex-role-parameterized # MooseX-Role-Parameterized
-    - perl-datetime # DateTime
-    - perl-data-visitor # Data-Visitor
-    - perl-http-message # HTTP-Message
-    - perl-html-parser # HTML-Parser
-    - perl-try-tiny # Try-Tiny
-    - perl-carp-clan # Carp-Clan
-    - perl-datetime-format-strptime # DateTime-Format-Strptime
-    - perl-class-load # Class-Load
-    - perl-moose # Moose
-    - perl-lwp-protocol-https # LWP-Protocol-https
-    - perl-net-http # Net-HTTP
-    - perl-net-oauth # Net-OAuth
-    - perl-test-fatal # Test-Fatal
-    - perl-libwww-perl # libwww-perl
-    - perl-uri # URI
-    - perl-json # JSON
-    - perl-test-warn # Test-Warn
-    - perl-namespace-autoclean # namespace-autoclean
+    - perl-html-parser
+    - perl-module-build
+    - perl-net-http
+    - perl-class-load
+    - perl-test-warn
+    - perl-lib
+    - perl-datetime-format-strptime
+    - perl-lwp-protocol-https
+    - perl-pathtools
+    - perl-libnet
+    - perl-json
+    - perl-scalar-list-utils
+    - perl-data-visitor
+    - perl-moosex-role-parameterized
+    - perl-uri
+    - perl-carp-clan
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-carp
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-file-temp
+    - perl-test-simple
+    - perl-libwww-perl
+    - perl-http-message
+    - perl-net-oauth
+    - perl-moose
+    - perl-base
+    - perl-digest-sha
+    - perl-devel-stacktrace
+    - perl-time-hires
+    - perl-datetime
 
   run:
     - perl
-    - perl-net-http # Net-HTTP
-    - perl-moosex-role-parameterized # MooseX-Role-Parameterized
-    - perl-net-oauth # Net-OAuth
-    - perl-devel-stacktrace # Devel-StackTrace
-    - perl-datetime # DateTime
-    - perl-data-visitor # Data-Visitor
-    - perl-html-parser # HTML-Parser
-    - perl-carp-clan # Carp-Clan
-    - perl-uri # URI
-    - perl-try-tiny # Try-Tiny
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-lwp-protocol-https # LWP-Protocol-https
-    - perl-http-message # HTTP-Message
-    - perl-json # JSON
-    - perl-datetime-format-strptime # DateTime-Format-Strptime
-    - perl-class-load # Class-Load
-    - perl-moose # Moose
+    - perl-html-parser
+    - perl-try-tiny
+    - perl-class-load
+    - perl-datetime-format-strptime
+    - perl-carp-clan
+    - perl-libnet
+    - perl-json
+    - perl-data-visitor
+    - perl-uri
+    - perl-lwp-protocol-https
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-net-http
+    - perl-scalar-list-utils
+    - perl-moosex-role-parameterized
+    - perl-http-message
+    - perl-devel-stacktrace
+    - perl-moose
+    - perl-digest-sha
+    - perl-net-oauth
+    - perl-time-hires
+    - perl-datetime
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

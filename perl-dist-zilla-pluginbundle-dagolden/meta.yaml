@@ -10,99 +10,106 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-pod-elemental-transformer-list # Pod-Elemental-Transformer-List
-    - perl-dist-zilla-plugin-checkmetaresources # Dist-Zilla-Plugin-CheckMetaResources
-    - perl-pod-spell # Pod-Spell
-    - perl-path-tiny # Path-Tiny
-    - perl-pod-weaver # Pod-Weaver
-    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
-    - perl-dist-zilla-plugin-test-podspelling # Dist-Zilla-Plugin-Test-PodSpelling
-    - perl-pod-elemental-perlmunger # Pod-Elemental-PerlMunger
-    - perl-dist-zilla-plugin-prereqs-authordeps # Dist-Zilla-Plugin-Prereqs-AuthorDeps
-    - perl-dist-zilla-plugin-test-compile # Dist-Zilla-Plugin-Test-Compile
-    - perl-dist-zilla-plugin-test-version # Dist-Zilla-Plugin-Test-Version
-    - perl-moose-autobox # Moose-Autobox
-    - perl-file-pushd # File-pushd
-    - perl-dist-zilla-plugin-test-reportprereqs # Dist-Zilla-Plugin-Test-ReportPrereqs
-    - perl-moose # Moose
-    - perl-dist-zilla-plugin-copyfilesfrombuild # Dist-Zilla-Plugin-CopyFilesFromBuild
-    - perl-dist-zilla-plugin-test-perl-critic # Dist-Zilla-Plugin-Test-Perl-Critic
-    - perl-dist-zilla-plugin-minimumperl # Dist-Zilla-Plugin-MinimumPerl
-    - perl-dist-zilla-plugin-promptifstale # Dist-Zilla-Plugin-PromptIfStale
-    - perl-dist-zilla-plugin-bugtracker # Dist-Zilla-Plugin-Bugtracker
-    - perl-pod-weaver-section-contributors # Pod-Weaver-Section-Contributors
-    - perl-dist-zilla-plugin-checkprereqsindexed # Dist-Zilla-Plugin-CheckPrereqsIndexed
-    - perl-dist-zilla-plugin-metaprovides-package # Dist-Zilla-Plugin-MetaProvides-Package
-    - perl-dist-zilla-plugin-checkextratests # Dist-Zilla-Plugin-CheckExtraTests
-    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
-    - perl-dist-zilla-plugin-checkchangeshascontent # Dist-Zilla-Plugin-CheckChangesHasContent
-    - perl-dist-zilla # Dist-Zilla
-    - perl-pod-weaver-section-support # Pod-Weaver-Section-Support
-    - perl-dist-zilla-config-slicer # Dist-Zilla-Config-Slicer
-    - perl-dist-zilla-plugin-test-portability # Dist-Zilla-Plugin-Test-Portability
-    - perl-dist-zilla-role-pluginbundle-pluginremover # Dist-Zilla-Role-PluginBundle-PluginRemover
-    - perl-dist-zilla-plugin-test-minimumversion # Dist-Zilla-Plugin-Test-MinimumVersion
-    - perl-dist-zilla-plugin-podweaver # Dist-Zilla-Plugin-PodWeaver
-    - perl-pod-elemental-transformer-wikidoc # Pod-Elemental-Transformer-WikiDoc
-    - perl-dist-zilla-plugin-ourpkgversion # Dist-Zilla-Plugin-OurPkgVersion
-    - perl-dist-zilla-plugin-readmefrompod # Dist-Zilla-Plugin-ReadmeFromPod
-    - perl-dist-zilla-plugin-insertcopyright # Dist-Zilla-Plugin-InsertCopyright
-    - perl-dist-zilla-plugin-authority # Dist-Zilla-Plugin-Authority
-    - perl-dist-zilla-plugin-contributorsfromgit # Dist-Zilla-Plugin-ContributorsFromGit
-    - perl-test-portability-files # Test-Portability-Files
-    - perl-dist-zilla-plugin-taskweaver # Dist-Zilla-Plugin-TaskWeaver
-    - perl-namespace-autoclean # namespace-autoclean
+    - perl-dist-zilla
+    - perl-dist-zilla-plugin-git
+    - perl-dist-zilla-plugin-ourpkgversion
+    - perl-dist-zilla-plugin-copyfilesfrombuild
+    - perl-path-tiny
+    - perl-pod-weaver-section-contributors
+    - perl-pod-spell
+    - perl-dist-zilla-plugin-test-minimumversion
+    - perl-dist-zilla-plugin-checkchangeshascontent
+    - perl-pod-weaver
+    - perl-moose-autobox
+    - perl-pathtools
+    - perl-dist-zilla-config-slicer
+    - perl-dist-zilla-plugin-test-perl-critic
+    - perl-moose
+    - perl-dist-zilla-plugin-test-podspelling
+    - perl-test-portability-files
+    - perl-dist-zilla-plugin-authority
+    - perl-scalar-list-utils
+    - perl-file-pushd
+    - perl-dist-zilla-plugin-minimumperl
+    - perl-namespace-autoclean
+    - perl-dist-zilla-plugin-promptifstale
+    - perl-dist-zilla-plugin-githubmeta
+    - perl-dist-zilla-plugin-taskweaver
+    - perl-dist-zilla-plugin-contributorsfromgit
+    - perl-version
+    - perl-dist-zilla-plugin-prereqs-authordeps
+    - perl-dist-zilla-plugin-test-reportprereqs
+    - perl-dist-zilla-plugin-checkmetaresources
+    - perl-dist-zilla-plugin-test-portability
+    - perl-pod-elemental-perlmunger
+    - perl-test-simple
+    - perl-extutils-makemaker
+    - perl-pod-elemental-transformer-list
+    - perl-dist-zilla-plugin-readmefrompod
+    - perl-dist-zilla-plugin-metaprovides-package
+    - perl-pod-weaver-section-support
+    - perl-dist-zilla-role-pluginbundle-pluginremover
+    - perl-dist-zilla-plugin-insertcopyright
+    - perl-pod-elemental-transformer-wikidoc
+    - perl-dist-zilla-plugin-checkprereqsindexed
+    - perl-dist-zilla-plugin-bugtracker
+    - perl-dist-zilla-plugin-checkextratests
+    - perl-dist-zilla-plugin-test-compile
+    - perl-autodie
+    - perl-dist-zilla-plugin-test-version
+    - perl-dist-zilla-plugin-podweaver
 
   run:
     - perl
-    - perl-pod-elemental-transformer-list # Pod-Elemental-Transformer-List
-    - perl-dist-zilla-plugin-metaprovides-package # Dist-Zilla-Plugin-MetaProvides-Package
-    - perl-dist-zilla-plugin-checkmetaresources # Dist-Zilla-Plugin-CheckMetaResources
-    - perl-pod-spell # Pod-Spell
-    - perl-dist-zilla-config-slicer # Dist-Zilla-Config-Slicer
-    - perl-pod-weaver # Pod-Weaver
-    - perl-dist-zilla-plugin-githubmeta # Dist-Zilla-Plugin-GithubMeta
-    - perl-dist-zilla-plugin-test-podspelling # Dist-Zilla-Plugin-Test-PodSpelling
-    - perl-pod-elemental-perlmunger # Pod-Elemental-PerlMunger
-    - perl-dist-zilla-plugin-prereqs-authordeps # Dist-Zilla-Plugin-Prereqs-AuthorDeps
-    - perl-dist-zilla-plugin-test-compile # Dist-Zilla-Plugin-Test-Compile
-    - perl-dist-zilla-plugin-test-version # Dist-Zilla-Plugin-Test-Version
-    - perl-moose-autobox # Moose-Autobox
-    - perl-dist-zilla-role-pluginbundle-pluginremover # Dist-Zilla-Role-PluginBundle-PluginRemover
-    - perl-moose # Moose
-    - perl-dist-zilla-plugin-insertcopyright # Dist-Zilla-Plugin-InsertCopyright
-    - perl-dist-zilla-plugin-test-perl-critic # Dist-Zilla-Plugin-Test-Perl-Critic
-    - perl-dist-zilla-plugin-minimumperl # Dist-Zilla-Plugin-MinimumPerl
-    - perl-dist-zilla-plugin-promptifstale # Dist-Zilla-Plugin-PromptIfStale
-    - perl-dist-zilla-plugin-bugtracker # Dist-Zilla-Plugin-Bugtracker
-    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
-    - perl-dist-zilla-plugin-checkprereqsindexed # Dist-Zilla-Plugin-CheckPrereqsIndexed
-    - perl-dist-zilla-plugin-test-minimumversion # Dist-Zilla-Plugin-Test-MinimumVersion
-    - perl-dist-zilla-plugin-checkextratests # Dist-Zilla-Plugin-CheckExtraTests
-    - perl-pod-weaver-section-contributors # Pod-Weaver-Section-Contributors
-    - perl-dist-zilla-plugin-checkchangeshascontent # Dist-Zilla-Plugin-CheckChangesHasContent
-    - perl-dist-zilla # Dist-Zilla
-    - perl-pod-weaver-section-support # Pod-Weaver-Section-Support
-    - perl-pod-elemental-transformer-wikidoc # Pod-Elemental-Transformer-WikiDoc
-    - perl-dist-zilla-plugin-test-portability # Dist-Zilla-Plugin-Test-Portability
-    - perl-test-portability-files # Test-Portability-Files
-    - perl-dist-zilla-plugin-podweaver # Dist-Zilla-Plugin-PodWeaver
-    - perl-dist-zilla-plugin-contributorsfromgit # Dist-Zilla-Plugin-ContributorsFromGit
-    - perl-dist-zilla-plugin-ourpkgversion # Dist-Zilla-Plugin-OurPkgVersion
-    - perl-dist-zilla-plugin-readmefrompod # Dist-Zilla-Plugin-ReadmeFromPod
-    - perl-dist-zilla-plugin-copyfilesfrombuild # Dist-Zilla-Plugin-CopyFilesFromBuild
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-dist-zilla-plugin-authority # Dist-Zilla-Plugin-Authority
-    - perl-dist-zilla-plugin-taskweaver # Dist-Zilla-Plugin-TaskWeaver
-    - perl-dist-zilla-plugin-test-reportprereqs # Dist-Zilla-Plugin-Test-ReportPrereqs
+    - perl-dist-zilla
+    - perl-dist-zilla-plugin-git
+    - perl-dist-zilla-plugin-ourpkgversion
+    - perl-dist-zilla-plugin-copyfilesfrombuild
+    - perl-pod-weaver-section-contributors
+    - perl-pod-spell
+    - perl-dist-zilla-plugin-test-minimumversion
+    - perl-dist-zilla-plugin-checkchangeshascontent
+    - perl-pod-weaver
+    - perl-moose-autobox
+    - perl-dist-zilla-config-slicer
+    - perl-dist-zilla-plugin-test-perl-critic
+    - perl-dist-zilla-plugin-test-podspelling
+    - perl-test-portability-files
+    - perl-dist-zilla-plugin-authority
+    - perl-pod-elemental-transformer-list
+    - perl-dist-zilla-plugin-minimumperl
+    - perl-namespace-autoclean
+    - perl-dist-zilla-plugin-promptifstale
+    - perl-dist-zilla-plugin-taskweaver
+    - perl-dist-zilla-plugin-contributorsfromgit
+    - perl-dist-zilla-plugin-prereqs-authordeps
+    - perl-dist-zilla-plugin-test-reportprereqs
+    - perl-dist-zilla-plugin-checkmetaresources
+    - perl-dist-zilla-plugin-test-portability
+    - perl-pod-elemental-perlmunger
+    - perl-dist-zilla-plugin-readmefrompod
+    - perl-dist-zilla-plugin-checkprereqsindexed
+    - perl-dist-zilla-plugin-githubmeta
+    - perl-dist-zilla-plugin-metaprovides-package
+    - perl-pod-weaver-section-support
+    - perl-dist-zilla-role-pluginbundle-pluginremover
+    - perl-dist-zilla-plugin-insertcopyright
+    - perl-pod-elemental-transformer-wikidoc
+    - perl-moose
+    - perl-dist-zilla-plugin-bugtracker
+    - perl-dist-zilla-plugin-checkextratests
+    - perl-dist-zilla-plugin-test-compile
+    - perl-autodie
+    - perl-dist-zilla-plugin-test-version
+    - perl-dist-zilla-plugin-podweaver
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

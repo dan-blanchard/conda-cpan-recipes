@@ -10,25 +10,28 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-git-wrapper # Git-Wrapper
-    - perl-dist-zilla # Dist-Zilla
-    - perl-moose # Moose
-    - perl-data-dump # Data-Dump
+    - perl-dist-zilla
+    - perl-moose
+    - perl-module-build
+    - perl-git-wrapper
+    - perl-data-dump
+    - perl-file-temp
+    - perl-test-simple
 
   run:
     - perl
-    - perl-git-wrapper # Git-Wrapper
-    - perl-dist-zilla # Dist-Zilla
-    - perl-moose # Moose
-    - perl-data-dump # Data-Dump
+    - perl-dist-zilla
+    - perl-moose
+    - perl-git-wrapper
+    - perl-data-dump
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

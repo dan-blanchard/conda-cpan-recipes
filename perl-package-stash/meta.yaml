@@ -10,23 +10,38 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-dist-checkconflicts # Dist-CheckConflicts
-    - perl-module-implementation # Module-Implementation
-    - perl-test-requires # Test-Requires
-    - perl-test-fatal # Test-Fatal
+    - perl-pathtools
+    - perl-text-parsewords
+    - perl-test-requires
+    - perl-scalar-list-utils
+    - perl-extutils-makemaker
+    - perl-getopt-long
+    - perl-constant
+    - perl-module-implementation
+    - perl-base
+    - perl-carp
+    - perl-test-fatal
+    - perl-lib
+    - perl-file-temp
+    - perl-dist-checkconflicts
+    - perl-test-simple
 
   run:
     - perl
-    - perl-dist-checkconflicts # Dist-CheckConflicts
-    - perl-module-implementation # Module-Implementation
+    - perl-constant
+    - perl-getopt-long
+    - perl-module-implementation
+    - perl-carp
+    - perl-dist-checkconflicts
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

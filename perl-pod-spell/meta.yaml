@@ -1,34 +1,53 @@
 package:
   name: perl-pod-spell
-  version: !!str 1.14
+  version: !!str 1.15
 
 source:
-  fn: Pod-Spell-1.14.tar.gz
-  url: http://cpan.metacpan.org/authors/id/X/XE/XENO/Pod-Spell-1.14.tar.gz
-  md5: 3923e820f247b8d1fd59b39ffdaa9185
+  fn: Pod-Spell-1.15.tar.gz
+  url: http://cpan.metacpan.org/authors/id/X/XE/XENO/Pod-Spell-1.15.tar.gz
+  md5: fce6fe5ae7ae8ebf140ddbbec36e4f8c
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-lingua-en-inflect # Lingua-EN-Inflect
-    - perl-class-tiny # Class-Tiny
-    - perl-file-sharedir-projectdistdir # File-ShareDir-ProjectDistDir
-    - perl-test-deep # Test-Deep
-    - perl-file-sharedir-install # File-ShareDir-Install
+    - perl-pathtools
+    - perl-base
+    - perl-extutils-makemaker
+    - perl-lingua-en-inflect
+    - perl-file-sharedir-projectdistdir
+    - perl-test-deep
+    - perl-io
+    - perl-pod-escapes
+    - perl-carp
+    - perl-version
+    - perl-scalar-list-utils
+    - perl-class-tiny
+    - perl-constant
+    - perl-file-temp
+    - perl-pod-parser
+    - perl-file-sharedir-install
+    - perl-text-tabs+wrap
+    - perl-test-simple
 
   run:
     - perl
-    - perl-lingua-en-inflect # Lingua-EN-Inflect
-    - perl-class-tiny # Class-Tiny
-    - perl-file-sharedir-projectdistdir # File-ShareDir-ProjectDistDir
+    - perl-lingua-en-inflect
+    - perl-file-sharedir-projectdistdir
+    - perl-pod-escapes
+    - perl-constant
+    - perl-base
+    - perl-carp
+    - perl-class-tiny
+    - perl-pod-parser
+    - perl-text-tabs+wrap
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

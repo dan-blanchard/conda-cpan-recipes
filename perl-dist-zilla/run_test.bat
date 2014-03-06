@@ -1,2 +1,2 @@
-perl -e 'use Dist::Zilla'
+perl -e 'use Dist-Zilla'
 if errorlevel 1 exit 1

@@ -10,30 +10,36 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-class-accessor # Class-Accessor
-    - perl-digest-sha1 # Digest-SHA1
-    - perl-digest-hmac # Digest-HMAC
-    - perl-libwww-perl # libwww-perl
-    - perl-class-data-inheritable # Class-Data-Inheritable
-    - perl-test-warn # Test-Warn
-    - perl-uri # URI
+    - perl-libwww-perl
+    - perl-module-build
+    - perl-class-accessor
+    - perl-class-data-inheritable
+    - perl-encode
+    - perl-digest-sha1
+    - perl-digest-hmac
+    - perl-uri
+    - perl-test-warn
+    - perl-digest-sha
+    - perl-test-simple
 
   run:
     - perl
-    - perl-class-accessor # Class-Accessor
-    - perl-digest-sha1 # Digest-SHA1
-    - perl-uri # URI
-    - perl-libwww-perl # libwww-perl
-    - perl-digest-hmac # Digest-HMAC
-    - perl-class-data-inheritable # Class-Data-Inheritable
+    - perl-libwww-perl
+    - perl-uri
+    - perl-class-accessor
+    - perl-class-data-inheritable
+    - perl-encode
+    - perl-digest-sha1
+    - perl-digest-hmac
+    - perl-digest-sha
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

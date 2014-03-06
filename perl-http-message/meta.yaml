@@ -10,27 +10,36 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-encode-locale # Encode-Locale
-    - perl-lwp-mediatypes # LWP-MediaTypes
-    - perl-io-html # IO-HTML
-    - perl-http-date # HTTP-Date
-    - perl-uri # URI
+    - perl-extutils-makemaker
+    - perl-encode-locale
+    - perl-compress-raw-zlib
+    - perl-io-compress
+    - perl-uri
+    - perl-lwp-mediatypes
+    - perl-encode
+    - perl-io-html
+    - perl-http-date
+    - perl-mime-base64
 
   run:
     - perl
-    - perl-encode-locale # Encode-Locale
-    - perl-io-html # IO-HTML
-    - perl-uri # URI
-    - perl-http-date # HTTP-Date
-    - perl-lwp-mediatypes # LWP-MediaTypes
+    - perl-uri
+    - perl-encode-locale
+    - perl-compress-raw-zlib
+    - perl-io-compress
+    - perl-lwp-mediatypes
+    - perl-encode
+    - perl-io-html
+    - perl-http-date
+    - perl-mime-base64
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

@@ -10,21 +10,22 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-params-validate # Params-Validate
-    - perl-list-moreutils # List-MoreUtils
+    - perl-module-build
+    - perl-list-moreutils
+    - perl-params-validate
 
   run:
     - perl
-    - perl-params-validate # Params-Validate
-    - perl-list-moreutils # List-MoreUtils
+    - perl-list-moreutils
+    - perl-params-validate
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

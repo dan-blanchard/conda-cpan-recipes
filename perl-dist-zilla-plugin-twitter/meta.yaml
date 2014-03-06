@@ -10,37 +10,46 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-net-twitter # Net-Twitter
-    - perl-www-shorten # WWW-Shorten
-    - perl-moose # Moose
-    - perl-try-tiny # Try-Tiny
-    - perl-www-shorten-simple # WWW-Shorten-Simple
-    - perl-http-message # HTTP-Message
-    - perl-params-util # Params-Util
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-dist-zilla # Dist-Zilla
-    - perl-libwww-perl # libwww-perl
-    - perl-config-ini # Config-INI
-    - perl-sub-exporter # Sub-Exporter
+    - perl-pathtools
+    - perl-dist-zilla
+    - perl-module-build
+    - perl-moose
+    - perl-http-message
+    - perl-www-shorten
+    - perl-namespace-autoclean
+    - perl-www-shorten-simple
+    - perl-io
+    - perl-config-ini
+    - perl-base
+    - perl-net-twitter
+    - perl-file-path
+    - perl-sub-exporter
+    - perl-try-tiny
+    - perl-lib
+    - perl-params-util
+    - perl-libwww-perl
+    - perl-test-simple
 
   run:
     - perl
-    - perl-net-twitter # Net-Twitter
-    - perl-moose # Moose
-    - perl-www-shorten-simple # WWW-Shorten-Simple
-    - perl-dist-zilla # Dist-Zilla
-    - perl-try-tiny # Try-Tiny
-    - perl-config-ini # Config-INI
-    - perl-www-shorten # WWW-Shorten
-    - perl-namespace-autoclean # namespace-autoclean
+    - perl-dist-zilla
+    - perl-config-ini
+    - perl-pathtools
+    - perl-www-shorten-simple
+    - perl-namespace-autoclean
+    - perl-moose
+    - perl-net-twitter
+    - perl-file-path
+    - perl-try-tiny
+    - perl-www-shorten
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

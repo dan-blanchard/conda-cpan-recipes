@@ -10,22 +10,26 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-lexical-sealrequirehints # Lexical-SealRequireHints
-    - perl-b-hooks-op-check # B-Hooks-OP-Check
-    - perl-extutils-depends # ExtUtils-Depends
+    - perl-extutils-makemaker
+    - perl-xsloader
+    - perl-lexical-sealrequirehints
+    - perl-test-simple
+    - perl-b-hooks-op-check
+    - perl-extutils-depends
 
   run:
     - perl
-    - perl-b-hooks-op-check # B-Hooks-OP-Check
-    - perl-lexical-sealrequirehints # Lexical-SealRequireHints
+    - perl-lexical-sealrequirehints
+    - perl-xsloader
+    - perl-b-hooks-op-check
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

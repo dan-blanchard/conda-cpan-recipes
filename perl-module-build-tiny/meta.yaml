@@ -10,23 +10,54 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-extutils-config # ExtUtils-Config
-    - perl-extutils-installpaths # ExtUtils-InstallPaths
-    - perl-extutils-helpers # ExtUtils-Helpers
+    - perl-data-dumper
+    - perl-cpan-meta
+    - perl-extutils-install
+    - perl-podlators
+    - perl-extutils-makemaker
+    - perl-getopt-long
+    - perl-json-pp
+    - perl-carp
+    - perl-extutils-parsexs
+    - perl-lib
+    - perl-xsloader
+    - perl-test-simple
+    - perl-pathtools
+    - perl-test-harness
+    - perl-file-temp
+    - perl-extutils-installpaths
+    - perl-extutils-cbuilder
+    - perl-exporter
+    - perl-extutils-config
+    - perl-io
+    - perl-file-path
+    - perl-extutils-helpers
 
   run:
     - perl
-    - perl-extutils-installpaths # ExtUtils-InstallPaths
-    - perl-extutils-helpers # ExtUtils-Helpers
-    - perl-extutils-config # ExtUtils-Config
+    - perl-pathtools
+    - perl-test-harness
+    - perl-extutils-config
+    - perl-cpan-meta
+    - perl-extutils-install
+    - perl-exporter
+    - perl-extutils-cbuilder
+    - perl-podlators
+    - perl-extutils-makemaker
+    - perl-getopt-long
+    - perl-json-pp
+    - perl-file-path
+    - perl-extutils-parsexs
+    - perl-extutils-installpaths
+    - perl-extutils-helpers
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

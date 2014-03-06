@@ -10,31 +10,37 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-moosex-types # MooseX-Types
-    - perl-readonly # Readonly
-    - perl-test-fatal # Test-Fatal
-    - perl-hash-merge-simple # Hash-Merge-Simple
-    - perl-dist-zilla # Dist-Zilla
-    - perl-dist-zilla-util-test-kentnl # Dist-Zilla-Util-Test-KENTNL
-    - perl-moose # Moose
-    - perl-namespace-autoclean # namespace-autoclean
+    - perl-pathtools
+    - perl-dist-zilla
+    - perl-extutils-makemaker
+    - perl-readonly
+    - perl-dist-zilla-util-test-kentnl
+    - perl-moosex-types
+    - perl-moose
+    - perl-version
+    - perl-test-fatal
+    - perl-lib
+    - perl-test-simple
+    - perl-hash-merge-simple
+    - perl-namespace-autoclean
+    - perl-scalar-list-utils
 
   run:
     - perl
-    - perl-moosex-types # MooseX-Types
-    - perl-readonly # Readonly
-    - perl-hash-merge-simple # Hash-Merge-Simple
-    - perl-dist-zilla # Dist-Zilla
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-moose # Moose
+    - perl-dist-zilla
+    - perl-readonly
+    - perl-namespace-autoclean
+    - perl-moosex-types
+    - perl-moose
+    - perl-hash-merge-simple
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

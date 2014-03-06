@@ -10,45 +10,52 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-path-class # Path-Class
-    - perl-aliased # aliased
-    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
-    - perl-syntax-keyword-junction # Syntax-Keyword-Junction
-    - perl-dist-zilla # Dist-Zilla
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-autobox-core # autobox-Core
-    - perl-test-tempdir # Test-TempDir
-    - perl-list-allutils # List-AllUtils
-    - perl-dist-zilla-role-registerstash # Dist-Zilla-Role-RegisterStash
-    - perl-file-which # File-Which
-    - perl-directory-scratch # Directory-Scratch
-    - perl-file-chdir # File-chdir
-    - perl-dist-zilla-stash-podweaver # Dist-Zilla-Stash-PodWeaver
-    - perl-ipc-system-simple # IPC-System-Simple
-    - perl-moose # Moose
+    - perl-dist-zilla
+    - perl-path-class
+    - perl-directory-scratch
+    - perl-file-which
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-test-tempdir
+    - perl-list-allutils
+    - perl-moosex-attributeshortcuts
+    - perl-syntax-keyword-junction
+    - perl-file-temp
+    - perl-test-simple
+    - perl-file-chdir
+    - perl-extutils-makemaker
+    - perl-autobox-core
+    - perl-dist-zilla-role-registerstash
+    - perl-moose
+    - perl-ipc-system-simple
+    - perl-aliased
+    - perl-autodie
+    - perl-dist-zilla-stash-podweaver
 
   run:
     - perl
-    - perl-dist-zilla-role-registerstash # Dist-Zilla-Role-RegisterStash
-    - perl-list-allutils # List-AllUtils
-    - perl-file-which # File-Which
-    - perl-dist-zilla-stash-podweaver # Dist-Zilla-Stash-PodWeaver
-    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
-    - perl-syntax-keyword-junction # Syntax-Keyword-Junction
-    - perl-dist-zilla # Dist-Zilla
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-aliased # aliased
-    - perl-autobox-core # autobox-Core
-    - perl-ipc-system-simple # IPC-System-Simple
-    - perl-moose # Moose
+    - perl-dist-zilla
+    - perl-file-which
+    - perl-moose
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-dist-zilla-role-registerstash
+    - perl-autobox-core
+    - perl-list-allutils
+    - perl-moosex-attributeshortcuts
+    - perl-aliased
+    - perl-syntax-keyword-junction
+    - perl-autodie
+    - perl-dist-zilla-stash-podweaver
+    - perl-ipc-system-simple
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

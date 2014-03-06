@@ -1,23 +1,24 @@
 package:
   name: perl-import-into
-  version: !!str 1.002000
+  version: !!str 1.002001
 
 source:
-  fn: Import-Into-1.002000.tar.gz
-  url: http://cpan.metacpan.org/authors/id/H/HA/HAARG/Import-Into-1.002000.tar.gz
-  md5: 6c51779d26d665d9858a71117d52e8a5
+  fn: Import-Into-1.002001.tar.gz
+  url: http://cpan.metacpan.org/authors/id/H/HA/HAARG/Import-Into-1.002001.tar.gz
+  md5: 6a7b3e16615c730c80ca7a80524ad6ae
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
+    - perl-extutils-makemaker
 
   run:
     - perl
@@ -35,7 +36,7 @@ requirements:
 
 about:
   home: http://metacpan.org/pod/Import-Into
-  license: p
+  license: perl_5
   summary: 'import packages into other packages'
 
 # See

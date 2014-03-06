@@ -10,48 +10,59 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-sub-name # Sub-Name
-    - perl-params-util # Params-Util
-    - perl-devel-partialdump # Devel-PartialDump
-    - perl-list-moreutils # List-MoreUtils
-    - perl-try-tiny # Try-Tiny
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-throwable # Throwable
-    - perl-class-load # Class-Load
-    - perl-list-allutils # List-AllUtils
-    - perl-moose # Moose
-    - perl-test-fatal # Test-Fatal
-    - perl-lingua-en-inflect # Lingua-EN-Inflect
-    - perl-moosex-params-validate # MooseX-Params-Validate
-    - perl-moosex-semiaffordanceaccessor # MooseX-SemiAffordanceAccessor
-    - perl-moosex-clone # MooseX-Clone
-    - perl-eval-closure # Eval-Closure
+    - perl-scalar-list-utils
+    - perl-sub-name
+    - perl-lingua-en-inflect
+    - perl-class-load
+    - perl-parent
+    - perl-list-moreutils
+    - perl-carp
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-test-simple
+    - perl-extutils-makemaker
+    - perl-moose
+    - perl-moosex-params-validate
+    - perl-exporter
+    - perl-moosex-clone
+    - perl-devel-partialdump
+    - perl-io
+    - perl-moosex-semiaffordanceaccessor
+    - perl-throwable
+    - perl-list-allutils
+    - perl-params-util
+    - perl-namespace-autoclean
+    - perl-eval-closure
 
   run:
     - perl
-    - perl-sub-name # Sub-Name
-    - perl-moose # Moose
-    - perl-try-tiny # Try-Tiny
-    - perl-lingua-en-inflect # Lingua-EN-Inflect
-    - perl-moosex-params-validate # MooseX-Params-Validate
-    - perl-moosex-semiaffordanceaccessor # MooseX-SemiAffordanceAccessor
-    - perl-list-moreutils # List-MoreUtils
-    - perl-params-util # Params-Util
-    - perl-devel-partialdump # Devel-PartialDump
-    - perl-moosex-clone # MooseX-Clone
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-throwable # Throwable
-    - perl-list-allutils # List-AllUtils
-    - perl-class-load # Class-Load
-    - perl-eval-closure # Eval-Closure
+    - perl-carp
+    - perl-sub-name
+    - perl-moosex-params-validate
+    - perl-moosex-semiaffordanceaccessor
+    - perl-lingua-en-inflect
+    - perl-eval-closure
+    - perl-moosex-clone
+    - perl-list-moreutils
+    - perl-class-load
+    - perl-parent
+    - perl-moose
+    - perl-throwable
+    - perl-list-allutils
+    - perl-exporter
+    - perl-try-tiny
+    - perl-devel-partialdump
+    - perl-params-util
+    - perl-namespace-autoclean
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

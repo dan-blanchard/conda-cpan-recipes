@@ -10,39 +10,53 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-moose # Moose
-    - perl-test-fatal # Test-Fatal
-    - perl-dist-zilla-role-file-changenotification # Dist-Zilla-Role-File-ChangeNotification
-    - perl-pod-markdown # Pod-Markdown
-    - perl-ppi # PPI
-    - perl-test-most # Test-Most
-    - perl-moosex-has-sugar # MooseX-Has-Sugar
-    - perl-dist-zilla # Dist-Zilla
-    - perl-test-deep # Test-Deep
-    - perl-path-tiny # Path-Tiny
-    - perl-io-stringy # IO-stringy
-    - perl-moose-autobox # Moose-Autobox
-    - perl-test-requires # Test-Requires
+    - perl-dist-zilla
+    - perl-moosex-has-sugar
+    - perl-encode
+    - perl-test-most
+    - perl-dist-zilla-role-file-changenotification
+    - perl-path-tiny
+    - perl-carp
+    - perl-test-fatal
+    - perl-pod-markdown
+    - perl-lib
+    - perl-io-stringy
+    - perl-moose-autobox
+    - perl-test-simple
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-ppi
+    - perl-test-deep
+    - perl-io
+    - perl-moose
+    - perl-pod-simple
+    - perl-scalar-list-utils
+    - perl-autodie
 
   run:
     - perl
-    - perl-moose # Moose
-    - perl-dist-zilla-role-file-changenotification # Dist-Zilla-Role-File-ChangeNotification
-    - perl-pod-markdown # Pod-Markdown
-    - perl-path-tiny # Path-Tiny
-    - perl-ppi # PPI
-    - perl-dist-zilla # Dist-Zilla
-    - perl-moosex-has-sugar # MooseX-Has-Sugar
-    - perl-io-stringy # IO-stringy
-    - perl-moose-autobox # Moose-Autobox
+    - perl-dist-zilla
+    - perl-moosex-has-sugar
+    - perl-ppi
+    - perl-encode
+    - perl-dist-zilla-role-file-changenotification
+    - perl-io
+    - perl-moose
+    - perl-path-tiny
+    - perl-pod-simple
+    - perl-pod-markdown
+    - perl-io-stringy
+    - perl-moose-autobox
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

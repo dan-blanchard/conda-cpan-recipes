@@ -10,46 +10,54 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-moose-autobox # Moose-Autobox
-    - perl-path-class # Path-Class
-    - perl-list-moreutils # List-MoreUtils
-    - perl-test-fatal # Test-Fatal
-    - perl-file-chdir # File-chdir
-    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
-    - perl-env-path # Env-Path
-    - perl-git-wrapper # Git-Wrapper
-    - perl-test-most # Test-Most
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-dist-zilla # Dist-Zilla
-    - perl-test-moose-more # Test-Moose-More
-    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
-    - perl-test-tempdir # Test-TempDir
-    - perl-test-checkdeps # Test-CheckDeps
-    - perl-try-tiny # Try-Tiny
-    - perl-ipc-system-simple # IPC-System-Simple
-    - perl-moose # Moose
-    - perl-capture-tiny # Capture-Tiny
+    - perl-dist-zilla
+    - perl-file-chdir
+    - perl-dist-zilla-plugin-git
+    - perl-git-wrapper
+    - perl-path-class
+    - perl-test-most
+    - perl-moose-autobox
+    - perl-test-tempdir
+    - perl-test-checkdeps
+    - perl-moosex-attributeshortcuts
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-list-moreutils
+    - perl-capture-tiny
+    - perl-env-path
+    - perl-test-simple
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-autodie
+    - perl-test-moose-more
+    - perl-io
+    - perl-moose
+    - perl-ipc-system-simple
+    - perl-scalar-list-utils
+    - perl-namespace-autoclean
 
   run:
     - perl
-    - perl-ipc-system-simple # IPC-System-Simple
-    - perl-moose # Moose
-    - perl-try-tiny # Try-Tiny
-    - perl-dist-zilla-plugin-git # Dist-Zilla-Plugin-Git
-    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
-    - perl-list-moreutils # List-MoreUtils
-    - perl-git-wrapper # Git-Wrapper
-    - perl-dist-zilla # Dist-Zilla
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-moose-autobox # Moose-Autobox
+    - perl-dist-zilla
+    - perl-ipc-system-simple
+    - perl-dist-zilla-plugin-git
+    - perl-namespace-autoclean
+    - perl-moose
+    - perl-list-moreutils
+    - perl-moosex-attributeshortcuts
+    - perl-git-wrapper
+    - perl-try-tiny
+    - perl-autodie
+    - perl-moose-autobox
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

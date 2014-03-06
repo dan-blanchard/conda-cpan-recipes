@@ -10,33 +10,49 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-file-copy-recursive # File-Copy-Recursive
-    - perl-io-handle-util # IO-Handle-Util
-    - perl-file-chdir # File-chdir
-    - perl-try-tiny # Try-Tiny
-    - perl-ipc-run3 # IPC-Run3
-    - perl-metacpan-api # MetaCPAN-API
-    - perl-module-build-tiny # Module-Build-Tiny
-    - perl-log-dispatch # Log-Dispatch
-    - perl-capture-tiny # Capture-Tiny
+    - perl-file-chdir
+    - perl-module-build
+    - perl-ipc-run3
+    - perl-try-tiny
+    - perl-module-build-tiny
+    - perl-file-temp
+    - perl-log-dispatch
+    - perl-test-simple
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-capture-tiny
+    - perl-exporter
+    - perl-cpan
+    - perl-file-copy-recursive
+    - perl-file-path
+    - perl-metacpan-api
+    - perl-io-handle-util
+    - perl-autodie
 
   run:
     - perl
-    - perl-ipc-run3 # IPC-Run3
-    - perl-try-tiny # Try-Tiny
-    - perl-file-chdir # File-chdir
-    - perl-io-handle-util # IO-Handle-Util
-    - perl-log-dispatch # Log-Dispatch
-    - perl-metacpan-api # MetaCPAN-API
-    - perl-capture-tiny # Capture-Tiny
+    - perl-pathtools
+    - perl-file-chdir
+    - perl-file-temp
+    - perl-log-dispatch
+    - perl-exporter
+    - perl-ipc-run3
+    - perl-cpan
+    - perl-file-path
+    - perl-try-tiny
+    - perl-metacpan-api
+    - perl-io-handle-util
+    - perl-capture-tiny
+    - perl-autodie
+    - perl-test-simple
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

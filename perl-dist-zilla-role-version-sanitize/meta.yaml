@@ -10,25 +10,31 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-file-copy-recursive # File-Copy-Recursive
-    - perl-dist-zilla # Dist-Zilla
-    - perl-file-sharedir # File-ShareDir
-    - perl-test-fatal # Test-Fatal
-    - perl-path-tiny # Path-Tiny
-    - perl-dist-zilla-plugin-bootstrap-lib # Dist-Zilla-Plugin-Bootstrap-lib
-    - perl-moose # Moose
+    - perl-dist-zilla
+    - perl-module-build
+    - perl-dist-zilla-plugin-bootstrap-lib
+    - perl-file-copy-recursive
+    - perl-moose
+    - perl-path-tiny
+    - perl-carp
+    - perl-version
+    - perl-test-fatal
+    - perl-file-sharedir
+    - perl-test-simple
 
   run:
     - perl
-    - perl-moose # Moose
+    - perl-moose
+    - perl-carp
+    - perl-version
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

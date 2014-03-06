@@ -10,19 +10,24 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-params-util # Params-Util
+    - perl-params-util
+    - perl-carp
+    - perl-scalar-list-utils
+    - perl-test-simple
 
   run:
     - perl
-    - perl-params-util # Params-Util
+    - perl-carp
+    - perl-params-util
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

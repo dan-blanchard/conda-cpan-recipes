@@ -10,34 +10,52 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-data-optlist # Data-OptList
-    - perl-sub-install # Sub-Install
-    - perl-test-fatal # Test-Fatal
-    - perl-getopt-long-descriptive # Getopt-Long-Descriptive
-    - perl-class-load # Class-Load
-    - perl-sub-exporter # Sub-Exporter
-    - perl-string-rewriteprefix # String-RewritePrefix
-    - perl-io-tiecombine # IO-TieCombine
-    - perl-capture-tiny # Capture-Tiny
+    - perl-module-pluggable
+    - perl-data-dumper
+    - perl-string-rewriteprefix
+    - perl-getopt-long-descriptive
+    - perl-ipc-cmd
+    - perl-getopt-long
+    - perl-parent
+    - perl-io-tiecombine
+    - perl-carp
+    - perl-sub-exporter
+    - perl-test-fatal
+    - perl-lib
+    - perl-constant
+    - perl-capture-tiny
+    - perl-test-simple
+    - perl-data-optlist
+    - perl-extutils-makemaker
+    - perl-text-abbrev
+    - perl-base
+    - perl-class-load
+    - perl-sub-install
 
   run:
     - perl
-    - perl-data-optlist # Data-OptList
-    - perl-sub-install # Sub-Install
-    - perl-getopt-long-descriptive # Getopt-Long-Descriptive
-    - perl-class-load # Class-Load
-    - perl-sub-exporter # Sub-Exporter
-    - perl-string-rewriteprefix # String-RewritePrefix
-    - perl-io-tiecombine # IO-TieCombine
-    - perl-capture-tiny # Capture-Tiny
+    - perl-data-optlist
+    - perl-string-rewriteprefix
+    - perl-module-pluggable
+    - perl-sub-install
+    - perl-getopt-long-descriptive
+    - perl-text-abbrev
+    - perl-getopt-long
+    - perl-parent
+    - perl-constant
+    - perl-io-tiecombine
+    - perl-carp
+    - perl-sub-exporter
+    - perl-class-load
+    - perl-capture-tiny
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

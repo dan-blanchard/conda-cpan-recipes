@@ -10,32 +10,42 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-test-nowarnings # Test-NoWarnings
-    - perl-task-weaken # Task-Weaken
-    - perl-test-object # Test-Object
-    - perl-class-inspector # Class-Inspector
-    - perl-params-util # Params-Util
-    - perl-io-string # IO-String
-    - perl-list-moreutils # List-MoreUtils
-    - perl-file-remove # File-Remove
-    - perl-test-subcalls # Test-SubCalls
-    - perl-clone # Clone
+    - perl-io-string
+    - perl-digest-md5
+    - perl-class-inspector
+    - perl-list-moreutils
+    - perl-task-weaken
+    - perl-scalar-list-utils
+    - perl-test-nowarnings
+    - perl-test-object
+    - perl-test-simple
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-params-util
+    - perl-file-remove
+    - perl-clone
+    - perl-test-subcalls
+    - perl-storable
 
   run:
     - perl
-    - perl-params-util # Params-Util
-    - perl-list-moreutils # List-MoreUtils
-    - perl-task-weaken # Task-Weaken
-    - perl-io-string # IO-String
-    - perl-clone # Clone
+    - perl-io-string
+    - perl-pathtools
+    - perl-clone
+    - perl-digest-md5
+    - perl-list-moreutils
+    - perl-task-weaken
+    - perl-storable
+    - perl-params-util
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

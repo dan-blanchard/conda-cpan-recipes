@@ -10,21 +10,29 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-sub-exporter-progressive # Sub-Exporter-Progressive
-    - perl-namespace-clean # namespace-clean
-    - perl-test-fatal # Test-Fatal
+    - perl-pathtools
+    - perl-namespace-clean
+    - perl-extutils-makemaker
+    - perl-sub-exporter-progressive
+    - perl-carp
+    - perl-version
+    - perl-test-fatal
+    - perl-lib
+    - perl-test-simple
+    - perl-scalar-list-utils
 
   run:
     - perl
-    - perl-sub-exporter-progressive # Sub-Exporter-Progressive
+    - perl-carp
+    - perl-sub-exporter-progressive
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

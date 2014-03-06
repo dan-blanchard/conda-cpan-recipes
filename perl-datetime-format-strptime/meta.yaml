@@ -10,25 +10,31 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-datetime-timezone # DateTime-TimeZone
-    - perl-datetime-locale # DateTime-Locale
-    - perl-params-validate # Params-Validate
-    - perl-datetime # DateTime
+    - perl-extutils-makemaker
+    - perl-datetime-locale
+    - perl-exporter
+    - perl-carp
+    - perl-params-validate
+    - perl-datetime-timezone
+    - perl-datetime
+    - perl-test-simple
 
   run:
     - perl
-    - perl-datetime-timezone # DateTime-TimeZone
-    - perl-datetime # DateTime
-    - perl-params-validate # Params-Validate
-    - perl-datetime-locale # DateTime-Locale
+    - perl-carp
+    - perl-datetime-locale
+    - perl-exporter
+    - perl-datetime-timezone
+    - perl-params-validate
+    - perl-datetime
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

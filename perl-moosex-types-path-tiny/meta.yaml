@@ -10,28 +10,36 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-moosex-types # MooseX-Types
-    - perl-moose # Moose
-    - perl-test-fatal # Test-Fatal
-    - perl-module-build-tiny # Module-Build-Tiny
-    - perl-path-tiny # Path-Tiny
-    - perl-moosex-types-stringlike # MooseX-Types-Stringlike
-    - perl-file-pushd # File-pushd
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-test-simple
+    - perl-moosex-types-stringlike
+    - perl-moosex-types
+    - perl-moose
+    - perl-path-tiny
+    - perl-version
+    - perl-test-fatal
+    - perl-module-build-tiny
+    - perl-file-temp
+    - perl-file-pushd
+    - perl-scalar-list-utils
 
   run:
     - perl
-    - perl-path-tiny # Path-Tiny
-    - perl-moosex-types # MooseX-Types
-    - perl-moosex-types-stringlike # MooseX-Types-Stringlike
-    - perl-moose # Moose
+    - perl-moosex-types
+    - perl-moose
+    - perl-path-tiny
+    - perl-moosex-types-stringlike
+    - perl-if
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

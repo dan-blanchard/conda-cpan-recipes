@@ -10,61 +10,78 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-moosex-types # MooseX-Types
-    - perl-devel-simpletrace # Devel-SimpleTrace
-    - perl-datetime # DateTime
-    - perl-path-tiny # Path-Tiny
-    - perl-string-formatter # String-Formatter
-    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
-    - perl-git-wrapper # Git-Wrapper
-    - perl-log-dispatchouli # Log-Dispatchouli
-    - perl-dist-zilla # Dist-Zilla
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-moosex-has-sugar # MooseX-Has-Sugar
-    - perl-moosex-types-path-tiny # MooseX-Types-Path-Tiny
-    - perl-try-tiny # Try-Tiny
-    - perl-moose-autobox # Moose-Autobox
-    - perl-file-pushd # File-pushd
-    - perl-file-copy-recursive # File-Copy-Recursive
-    - perl-list-allutils # List-AllUtils
-    - perl-test-fatal # Test-Fatal
-    - perl-file-which # File-Which
-    - perl-file-chdir # File-chdir
-    - perl-version-next # Version-Next
-    - perl-module-runtime # Module-Runtime
-    - perl-ipc-system-simple # IPC-System-Simple
-    - perl-moose # Moose
-    - perl-dist-zilla-plugin-config-git # Dist-Zilla-Plugin-Config-Git
+    - perl-dist-zilla
+    - perl-file-which
+    - perl-dist-zilla-plugin-config-git
+    - perl-git-wrapper
+    - perl-file-chdir
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-module-build
+    - perl-constant
+    - perl-moosex-types
+    - perl-path-tiny
+    - perl-list-allutils
+    - perl-version
+    - perl-moosex-attributeshortcuts
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-lib
+    - perl-devel-simpletrace
+    - perl-file-copy-recursive
+    - perl-moosex-has-sugar
+    - perl-moose-autobox
+    - perl-test-simple
+    - perl-pathtools
+    - perl-file-temp
+    - perl-module-runtime
+    - perl-moosex-types-path-tiny
+    - perl-scalar-list-utils
+    - perl-exporter
+    - perl-io
+    - perl-datetime
+    - perl-moose
+    - perl-file-path
+    - perl-ipc-system-simple
+    - perl-version-next
+    - perl-log-dispatchouli
+    - perl-file-pushd
+    - perl-string-formatter
 
   run:
     - perl
-    - perl-string-formatter # String-Formatter
-    - perl-moosex-types # MooseX-Types
-    - perl-list-allutils # List-AllUtils
-    - perl-datetime # DateTime
-    - perl-moosex-types-path-tiny # MooseX-Types-Path-Tiny
-    - perl-file-chdir # File-chdir
-    - perl-path-tiny # Path-Tiny
-    - perl-moosex-attributeshortcuts # MooseX-AttributeShortcuts
-    - perl-ipc-system-simple # IPC-System-Simple
-    - perl-git-wrapper # Git-Wrapper
-    - perl-try-tiny # Try-Tiny
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-dist-zilla # Dist-Zilla
-    - perl-version-next # Version-Next
-    - perl-moosex-has-sugar # MooseX-Has-Sugar
-    - perl-moose # Moose
-    - perl-module-runtime # Module-Runtime
-    - perl-moose-autobox # Moose-Autobox
-    - perl-dist-zilla-plugin-config-git # Dist-Zilla-Plugin-Config-Git
+    - perl-dist-zilla
+    - perl-dist-zilla-plugin-config-git
+    - perl-path-tiny
+    - perl-moosex-attributeshortcuts
+    - perl-moose-autobox
+    - perl-file-chdir
+    - perl-ipc-system-simple
+    - perl-version-next
+    - perl-string-formatter
+    - perl-pathtools
+    - perl-moosex-has-sugar
+    - perl-namespace-autoclean
+    - perl-constant
+    - perl-moosex-types
+    - perl-list-allutils
+    - perl-version
+    - perl-git-wrapper
+    - perl-try-tiny
+    - perl-file-temp
+    - perl-scalar-list-utils
+    - perl-module-runtime
+    - perl-moosex-types-path-tiny
+    - perl-moose
+    - perl-datetime
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

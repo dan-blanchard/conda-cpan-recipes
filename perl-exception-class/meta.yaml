@@ -10,21 +10,28 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-devel-stacktrace # Devel-StackTrace
-    - perl-class-data-inheritable # Class-Data-Inheritable
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-class-data-inheritable
+    - perl-devel-stacktrace
+    - perl-scalar-list-utils
+    - perl-base
+    - perl-test-simple
 
   run:
     - perl
-    - perl-devel-stacktrace # Devel-StackTrace
-    - perl-class-data-inheritable # Class-Data-Inheritable
+    - perl-class-data-inheritable
+    - perl-devel-stacktrace
+    - perl-base
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

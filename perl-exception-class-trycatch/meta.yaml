@@ -1,28 +1,35 @@
 package:
   name: perl-exception-class-trycatch
-  version: !!str 1.12
+  version: !!str 1.13
 
 source:
-  fn: Exception-Class-TryCatch-1.12.tar.gz
-  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Exception-Class-TryCatch-1.12.tar.gz
-  md5: d9943ce5e251437312a11001b9531f43
+  fn: Exception-Class-TryCatch-1.13.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Exception-Class-TryCatch-1.13.tar.gz
+  md5: b15793cc403d0bfa8ffe4b5918b9601f
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-exception-class # Exception-Class
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-version
+    - perl-exception-class
+    - perl-exporter
+    - perl-scalar-list-utils
+    - perl-test-simple
 
   run:
     - perl
-    - perl-exception-class # Exception-Class
+    - perl-exporter
+    - perl-exception-class
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm
@@ -36,9 +43,9 @@ requirements:
     # - nose
 
 about:
-  home: http://metacpan.org/pod/Exception-Class-TryCatch
+  home: https://github.com/dagolden/Exception-Class-TryCatch
   license: apache_2_0
-  summary: 'Syntactic trysolcatch sugar for use with Exception::Class'
+  summary: 'Syntactic try/catch sugar for use with Exception::Class'
 
 # See
 # http://docs.continuum.io/conda/build.html for

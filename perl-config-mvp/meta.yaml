@@ -10,38 +10,46 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-moose # Moose
-    - perl-test-fatal # Test-Fatal
-    - perl-params-util # Params-Util
-    - perl-tie-ixhash # Tie-IxHash
-    - perl-class-load # Class-Load
-    - perl-try-tiny # Try-Tiny
-    - perl-role-hasmessage # Role-HasMessage
-    - perl-role-identifiable # Role-Identifiable
-    - perl-throwable # Throwable
-    - perl-module-runtime # Module-Runtime
-    - perl-moosex-oneargnew # MooseX-OneArgNew
+    - perl-module-pluggable
+    - perl-moosex-oneargnew
+    - perl-role-identifiable
+    - perl-class-load
+    - perl-tie-ixhash
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-lib
+    - perl-test-simple
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-module-runtime
+    - perl-moose
+    - perl-throwable
+    - perl-role-hasmessage
+    - perl-params-util
 
   run:
     - perl
-    - perl-moose # Moose
-    - perl-try-tiny # Try-Tiny
-    - perl-tie-ixhash # Tie-IxHash
-    - perl-class-load # Class-Load
-    - perl-params-util # Params-Util
-    - perl-role-hasmessage # Role-HasMessage
-    - perl-role-identifiable # Role-Identifiable
-    - perl-throwable # Throwable
-    - perl-module-runtime # Module-Runtime
-    - perl-moosex-oneargnew # MooseX-OneArgNew
+    - perl-pathtools
+    - perl-module-pluggable
+    - perl-module-runtime
+    - perl-role-identifiable
+    - perl-class-load
+    - perl-moose
+    - perl-throwable
+    - perl-tie-ixhash
+    - perl-role-hasmessage
+    - perl-try-tiny
+    - perl-moosex-oneargnew
+    - perl-params-util
+    - perl-test-simple
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

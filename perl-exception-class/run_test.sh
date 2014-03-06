@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Just a simple import test
-perl -e 'use Exception::Class'
+perl -e 'use Exception-Class'

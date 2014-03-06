@@ -1,42 +1,58 @@
 package:
   name: perl-test-cleannamespaces
-  version: !!str 0.05
+  version: !!str 0.07
 
 source:
-  fn: Test-CleanNamespaces-0.05.tar.gz
-  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-CleanNamespaces-0.05.tar.gz
-  md5: 9d09f173aaba94a2e5759e1b9838c930
+  fn: Test-CleanNamespaces-0.07.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-CleanNamespaces-0.07.tar.gz
+  md5: 5534728b2005540d2f5a375814747393
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-sub-name # Sub-Name
-    - perl-module-runtime # Module-Runtime
-    - perl-moose # Moose
-    - perl-file-find-rule # File-Find-Rule
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-file-find-rule-perl # File-Find-Rule-Perl
-    - perl-test-checkdeps # Test-CheckDeps
-    - perl-test-tester # Test-Tester
-    - perl-sub-exporter # Sub-Exporter
+    - perl-pathtools
+    - perl-sub-name
+    - perl-file-find-rule-perl
+    - perl-role-tiny
+    - perl-sub-identify
+    - perl-parent
+    - perl-version
+    - perl-sub-exporter
+    - perl-test-fatal
+    - perl-module-build-tiny
+    - perl-lib
+    - perl-scalar-list-utils
+    - perl-test-tester
+    - perl-namespace-clean
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-module-runtime
+    - perl-package-stash
+    - perl-exporter
+    - perl-test-simple
+    - perl-file-find-rule
 
   run:
     - perl
-    - perl-sub-name # Sub-Name
-    - perl-moose # Moose
-    - perl-file-find-rule-perl # File-Find-Rule-Perl
-    - perl-file-find-rule # File-Find-Rule
-    - perl-sub-exporter # Sub-Exporter
-    - perl-module-runtime # Module-Runtime
-    - perl-namespace-autoclean # namespace-autoclean
+    - perl-pathtools
+    - perl-namespace-clean
+    - perl-sub-name
+    - perl-module-runtime
+    - perl-file-find-rule-perl
+    - perl-package-stash
+    - perl-role-tiny
+    - perl-file-find-rule
+    - perl-sub-exporter
+    - perl-sub-identify
+    - perl-test-simple
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

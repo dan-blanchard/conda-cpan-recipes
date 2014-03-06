@@ -10,20 +10,35 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-module-implementation # Module-Implementation
-    - perl-test-fatal # Test-Fatal
+    - perl-pathtools
+    - perl-module-build
+    - perl-xsloader
+    - perl-scalar-list-utils
+    - perl-exporter
+    - perl-module-implementation
+    - perl-base
+    - perl-carp
+    - perl-test-fatal
+    - perl-attribute-handlers
+    - perl-file-temp
+    - perl-test-simple
 
   run:
     - perl
-    - perl-module-implementation # Module-Implementation
+    - perl-exporter
+    - perl-module-implementation
+    - perl-carp
+    - perl-attribute-handlers
+    - perl-xsloader
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

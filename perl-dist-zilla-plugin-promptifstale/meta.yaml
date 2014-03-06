@@ -1,47 +1,69 @@
 package:
   name: perl-dist-zilla-plugin-promptifstale
-  version: !!str 0.017
+  version: !!str 0.020
 
 source:
-  fn: Dist-Zilla-Plugin-PromptIfStale-0.017.tar.gz
-  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-PromptIfStale-0.017.tar.gz
-  md5: dcd817ebb04b83e1dccd61bada34e433
+  fn: Dist-Zilla-Plugin-PromptIfStale-0.020.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-PromptIfStale-0.020.tar.gz
+  md5: 5962a28f31f949f81121507092e6b373
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-moosex-types # MooseX-Types
-    - perl-moose # Moose
-    - perl-test-fatal # Test-Fatal
-    - perl-path-tiny # Path-Tiny
-    - perl-module-path # Module-Path
-    - perl-list-moreutils # List-MoreUtils
-    - perl-dist-zilla # Dist-Zilla
-    - perl-test-deep # Test-Deep
-    - perl-json # JSON
-    - perl-module-build-tiny # Module-Build-Tiny
-    - perl-parse-cpan-packages-fast # Parse-CPAN-Packages-Fast
-    - perl-namespace-autoclean # namespace-autoclean
+    - perl-dist-zilla
+    - perl-path-class
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-module-metadata
+    - perl-moosex-types
+    - perl-path-tiny
+    - perl-version
+    - perl-parse-cpan-packages-fast
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-module-build-tiny
+    - perl-lib
+    - perl-list-moreutils
+    - perl-file-temp
+    - perl-test-simple
+    - perl-pathtools
+    - perl-http-tiny
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-json
+    - perl-test-deep
+    - perl-moose
+    - perl-scalar-list-utils
+    - perl-module-path
+    - perl-file-pushd
 
   run:
     - perl
-    - perl-moosex-types # MooseX-Types
-    - perl-moose # Moose
-    - perl-path-tiny # Path-Tiny
-    - perl-module-path # Module-Path
-    - perl-list-moreutils # List-MoreUtils
-    - perl-dist-zilla # Dist-Zilla
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-json # JSON
-    - perl-parse-cpan-packages-fast # Parse-CPAN-Packages-Fast
+    - perl-dist-zilla
+    - perl-http-tiny
+    - perl-pathtools
+    - perl-path-class
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-json
+    - perl-path-tiny
+    - perl-module-metadata
+    - perl-moosex-types
+    - perl-moose
+    - perl-list-moreutils
+    - perl-version
+    - perl-parse-cpan-packages-fast
+    - perl-try-tiny
+    - perl-file-temp
+    - perl-module-path
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

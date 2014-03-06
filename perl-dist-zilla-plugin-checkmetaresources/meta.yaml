@@ -10,26 +10,31 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-try-tiny # Try-Tiny
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-dist-zilla # Dist-Zilla
-    - perl-path-class # Path-Class
-    - perl-moose # Moose
-    - perl-capture-tiny # Capture-Tiny
+    - perl-dist-zilla
+    - perl-path-class
+    - perl-extutils-makemaker
+    - perl-namespace-autoclean
+    - perl-moose
+    - perl-try-tiny
+    - perl-file-temp
+    - perl-capture-tiny
+    - perl-autodie
+    - perl-test-simple
 
   run:
     - perl
-    - perl-dist-zilla # Dist-Zilla
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-moose # Moose
+    - perl-dist-zilla
+    - perl-moose
+    - perl-namespace-autoclean
+    - perl-autodie
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

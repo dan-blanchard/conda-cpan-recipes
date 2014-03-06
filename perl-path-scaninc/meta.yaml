@@ -10,26 +10,33 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-try-tiny # Try-Tiny
-    - perl-class-tiny # Class-Tiny
-    - perl-path-tiny # Path-Tiny
-    - perl-data-dump # Data-Dump
-    - perl-test-fatal # Test-Fatal
+    - perl-module-build
+    - perl-data-dump
+    - perl-path-tiny
+    - perl-carp
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-class-tiny
+    - perl-lib
+    - perl-scalar-list-utils
+    - perl-test-simple
 
   run:
     - perl
-    - perl-try-tiny # Try-Tiny
-    - perl-class-tiny # Class-Tiny
-    - perl-data-dump # Data-Dump
-    - perl-path-tiny # Path-Tiny
+    - perl-path-tiny
+    - perl-carp
+    - perl-try-tiny
+    - perl-class-tiny
+    - perl-data-dump
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

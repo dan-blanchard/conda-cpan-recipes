@@ -10,118 +10,157 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-moosex-types # MooseX-Types
-    - perl-file-sharedir # File-ShareDir
-    - perl-datetime # DateTime
-    - perl-path-tiny # Path-Tiny
-    - perl-json # JSON
-    - perl-perl-prereqscanner # Perl-PrereqScanner
-    - perl-params-util # Params-Util
-    - perl-termreadkey # TermReadKey
-    - perl-class-load # Class-Load
-    - perl-data-section # Data-Section
-    - perl-software-license # Software-License
-    - perl-log-dispatchouli # Log-Dispatchouli
-    - perl-config-mvp # Config-MVP
-    - perl-file-pushd # File-pushd
-    - perl-test-failwarnings # Test-FailWarnings
-    - perl-moose # Moose
-    - perl-list-moreutils # List-MoreUtils
-    - perl-app-cmd # App-Cmd
-    - perl-pod-eventual # Pod-Eventual
-    - perl-ppi # PPI
-    - perl-file-find-rule # File-Find-Rule
-    - perl-hash-merge-simple # Hash-Merge-Simple
-    - perl-test-deep # Test-Deep
-    - perl-moosex-lazyrequire # MooseX-LazyRequire
-    - perl-moosex-types-path-class # MooseX-Types-Path-Class
-    - perl-text-glob # Text-Glob
-    - perl-sub-exporter # Sub-Exporter
-    - perl-moose-autobox # Moose-Autobox
-    - perl-moosex-role-parameterized # MooseX-Role-Parameterized
-    - perl-test-file-sharedir # Test-File-ShareDir
-    - perl-mixin-linewise # Mixin-Linewise
-    - perl-file-sharedir-install # File-ShareDir-Install
-    - perl-string-formatter # String-Formatter
-    - perl-moosex-types-perl # MooseX-Types-Perl
-    - perl-perl-version # Perl-Version
-    - perl-moosex-setonce # MooseX-SetOnce
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-file-homedir # File-HomeDir
-    - perl-try-tiny # Try-Tiny
-    - perl-text-template # Text-Template
-    - perl-path-class # Path-Class
-    - perl-yaml-tiny # YAML-Tiny
-    - perl-list-allutils # List-AllUtils
-    - perl-test-fatal # Test-Fatal
-    - perl-sub-exporter-formethods # Sub-Exporter-ForMethods
-    - perl-config-mvp-reader-ini # Config-MVP-Reader-INI
-    - perl-config-ini # Config-INI
-    - perl-file-copy-recursive # File-Copy-Recursive
-    - perl-autobox # autobox
-    - perl-string-rewriteprefix # String-RewritePrefix
-    - perl-term-encoding # Term-Encoding
-    - perl-cpan-uploader # CPAN-Uploader
+    - perl-string-rewriteprefix
+    - perl-class-load
+    - perl-parent
+    - perl-list-moreutils
+    - perl-sub-exporter
+    - perl-lib
+    - perl-term-encoding
+    - perl-file-sharedir
+    - perl-config-ini
+    - perl-moosex-types-path-class
+    - perl-json
+    - perl-test-deep
+    - perl-file-copy-recursive
+    - perl-scalar-list-utils
+    - perl-file-sharedir-install
+    - perl-file-pushd
+    - perl-string-formatter
+    - perl-app-cmd
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-moosex-types
+    - perl-list-allutils
+    - perl-version
+    - perl-test-file-sharedir
+    - perl-try-tiny
+    - perl-file-temp
+    - perl-moosex-role-parameterized
+    - perl-sub-exporter-formethods
+    - perl-file-find-rule
+    - perl-path-tiny
+    - perl-log-dispatchouli
+    - perl-moose
+    - perl-storable
+    - perl-extutils-manifest
+    - perl-params-util
+    - perl-mixin-linewise
+    - perl-data-dumper
+    - perl-moosex-types-perl
+    - perl-cpan-meta
+    - perl-text-template
+    - perl-path-class
+    - perl-config-mvp-reader-ini
+    - perl-autobox
+    - perl-pod-eventual
+    - perl-hash-merge-simple
+    - perl-moose-autobox
+    - perl-pathtools
+    - perl-term-readline
+    - perl-ppi
+    - perl-test-failwarnings
+    - perl-perl-prereqscanner
+    - perl-file-homedir
+    - perl-term-ui
+    - perl-moosex-lazyrequire
+    - perl-termreadkey
+    - perl-config-mvp
+    - perl-yaml-tiny
+    - perl-test-fatal
+    - perl-moosex-setonce
+    - perl-test-simple
+    - perl-software-license
+    - perl-extutils-makemaker
+    - perl-data-section
+    - perl-cpan-meta-requirements
+    - perl-text-glob
+    - perl-cpan-uploader
+    - perl-digest-md5
+    - perl-perl-version
+    - perl-carp
+    - perl-file-path
+    - perl-archive-tar
+    - perl-autodie
+    - perl-datetime
 
   run:
     - perl
-    - perl-moosex-types # MooseX-Types
-    - perl-file-sharedir # File-ShareDir
-    - perl-datetime # DateTime
-    - perl-path-tiny # Path-Tiny
-    - perl-json # JSON
-    - perl-params-util # Params-Util
-    - perl-termreadkey # TermReadKey
-    - perl-file-sharedir-install # File-ShareDir-Install
-    - perl-data-section # Data-Section
-    - perl-file-find-rule # File-Find-Rule
-    - perl-log-dispatchouli # Log-Dispatchouli
-    - perl-config-mvp # Config-MVP
-    - perl-file-pushd # File-pushd
-    - perl-file-copy-recursive # File-Copy-Recursive
-    - perl-moosex-role-parameterized # MooseX-Role-Parameterized
-    - perl-software-license # Software-License
-    - perl-moose # Moose
-    - perl-hash-merge-simple # Hash-Merge-Simple
-    - perl-pod-eventual # Pod-Eventual
-    - perl-perl-prereqscanner # Perl-PrereqScanner
-    - perl-app-cmd # App-Cmd
-    - perl-test-deep # Test-Deep
-    - perl-moosex-lazyrequire # MooseX-LazyRequire
-    - perl-moosex-types-path-class # MooseX-Types-Path-Class
-    - perl-string-formatter # String-Formatter
-    - perl-text-glob # Text-Glob
-    - perl-sub-exporter # Sub-Exporter
-    - perl-moose-autobox # Moose-Autobox
-    - perl-path-class # Path-Class
-    - perl-mixin-linewise # Mixin-Linewise
-    - perl-cpan-uploader # CPAN-Uploader
-    - perl-file-homedir # File-HomeDir
-    - perl-moosex-types-perl # MooseX-Types-Perl
-    - perl-perl-version # Perl-Version
-    - perl-moosex-setonce # MooseX-SetOnce
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-list-moreutils # List-MoreUtils
-    - perl-try-tiny # Try-Tiny
-    - perl-text-template # Text-Template
-    - perl-yaml-tiny # YAML-Tiny
-    - perl-list-allutils # List-AllUtils
-    - perl-ppi # PPI
-    - perl-sub-exporter-formethods # Sub-Exporter-ForMethods
-    - perl-config-mvp-reader-ini # Config-MVP-Reader-INI
-    - perl-class-load # Class-Load
-    - perl-config-ini # Config-INI
-    - perl-autobox # autobox
-    - perl-string-rewriteprefix # String-RewritePrefix
-    - perl-term-encoding # Term-Encoding
+    - perl-data-dumper
+    - perl-moosex-types-perl
+    - perl-cpan-meta
+    - perl-string-rewriteprefix
+    - perl-text-template
+    - perl-term-ui
+    - perl-config-mvp-reader-ini
+    - perl-class-load
+    - perl-parent
+    - perl-autobox
+    - perl-list-moreutils
+    - perl-sub-exporter
+    - perl-pod-eventual
+    - perl-hash-merge-simple
+    - perl-moose-autobox
+    - perl-file-sharedir
+    - perl-pathtools
+    - perl-sub-exporter-formethods
+    - perl-term-readline
+    - perl-ppi
+    - perl-json
+    - perl-config-ini
+    - perl-test-deep
+    - perl-file-copy-recursive
+    - perl-moosex-types-path-class
+    - perl-perl-prereqscanner
+    - perl-term-encoding
+    - perl-scalar-list-utils
+    - perl-log-dispatchouli
+    - perl-file-pushd
+    - perl-string-formatter
+    - perl-path-class
+    - perl-moosex-lazyrequire
+    - perl-app-cmd
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-autodie
+    - perl-termreadkey
+    - perl-moosex-types
+    - perl-yaml-tiny
+    - perl-list-allutils
+    - perl-version
+    - perl-software-license
+    - perl-try-tiny
+    - perl-file-temp
+    - perl-moosex-setonce
+    - perl-storable
+    - perl-moosex-role-parameterized
+    - perl-file-sharedir-install
+    - perl-data-section
+    - perl-cpan-meta-requirements
+    - perl-text-glob
+    - perl-cpan-uploader
+    - perl-file-find-rule
+    - perl-digest-md5
+    - perl-path-tiny
+    - perl-perl-version
+    - perl-moose
+    - perl-carp
+    - perl-file-path
+    - perl-file-homedir
+    - perl-extutils-manifest
+    - perl-archive-tar
+    - perl-params-util
+    - perl-config-mvp
+    - perl-datetime
+    - perl-mixin-linewise
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

@@ -10,40 +10,55 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-test-nowarnings # Test-NoWarnings
-    - perl-file-find-rule-vcs # File-Find-Rule-VCS
-    - perl-yaml # YAML
-    - perl-class-accessor # Class-Accessor
-    - perl-array-diff # Array-Diff
-    - perl-io-capture # IO-Capture
-    - perl-test-deep # Test-Deep
-    - perl-set-scalar # Set-Scalar
-    - perl-archive-any-lite # Archive-Any-Lite
-    - perl-software-license # Software-License
-    - perl-cpan-distnameinfo # CPAN-DistnameInfo
-    - perl-test-warn # Test-Warn
-    - perl-module-extractuse # Module-ExtractUse
+    - perl-software-license
+    - perl-module-build
+    - perl-cpan-meta
+    - perl-module-pluggable
+    - perl-file-find-rule-vcs
+    - perl-io-capture
+    - perl-test-warn
+    - perl-version
+    - perl-test-nowarnings
+    - perl-archive-any-lite
+    - perl-cpan-distnameinfo
+    - perl-test-simple
+    - perl-pathtools
+    - perl-class-accessor
+    - perl-array-diff
+    - perl-yaml
+    - perl-set-scalar
+    - perl-test-deep
+    - perl-cpan-meta-yaml
+    - perl-module-extractuse
+    - perl-text-balanced
+    - perl-archive-tar
 
   run:
     - perl
-    - perl-class-accessor # Class-Accessor
-    - perl-module-extractuse # Module-ExtractUse
-    - perl-yaml # YAML
-    - perl-set-scalar # Set-Scalar
-    - perl-io-capture # IO-Capture
-    - perl-cpan-distnameinfo # CPAN-DistnameInfo
-    - perl-array-diff # Array-Diff
-    - perl-archive-any-lite # Archive-Any-Lite
-    - perl-software-license # Software-License
-    - perl-file-find-rule-vcs # File-Find-Rule-VCS
+    - perl-software-license
+    - perl-module-pluggable
+    - perl-class-accessor
+    - perl-cpan-meta
+    - perl-array-diff
+    - perl-yaml
+    - perl-file-find-rule-vcs
+    - perl-set-scalar
+    - perl-version
+    - perl-io-capture
+    - perl-archive-tar
+    - perl-cpan-meta-yaml
+    - perl-module-extractuse
+    - perl-text-balanced
+    - perl-archive-any-lite
+    - perl-cpan-distnameinfo
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

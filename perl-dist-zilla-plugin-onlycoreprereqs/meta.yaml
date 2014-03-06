@@ -10,30 +10,43 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-moose # Moose
-    - perl-test-fatal # Test-Fatal
-    - perl-moosex-types-perl # MooseX-Types-Perl
-    - perl-json # JSON
-    - perl-dist-zilla # Dist-Zilla
-    - perl-test-deep # Test-Deep
-    - perl-module-build-tiny # Module-Build-Tiny
-    - perl-namespace-autoclean # namespace-autoclean
+    - perl-dist-zilla
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-moosex-types-perl
+    - perl-module-corelist
+    - perl-if
+    - perl-http-tiny
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-json
+    - perl-test-deep
+    - perl-moose
+    - perl-version
+    - perl-test-fatal
+    - perl-module-build-tiny
+    - perl-test-simple
+    - perl-scalar-list-utils
 
   run:
     - perl
-    - perl-json # JSON
-    - perl-moosex-types-perl # MooseX-Types-Perl
-    - perl-dist-zilla # Dist-Zilla
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-moose # Moose
+    - perl-dist-zilla
+    - perl-http-tiny
+    - perl-moosex-types-perl
+    - perl-module-corelist
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-json
+    - perl-moose
+    - perl-version
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

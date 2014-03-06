@@ -1,40 +1,59 @@
 package:
   name: perl-dist-zilla-plugins-cjm
-  version: !!str 4.20
+  version: !!str 4.21
 
 source:
-  fn: Dist-Zilla-Plugins-CJM-4.20.tar.gz
-  url: http://cpan.metacpan.org/authors/id/C/CJ/CJM/Dist-Zilla-Plugins-CJM-4.20.tar.gz
-  md5: eb255c51ef4ae0912c71482bfe6c0dd5
+  fn: Dist-Zilla-Plugins-CJM-4.21.tar.gz
+  url: http://cpan.metacpan.org/authors/id/C/CJ/CJM/Dist-Zilla-Plugins-CJM-4.21.tar.gz
+  md5: 78f4de521770721f03b454a842d1d058
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-path-class # Path-Class
-    - perl-file-homedir # File-HomeDir
-    - perl-try-tiny # Try-Tiny
-    - perl-dist-zilla # Dist-Zilla
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-moose # Moose
-    - perl-moose-autobox # Moose-Autobox
-    - perl-file-pushd # File-pushd
+    - perl-dist-zilla
+    - perl-path-class
+    - perl-data-dumper
+    - perl-cpan-meta
+    - perl-namespace-autoclean
+    - perl-module-metadata
+    - perl-version
+    - perl-try-tiny
+    - perl-file-temp
+    - perl-parse-cpan-meta
+    - perl-moose-autobox
+    - perl-test-simple
+    - perl-extutils-makemaker
+    - perl-cpan-meta-requirements
+    - perl-moose
+    - perl-file-homedir
+    - perl-scalar-list-utils
+    - perl-autodie
+    - perl-file-pushd
 
   run:
     - perl
-    - perl-path-class # Path-Class
-    - perl-file-homedir # File-HomeDir
-    - perl-dist-zilla # Dist-Zilla
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-moose-autobox # Moose-Autobox
-    - perl-moose # Moose
+    - perl-dist-zilla
+    - perl-path-class
+    - perl-data-dumper
+    - perl-cpan-meta
+    - perl-namespace-autoclean
+    - perl-module-metadata
+    - perl-moose
+    - perl-version
+    - perl-moose-autobox
+    - perl-cpan-meta-requirements
+    - perl-file-temp
+    - perl-autodie
+    - perl-file-homedir
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

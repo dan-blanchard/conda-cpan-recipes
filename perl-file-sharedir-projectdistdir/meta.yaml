@@ -1,38 +1,44 @@
 package:
   name: perl-file-sharedir-projectdistdir
-  version: !!str 0.5.2
+  version: !!str 1.000001
 
 source:
-  fn: File-ShareDir-ProjectDistDir-0.5.2.tar.gz
-  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/File-ShareDir-ProjectDistDir-0.5.2.tar.gz
-  md5: a20a0c8b8116fa4e0033e23a95c7b272
+  fn: File-ShareDir-ProjectDistDir-1.000001.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/File-ShareDir-ProjectDistDir-1.000001.tar.gz
+  md5: 5bbc7949821f80ea4aaf94d34680d4c7
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-path-finddev # Path-FindDev
-    - perl-path-isdev # Path-IsDev
-    - perl-path-class # Path-Class
-    - perl-path-tiny # Path-Tiny
-    - perl-file-sharedir # File-ShareDir
-    - perl-sub-exporter # Sub-Exporter
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-path-isdev
+    - perl-path-finddev
+    - perl-path-tiny
+    - perl-carp
+    - perl-version
+    - perl-sub-exporter
+    - perl-lib
+    - perl-test-simple
+    - perl-file-sharedir
+    - perl-scalar-list-utils
 
   run:
     - perl
-    - perl-path-finddev # Path-FindDev
-    - perl-path-isdev # Path-IsDev
-    - perl-path-class # Path-Class
-    - perl-path-tiny # Path-Tiny
-    - perl-sub-exporter # Sub-Exporter
-    - perl-file-sharedir # File-ShareDir
+    - perl-path-isdev
+    - perl-path-finddev
+    - perl-path-tiny
+    - perl-carp
+    - perl-sub-exporter
+    - perl-file-sharedir
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

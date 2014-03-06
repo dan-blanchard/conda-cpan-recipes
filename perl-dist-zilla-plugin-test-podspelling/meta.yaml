@@ -1,36 +1,44 @@
 package:
   name: perl-dist-zilla-plugin-test-podspelling
-  version: !!str 2.006002
+  version: !!str 2.006007
 
 source:
-  fn: Dist-Zilla-Plugin-Test-PodSpelling-2.006002.tar.gz
-  url: http://cpan.metacpan.org/authors/id/X/XE/XENO/Dist-Zilla-Plugin-Test-PodSpelling-2.006002.tar.gz
-  md5: 88ad2e4ca87c83556aba6af778f0b24f
+  fn: Dist-Zilla-Plugin-Test-PodSpelling-2.006007.tar.gz
+  url: http://cpan.metacpan.org/authors/id/X/XE/XENO/Dist-Zilla-Plugin-Test-PodSpelling-2.006007.tar.gz
+  md5: ce714c3b37a1380c432feaffce573c2d
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-path-class # Path-Class
-    - perl-test-script # Test-Script
-    - perl-test-spelling # Test-Spelling
-    - perl-dist-zilla # Dist-Zilla
-    - perl-test-requires # Test-Requires
-    - perl-test-tester # Test-Tester
-    - perl-moose # Moose
+    - perl-pathtools
+    - perl-test-script
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-dist-zilla
+    - perl-test-tester
+    - perl-io
+    - perl-moose
+    - perl-path-tiny
+    - perl-version
+    - perl-test-spelling
+    - perl-test-fatal
+    - perl-scalar-list-utils
+    - perl-file-pushd
+    - perl-test-simple
 
   run:
     - perl
-    - perl-dist-zilla # Dist-Zilla
-    - perl-test-spelling # Test-Spelling
-    - perl-moose # Moose
+    - perl-dist-zilla
+    - perl-moose
+    - perl-test-spelling
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm
@@ -45,7 +53,7 @@ requirements:
 
 about:
   home: https://metacpan.org/dist/Dist-Zilla-Plugin-Test-PodSpelling
-  license: a
+  license: artistic_2
   summary: 'Author tests for POD spelling'
 
 # See

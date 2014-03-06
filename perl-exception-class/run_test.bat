@@ -1,2 +1,2 @@
-perl -e 'use Exception::Class'
+perl -e 'use Exception-Class'
 if errorlevel 1 exit 1

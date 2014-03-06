@@ -10,27 +10,34 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-dist-checkconflicts # Dist-CheckConflicts
-    - perl-namespace-clean # namespace-clean
-    - perl-module-cpants-analyse # Module-CPANTS-Analyse
-    - perl-test-deep # Test-Deep
-    - perl-test-warnings # Test-Warnings
-    - perl-module-build-tiny # Module-Build-Tiny
-    - perl-test-tester # Test-Tester
+    - perl-test-tester
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-namespace-clean
+    - perl-module-cpants-analyse
+    - perl-test-deep
+    - perl-test-warnings
+    - perl-module-build-tiny
+    - perl-scalar-list-utils
+    - perl-dist-checkconflicts
+    - perl-test-simple
 
   run:
     - perl
-    - perl-module-cpants-analyse # Module-CPANTS-Analyse
-    - perl-namespace-clean # namespace-clean
-    - perl-dist-checkconflicts # Dist-CheckConflicts
+    - perl-pathtools
+    - perl-namespace-clean
+    - perl-dist-checkconflicts
+    - perl-module-cpants-analyse
+    - perl-test-simple
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

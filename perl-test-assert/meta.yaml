@@ -10,25 +10,26 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-test-unit-lite # Test-Unit-Lite
-    - perl-exception-base # Exception-Base
-    - perl-constant-boolean # constant-boolean
-    - perl-symbol-util # Symbol-Util
-    - perl-class-inspector # Class-Inspector
+    - perl-class-inspector
+    - perl-symbol-util
+    - perl-constant-boolean
+    - perl-test-unit-lite
+    - perl-exception-base
+    - perl-parent
 
   run:
     - perl
-    - perl-exception-base # Exception-Base
-    - perl-symbol-util # Symbol-Util
-    - perl-constant-boolean # constant-boolean
+    - perl-symbol-util
+    - perl-constant-boolean
+    - perl-exception-base
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

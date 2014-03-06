@@ -10,55 +10,65 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-devel-stacktrace # Devel-StackTrace
-    - perl-package-stash-xs # Package-Stash-XS
-    - perl-package-deprecationmanager # Package-DeprecationManager
-    - perl-try-tiny # Try-Tiny
-    - perl-list-moreutils # List-MoreUtils
-    - perl-params-util # Params-Util
-    - perl-test-requires # Test-Requires
-    - perl-class-load # Class-Load
-    - perl-class-load-xs # Class-Load-XS
-    - perl-data-optlist # Data-OptList
-    - perl-package-stash # Package-Stash
-    - perl-dist-checkconflicts # Dist-CheckConflicts
-    - perl-mro-compat # MRO-Compat
-    - perl-test-fatal # Test-Fatal
-    - perl-sub-name # Sub-Name
-    - perl-devel-globaldestruction # Devel-GlobalDestruction
-    - perl-sub-exporter # Sub-Exporter
-    - perl-module-runtime # Module-Runtime
-    - perl-task-weaken # Task-Weaken
-    - perl-eval-closure # Eval-Closure
+    - perl-sub-name
+    - perl-eval-closure
+    - perl-class-load
+    - perl-parent
+    - perl-devel-globaldestruction
+    - perl-carp
+    - perl-task-weaken
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-mro-compat
+    - perl-test-simple
+    - perl-pathtools
+    - perl-data-optlist
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-module-runtime
+    - perl-package-stash
+    - perl-extutils-cbuilder
+    - perl-scalar-list-utils
+    - perl-devel-stacktrace
+    - perl-package-stash-xs
+    - perl-list-moreutils
+    - perl-class-load-xs
+    - perl-params-util
+    - perl-dist-checkconflicts
+    - perl-package-deprecationmanager
+    - perl-sub-exporter
 
   run:
     - perl
-    - perl-dist-checkconflicts # Dist-CheckConflicts
-    - perl-package-deprecationmanager # Package-DeprecationManager
-    - perl-mro-compat # MRO-Compat
-    - perl-package-stash-xs # Package-Stash-XS
-    - perl-devel-stacktrace # Devel-StackTrace
-    - perl-class-load-xs # Class-Load-XS
-    - perl-sub-name # Sub-Name
-    - perl-list-moreutils # List-MoreUtils
-    - perl-devel-globaldestruction # Devel-GlobalDestruction
-    - perl-params-util # Params-Util
-    - perl-data-optlist # Data-OptList
-    - perl-sub-exporter # Sub-Exporter
-    - perl-class-load # Class-Load
-    - perl-package-stash # Package-Stash
-    - perl-module-runtime # Module-Runtime
-    - perl-try-tiny # Try-Tiny
-    - perl-task-weaken # Task-Weaken
-    - perl-eval-closure # Eval-Closure
+    - perl-data-optlist
+    - perl-sub-name
+    - perl-module-runtime
+    - perl-package-stash
+    - perl-package-stash-xs
+    - perl-devel-stacktrace
+    - perl-try-tiny
+    - perl-devel-globaldestruction
+    - perl-class-load
+    - perl-parent
+    - perl-task-weaken
+    - perl-list-moreutils
+    - perl-carp
+    - perl-dist-checkconflicts
+    - perl-sub-exporter
+    - perl-class-load-xs
+    - perl-mro-compat
+    - perl-params-util
+    - perl-eval-closure
+    - perl-package-deprecationmanager
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

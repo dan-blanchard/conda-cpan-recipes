@@ -10,50 +10,56 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-datetime # DateTime
-    - perl-mixin-linewise # Mixin-Linewise
-    - perl-string-formatter # String-Formatter
-    - perl-test-differences # Test-Differences
-    - perl-ppi # PPI
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-string-flogger # String-Flogger
-    - perl-software-license # Software-License
-    - perl-log-dispatchouli # Log-Dispatchouli
-    - perl-moose-autobox # Moose-Autobox
-    - perl-moose # Moose
-    - perl-pod-elemental # Pod-Elemental
-    - perl-list-moreutils # List-MoreUtils
-    - perl-params-util # Params-Util
-    - perl-config-mvp-reader-ini # Config-MVP-Reader-INI
-    - perl-config-mvp # Config-MVP
-    - perl-string-rewriteprefix # String-RewritePrefix
-    - perl-module-runtime # Module-Runtime
+    - perl-pathtools
+    - perl-string-rewriteprefix
+    - perl-namespace-autoclean
+    - perl-config-mvp-reader-ini
+    - perl-string-flogger
+    - perl-list-moreutils
+    - perl-mixin-linewise
+    - perl-moose-autobox
+    - perl-test-simple
+    - perl-software-license
+    - perl-extutils-makemaker
+    - perl-pod-elemental
+    - perl-module-runtime
+    - perl-ppi
+    - perl-test-differences
+    - perl-config-mvp
+    - perl-moose
+    - perl-datetime
+    - perl-params-util
+    - perl-log-dispatchouli
+    - perl-text-tabs+wrap
+    - perl-string-formatter
 
   run:
     - perl
-    - perl-string-formatter # String-Formatter
-    - perl-moose-autobox # Moose-Autobox
-    - perl-pod-elemental # Pod-Elemental
-    - perl-datetime # DateTime
-    - perl-params-util # Params-Util
-    - perl-mixin-linewise # Mixin-Linewise
-    - perl-config-mvp-reader-ini # Config-MVP-Reader-INI
-    - perl-list-moreutils # List-MoreUtils
-    - perl-log-dispatchouli # Log-Dispatchouli
-    - perl-namespace-autoclean # namespace-autoclean
-    - perl-string-rewriteprefix # String-RewritePrefix
-    - perl-string-flogger # String-Flogger
-    - perl-module-runtime # Module-Runtime
-    - perl-config-mvp # Config-MVP
-    - perl-moose # Moose
+    - perl-pathtools
+    - perl-string-formatter
+    - perl-params-util
+    - perl-module-runtime
+    - perl-string-rewriteprefix
+    - perl-moose
+    - perl-text-tabs+wrap
+    - perl-namespace-autoclean
+    - perl-config-mvp-reader-ini
+    - perl-log-dispatchouli
+    - perl-string-flogger
+    - perl-list-moreutils
+    - perl-moose-autobox
+    - perl-pod-elemental
+    - perl-config-mvp
+    - perl-datetime
+    - perl-mixin-linewise
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

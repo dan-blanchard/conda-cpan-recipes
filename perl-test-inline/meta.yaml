@@ -10,37 +10,45 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-test-classapi # Test-ClassAPI
-    - perl-file-remove # File-Remove
-    - perl-params-util # Params-Util
-    - perl-test-script # Test-Script
-    - perl-file-chmod # File-chmod
-    - perl-file-find-rule # File-Find-Rule
-    - perl-config-tiny # Config-Tiny
-    - perl-file-slurp # File-Slurp
-    - perl-pod-tests # Pod-Tests
-    - perl-file-flat # File-Flat
-    - perl-algorithm-dependency # Algorithm-Dependency
+    - perl-test-script
+    - perl-file-slurp
+    - perl-getopt-long
+    - perl-file-chmod
+    - perl-scalar-list-utils
+    - perl-file-flat
+    - perl-test-simple
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-pod-tests
+    - perl-file-remove
+    - perl-config-tiny
+    - perl-file-find-rule
+    - perl-test-classapi
+    - perl-algorithm-dependency
+    - perl-params-util
 
   run:
     - perl
-    - perl-config-tiny # Config-Tiny
-    - perl-file-remove # File-Remove
-    - perl-pod-tests # Pod-Tests
-    - perl-file-chmod # File-chmod
-    - perl-file-find-rule # File-Find-Rule
-    - perl-params-util # Params-Util
-    - perl-file-slurp # File-Slurp
-    - perl-file-flat # File-Flat
-    - perl-algorithm-dependency # Algorithm-Dependency
+    - perl-pathtools
+    - perl-params-util
+    - perl-file-remove
+    - perl-file-find-rule
+    - perl-file-chmod
+    - perl-getopt-long
+    - perl-config-tiny
+    - perl-algorithm-dependency
+    - perl-file-flat
+    - perl-pod-tests
+    - perl-file-slurp
+    - perl-scalar-list-utils
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

@@ -1,23 +1,24 @@
 package:
   name: perl-set-scalar
-  version: !!str 1.27
+  version: !!str 1.28
 
 source:
-  fn: Set-Scalar-1.27.tar.gz
-  url: http://cpan.metacpan.org/authors/id/D/DA/DAVIDO/Set-Scalar-1.27.tar.gz
-  md5: aff90ce482c5c53e8dafe9812b61c9d0
+  fn: Set-Scalar-1.28.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAVIDO/Set-Scalar-1.28.tar.gz
+  md5: 1243a38c70000159bd5f8ec0d3e91bf2
 #  patches:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
+    - perl-extutils-makemaker
 
   run:
     - perl
@@ -35,7 +36,7 @@ requirements:
 
 about:
   home: http://metacpan.org/pod/Set-Scalar
-  license: p
+  license: perl_5
   summary: 'basic set operations'
 
 # See

@@ -10,22 +10,29 @@ source:
    # List any patch files here
    # - fix.patch
 
-# build:
+build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  # number: 1
+  number: 1
 
 requirements:
   build:
     - perl
-    - perl-test-warnings # Test-Warnings
-    - perl-moosex-types # MooseX-Types
-    - perl-test-deep # Test-Deep
-    - perl-module-build-tiny # Module-Build-Tiny
+    - perl-pathtools
+    - perl-moosex-types
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-test-deep
+    - perl-test-warnings
+    - perl-carp
+    - perl-module-build-tiny
+    - perl-test-simple
+    - perl-scalar-list-utils
 
   run:
     - perl
-    - perl-moosex-types # MooseX-Types
+    - perl-moosex-types
+    - perl-carp
 
 # test:
   # By default CPAN tests will be run while "building" (which just uses cpanm

@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Just a simple import test
-perl -e 'use Module::Pluggable::Object'
+perl -e 'use Module-Pluggable'
