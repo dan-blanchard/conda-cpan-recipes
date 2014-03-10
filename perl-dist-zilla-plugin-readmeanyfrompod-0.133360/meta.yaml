@@ -1,0 +1,83 @@
+package:
+  name: perl-dist-zilla-plugin-readmeanyfrompod
+  version: !!str 0.133360
+
+source:
+  fn: Dist-Zilla-Plugin-ReadmeAnyFromPod-0.133360.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RT/RTHOMPSON/Dist-Zilla-Plugin-ReadmeAnyFromPod-0.133360.tar.gz
+  md5: 73e0f30f1e2ab007cc37b1734f4bc04f
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-moosex-has-sugar
+    - perl-encode
+    - perl-test-most
+    - perl-dist-zilla-role-file-changenotification
+    - perl-path-tiny
+    - perl-carp
+    - perl-test-fatal
+    - perl-pod-markdown
+    - perl-lib
+    - perl-io-stringy
+    - perl-moose-autobox
+    - perl-test-simple
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-ppi
+    - perl-test-deep
+    - perl-io
+    - perl-moose
+    - perl-pod-simple
+    - perl-scalar-list-utils
+    - perl-autodie
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-moosex-has-sugar
+    - perl-ppi
+    - perl-encode
+    - perl-dist-zilla-role-file-changenotification
+    - perl-io
+    - perl-moose
+    - perl-path-tiny
+    - perl-pod-simple
+    - perl-pod-markdown
+    - perl-io-stringy
+    - perl-moose-autobox
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::ReadmeAnyFromPod
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/DarwinAwardWinner/Dist-Zilla-Plugin-ReadmeAnyFromPod
+  license: p
+  summary: 'Automatically convert POD to a README in any format for Dist::Zilla'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

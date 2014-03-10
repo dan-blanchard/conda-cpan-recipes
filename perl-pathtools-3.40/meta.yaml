@@ -1,0 +1,53 @@
+package:
+  name: perl-pathtools
+  version: !!str 3.40
+
+source:
+  fn: PathTools-3.40.tar.gz
+  url: http://cpan.metacpan.org/authors/id/S/SM/SMUELLER/PathTools-3.40.tar.gz
+  md5: 7da19c34dc2d1017cbb675a6ff4fe283
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test
+    - perl-extutils-makemaker
+    - perl-carp
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-test
+    - perl-carp
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/PathTools
+  license: unknown
+  summary: 'get pathname of current working directory'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

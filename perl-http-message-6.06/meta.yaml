@@ -1,0 +1,65 @@
+package:
+  name: perl-http-message
+  version: !!str 6.06
+
+source:
+  fn: HTTP-Message-6.06.tar.gz
+  url: http://cpan.metacpan.org/authors/id/G/GA/GAAS/HTTP-Message-6.06.tar.gz
+  md5: e563ac516e28d33f65bc0f295f625f85
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-encode-locale
+    - perl-compress-raw-zlib
+    - perl-io-compress
+    - perl-uri
+    - perl-lwp-mediatypes
+    - perl-encode
+    - perl-io-html
+    - perl-http-date
+    - perl-mime-base64
+
+  run:
+    - perl
+    - perl-uri
+    - perl-encode-locale
+    - perl-compress-raw-zlib
+    - perl-io-compress
+    - perl-lwp-mediatypes
+    - perl-encode
+    - perl-io-html
+    - perl-http-date
+    - perl-mime-base64
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/HTTP-Message
+  license: perl_5
+  summary: 'HTTP style messages'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

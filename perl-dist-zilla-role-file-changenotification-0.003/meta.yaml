@@ -1,0 +1,66 @@
+package:
+  name: perl-dist-zilla-role-file-changenotification
+  version: !!str 0.003
+
+source:
+  fn: Dist-Zilla-Role-File-ChangeNotification-0.003.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Role-File-ChangeNotification-0.003.tar.gz
+  md5: 32068bfe4cd6361d14cced924dc0e541
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-module-runtime
+    - perl-if
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-digest-md5
+    - perl-test-deep
+    - perl-moose
+    - perl-path-tiny
+    - perl-test-fatal
+    - perl-module-build-tiny
+    - perl-test-simple
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-digest-md5
+    - perl-moose
+    - perl-namespace-autoclean
+    - perl-encode
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Role::File::ChangeNotification
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Role-File-ChangeNotification
+  license: perl_5
+  summary: "Receive notification when something changes a file's contents"
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

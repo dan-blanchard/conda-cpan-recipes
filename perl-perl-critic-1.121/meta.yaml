@@ -1,0 +1,296 @@
+package:
+  name: perl-perl-critic
+  version: !!str 1.121
+
+source:
+  fn: Perl-Critic-1.121.tar.gz
+  url: http://cpan.metacpan.org/authors/id/T/TH/THALJEF/Perl-Critic-1.121.tar.gz
+  md5: d14676d579c4fbc2736106f9863d4d1f
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-b-keywords
+    - perl-module-build
+    - perl-exception-class
+    - perl-text-parsewords
+    - perl-config-tiny
+    - perl-list-moreutils
+    - perl-task-weaken
+    - perl-pod-spell
+    - perl-email-address
+    - perl-lib
+    - perl-pathtools
+    - perl-readonly
+    - perl-ppi
+    - perl-ppix-utilities
+    - perl-test-deep
+    - perl-perl-tidy
+    - perl-ppix-regexp
+    - perl-io-string
+    - perl-module-pluggable
+    - perl-getopt-long
+    - perl-carp
+    - perl-version
+    - perl-scalar-list-utils
+    - perl-file-temp
+    - perl-pod-usage
+    - perl-test-simple
+    - perl-string-format
+    - perl-exporter
+    - perl-base
+    - perl-file-path
+    - perl-pod-parser
+
+  run:
+    - perl
+    - perl-io-string
+    - perl-text-parsewords
+    - perl-exception-class
+    - perl-config-tiny
+    - perl-list-moreutils
+    - perl-task-weaken
+    - perl-pod-spell
+    - perl-email-address
+    - perl-ppix-regexp
+    - perl-pathtools
+    - perl-readonly
+    - perl-ppi
+    - perl-ppix-utilities
+    - perl-perl-tidy
+    - perl-string-format
+    - perl-b-keywords
+    - perl-module-pluggable
+    - perl-getopt-long
+    - perl-carp
+    - perl-version
+    - perl-scalar-list-utils
+    - perl-file-temp
+    - perl-pod-usage
+    - perl-test-simple
+    - perl-exporter
+    - perl-base
+    - perl-file-path
+    - perl-pod-parser
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Perl::Critic
+    - Perl::Critic::Annotation
+    - Perl::Critic::Command
+    - Perl::Critic::Config
+    - Perl::Critic::Document
+    - Perl::Critic::Exception
+    - Perl::Critic::Exception::AggregateConfiguration
+    - Perl::Critic::Exception::Configuration
+    - Perl::Critic::Exception::Configuration::Generic
+    - Perl::Critic::Exception::Configuration::NonExistentPolicy
+    - Perl::Critic::Exception::Configuration::Option
+    - Perl::Critic::Exception::Configuration::Option::Global
+    - Perl::Critic::Exception::Configuration::Option::Global::ExtraParameter
+    - Perl::Critic::Exception::Configuration::Option::Global::ParameterValue
+    - Perl::Critic::Exception::Configuration::Option::Policy
+    - Perl::Critic::Exception::Configuration::Option::Policy::ExtraParameter
+    - Perl::Critic::Exception::Configuration::Option::Policy::ParameterValue
+    - Perl::Critic::Exception::Fatal
+    - Perl::Critic::Exception::Fatal::Generic
+    - Perl::Critic::Exception::Fatal::Internal
+    - Perl::Critic::Exception::Fatal::PolicyDefinition
+    - Perl::Critic::Exception::IO
+    - Perl::Critic::Exception::Parse
+    - Perl::Critic::OptionsProcessor
+    - Perl::Critic::Policy
+    - Perl::Critic::Policy::BuiltinFunctions::ProhibitBooleanGrep
+    - Perl::Critic::Policy::BuiltinFunctions::ProhibitComplexMappings
+    - Perl::Critic::Policy::BuiltinFunctions::ProhibitLvalueSubstr
+    - Perl::Critic::Policy::BuiltinFunctions::ProhibitReverseSortBlock
+    - Perl::Critic::Policy::BuiltinFunctions::ProhibitSleepViaSelect
+    - Perl::Critic::Policy::BuiltinFunctions::ProhibitStringyEval
+    - Perl::Critic::Policy::BuiltinFunctions::ProhibitStringySplit
+    - Perl::Critic::Policy::BuiltinFunctions::ProhibitUniversalCan
+    - Perl::Critic::Policy::BuiltinFunctions::ProhibitUniversalIsa
+    - Perl::Critic::Policy::BuiltinFunctions::ProhibitVoidGrep
+    - Perl::Critic::Policy::BuiltinFunctions::ProhibitVoidMap
+    - Perl::Critic::Policy::BuiltinFunctions::RequireBlockGrep
+    - Perl::Critic::Policy::BuiltinFunctions::RequireBlockMap
+    - Perl::Critic::Policy::BuiltinFunctions::RequireGlobFunction
+    - Perl::Critic::Policy::BuiltinFunctions::RequireSimpleSortBlock
+    - Perl::Critic::Policy::ClassHierarchies::ProhibitAutoloading
+    - Perl::Critic::Policy::ClassHierarchies::ProhibitExplicitISA
+    - Perl::Critic::Policy::ClassHierarchies::ProhibitOneArgBless
+    - Perl::Critic::Policy::CodeLayout::ProhibitHardTabs
+    - Perl::Critic::Policy::CodeLayout::ProhibitParensWithBuiltins
+    - Perl::Critic::Policy::CodeLayout::ProhibitQuotedWordLists
+    - Perl::Critic::Policy::CodeLayout::ProhibitTrailingWhitespace
+    - Perl::Critic::Policy::CodeLayout::RequireConsistentNewlines
+    - Perl::Critic::Policy::CodeLayout::RequireTidyCode
+    - Perl::Critic::Policy::CodeLayout::RequireTrailingCommas
+    - Perl::Critic::Policy::ControlStructures::ProhibitCStyleForLoops
+    - Perl::Critic::Policy::ControlStructures::ProhibitCascadingIfElse
+    - Perl::Critic::Policy::ControlStructures::ProhibitDeepNests
+    - Perl::Critic::Policy::ControlStructures::ProhibitLabelsWithSpecialBlockNames
+    - Perl::Critic::Policy::ControlStructures::ProhibitMutatingListFunctions
+    - Perl::Critic::Policy::ControlStructures::ProhibitNegativeExpressionsInUnlessAndUntilConditions
+    - Perl::Critic::Policy::ControlStructures::ProhibitPostfixControls
+    - Perl::Critic::Policy::ControlStructures::ProhibitUnlessBlocks
+    - Perl::Critic::Policy::ControlStructures::ProhibitUnreachableCode
+    - Perl::Critic::Policy::ControlStructures::ProhibitUntilBlocks
+    - Perl::Critic::Policy::Documentation::PodSpelling
+    - Perl::Critic::Policy::Documentation::RequirePackageMatchesPodName
+    - Perl::Critic::Policy::Documentation::RequirePodAtEnd
+    - Perl::Critic::Policy::Documentation::RequirePodLinksIncludeText
+    - Perl::Critic::Policy::Documentation::RequirePodSections
+    - Perl::Critic::Policy::ErrorHandling::RequireCarping
+    - Perl::Critic::Policy::ErrorHandling::RequireCheckingReturnValueOfEval
+    - Perl::Critic::Policy::InputOutput::ProhibitBacktickOperators
+    - Perl::Critic::Policy::InputOutput::ProhibitBarewordFileHandles
+    - Perl::Critic::Policy::InputOutput::ProhibitExplicitStdin
+    - Perl::Critic::Policy::InputOutput::ProhibitInteractiveTest
+    - Perl::Critic::Policy::InputOutput::ProhibitJoinedReadline
+    - Perl::Critic::Policy::InputOutput::ProhibitOneArgSelect
+    - Perl::Critic::Policy::InputOutput::ProhibitReadlineInForLoop
+    - Perl::Critic::Policy::InputOutput::ProhibitTwoArgOpen
+    - Perl::Critic::Policy::InputOutput::RequireBracedFileHandleWithPrint
+    - Perl::Critic::Policy::InputOutput::RequireBriefOpen
+    - Perl::Critic::Policy::InputOutput::RequireCheckedClose
+    - Perl::Critic::Policy::InputOutput::RequireCheckedOpen
+    - Perl::Critic::Policy::InputOutput::RequireCheckedSyscalls
+    - Perl::Critic::Policy::InputOutput::RequireEncodingWithUTF8Layer
+    - Perl::Critic::Policy::Miscellanea::ProhibitFormats
+    - Perl::Critic::Policy::Miscellanea::ProhibitTies
+    - Perl::Critic::Policy::Miscellanea::ProhibitUnrestrictedNoCritic
+    - Perl::Critic::Policy::Miscellanea::ProhibitUselessNoCritic
+    - Perl::Critic::Policy::Modules::ProhibitAutomaticExportation
+    - Perl::Critic::Policy::Modules::ProhibitConditionalUseStatements
+    - Perl::Critic::Policy::Modules::ProhibitEvilModules
+    - Perl::Critic::Policy::Modules::ProhibitExcessMainComplexity
+    - Perl::Critic::Policy::Modules::ProhibitMultiplePackages
+    - Perl::Critic::Policy::Modules::RequireBarewordIncludes
+    - Perl::Critic::Policy::Modules::RequireEndWithOne
+    - Perl::Critic::Policy::Modules::RequireExplicitPackage
+    - Perl::Critic::Policy::Modules::RequireFilenameMatchesPackage
+    - Perl::Critic::Policy::Modules::RequireNoMatchVarsWithUseEnglish
+    - Perl::Critic::Policy::Modules::RequireVersionVar
+    - Perl::Critic::Policy::NamingConventions::Capitalization
+    - Perl::Critic::Policy::NamingConventions::ProhibitAmbiguousNames
+    - Perl::Critic::Policy::Objects::ProhibitIndirectSyntax
+    - Perl::Critic::Policy::References::ProhibitDoubleSigils
+    - Perl::Critic::Policy::RegularExpressions::ProhibitCaptureWithoutTest
+    - Perl::Critic::Policy::RegularExpressions::ProhibitComplexRegexes
+    - Perl::Critic::Policy::RegularExpressions::ProhibitEnumeratedClasses
+    - Perl::Critic::Policy::RegularExpressions::ProhibitEscapedMetacharacters
+    - Perl::Critic::Policy::RegularExpressions::ProhibitFixedStringMatches
+    - Perl::Critic::Policy::RegularExpressions::ProhibitSingleCharAlternation
+    - Perl::Critic::Policy::RegularExpressions::ProhibitUnusedCapture
+    - Perl::Critic::Policy::RegularExpressions::ProhibitUnusualDelimiters
+    - Perl::Critic::Policy::RegularExpressions::RequireBracesForMultiline
+    - Perl::Critic::Policy::RegularExpressions::RequireDotMatchAnything
+    - Perl::Critic::Policy::RegularExpressions::RequireExtendedFormatting
+    - Perl::Critic::Policy::RegularExpressions::RequireLineBoundaryMatching
+    - Perl::Critic::Policy::Subroutines::ProhibitAmpersandSigils
+    - Perl::Critic::Policy::Subroutines::ProhibitBuiltinHomonyms
+    - Perl::Critic::Policy::Subroutines::ProhibitExcessComplexity
+    - Perl::Critic::Policy::Subroutines::ProhibitExplicitReturnUndef
+    - Perl::Critic::Policy::Subroutines::ProhibitManyArgs
+    - Perl::Critic::Policy::Subroutines::ProhibitNestedSubs
+    - Perl::Critic::Policy::Subroutines::ProhibitReturnSort
+    - Perl::Critic::Policy::Subroutines::ProhibitSubroutinePrototypes
+    - Perl::Critic::Policy::Subroutines::ProhibitUnusedPrivateSubroutines
+    - Perl::Critic::Policy::Subroutines::ProtectPrivateSubs
+    - Perl::Critic::Policy::Subroutines::RequireArgUnpacking
+    - Perl::Critic::Policy::Subroutines::RequireFinalReturn
+    - Perl::Critic::Policy::TestingAndDebugging::ProhibitNoStrict
+    - Perl::Critic::Policy::TestingAndDebugging::ProhibitNoWarnings
+    - Perl::Critic::Policy::TestingAndDebugging::ProhibitProlongedStrictureOverride
+    - Perl::Critic::Policy::TestingAndDebugging::RequireTestLabels
+    - Perl::Critic::Policy::TestingAndDebugging::RequireUseStrict
+    - Perl::Critic::Policy::TestingAndDebugging::RequireUseWarnings
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitCommaSeparatedStatements
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitComplexVersion
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitConstantPragma
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitEmptyQuotes
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitEscapedCharacters
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitImplicitNewlines
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitInterpolationOfLiterals
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitLeadingZeros
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitLongChainsOfMethodCalls
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitMagicNumbers
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitMismatchedOperators
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitMixedBooleanOperators
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitNoisyQuotes
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitQuotesAsQuotelikeOperatorDelimiters
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitSpecialLiteralHeredocTerminator
+    - Perl::Critic::Policy::ValuesAndExpressions::ProhibitVersionStrings
+    - Perl::Critic::Policy::ValuesAndExpressions::RequireConstantVersion
+    - Perl::Critic::Policy::ValuesAndExpressions::RequireInterpolationOfMetachars
+    - Perl::Critic::Policy::ValuesAndExpressions::RequireNumberSeparators
+    - Perl::Critic::Policy::ValuesAndExpressions::RequireQuotedHeredocTerminator
+    - Perl::Critic::Policy::ValuesAndExpressions::RequireUpperCaseHeredocTerminator
+    - Perl::Critic::Policy::Variables::ProhibitAugmentedAssignmentInDeclaration
+    - Perl::Critic::Policy::Variables::ProhibitConditionalDeclarations
+    - Perl::Critic::Policy::Variables::ProhibitEvilVariables
+    - Perl::Critic::Policy::Variables::ProhibitLocalVars
+    - Perl::Critic::Policy::Variables::ProhibitMatchVars
+    - Perl::Critic::Policy::Variables::ProhibitPackageVars
+    - Perl::Critic::Policy::Variables::ProhibitPerl4PackageNames
+    - Perl::Critic::Policy::Variables::ProhibitPunctuationVars
+    - Perl::Critic::Policy::Variables::ProhibitReusedNames
+    - Perl::Critic::Policy::Variables::ProhibitUnusedVariables
+    - Perl::Critic::Policy::Variables::ProtectPrivateVars
+    - Perl::Critic::Policy::Variables::RequireInitializationForLocalVars
+    - Perl::Critic::Policy::Variables::RequireLexicalLoopIterators
+    - Perl::Critic::Policy::Variables::RequireLocalizedPunctuationVars
+    - Perl::Critic::Policy::Variables::RequireNegativeIndices
+    - Perl::Critic::PolicyConfig
+    - Perl::Critic::PolicyFactory
+    - Perl::Critic::PolicyListing
+    - Perl::Critic::PolicyParameter
+    - Perl::Critic::PolicyParameter::Behavior
+    - Perl::Critic::PolicyParameter::Behavior::Boolean
+    - Perl::Critic::PolicyParameter::Behavior::Enumeration
+    - Perl::Critic::PolicyParameter::Behavior::Integer
+    - Perl::Critic::PolicyParameter::Behavior::String
+    - Perl::Critic::PolicyParameter::Behavior::StringList
+    - Perl::Critic::ProfilePrototype
+    - Perl::Critic::Statistics
+    - Perl::Critic::TestUtils
+    - Perl::Critic::Theme
+    - Perl::Critic::ThemeListing
+    - Perl::Critic::UserProfile
+    - Perl::Critic::Utils
+    - Perl::Critic::Utils::Constants
+    - Perl::Critic::Utils::DataConversion
+    - Perl::Critic::Utils::McCabe
+    - Perl::Critic::Utils::POD
+    - Perl::Critic::Utils::POD::ParseInteriorSequence
+    - Perl::Critic::Utils::PPI
+    - Perl::Critic::Utils::Perl
+    - Perl::Critic::Violation
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://perlcritic.com
+  license: perl_5
+  summary: 'Critique Perl source code for best-practices.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

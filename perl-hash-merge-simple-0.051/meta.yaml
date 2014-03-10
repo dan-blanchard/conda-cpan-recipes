@@ -1,0 +1,52 @@
+package:
+  name: perl-hash-merge-simple
+  version: !!str 0.051
+
+source:
+  fn: Hash-Merge-Simple-0.051.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RO/ROKR/Hash-Merge-Simple-0.051.tar.gz
+  md5: f47b9b99794b1f958bcfa3e816ff4660
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-clone
+    - perl-extutils-makemaker
+    - perl-test-most
+    - perl-storable
+
+  run:
+    - perl
+    - perl-clone
+    - perl-storable
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Hash-Merge-Simple
+  license: perl_5
+  summary: 'Recursively merge two or more hashes, simply'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

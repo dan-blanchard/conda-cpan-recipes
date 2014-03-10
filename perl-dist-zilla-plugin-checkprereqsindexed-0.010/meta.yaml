@@ -1,0 +1,67 @@
+package:
+  name: perl-dist-zilla-plugin-checkprereqsindexed
+  version: !!str 0.010
+
+source:
+  fn: Dist-Zilla-Plugin-CheckPrereqsIndexed-0.010.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Dist-Zilla-Plugin-CheckPrereqsIndexed-0.010.tar.gz
+  md5: 0071a13f81cccf9f435794b16a71f438
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-libwww-perl
+    - perl-extutils-makemaker
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-json
+    - perl-moose
+    - perl-list-moreutils
+    - perl-version
+    - perl-test-fatal
+    - perl-lib
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-libwww-perl
+    - perl-dist-zilla
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-json
+    - perl-moose
+    - perl-list-moreutils
+    - perl-version
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::CheckPrereqsIndexed
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Dist-Zilla-Plugin-CheckPrereqsIndexed
+  license: p
+  summary: 'prevent a release if you have prereqs not found on CPAN'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,66 @@
+package:
+  name: perl-string-errf
+  version: !!str 0.007
+
+source:
+  fn: String-Errf-0.007.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/String-Errf-0.007.tar.gz
+  md5: 27771ecf864f1ae81cb532fb3e2d42ed
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-params-util
+    - perl-time-piece
+    - perl-json
+    - perl-parent
+    - perl-carp
+    - perl-sub-exporter
+    - perl-scalar-list-utils
+    - perl-string-formatter
+    - perl-autodie
+    - perl-timedate
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-string-formatter
+    - perl-time-piece
+    - perl-parent
+    - perl-carp
+    - perl-sub-exporter
+    - perl-params-util
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - String::Errf
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/String-Errf
+  license: p
+  summary: 'a simple sprintf-like dialect'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

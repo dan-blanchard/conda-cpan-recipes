@@ -1,0 +1,69 @@
+package:
+  name: perl-package-stash
+  version: !!str 0.36
+
+source:
+  fn: Package-Stash-0.36.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DO/DOY/Package-Stash-0.36.tar.gz
+  md5: 066aa5099af88457c4f1eb2448272061
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-text-parsewords
+    - perl-test-requires
+    - perl-scalar-list-utils
+    - perl-extutils-makemaker
+    - perl-getopt-long
+    - perl-constant
+    - perl-module-implementation
+    - perl-base
+    - perl-carp
+    - perl-test-fatal
+    - perl-lib
+    - perl-file-temp
+    - perl-dist-checkconflicts
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-constant
+    - perl-getopt-long
+    - perl-module-implementation
+    - perl-carp
+    - perl-dist-checkconflicts
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Package::Stash
+    - Package::Stash::PP
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/release/Package-Stash
+  license: perl_5
+  summary: 'routines for manipulating stashes'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

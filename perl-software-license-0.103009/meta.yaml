@@ -1,0 +1,95 @@
+package:
+  name: perl-software-license
+  version: !!str 0.103009
+
+source:
+  fn: Software-License-0.103009.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Software-License-0.103009.tar.gz
+  md5: 56207e8cc99b2a9b4a05a46b730fbca4
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-data-section
+    - perl-text-template
+    - perl-parent
+    - perl-module-load
+    - perl-carp
+    - perl-try-tiny
+    - perl-io
+    - perl-sub-install
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-data-section
+    - perl-text-template
+    - perl-parent
+    - perl-module-load
+    - perl-carp
+    - perl-io
+    - perl-sub-install
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Software::License
+    - Software::License::AGPL_3
+    - Software::License::Apache_1_1
+    - Software::License::Apache_2_0
+    - Software::License::Artistic_1_0
+    - Software::License::Artistic_2_0
+    - Software::License::BSD
+    - Software::License::CC0_1_0
+    - Software::License::Custom
+    - Software::License::FreeBSD
+    - Software::License::GFDL_1_2
+    - Software::License::GFDL_1_3
+    - Software::License::GPL_1
+    - Software::License::GPL_2
+    - Software::License::GPL_3
+    - Software::License::LGPL_2_1
+    - Software::License::LGPL_3_0
+    - Software::License::MIT
+    - Software::License::Mozilla_1_0
+    - Software::License::Mozilla_1_1
+    - Software::License::Mozilla_2_0
+    - Software::License::None
+    - Software::License::OpenSSL
+    - Software::License::Perl_5
+    - Software::License::PostgreSQL
+    - Software::License::QPL_1_0
+    - Software::License::SSLeay
+    - Software::License::Sun
+    - Software::License::Zlib
+    - Software::LicenseUtils
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Software-License
+  license: perl_5
+  summary: 'packages that provide templated software licenses'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

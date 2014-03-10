@@ -1,0 +1,58 @@
+package:
+  name: perl-uri-fromhash
+  version: !!str 0.04
+
+source:
+  fn: URI-FromHash-0.04.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/URI-FromHash-0.04.tar.gz
+  md5: 2034041b86ac2a71fb7b488d6f0370f8
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-carp
+    - perl-params-validate
+    - perl-exporter
+    - perl-file-temp
+    - perl-uri
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-uri
+    - perl-exporter
+    - perl-carp
+    - perl-params-validate
+
+test:
+  # Perl 'use' tests
+  imports:
+    - URI::FromHash
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/release/URI-FromHash
+  license: artistic_2
+  summary: 'Build a URI from a set of named parameters'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

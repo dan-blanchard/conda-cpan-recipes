@@ -1,0 +1,51 @@
+package:
+  name: perl-algorithm-c3
+  version: !!str 0.09
+
+source:
+  fn: Algorithm-C3-0.09.tar.gz
+  url: http://cpan.metacpan.org/authors/id/H/HA/HAARG/Algorithm-C3-0.09.tar.gz
+  md5: 0235e64330790b4c5d59bf76d03f8c90
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-carp
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-carp
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Algorithm::C3
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Algorithm-C3
+  license: perl_5
+  summary: 'A module for merging hierarchies using the C3 algorithm'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,61 @@
+package:
+  name: perl-directory-scratch
+  version: !!str 0.15
+
+source:
+  fn: Directory-Scratch-0.15.tar.gz
+  url: http://cpan.metacpan.org/authors/id/B/BO/BOBTFISH/Directory-Scratch-0.15.tar.gz
+  md5: 8d4ad115e1f2b3bfabb59267b8fec0fb
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-path-class
+    - perl-extutils-makemaker
+    - perl-file-slurp
+    - perl-carp
+    - perl-file-path
+    - perl-file-temp
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-path-class
+    - perl-file-slurp
+    - perl-carp
+    - perl-file-path
+    - perl-file-temp
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Directory::Scratch
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Directory-Scratch
+  license: perl_5
+  summary: 'Easy-to-use self-cleaning scratch space.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,68 @@
+package:
+  name: perl-dist-zilla-plugin-metadata-builtwith
+  version: !!str 0.04000002
+
+source:
+  fn: Dist-Zilla-Plugin-MetaData-BuiltWith-0.04000002.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Dist-Zilla-Plugin-MetaData-BuiltWith-0.04000002.tar.gz
+  md5: 7df432125acf254574d4d9e987f8d779
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-module-build
+    - perl-readonly
+    - perl-namespace-autoclean
+    - perl-class-load
+    - perl-moosex-types
+    - perl-moose
+    - perl-carp
+    - perl-dist-zilla-util-emulatephase
+    - perl-module-data
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-readonly
+    - perl-namespace-autoclean
+    - perl-class-load
+    - perl-moosex-types
+    - perl-moose
+    - perl-carp
+    - perl-dist-zilla-util-emulatephase
+    - perl-module-data
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::MetaData::BuiltWith
+    - Dist::Zilla::Plugin::MetaData::BuiltWith::All
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/Dist-Zilla-Plugin-MetaData-BuiltWith
+  license: p
+  summary: 'Report what versions of things your distribution was built against'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

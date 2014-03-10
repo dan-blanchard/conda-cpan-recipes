@@ -1,0 +1,66 @@
+package:
+  name: perl-moosex-types-path-tiny
+  version: !!str 0.010
+
+source:
+  fn: MooseX-Types-Path-Tiny-0.010.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-Path-Tiny-0.010.tar.gz
+  md5: dadcd3dd3ea8cc1ac594382b6f5c0fca
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-test-simple
+    - perl-moosex-types-stringlike
+    - perl-moosex-types
+    - perl-moose
+    - perl-path-tiny
+    - perl-version
+    - perl-test-fatal
+    - perl-module-build-tiny
+    - perl-file-temp
+    - perl-file-pushd
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-moosex-types
+    - perl-moose
+    - perl-path-tiny
+    - perl-moosex-types-stringlike
+    - perl-if
+
+test:
+  # Perl 'use' tests
+  imports:
+    - MooseX::Types::Path::Tiny
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/MooseX-Types-Path-Tiny
+  license: apache_2_0
+  summary: 'Path::Tiny types and coercions for Moose'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

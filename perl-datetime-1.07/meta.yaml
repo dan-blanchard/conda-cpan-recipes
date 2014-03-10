@@ -1,0 +1,73 @@
+package:
+  name: perl-datetime
+  version: !!str 1.07
+
+source:
+  fn: DateTime-1.07.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-1.07.tar.gz
+  md5: 2b1745e4f7c0777c02545033588f6394
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-module-build
+    - perl-xsloader
+    - perl-datetime-locale
+    - perl-scalar-list-utils
+    - perl-constant
+    - perl-base
+    - perl-carp
+    - perl-params-validate
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-datetime-timezone
+    - perl-storable
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-datetime-locale
+    - perl-constant
+    - perl-base
+    - perl-carp
+    - perl-params-validate
+    - perl-try-tiny
+    - perl-datetime-timezone
+    - perl-xsloader
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - DateTime
+    - DateTime::Duration
+    - DateTime::Helpers
+    - DateTime::Infinite
+    - DateTime::LeapSecond
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/DateTime
+  license: artistic_2
+  summary: 'A date and time object'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

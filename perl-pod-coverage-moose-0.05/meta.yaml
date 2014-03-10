@@ -1,0 +1,64 @@
+package:
+  name: perl-pod-coverage-moose
+  version: !!str 0.05
+
+source:
+  fn: Pod-Coverage-Moose-0.05.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Pod-Coverage-Moose-0.05.tar.gz
+  md5: 7f2402f116248284d6479e9f53ed0d34
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-namespace-autoclean
+    - perl-pod-coverage
+    - perl-class-load
+    - perl-moose
+    - perl-carp
+    - perl-module-build-tiny
+    - perl-lib
+    - perl-test-simple
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-moose
+    - perl-namespace-autoclean
+    - perl-carp
+    - perl-pod-coverage
+    - perl-class-load
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Pod::Coverage::Moose
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/moose/Pod-Coverage-Moose
+  license: p
+  summary: 'Pod::Coverage extension for Moose'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

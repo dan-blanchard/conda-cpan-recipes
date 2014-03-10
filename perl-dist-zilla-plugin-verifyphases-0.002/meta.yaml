@@ -1,0 +1,67 @@
+package:
+  name: perl-dist-zilla-plugin-verifyphases
+  version: !!str 0.002
+
+source:
+  fn: Dist-Zilla-Plugin-VerifyPhases-0.002.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-VerifyPhases-0.002.tar.gz
+  md5: e8e91b90b4b3931b2ce83b4637959a9e
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-namespace-autoclean
+    - perl-digest-md5
+    - perl-test-deep
+    - perl-moose
+    - perl-path-tiny
+    - perl-version
+    - perl-test-fatal
+    - perl-module-build-tiny
+    - perl-list-moreutils
+    - perl-test-simple
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-moose
+    - perl-namespace-autoclean
+    - perl-digest-md5
+    - perl-list-moreutils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::VerifyPhases
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-VerifyPhases
+  license: perl_5
+  summary: 'Compare data and files at different phases of the distribution build process'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

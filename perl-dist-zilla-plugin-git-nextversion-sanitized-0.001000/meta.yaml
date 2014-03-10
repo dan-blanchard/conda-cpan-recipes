@@ -1,0 +1,55 @@
+package:
+  name: perl-dist-zilla-plugin-git-nextversion-sanitized
+  version: !!str 0.001000
+
+source:
+  fn: Dist-Zilla-Plugin-Git-NextVersion-Sanitized-0.001000.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Dist-Zilla-Plugin-Git-NextVersion-Sanitized-0.001000.tar.gz
+  md5: c27edb326db8de95acf3a934e690861c
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-moose
+    - perl-module-build
+    - perl-dist-zilla-role-version-sanitize
+    - perl-dist-zilla-plugin-git
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-moose
+    - perl-dist-zilla-plugin-git
+    - perl-dist-zilla-role-version-sanitize
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::Git::NextVersion::Sanitized
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/Dist-Zilla-Plugin-Git-NextVersion-Sanitized
+  license: p
+  summary: 'Sanitize versions handed to you by Git::NextVersion'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

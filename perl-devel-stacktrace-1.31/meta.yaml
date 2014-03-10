@@ -1,0 +1,57 @@
+package:
+  name: perl-devel-stacktrace
+  version: !!str 1.31
+
+source:
+  fn: Devel-StackTrace-1.31.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Devel-StackTrace-1.31.tar.gz
+  md5: f7d3ba1371eac6b6a5855ba3dc1dbcd4
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-base
+    - perl-scalar-list-utils
+    - perl-test
+    - perl-file-temp
+    - perl-extutils-makemaker
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Devel::StackTrace
+    - Devel::StackTrace::Frame
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/release/Devel-StackTrace
+  license: artistic_2
+  summary: 'An object representing a stack trace'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

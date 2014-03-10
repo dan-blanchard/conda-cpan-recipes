@@ -1,0 +1,123 @@
+package:
+  name: perl-net-twitter
+  version: !!str 4.01002
+
+source:
+  fn: Net-Twitter-4.01002.tar.gz
+  url: http://cpan.metacpan.org/authors/id/M/MM/MMIMS/Net-Twitter-4.01002.tar.gz
+  md5: 58cb0b4af7c73d74113aa5b5794dfeee
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-html-parser
+    - perl-module-build
+    - perl-net-http
+    - perl-class-load
+    - perl-test-warn
+    - perl-lib
+    - perl-datetime-format-strptime
+    - perl-lwp-protocol-https
+    - perl-pathtools
+    - perl-libnet
+    - perl-json
+    - perl-scalar-list-utils
+    - perl-data-visitor
+    - perl-moosex-role-parameterized
+    - perl-uri
+    - perl-carp-clan
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-carp
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-file-temp
+    - perl-test-simple
+    - perl-libwww-perl
+    - perl-http-message
+    - perl-net-oauth
+    - perl-moose
+    - perl-base
+    - perl-digest-sha
+    - perl-devel-stacktrace
+    - perl-time-hires
+    - perl-datetime
+
+  run:
+    - perl
+    - perl-html-parser
+    - perl-try-tiny
+    - perl-class-load
+    - perl-datetime-format-strptime
+    - perl-carp-clan
+    - perl-libnet
+    - perl-json
+    - perl-data-visitor
+    - perl-uri
+    - perl-lwp-protocol-https
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-net-http
+    - perl-scalar-list-utils
+    - perl-moosex-role-parameterized
+    - perl-http-message
+    - perl-devel-stacktrace
+    - perl-moose
+    - perl-digest-sha
+    - perl-net-oauth
+    - perl-time-hires
+    - perl-datetime
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Net::Identica
+    - Net::Twitter
+    - Net::Twitter::API
+    - Net::Twitter::Core
+    - Net::Twitter::Error
+    - Net::Twitter::Meta::Method
+    - Net::Twitter::OAuth
+    - Net::Twitter::Role::API::Lists
+    - Net::Twitter::Role::API::REST
+    - Net::Twitter::Role::API::RESTv1_1
+    - Net::Twitter::Role::API::Search
+    - Net::Twitter::Role::API::Search::Trends
+    - Net::Twitter::Role::API::TwitterVision
+    - Net::Twitter::Role::API::Upload
+    - Net::Twitter::Role::AutoCursor
+    - Net::Twitter::Role::InflateObjects
+    - Net::Twitter::Role::Legacy
+    - Net::Twitter::Role::OAuth
+    - Net::Twitter::Role::RateLimit
+    - Net::Twitter::Role::RetryOnError
+    - Net::Twitter::Role::SimulateCursors
+    - Net::Twitter::Role::WrapError
+    - Net::Twitter::Search
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/semifor/Net-Twitter
+  license: perl_5
+  summary: 'A perl interface to the Twitter API'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,86 @@
+package:
+  name: perl-config-mvp
+  version: !!str 2.200007
+
+source:
+  fn: Config-MVP-2.200007.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Config-MVP-2.200007.tar.gz
+  md5: 6890447ae38d453e0125f953885a3722
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-module-pluggable
+    - perl-moosex-oneargnew
+    - perl-role-identifiable
+    - perl-class-load
+    - perl-tie-ixhash
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-lib
+    - perl-test-simple
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-module-runtime
+    - perl-moose
+    - perl-throwable
+    - perl-role-hasmessage
+    - perl-params-util
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-module-pluggable
+    - perl-module-runtime
+    - perl-role-identifiable
+    - perl-class-load
+    - perl-moose
+    - perl-throwable
+    - perl-tie-ixhash
+    - perl-role-hasmessage
+    - perl-try-tiny
+    - perl-moosex-oneargnew
+    - perl-params-util
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Config::MVP
+    - Config::MVP::Assembler
+    - Config::MVP::Assembler::WithBundles
+    - Config::MVP::Error
+    - Config::MVP::Reader
+    - Config::MVP::Reader::Findable
+    - Config::MVP::Reader::Findable::ByExtension
+    - Config::MVP::Reader::Finder
+    - Config::MVP::Reader::Hash
+    - Config::MVP::Section
+    - Config::MVP::Sequence
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Config-MVP
+  license: perl_5
+  summary: 'multivalue-property package-oriented configuration'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

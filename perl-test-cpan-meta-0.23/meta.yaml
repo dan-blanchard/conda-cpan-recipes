@@ -1,0 +1,53 @@
+package:
+  name: perl-test-cpan-meta
+  version: !!str 0.23
+
+source:
+  fn: Test-CPAN-Meta-0.23.tar.gz
+  url: http://cpan.metacpan.org/authors/id/B/BA/BARBIE/Test-CPAN-Meta-0.23.tar.gz
+  md5: ec0129151f4631fc725a2d7ec24e4801
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-simple
+    - perl-parse-cpan-meta
+    - perl-io
+
+  run:
+    - perl
+    - perl-parse-cpan-meta
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Test::CPAN::Meta
+    - Test::CPAN::Meta::Version
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Test-CPAN-Meta
+  license: artistic_2
+  summary: 'Validate your CPAN META.yml files'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

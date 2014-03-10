@@ -1,0 +1,59 @@
+package:
+  name: perl-file-chmod
+  version: !!str 0.40
+
+source:
+  fn: File-chmod-0.40.tar.gz
+  url: http://cpan.metacpan.org/authors/id/X/XE/XENO/File-chmod-0.40.tar.gz
+  md5: dd0c2034bcb13fb7031bc1e6b416d7a7
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-base
+    - perl-extutils-makemaker
+    - perl-carp
+    - perl-test-simple
+    - perl-exporter
+    - perl-file-temp
+    - perl-autodie
+    - perl-io
+
+  run:
+    - perl
+    - perl-base
+    - perl-carp
+    - perl-exporter
+
+test:
+  # Perl 'use' tests
+  imports:
+    - File::chmod
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://metacpan.org/dist/File-chmod
+  license: perl_5
+  summary: 'Implements symbolic and ls chmod modes'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

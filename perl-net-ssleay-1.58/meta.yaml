@@ -1,0 +1,53 @@
+package:
+  name: perl-net-ssleay
+  version: !!str 1.58
+
+source:
+  fn: Net-SSLeay-1.58.tar.gz
+  url: http://cpan.metacpan.org/authors/id/M/MI/MIKEM/Net-SSLeay-1.58.tar.gz
+  md5: fdd09b065e46aa3482f80d7ed7044e38
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-mime-base64
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-mime-base64
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Net::SSLeay
+    - Net::SSLeay::Handle
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Net-SSLeay
+  license: openssl
+  summary: 'Perl extension for using OpenSSL'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

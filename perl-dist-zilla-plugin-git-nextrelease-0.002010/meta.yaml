@@ -1,0 +1,65 @@
+package:
+  name: perl-dist-zilla-plugin-git-nextrelease
+  version: !!str 0.002010
+
+source:
+  fn: Dist-Zilla-Plugin-Git-NextRelease-0.002010.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Dist-Zilla-Plugin-Git-NextRelease-0.002010.tar.gz
+  md5: fa53cacd1b03e662d02b0b2668ef7d45
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-string-formatter
+    - perl-file-copy-recursive
+    - perl-moose
+    - perl-path-tiny
+    - perl-version
+    - perl-test-fatal
+    - perl-git-wrapper-plus
+    - perl-scalar-list-utils
+    - perl-datetime
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-moose
+    - perl-git-wrapper-plus
+    - perl-datetime
+    - perl-string-formatter
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::Git::NextRelease
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/Dist-Zilla-Plugin-Git-NextRelease
+  license: perl_5
+  summary: 'Use time-stamp from Git instead of process start time.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

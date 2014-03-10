@@ -1,0 +1,67 @@
+package:
+  name: perl-spellunker
+  version: !!str v0.4.0
+
+source:
+  fn: Spellunker-v0.4.0.tar.gz
+  url: http://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Spellunker-v0.4.0.tar.gz
+  md5: d0d46dbf91353a9656eae6ec827ccf7d
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-module-build
+    - perl-cpan-meta
+    - perl-regexp-common
+    - perl-getopt-long
+    - perl-parent
+    - perl-pod-simple
+    - perl-version
+    - perl-file-sharedir
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-regexp-common
+    - perl-getopt-long
+    - perl-parent
+    - perl-pod-simple
+    - perl-version
+    - perl-file-sharedir
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Spellunker
+    - Spellunker::CLI
+    - Spellunker::CLI::Pod
+    - Spellunker::Pod
+    - Spellunker::Pod::Parser
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/tokuhirom/Spellunker
+  license: perl_5
+  summary: 'Pure perl spelling checker implementation'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

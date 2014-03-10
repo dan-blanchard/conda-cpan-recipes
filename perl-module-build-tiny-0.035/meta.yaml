@@ -1,0 +1,84 @@
+package:
+  name: perl-module-build-tiny
+  version: !!str 0.035
+
+source:
+  fn: Module-Build-Tiny-0.035.tar.gz
+  url: http://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-Tiny-0.035.tar.gz
+  md5: b47f196d2611c0eb99e8ff19acc30f31
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-data-dumper
+    - perl-cpan-meta
+    - perl-extutils-install
+    - perl-podlators
+    - perl-extutils-makemaker
+    - perl-getopt-long
+    - perl-json-pp
+    - perl-carp
+    - perl-extutils-parsexs
+    - perl-lib
+    - perl-xsloader
+    - perl-test-simple
+    - perl-pathtools
+    - perl-test-harness
+    - perl-file-temp
+    - perl-extutils-installpaths
+    - perl-extutils-cbuilder
+    - perl-exporter
+    - perl-extutils-config
+    - perl-io
+    - perl-file-path
+    - perl-extutils-helpers
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-test-harness
+    - perl-extutils-config
+    - perl-cpan-meta
+    - perl-extutils-install
+    - perl-exporter
+    - perl-extutils-cbuilder
+    - perl-podlators
+    - perl-extutils-makemaker
+    - perl-getopt-long
+    - perl-json-pp
+    - perl-file-path
+    - perl-extutils-parsexs
+    - perl-extutils-installpaths
+    - perl-extutils-helpers
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Module::Build::Tiny
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Module-Build-Tiny
+  license: perl_5
+  summary: 'A tiny replacement for Module::Build'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

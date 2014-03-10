@@ -1,0 +1,59 @@
+package:
+  name: perl-extutils-cbuilder
+  version: !!str 0.280210
+
+source:
+  #fn: ExtUtils/ExtUtils-CBuilder-0.280210.tar.gz
+  #url: http://cpan.metacpan.org/authors/id/A/AM/AMBS/ExtUtils/ExtUtils-CBuilder-0.280210.tar.gz
+  #md5: 748028cf77eb90f3a3c411e7f997e3da
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl 5.18.2
+
+  run:
+    - perl 5.18.2
+
+test:
+  # Perl 'use' tests
+  imports:
+    - ExtUtils::CBuilder
+    - ExtUtils::CBuilder::Base
+    - ExtUtils::CBuilder::Platform::Unix
+    - ExtUtils::CBuilder::Platform::VMS
+    - ExtUtils::CBuilder::Platform::Windows
+    - ExtUtils::CBuilder::Platform::Windows::BCC
+    - ExtUtils::CBuilder::Platform::Windows::GCC
+    - ExtUtils::CBuilder::Platform::Windows::MSVC
+    - ExtUtils::CBuilder::Platform::aix
+    - ExtUtils::CBuilder::Platform::cygwin
+    - ExtUtils::CBuilder::Platform::darwin
+    - ExtUtils::CBuilder::Platform::dec_osf
+    - ExtUtils::CBuilder::Platform::os2
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://search.cpan.org/dist/ExtUtils-CBuilder
+  license: perl_5
+  summary: 'Compile and link C code for Perl modules'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

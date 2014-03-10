@@ -1,0 +1,78 @@
+package:
+  name: perl-dist-zilla-plugin-test-checkbreaks
+  version: !!str 0.007
+
+source:
+  fn: Dist-Zilla-Plugin-Test-CheckBreaks-0.007.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-Test-CheckBreaks-0.007.tar.gz
+  md5: 23de4031782b833289ad18877dc691d4
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-sub-exporter-formethods
+    - perl-namespace-autoclean
+    - perl-module-metadata
+    - perl-test-deep
+    - perl-path-tiny
+    - perl-version
+    - perl-module-build-tiny
+    - perl-lib
+    - perl-list-moreutils
+    - perl-test-simple
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-data-section
+    - perl-cpan-meta-requirements
+    - perl-if
+    - perl-cpan-meta-check
+    - perl-moose
+    - perl-module-runtime
+    - perl-test-deep-yaml
+    - perl-scalar-list-utils
+    - perl-file-pushd
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-data-section
+    - perl-sub-exporter-formethods
+    - perl-namespace-autoclean
+    - perl-path-tiny
+    - perl-module-metadata
+    - perl-moose
+    - perl-list-moreutils
+    - perl-module-runtime
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::Test::CheckBreaks
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-Test-CheckBreaks
+  license: perl_5
+  summary: 'Generate a test that shows your conflicting modules'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

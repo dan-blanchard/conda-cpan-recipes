@@ -1,0 +1,61 @@
+package:
+  name: perl-moosex-types-common
+  version: !!str 0.001012
+
+source:
+  fn: MooseX-Types-Common-0.001012.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Types-Common-0.001012.tar.gz
+  md5: 9acfbf718d46a9ee1d2198d6b59e40fa
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-moosex-types
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-test-deep
+    - perl-test-warnings
+    - perl-carp
+    - perl-module-build-tiny
+    - perl-test-simple
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-moosex-types
+    - perl-carp
+
+test:
+  # Perl 'use' tests
+  imports:
+    - MooseX::Types::Common
+    - MooseX::Types::Common::Numeric
+    - MooseX::Types::Common::String
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/moose/MooseX-Types-Common
+  license: p
+  summary: 'A library of commonly used type constraints'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

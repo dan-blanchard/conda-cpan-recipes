@@ -1,0 +1,62 @@
+package:
+  name: perl-config-auto
+  version: !!str 0.44
+
+source:
+  fn: Config-Auto-0.44.tar.gz
+  url: http://cpan.metacpan.org/authors/id/B/BI/BINGOS/Config-Auto-0.44.tar.gz
+  md5: 11bdd333bfb4dcf414fb78ab40a73f7f
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-io-string
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-yaml
+    - perl-config-inifiles
+    - perl-text-parsewords
+    - perl-file-temp
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-io-string
+    - perl-pathtools
+    - perl-text-parsewords
+    - perl-yaml
+    - perl-config-inifiles
+    - perl-file-temp
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Config::Auto
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Config-Auto
+  license: perl_5
+  summary: 'Magical config file parser'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

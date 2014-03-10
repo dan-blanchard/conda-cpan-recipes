@@ -1,0 +1,51 @@
+package:
+  name: perl-lingua-en-inflect
+  version: !!str 1.895
+
+source:
+  fn: Lingua-EN-Inflect-1.895.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DC/DCONWAY/Lingua-EN-Inflect-1.895.tar.gz
+  md5: 96ce4517a21800a6e90df1f4cdd515a5
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-version
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-version
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Lingua-EN-Inflect
+  license: unknown
+  summary: 'Convert singular to plural. Select "a" or "an".'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

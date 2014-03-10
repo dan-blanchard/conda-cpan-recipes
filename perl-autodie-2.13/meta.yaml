@@ -1,0 +1,46 @@
+package:
+  name: perl-autodie
+  version: !!str 2.13
+
+source:
+  #fn: autodie-2.13.tar.gz
+  #url: http://cpan.metacpan.org/authors/id/P/PJ/PJF/autodie-2.13.tar.gz
+  #md5: 2c72f01216797b44ebbc5303014a1987
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl 5.18.2
+
+  run:
+    - perl 5.18.2
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/autodie
+  license: perl_5
+  summary: 'Replace functions with ones that succeed or die with lexical scope'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,136 @@
+package:
+  name: perl-dist-zilla-pluginbundle-dagolden
+  version: !!str 0.062
+
+source:
+  fn: Dist-Zilla-PluginBundle-DAGOLDEN-0.062.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Dist-Zilla-PluginBundle-DAGOLDEN-0.062.tar.gz
+  md5: 937e851438f507082aa4686f421e3ec8
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-dist-zilla-plugin-git
+    - perl-dist-zilla-plugin-ourpkgversion
+    - perl-dist-zilla-plugin-copyfilesfrombuild
+    - perl-path-tiny
+    - perl-pod-weaver-section-contributors
+    - perl-pod-spell
+    - perl-dist-zilla-plugin-test-minimumversion
+    - perl-dist-zilla-plugin-checkchangeshascontent
+    - perl-pod-weaver
+    - perl-moose-autobox
+    - perl-pathtools
+    - perl-dist-zilla-config-slicer
+    - perl-dist-zilla-plugin-test-perl-critic
+    - perl-moose
+    - perl-dist-zilla-plugin-test-podspelling
+    - perl-test-portability-files
+    - perl-dist-zilla-plugin-authority
+    - perl-scalar-list-utils
+    - perl-file-pushd
+    - perl-dist-zilla-plugin-minimumperl
+    - perl-namespace-autoclean
+    - perl-dist-zilla-plugin-promptifstale
+    - perl-dist-zilla-plugin-githubmeta
+    - perl-dist-zilla-plugin-taskweaver
+    - perl-dist-zilla-plugin-contributorsfromgit
+    - perl-version
+    - perl-dist-zilla-plugin-prereqs-authordeps
+    - perl-dist-zilla-plugin-test-reportprereqs
+    - perl-dist-zilla-plugin-checkmetaresources
+    - perl-dist-zilla-plugin-test-portability
+    - perl-pod-elemental-perlmunger
+    - perl-test-simple
+    - perl-extutils-makemaker
+    - perl-pod-elemental-transformer-list
+    - perl-dist-zilla-plugin-readmefrompod
+    - perl-dist-zilla-plugin-metaprovides-package
+    - perl-pod-weaver-section-support
+    - perl-dist-zilla-role-pluginbundle-pluginremover
+    - perl-dist-zilla-plugin-insertcopyright
+    - perl-pod-elemental-transformer-wikidoc
+    - perl-dist-zilla-plugin-checkprereqsindexed
+    - perl-dist-zilla-plugin-bugtracker
+    - perl-dist-zilla-plugin-checkextratests
+    - perl-dist-zilla-plugin-test-compile
+    - perl-autodie
+    - perl-dist-zilla-plugin-test-version
+    - perl-dist-zilla-plugin-podweaver
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-dist-zilla-plugin-git
+    - perl-dist-zilla-plugin-ourpkgversion
+    - perl-dist-zilla-plugin-copyfilesfrombuild
+    - perl-pod-weaver-section-contributors
+    - perl-pod-spell
+    - perl-dist-zilla-plugin-test-minimumversion
+    - perl-dist-zilla-plugin-checkchangeshascontent
+    - perl-pod-weaver
+    - perl-moose-autobox
+    - perl-dist-zilla-config-slicer
+    - perl-dist-zilla-plugin-test-perl-critic
+    - perl-dist-zilla-plugin-test-podspelling
+    - perl-test-portability-files
+    - perl-dist-zilla-plugin-authority
+    - perl-pod-elemental-transformer-list
+    - perl-dist-zilla-plugin-minimumperl
+    - perl-namespace-autoclean
+    - perl-dist-zilla-plugin-promptifstale
+    - perl-dist-zilla-plugin-taskweaver
+    - perl-dist-zilla-plugin-contributorsfromgit
+    - perl-dist-zilla-plugin-prereqs-authordeps
+    - perl-dist-zilla-plugin-test-reportprereqs
+    - perl-dist-zilla-plugin-checkmetaresources
+    - perl-dist-zilla-plugin-test-portability
+    - perl-pod-elemental-perlmunger
+    - perl-dist-zilla-plugin-readmefrompod
+    - perl-dist-zilla-plugin-checkprereqsindexed
+    - perl-dist-zilla-plugin-githubmeta
+    - perl-dist-zilla-plugin-metaprovides-package
+    - perl-pod-weaver-section-support
+    - perl-dist-zilla-role-pluginbundle-pluginremover
+    - perl-dist-zilla-plugin-insertcopyright
+    - perl-pod-elemental-transformer-wikidoc
+    - perl-moose
+    - perl-dist-zilla-plugin-bugtracker
+    - perl-dist-zilla-plugin-checkextratests
+    - perl-dist-zilla-plugin-test-compile
+    - perl-autodie
+    - perl-dist-zilla-plugin-test-version
+    - perl-dist-zilla-plugin-podweaver
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::PluginBundle::DAGOLDEN
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/dagolden/Dist-Zilla-PluginBundle-DAGOLDEN
+  license: apache_2_0
+  summary: 'Dist::Zilla configuration the way DAGOLDEN does it'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

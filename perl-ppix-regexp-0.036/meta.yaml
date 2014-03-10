@@ -1,0 +1,114 @@
+package:
+  name: perl-ppix-regexp
+  version: !!str 0.036
+
+source:
+  fn: PPIx-Regexp-0.036.tar.gz
+  url: http://cpan.metacpan.org/authors/id/W/WY/WYANT/PPIx-Regexp-0.036.tar.gz
+  md5: a5f778ee5c334f2d41cb944262ef1040
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-ppi
+    - perl-list-moreutils
+    - perl-scalar-list-utils
+    - perl-task-weaken
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-list-moreutils
+    - perl-task-weaken
+    - perl-ppi
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - PPIx::Regexp
+    - PPIx::Regexp::Constant
+    - PPIx::Regexp::Dumper
+    - PPIx::Regexp::Element
+    - PPIx::Regexp::Lexer
+    - PPIx::Regexp::Node
+    - PPIx::Regexp::Node::Range
+    - PPIx::Regexp::Structure
+    - PPIx::Regexp::Structure::Assertion
+    - PPIx::Regexp::Structure::BranchReset
+    - PPIx::Regexp::Structure::Capture
+    - PPIx::Regexp::Structure::CharClass
+    - PPIx::Regexp::Structure::Code
+    - PPIx::Regexp::Structure::Main
+    - PPIx::Regexp::Structure::Modifier
+    - PPIx::Regexp::Structure::NamedCapture
+    - PPIx::Regexp::Structure::Quantifier
+    - PPIx::Regexp::Structure::RegexSet
+    - PPIx::Regexp::Structure::Regexp
+    - PPIx::Regexp::Structure::Replacement
+    - PPIx::Regexp::Structure::Subexpression
+    - PPIx::Regexp::Structure::Switch
+    - PPIx::Regexp::Structure::Unknown
+    - PPIx::Regexp::Support
+    - PPIx::Regexp::Token
+    - PPIx::Regexp::Token::Assertion
+    - PPIx::Regexp::Token::Backreference
+    - PPIx::Regexp::Token::Backtrack
+    - PPIx::Regexp::Token::CharClass
+    - PPIx::Regexp::Token::CharClass::POSIX
+    - PPIx::Regexp::Token::CharClass::POSIX::Unknown
+    - PPIx::Regexp::Token::CharClass::Simple
+    - PPIx::Regexp::Token::Code
+    - PPIx::Regexp::Token::Comment
+    - PPIx::Regexp::Token::Condition
+    - PPIx::Regexp::Token::Control
+    - PPIx::Regexp::Token::Delimiter
+    - PPIx::Regexp::Token::Greediness
+    - PPIx::Regexp::Token::GroupType
+    - PPIx::Regexp::Token::GroupType::Assertion
+    - PPIx::Regexp::Token::GroupType::BranchReset
+    - PPIx::Regexp::Token::GroupType::Code
+    - PPIx::Regexp::Token::GroupType::Modifier
+    - PPIx::Regexp::Token::GroupType::NamedCapture
+    - PPIx::Regexp::Token::GroupType::Subexpression
+    - PPIx::Regexp::Token::GroupType::Switch
+    - PPIx::Regexp::Token::Interpolation
+    - PPIx::Regexp::Token::Literal
+    - PPIx::Regexp::Token::Modifier
+    - PPIx::Regexp::Token::Operator
+    - PPIx::Regexp::Token::Quantifier
+    - PPIx::Regexp::Token::Recursion
+    - PPIx::Regexp::Token::Reference
+    - PPIx::Regexp::Token::Structure
+    - PPIx::Regexp::Token::Unknown
+    - PPIx::Regexp::Token::Unmatched
+    - PPIx::Regexp::Token::Whitespace
+    - PPIx::Regexp::Tokenizer
+    - PPIx::Regexp::Util
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/PPIx-Regexp
+  license: perl_5
+  summary: 'Parse regular expressions'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,51 @@
+package:
+  name: perl-devel-caller
+  version: !!str 2.06
+
+source:
+  fn: Devel-Caller-2.06.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Devel-Caller-2.06.tar.gz
+  md5: af52f47979b3c9358af9e5d8c283f263
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-test-simple
+    - perl-padwalker
+
+  run:
+    - perl
+    - perl-padwalker
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Devel-Caller
+  license: perl_5
+  summary: 'meatier versions of caller'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

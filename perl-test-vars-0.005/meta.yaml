@@ -1,0 +1,53 @@
+package:
+  name: perl-test-vars
+  version: !!str 0.005
+
+source:
+  fn: Test-Vars-0.005.tar.gz
+  url: http://cpan.metacpan.org/authors/id/G/GF/GFUJI/Test-Vars-0.005.tar.gz
+  md5: 56a763c785f66e4ae0edd2b4e613dc19
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-module-build
+    - perl-parent
+    - perl-cpan-meta
+    - perl-extutils-makemaker
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-parent
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Test::Vars
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/gfx/p5-Test-Vars
+  license: perl_5
+  summary: 'Detects unused variables'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

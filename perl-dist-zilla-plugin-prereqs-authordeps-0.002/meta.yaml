@@ -1,0 +1,61 @@
+package:
+  name: perl-dist-zilla-plugin-prereqs-authordeps
+  version: !!str 0.002
+
+source:
+  fn: Dist-Zilla-Plugin-Prereqs-AuthorDeps-0.002.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Dist-Zilla-Plugin-Prereqs-AuthorDeps-0.002.tar.gz
+  md5: 134d8b874be1832553e1e83ac2d4edac
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-dist-zilla
+    - perl-extutils-makemaker
+    - perl-cpan-meta
+    - perl-path-class
+    - perl-moosex-types
+    - perl-moose
+    - perl-path-tiny
+    - perl-test-simple
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-moosex-types
+    - perl-dist-zilla
+    - perl-moose
+    - perl-path-class
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::Prereqs::AuthorDeps
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/dagolden/Dist-Zilla-Plugin-Prereqs-AuthorDeps
+  license: apache_2_0
+  summary: 'Add Dist::Zilla authordeps to META files as develop prereqs'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

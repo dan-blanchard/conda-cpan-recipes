@@ -1,0 +1,104 @@
+package:
+  name: perl-test-deep
+  version: !!str 0.112
+
+source:
+  fn: Test-Deep-0.112.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-Deep-0.112.tar.gz
+  md5: 8568575c2ebfd793574250ddb7da6ac8
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-tester
+    - perl-extutils-makemaker
+    - perl-test-nowarnings
+    - perl-test-simple
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-test-tester
+    - perl-scalar-list-utils
+    - perl-test-nowarnings
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Test::Deep
+    - Test::Deep::All
+    - Test::Deep::Any
+    - Test::Deep::Array
+    - Test::Deep::ArrayEach
+    - Test::Deep::ArrayElementsOnly
+    - Test::Deep::ArrayLength
+    - Test::Deep::ArrayLengthOnly
+    - Test::Deep::Blessed
+    - Test::Deep::Boolean
+    - Test::Deep::Cache
+    - Test::Deep::Cache::Simple
+    - Test::Deep::Class
+    - Test::Deep::Cmp
+    - Test::Deep::Code
+    - Test::Deep::Hash
+    - Test::Deep::HashEach
+    - Test::Deep::HashElements
+    - Test::Deep::HashKeys
+    - Test::Deep::HashKeysOnly
+    - Test::Deep::Ignore
+    - Test::Deep::Isa
+    - Test::Deep::ListMethods
+    - Test::Deep::MM
+    - Test::Deep::Methods
+    - Test::Deep::NoTest
+    - Test::Deep::Number
+    - Test::Deep::Obj
+    - Test::Deep::Ref
+    - Test::Deep::RefType
+    - Test::Deep::Regexp
+    - Test::Deep::RegexpMatches
+    - Test::Deep::RegexpRef
+    - Test::Deep::RegexpRefOnly
+    - Test::Deep::RegexpVersion
+    - Test::Deep::ScalarRef
+    - Test::Deep::ScalarRefOnly
+    - Test::Deep::Set
+    - Test::Deep::Shallow
+    - Test::Deep::Stack
+    - Test::Deep::String
+    - Test::Deep::SubHash
+    - Test::Deep::SubHashElements
+    - Test::Deep::SubHashKeys
+    - Test::Deep::SubHashKeysOnly
+    - Test::Deep::SuperHash
+    - Test::Deep::SuperHashElements
+    - Test::Deep::SuperHashKeys
+    - Test::Deep::SuperHashKeysOnly
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://github.com/rjbs/Test-Deep/
+  license: u
+  summary: 'Extremely flexible deep comparison'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

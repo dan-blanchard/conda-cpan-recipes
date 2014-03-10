@@ -1,0 +1,68 @@
+package:
+  name: perl-params-validate
+  version: !!str 1.08
+
+source:
+  fn: Params-Validate-1.08.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Params-Validate-1.08.tar.gz
+  md5: 5edfb0ffd92cbb0e2646ddf23d4516e9
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-module-build
+    - perl-xsloader
+    - perl-scalar-list-utils
+    - perl-exporter
+    - perl-module-implementation
+    - perl-base
+    - perl-carp
+    - perl-test-fatal
+    - perl-attribute-handlers
+    - perl-file-temp
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-exporter
+    - perl-module-implementation
+    - perl-carp
+    - perl-attribute-handlers
+    - perl-xsloader
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Params::Validate
+    - Params::Validate::Constants
+    - Params::Validate::PP
+    - Params::Validate::XS
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Params-Validate
+  license: artistic_2
+  summary: 'Validate method/function parameters'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

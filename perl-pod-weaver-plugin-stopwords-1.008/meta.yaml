@@ -1,0 +1,68 @@
+package:
+  name: perl-pod-weaver-plugin-stopwords
+  version: !!str 1.008
+
+source:
+  fn: Pod-Weaver-Plugin-StopWords-1.008.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RW/RWSTAUNER/Pod-Weaver-Plugin-StopWords-1.008.tar.gz
+  md5: c18004ea3e81dfadc74bf47d31a106f9
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-software-license
+    - perl-extutils-makemaker
+    - perl-pod-elemental
+    - perl-ppi
+    - perl-exporter
+    - perl-test-mockobject
+    - perl-io
+    - perl-moose
+    - perl-test-differences
+    - perl-scalar-list-utils
+    - perl-pod-weaver
+    - perl-lib
+    - perl-file-temp
+    - perl-namespace-autoclean
+    - perl-moose-autobox
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-moose
+    - perl-namespace-autoclean
+    - perl-pod-weaver
+    - perl-moose-autobox
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Pod::Weaver::Plugin::StopWords
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rwstauner/Pod-Weaver-Plugin-StopWords
+  license: perl_5
+  summary: 'Dynamically add stopwords to your woven pod'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

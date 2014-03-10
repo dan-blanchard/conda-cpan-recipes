@@ -1,0 +1,55 @@
+package:
+  name: perl-data-optlist
+  version: !!str 0.109
+
+source:
+  fn: Data-OptList-0.109.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Data-OptList-0.109.tar.gz
+  md5: de3f747d6b802ded363cf434a96dab8f
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-params-util
+    - perl-sub-install
+    - perl-scalar-list-utils
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-params-util
+    - perl-sub-install
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Data::OptList
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Data-OptList
+  license: p
+  summary: 'parse and validate simple name/value option pairs'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

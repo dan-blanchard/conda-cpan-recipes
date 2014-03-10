@@ -1,0 +1,81 @@
+package:
+  name: perl-libwww-perl
+  version: !!str 6.05
+
+source:
+  fn: libwww-perl-6.05.tar.gz
+  url: http://cpan.metacpan.org/authors/id/G/GA/GAAS/libwww-perl-6.05.tar.gz
+  md5: 637d5f1eb61336ca2caa6e026b382f87
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-digest-md5
+    - perl-uri
+    - perl-encode-locale
+    - perl-html-parser
+    - perl-encode
+    - perl-http-daemon
+    - perl-net-http
+    - perl-http-date
+    - perl-mime-base64
+    - perl-http-negotiate
+    - perl-extutils-makemaker
+    - perl-www-robotrules
+    - perl-http-message
+    - perl-libnet
+    - perl-lwp-mediatypes
+    - perl-io
+    - perl-http-cookies
+    - perl-file-listing
+
+  run:
+    - perl
+    - perl-http-negotiate
+    - perl-digest-md5
+    - perl-uri
+    - perl-encode-locale
+    - perl-www-robotrules
+    - perl-http-message
+    - perl-encode
+    - perl-http-cookies
+    - perl-lwp-mediatypes
+    - perl-io
+    - perl-http-daemon
+    - perl-libnet
+    - perl-net-http
+    - perl-html-parser
+    - perl-mime-base64
+    - perl-http-date
+    - perl-file-listing
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/libwww-perl
+  license: perl_5
+  summary: 'The World-Wide Web library for Perl'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

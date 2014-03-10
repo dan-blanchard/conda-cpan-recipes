@@ -1,0 +1,79 @@
+package:
+  name: perl-test-dependentmodules
+  version: !!str 0.17
+
+source:
+  fn: Test-DependentModules-0.17.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Test-DependentModules-0.17.tar.gz
+  md5: 0a05a1601e0d29c07657df2b742b8b52
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-file-chdir
+    - perl-module-build
+    - perl-ipc-run3
+    - perl-try-tiny
+    - perl-module-build-tiny
+    - perl-file-temp
+    - perl-log-dispatch
+    - perl-test-simple
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-capture-tiny
+    - perl-exporter
+    - perl-cpan
+    - perl-file-copy-recursive
+    - perl-file-path
+    - perl-metacpan-api
+    - perl-io-handle-util
+    - perl-autodie
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-file-chdir
+    - perl-file-temp
+    - perl-log-dispatch
+    - perl-exporter
+    - perl-ipc-run3
+    - perl-cpan
+    - perl-file-path
+    - perl-try-tiny
+    - perl-metacpan-api
+    - perl-io-handle-util
+    - perl-capture-tiny
+    - perl-autodie
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Test::DependentModules
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/release/Test-DependentModules
+  license: artistic_2
+  summary: 'Test all modules which depend on your module'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

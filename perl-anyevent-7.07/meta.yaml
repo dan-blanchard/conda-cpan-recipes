@@ -1,0 +1,57 @@
+package:
+  name: perl-anyevent
+  version: !!str 7.07
+
+source:
+  fn: AnyEvent-7.07.tar.gz
+  url: http://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/AnyEvent-7.07.tar.gz
+  md5: e5ef99081b2acc3df80851838f9acfc4
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  imports:
+    - AnyEvent
+    - AnyEvent::DNS
+    - AnyEvent::Debug
+    - AnyEvent::Handle
+    - AnyEvent::IO
+    - AnyEvent::Log
+    - AnyEvent::Loop
+    - AnyEvent::Socket
+    - AnyEvent::Strict
+    - AnyEvent::Util
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/AnyEvent
+  license: u
+  summary: 'the DBI of event loop programming'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

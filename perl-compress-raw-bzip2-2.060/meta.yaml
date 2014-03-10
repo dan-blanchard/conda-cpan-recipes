@@ -1,0 +1,46 @@
+package:
+  name: perl-compress-raw-bzip2
+  version: !!str 2.060
+
+source:
+  #fn: Compress-Raw-Bzip2-2.060.tar.gz
+  #url: http://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Bzip2-2.060.tar.gz
+  #md5: 1eb9085f99111599a07948a4f0069cdf
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl 5.18.2
+
+  run:
+    - perl 5.18.2
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Compress-Raw-Bzip2
+  license: perl_5
+  summary: 'Low-Level Interface to bzip2 compression library'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

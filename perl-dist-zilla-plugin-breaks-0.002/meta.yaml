@@ -1,0 +1,67 @@
+package:
+  name: perl-dist-zilla-plugin-breaks
+  version: !!str 0.002
+
+source:
+  fn: Dist-Zilla-Plugin-Breaks-0.002.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-Breaks-0.002.tar.gz
+  md5: 4b852f19d2e423c2ead600e8e656a447
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-cpan-meta-requirements
+    - perl-if
+    - perl-namespace-autoclean
+    - perl-test-deep
+    - perl-moose
+    - perl-carp
+    - perl-version
+    - perl-test-fatal
+    - perl-module-build-tiny
+    - perl-test-deep-json
+    - perl-test-simple
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-moose
+    - perl-namespace-autoclean
+    - perl-carp
+    - perl-cpan-meta-requirements
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::Breaks
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-Breaks
+  license: perl_5
+  summary: 'Add metadata about potential breakages to your distribution'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

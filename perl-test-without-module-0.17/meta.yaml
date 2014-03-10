@@ -1,0 +1,46 @@
+package:
+  name: perl-test-without-module
+  version: !!str 0.17
+
+source:
+  fn: Test-Without-Module-0.17.tar.gz
+  url: http://cpan.metacpan.org/authors/id/C/CO/CORION/Test-Without-Module-0.17.tar.gz
+  md5: 4480ece707cb6bbedaae8fbe41320927
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Test-Without-Module
+  license: perl_5
+  summary: 'Test fallback behaviour in absence of modules'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

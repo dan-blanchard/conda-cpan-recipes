@@ -1,0 +1,61 @@
+package:
+  name: perl-cpan-meta-check
+  version: !!str 0.008
+
+source:
+  fn: CPAN-Meta-Check-0.008.tar.gz
+  url: http://cpan.metacpan.org/authors/id/L/LE/LEONT/CPAN-Meta-Check-0.008.tar.gz
+  md5: c39a16ed38cf56d085050893bff52a7c
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-cpan-meta 2.132830
+    - perl-exporter
+    - perl-test-deep
+    - perl-module-metadata
+    - perl-io
+    - perl-env
+    - perl-cpan-meta-requirements
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-cpan-meta 2.132830
+    - perl-exporter
+    - perl-cpan-meta-requirements
+    - perl-module-metadata
+
+test:
+  # Perl 'use' tests
+  imports:
+    - CPAN::Meta::Check
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/CPAN-Meta-Check
+  license: perl_5
+  summary: 'Verify requirements in a CPAN::Meta object'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

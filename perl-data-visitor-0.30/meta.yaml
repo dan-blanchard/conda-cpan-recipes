@@ -1,0 +1,61 @@
+package:
+  name: perl-data-visitor
+  version: !!str 0.30
+
+source:
+  fn: Data-Visitor-0.30.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DO/DOY/Data-Visitor-0.30.tar.gz
+  md5: a43deb0bc99f4d49721965780eae6cef
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-namespace-clean
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-class-load
+    - perl-tie-toobject
+    - perl-moose
+    - perl-task-weaken
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-tie-toobject
+    - perl-namespace-clean
+    - perl-task-weaken
+    - perl-class-load
+    - perl-moose
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Data::Visitor
+    - Data::Visitor::Callback
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/release/Data-Visitor
+  license: perl_5
+  summary: 'Visitor style traversal of Perl data structures'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

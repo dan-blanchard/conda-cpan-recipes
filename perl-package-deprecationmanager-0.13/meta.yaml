@@ -1,0 +1,58 @@
+package:
+  name: perl-package-deprecationmanager
+  version: !!str 0.13
+
+source:
+  fn: Package-DeprecationManager-0.13.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Package-DeprecationManager-0.13.tar.gz
+  md5: f81ae3c0f9bcac048eb4bff348b79f67
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-list-moreutils
+    - perl-carp
+    - perl-test-fatal
+    - perl-params-util
+    - perl-sub-install
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-list-moreutils
+    - perl-params-util
+    - perl-sub-install
+    - perl-carp
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Package-DeprecationManager
+  license: artistic_2
+  summary: 'Manage deprecation warnings for your distribution'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

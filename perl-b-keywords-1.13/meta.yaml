@@ -1,0 +1,48 @@
+package:
+  name: perl-b-keywords
+  version: !!str 1.13
+
+source:
+  fn: B-Keywords-1.13.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RU/RURBAN/B-Keywords-1.13.tar.gz
+  md5: fe57415a76a423645c31281fe508bf46
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  imports:
+    - B::Keywords
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/B-Keywords
+  license: unknown
+  summary: 'Lists of reserved barewords and symbol names'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

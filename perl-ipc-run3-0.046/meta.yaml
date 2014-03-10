@@ -1,0 +1,52 @@
+package:
+  name: perl-ipc-run3
+  version: !!str 0.046
+
+source:
+  fn: IPC-Run3-0.046.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/IPC-Run3-0.046.tar.gz
+  md5: c1c8f5605cae097e6fc118f7f1437dfd
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-time-hires
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-time-hires
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - IPC::Run3
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/IPC-Run3
+  license: open_source
+  summary: 'run a subprocess with input/ouput redirection'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,49 @@
+package:
+  name: perl-www-shorten-simple
+  version: !!str 0.01
+
+source:
+  fn: WWW-Shorten-Simple-0.01.tar.gz
+  url: http://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/WWW-Shorten-Simple-0.01.tar.gz
+  md5: 83150dd1e49fa17bc37261dcc0b2648e
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-filter
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-filter
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # By default CPAN tests will be run while "building" (which just uses cpanm
+  # to install)
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/WWW-Shorten-Simple
+  license: perl_5
+  summary: 'Factory wrapper around WWW::Shorten to avoid imports'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
