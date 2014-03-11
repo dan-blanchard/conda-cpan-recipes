@@ -1,0 +1,48 @@
+package:
+  name: perl-fennec-lite
+  version: !!str 0.004
+
+source:
+  fn: Fennec-Lite-0.004.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/EX/EXODIST/Fennec-Lite-0.004.tar.gz
+  md5: e0a373981c6758490667fffc6bca8156
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-module-build
+    - perl-test-simple
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-scalar-list-utils
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://open-exodus.net/projects/Fennec-Lite
+  license: perl_5
+  summary: 'Minimalist Fennec, the commonly used bits.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

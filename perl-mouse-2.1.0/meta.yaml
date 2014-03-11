@@ -1,0 +1,83 @@
+package:
+  name: perl-mouse
+  version: !!str 2.1.0
+
+source:
+  fn: Mouse-2.1.0.tar.gz
+  url: http://cpan.metacpan.org/authors/id/G/GF/GFUJI/Mouse-2.1.0.tar.gz
+  md5: b9cfa0a14609e0ecb4ff29fc79369b60
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-module-build
+    - perl-test-exception
+    - perl-test-leaktrace
+    - perl-test-simple
+    - perl-scalar-list-utils
+    - perl-test-exception-lessclever
+    - perl-xsloader
+    - perl-devel-ppport
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-extutils-parsexs
+    - perl-cpan-meta
+    - perl-test-requires
+    - perl-test-output
+    - perl-module-build-xsutil
+
+  run:
+    - perl
+    - perl-xsloader
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Mouse
+    - Mouse::Exporter
+    - Mouse::Meta::Attribute
+    - Mouse::Meta::Class
+    - Mouse::Meta::Method
+    - Mouse::Meta::Method::Accessor
+    - Mouse::Meta::Method::Constructor
+    - Mouse::Meta::Method::Delegation
+    - Mouse::Meta::Method::Destructor
+    - Mouse::Meta::Module
+    - Mouse::Meta::Role
+    - Mouse::Meta::Role::Application
+    - Mouse::Meta::Role::Composite
+    - Mouse::Meta::Role::Method
+    - Mouse::Meta::TypeConstraint
+    - Mouse::Object
+    - Mouse::PurePerl
+    - Mouse::Role
+    - Mouse::Spec
+    - Mouse::TypeRegistry
+    - Mouse::Util
+    - Mouse::Util::MetaRole
+    - Mouse::Util::TypeConstraints
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/gfx/p5-Mouse
+  license: perl_5
+  summary: 'Moose minus the antlers'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

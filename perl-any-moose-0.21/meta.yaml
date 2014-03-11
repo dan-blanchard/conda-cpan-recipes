@@ -25,9 +25,11 @@ requirements:
   build:
     - perl
     - perl-extutils-makemaker
+    - perl-mouse
 
   run:
     - perl
+    - perl-mouse
 
 test:
   # Perl 'use' tests
