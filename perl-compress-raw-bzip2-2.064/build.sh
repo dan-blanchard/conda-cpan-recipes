@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # If it has Build.PL use that, otherwise use Makefile.PL
-if [[ -e Build.PL ]]; then
+if [ -f Build.PL ]; then
     perl Build.PL
     ./Build
     ./Build test
     # Make sure this goes in site
     ./Build install --installdirs site
-elif [[ -e Makefile.PL ]]; then
+elif [ -f Makefile.PL ]; then
     # Make sure this goes in site
     perl Makefile.PL INSTALLDIRS=site
     make

@@ -12,13 +12,7 @@ source:
 
 build:
   # If this is a new build for the same version, increment the build
-  # number. If you're using a build string instead of a number, this is the
-  # final numeric portion of the string.
-  #
-  # If you do not include a build number or string, the build number and string
-  # default to 0.
-  #
-  # NOTE: Build strings override build numbers.
+  # number. If you do not include this key, it defaults to 0.
   number: 1
 
 requirements:
@@ -37,7 +31,6 @@ test:
   # Perl 'use' tests
   imports:
     - Test::Builder
-    - Test::Builder::IO::Scalar
     - Test::Builder::Module
     - Test::Builder::Tester
     - Test::Builder::Tester::Color

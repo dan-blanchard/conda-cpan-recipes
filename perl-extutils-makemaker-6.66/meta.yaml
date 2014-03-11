@@ -23,10 +23,10 @@ build:
 
 requirements:
   build:
-    - perl 5.18.2
+    - perl
 
   run:
-    - perl 5.18.2
+    - perl
 
 test:
   # Perl 'use' tests
