@@ -12,7 +12,13 @@ source:
 
 build:
   # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
+  # number. If you're using a build string instead of a number, this is the
+  # final numeric portion of the string.
+  #
+  # If you do not include a build number or string, the build number and string
+  # default to 0.
+  #
+  # NOTE: Build strings override build numbers.
   number: 1
 
 requirements:
@@ -20,13 +26,13 @@ requirements:
     - perl
     - perl-extutils-makemaker
     - perl-scalar-list-utils
-    - perl-compress-raw-bzip2 2.064
-    - perl-compress-raw-zlib 2.065
+    - perl-compress-raw-bzip2
+    - perl-compress-raw-zlib
 
   run:
     - perl
-    - perl-compress-raw-zlib 2.065
-    - perl-compress-raw-bzip2 2.064
+    - perl-compress-raw-zlib
+    - perl-compress-raw-bzip2
     - perl-scalar-list-utils
 
 test:
@@ -58,11 +64,8 @@ test:
     - IO::Uncompress::RawInflate
     - IO::Uncompress::Unzip
 
-  # By default CPAN tests will be run while "building" (which just uses cpanm
-  # to install)
-
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
 
   # requires:
     # Put any additional test requirements here.  For example

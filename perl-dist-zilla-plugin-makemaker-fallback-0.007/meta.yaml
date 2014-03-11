@@ -1,0 +1,71 @@
+package:
+  name: perl-dist-zilla-plugin-makemaker-fallback
+  version: !!str 0.007
+
+source:
+  fn: Dist-Zilla-Plugin-MakeMaker-Fallback-0.007.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-MakeMaker-Fallback-0.007.tar.gz
+  md5: 47f5b7307203d47584a2e39859fa0936
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you're using a build string instead of a number, this is the
+  # final numeric portion of the string.
+  #
+  # If you do not include a build number or string, the build number and string
+  # default to 0.
+  #
+  # NOTE: Build strings override build numbers.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-dist-zilla
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-namespace-autoclean
+    - perl-test-deep
+    - perl-dist-zilla-plugin-modulebuildtiny
+    - perl-moose
+    - perl-path-tiny
+    - perl-version
+    - perl-test-fatal
+    - perl-module-build-tiny
+    - perl-scalar-list-utils
+    - perl-dist-zilla-plugin-makemaker-awesome
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-namespace-autoclean
+    - perl-moose
+    - perl-version
+    - perl-dist-zilla-plugin-makemaker-awesome
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::MakeMaker::Fallback
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-MakeMaker-Fallback
+  license: perl_5
+  summary: 'Generate a Makefile.PL containing a warning for legacy users'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,8 +1,28 @@
 :: Use sed, assuming cygwin is installed
 sed -i -e "s,CONDA_PREFIX_PLACEHOLDER,$PREFIX\lib," .\lib\ZMQ\FFI\Util.pm
 
-cpanm .
-if errorlevel 1 exit 1
+IF exist Makefile.PL (
+    :: Make sure this goes in site
+    perl Makefile.PL INSTALLDIRS=site
+    IF errorlevel 1 exit 1
+    make
+    IF errorlevel 1 exit 1
+    make test
+    IF errorlevel 1 exit 1
+    make install
+) ELSE IF exist Build.PL (
+    perl Build.PL
+    IF errorlevel 1 exit 1
+    Build
+    IF errorlevel 1 exit 1
+    Build test
+    :: Make sure this goes in site
+    Build install --installdirs site
+    IF errorlevel 1 exit 1
+) ELSE (
+    ECHO 'Unable to find Build.PL or Makefile.PL. You need to modify bld.bat.'
+    exit 1
+)
 
 :: Add more build steps here, if they are necessary.
 

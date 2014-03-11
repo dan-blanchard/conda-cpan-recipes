@@ -12,8 +12,13 @@ source:
 
 build:
   # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
-
+  # number. If you're using a build string instead of a number, this is the
+  # final numeric portion of the string.
+  #
+  # If you do not include a build number or string, the build number and string
+  # default to 0.
+  #
+  # NOTE: Build strings override build numbers.
   string: pl_5.18.2_1
 
 requirements:
@@ -27,6 +32,7 @@ test:
   # Perl 'use' tests
   imports:
     - CPAN
+    - CPAN::Admin
     - CPAN::Author
     - CPAN::Bundle
     - CPAN::CacheMgr
@@ -35,8 +41,21 @@ test:
     - CPAN::DeferredCode
     - CPAN::Distribution
     - CPAN::Distroprefs
+    - CPAN::Distroprefs::Iterator
+    - CPAN::Distroprefs::Pref
+    - CPAN::Distroprefs::Result
+    - CPAN::Distroprefs::Result::Error
+    - CPAN::Distroprefs::Result::Fatal
+    - CPAN::Distroprefs::Result::Success
+    - CPAN::Distroprefs::Result::Warning
     - CPAN::Distrostatus
+    - CPAN::Eval
+    - CPAN::Exception::RecursiveDependency
+    - CPAN::Exception::blocked_urllist
+    - CPAN::Exception::yaml_not_installed
+    - CPAN::Exception::yaml_process_error
     - CPAN::FTP
+    - CPAN::FTP::netrc
     - CPAN::FirstTime
     - CPAN::HTTP::Client
     - CPAN::HTTP::Credentials
@@ -45,21 +64,20 @@ test:
     - CPAN::InfoObj
     - CPAN::Kwalify
     - CPAN::LWP::UserAgent
+    - CPAN::Mirrored::By
     - CPAN::Mirrors
     - CPAN::Module
     - CPAN::Nox
     - CPAN::Prompt
     - CPAN::Queue
+    - CPAN::Queue::Item
     - CPAN::Shell
     - CPAN::Tarzip
     - CPAN::URL
     - CPAN::Version
 
-  # By default CPAN tests will be run while "building" (which just uses cpanm
-  # to install)
-
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
 
   # requires:
     # Put any additional test requirements here.  For example

@@ -1,0 +1,80 @@
+package:
+  name: perl-test-cleannamespaces
+  version: !!str 0.08
+
+source:
+  fn: Test-CleanNamespaces-0.08.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Test-CleanNamespaces-0.08.tar.gz
+  md5: 8a22db12ab8c549871631a2fb63d050f
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you're using a build string instead of a number, this is the
+  # final numeric portion of the string.
+  #
+  # If you do not include a build number or string, the build number and string
+  # default to 0.
+  #
+  # NOTE: Build strings override build numbers.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-tester
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-module-runtime
+    - perl-file-find-rule-perl
+    - perl-package-stash
+    - perl-namespace-clean
+    - perl-exporter
+    - perl-parent
+    - perl-sub-identify
+    - perl-sub-name
+    - perl-version
+    - perl-sub-exporter
+    - perl-test-fatal
+    - perl-module-build-tiny
+    - perl-lib
+    - perl-scalar-list-utils
+    - perl-file-find-rule
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-namespace-clean
+    - perl-sub-name
+    - perl-module-runtime
+    - perl-file-find-rule-perl
+    - perl-package-stash
+    - perl-file-find-rule
+    - perl-sub-exporter
+    - perl-sub-identify
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Test::CleanNamespaces
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Test-CleanNamespaces
+  license: perl_5
+  summary: 'Check for uncleaned imports'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

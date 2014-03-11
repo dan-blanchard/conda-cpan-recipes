@@ -1,0 +1,61 @@
+package:
+  name: perl-module-scandeps
+  version: !!str 1.13
+
+source:
+  fn: Module-ScanDeps-1.13.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/Module-ScanDeps-1.13.tar.gz
+  md5: 15fe01997c556f36d1a1b22722e4bd79
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you're using a build string instead of a number, this is the
+  # final numeric portion of the string.
+  #
+  # If you do not include a build number or string, the build number and string
+  # default to 0.
+  #
+  # NOTE: Build strings override build numbers.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-version
+    - perl-file-temp
+    - perl-module-build
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-module-build
+    - perl-file-temp
+    - perl-version
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Module::ScanDeps
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Module-ScanDeps
+  license: perl_5
+  summary: 'Recursively scan Perl code for dependencies'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

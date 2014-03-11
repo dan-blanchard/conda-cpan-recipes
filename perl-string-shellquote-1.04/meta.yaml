@@ -1,0 +1,50 @@
+package:
+  name: perl-string-shellquote
+  version: !!str 1.04
+
+source:
+  fn: String-ShellQuote-1.04.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RO/ROSCH/String-ShellQuote-1.04.tar.gz
+  md5: da6329dc482b21adf5697cfbd2ac5412
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you're using a build string instead of a number, this is the
+  # final numeric portion of the string.
+  #
+  # If you do not include a build number or string, the build number and string
+  # default to 0.
+  #
+  # NOTE: Build strings override build numbers.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/String-ShellQuote
+  license: unknown
+  summary: 'quote strings for passing through the shell'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

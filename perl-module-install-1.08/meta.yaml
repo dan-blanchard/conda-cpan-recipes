@@ -1,0 +1,113 @@
+package:
+  name: perl-module-install
+  version: !!str 1.08
+
+source:
+  fn: Module-Install-1.08.tar.gz
+  url: http://cpan.metacpan.org/authors/id/B/BI/BINGOS/Module-Install-1.08.tar.gz
+  md5: 4a20650faeaf2b69fbacf11b74754efa
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you're using a build string instead of a number, this is the
+  # final numeric portion of the string.
+  #
+  # If you do not include a build number or string, the build number and string
+  # default to 0.
+  #
+  # NOTE: Build strings override build numbers.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-module-build
+    - perl-devel-ppport
+    - perl-extutils-install
+    - perl-test-harness
+    - perl-yaml-tiny
+    - perl-par-dist
+    - perl-archive-tar
+    - perl-extutils-parsexs
+    - perl-parse-cpan-meta
+    - perl-test-simple
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-module-corelist
+    - perl-file-remove
+    - perl-json
+    - perl-module-scandeps
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-json
+    - perl-extutils-makemaker
+    - perl-devel-ppport
+    - perl-module-corelist
+    - perl-file-remove
+    - perl-extutils-install
+    - perl-module-build
+    - perl-module-scandeps
+    - perl-yaml-tiny
+    - perl-par-dist
+    - perl-archive-tar
+    - perl-extutils-parsexs
+    - perl-parse-cpan-meta
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Module::AutoInstall
+    - Module::Install
+    - Module::Install::Admin
+    - Module::Install::Admin::Bundle
+    - Module::Install::Admin::Compiler
+    - Module::Install::Admin::Find
+    - Module::Install::Admin::Include
+    - Module::Install::Admin::Makefile
+    - Module::Install::Admin::Manifest
+    - Module::Install::Admin::Metadata
+    - Module::Install::Admin::ScanDeps
+    - Module::Install::Admin::WriteAll
+    - Module::Install::AutoInstall
+    - Module::Install::Base
+    - Module::Install::Base::FakeAdmin
+    - Module::Install::Bundle
+    - Module::Install::Can
+    - Module::Install::Compiler
+    - Module::Install::DSL
+    - Module::Install::Deprecated
+    - Module::Install::External
+    - Module::Install::Fetch
+    - Module::Install::Include
+    - Module::Install::Inline
+    - Module::Install::MakeMaker
+    - Module::Install::Makefile
+    - Module::Install::Metadata
+    - Module::Install::PAR
+    - Module::Install::Run
+    - Module::Install::Scripts
+    - Module::Install::Share
+    - Module::Install::Win32
+    - Module::Install::With
+    - Module::Install::WriteAll
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Module-Install
+  license: perl_5
+  summary: 'Standalone, extensible Perl module installer'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

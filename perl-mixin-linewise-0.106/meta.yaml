@@ -1,0 +1,64 @@
+package:
+  name: perl-mixin-linewise
+  version: !!str 0.106
+
+source:
+  fn: Mixin-Linewise-0.106.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Mixin-Linewise-0.106.tar.gz
+  md5: d4699cde97d8286f44624c1d19663334
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you're using a build string instead of a number, this is the
+  # final numeric portion of the string.
+  #
+  # If you do not include a build number or string, the build number and string
+  # default to 0.
+  #
+  # NOTE: Build strings override build numbers.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-encode
+    - perl-io
+    - perl-carp
+    - perl-perlio-utf8_strict
+    - perl-sub-exporter
+    - perl-lib
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-carp
+    - perl-perlio-utf8_strict
+    - perl-sub-exporter
+    - perl-io
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Mixin::Linewise
+    - Mixin::Linewise::Readers
+    - Mixin::Linewise::Writers
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/rjbs/Mixin-Linewise
+  license: perl_5
+  summary: 'write your linewise code for handles; this does the rest'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

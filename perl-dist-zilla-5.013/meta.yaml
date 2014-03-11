@@ -12,7 +12,13 @@ source:
 
 build:
   # If this is a new build for the same version, increment the build
-  # number. If you do not include this key, it defaults to 0.
+  # number. If you're using a build string instead of a number, this is the
+  # final numeric portion of the string.
+  #
+  # If you do not include a build number or string, the build number and string
+  # default to 0.
+  #
+  # NOTE: Build strings override build numbers.
   number: 1
 
 requirements:
@@ -70,7 +76,7 @@ requirements:
     - perl-test-failwarnings
     - perl-perl-prereqscanner
     - perl-file-homedir
-    - perl-term-ui 0.42
+    - perl-term-ui
     - perl-moosex-lazyrequire
     - perl-termreadkey
     - perl-config-mvp
@@ -99,7 +105,7 @@ requirements:
     - perl-cpan-meta
     - perl-string-rewriteprefix
     - perl-text-template
-    - perl-term-ui 0.42
+    - perl-term-ui
     - perl-config-mvp-reader-ini
     - perl-class-load
     - perl-parent
@@ -183,6 +189,7 @@ test:
     - Dist::Zilla::App::Command::test
     - Dist::Zilla::App::Command::version
     - Dist::Zilla::App::Tester
+    - Dist::Zilla::App::Tester::Result
     - Dist::Zilla::Chrome::Term
     - Dist::Zilla::Chrome::Test
     - Dist::Zilla::Dist::Builder
@@ -296,15 +303,13 @@ test:
     - Dist::Zilla::Stash::Rights
     - Dist::Zilla::Stash::User
     - Dist::Zilla::Tester
+    - Dist::Zilla::Tutorial
     - Dist::Zilla::Types
     - Dist::Zilla::Util
     - Dist::Zilla::Util::AuthorDeps
 
-  # By default CPAN tests will be run while "building" (which just uses cpanm
-  # to install)
-
-  # You can also put a file called run_test.py in the recipe that will be run
-  # at test time.
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
 
   # requires:
     # Put any additional test requirements here.  For example

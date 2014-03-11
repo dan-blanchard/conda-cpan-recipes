@@ -1,0 +1,69 @@
+package:
+  name: perl-dist-zilla-plugin-test-cleannamespaces
+  version: !!str 0.003
+
+source:
+  fn: Dist-Zilla-Plugin-Test-CleanNamespaces-0.003.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-Test-CleanNamespaces-0.003.tar.gz
+  md5: 8e776b1c01522c3afcd634d96ac6aa84
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you're using a build string instead of a number, this is the
+  # final numeric portion of the string.
+  #
+  # If you do not include a build number or string, the build number and string
+  # default to 0.
+  #
+  # NOTE: Build strings override build numbers.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-namespace-autoclean
+    - perl-moosex-types-stringlike
+    - perl-moose
+    - perl-path-tiny
+    - perl-version
+    - perl-module-build-tiny
+    - perl-test-cleannamespaces
+    - perl-test-simple
+    - perl-file-pushd
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-moose
+    - perl-namespace-autoclean
+    - perl-moosex-types-stringlike
+    - perl-path-tiny
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::Test::CleanNamespaces
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-Test-CleanNamespaces
+  license: perl_5
+  summary: 'Generate a test to check that all namespaces are clean'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

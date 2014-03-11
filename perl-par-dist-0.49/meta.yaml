@@ -1,0 +1,56 @@
+package:
+  name: perl-par-dist
+  version: !!str 0.49
+
+source:
+  fn: PAR-Dist-0.49.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RS/RSCHUPP/PAR-Dist-0.49.tar.gz
+  md5: bd852113974544f3c8c107ab4055cf8c
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # If this is a new build for the same version, increment the build
+  # number. If you're using a build string instead of a number, this is the
+  # final numeric portion of the string.
+  #
+  # If you do not include a build number or string, the build number and string
+  # default to 0.
+  #
+  # NOTE: Build strings override build numbers.
+  number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-file-temp
+    - perl-file-path
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-file-temp
+    - perl-file-path
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/PAR-Dist
+  license: unknown
+  summary: 'Create and manipulate PAR distributions'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
