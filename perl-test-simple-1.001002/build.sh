@@ -1,6 +1,14 @@
 #!/bin/bash
 
-cpanm .
+# Patch installation paths to always use site_perl
+cat Makefile.PL | perl -pe 's/^( *)INSTALLDIRS .*=>.+$/\1INSTALLDIRS => "site",/' > Makefile.NEW
+mv Makefile.NEW Makefile.PL
+
+perl Makefile.PL
+make
+make test
+make install
+
 
 # Add more build steps here, if they are necessary.
 

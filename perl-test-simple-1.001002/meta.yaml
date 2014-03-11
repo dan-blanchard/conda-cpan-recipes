@@ -6,14 +6,15 @@ source:
   fn: Test-Simple-1.001002.tar.gz
   url: http://cpan.metacpan.org/authors/id/R/RJ/RJBS/Test-Simple-1.001002.tar.gz
   md5: 7fb57b0f504584a47d014b02586dfe35
-#  patches:
+  # patches:
    # List any patch files here
    # - fix.patch
 
 build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 2
+  number: 1
+  string: ''
 
 requirements:
   build:
@@ -31,6 +32,7 @@ test:
   # Perl 'use' tests
   imports:
     - Test::Builder
+    - Test::Builder::IO::Scalar
     - Test::Builder::Module
     - Test::Builder::Tester
     - Test::Builder::Tester::Color
