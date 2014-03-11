@@ -38,7 +38,6 @@ test:
     - Pod::Simple::DumpAsXML
     - Pod::Simple::HTML
     - Pod::Simple::HTMLBatch
-    - Pod::Simple::HTMLLegacy
     - Pod::Simple::LinkSection
     - Pod::Simple::Methody
     - Pod::Simple::Progress

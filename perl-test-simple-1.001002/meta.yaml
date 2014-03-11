@@ -32,8 +32,6 @@ test:
   imports:
     - Test::Builder
     - Test::Builder::Module
-    - Test::Builder::Tester
-    - Test::Builder::Tester::Color
     - Test::More
     - Test::Simple
 

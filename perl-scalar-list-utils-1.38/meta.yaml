@@ -25,7 +25,7 @@ requirements:
   build:
     - perl
     - perl-extutils-makemaker
-    - perl-test-simple
+    - perl-test-simple 0.98
 
   run:
     - perl
