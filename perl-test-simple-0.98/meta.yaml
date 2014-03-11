@@ -3,9 +3,9 @@ package:
   version: !!str 0.98
 
 source:
-  #fn: 
-  #url: 
-  #md5: 
+  #fn:
+  #url:
+  #md5:
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -13,7 +13,8 @@ source:
 build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 1
+
+  string: pl_5.18.2_1
 
 requirements:
   build:
@@ -26,11 +27,8 @@ test:
   # Perl 'use' tests
   imports:
     - Test::Builder
-    - Test::Builder::IO::Scalar
     - Test::Builder::Module
     - Test::Builder::Tester
-    - Test::Builder::Tester::Color
-    - Test::Builder::Tester::Tie
     - Test::More
     - Test::Simple
 

@@ -46,7 +46,7 @@ test:
 
 about:
   home: https://github.com/kentfredric/Dist-Zilla-Role-BundleDeps
-  license: p
+  license: perl_5
   summary: 'Automatically add all plugins in a bundle as dependencies'
 
 # See

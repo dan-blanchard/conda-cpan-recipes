@@ -47,7 +47,7 @@ test:
 
 about:
   home: https://github.com/sukria/Test-TinyMocker/wiki
-  license: p
+  license: perl_5
   summary: 'a very simple tool to mock external modules'
 
 # See

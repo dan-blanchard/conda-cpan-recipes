@@ -47,7 +47,7 @@ test:
 
 about:
   home: https://github.com/rjbs/Data-OptList
-  license: p
+  license: perl_5
   summary: 'parse and validate simple name/value option pairs'
 
 # See

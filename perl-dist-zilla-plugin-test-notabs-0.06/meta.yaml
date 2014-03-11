@@ -59,7 +59,7 @@ test:
 
 about:
   home: https://github.com/karenetheridge/Dist-Zilla-Plugin-Test-NoTabs
-  license: p
+  license: perl_5
   summary: "Release tests making sure hard tabs aren't used"
 
 # See

@@ -75,14 +75,6 @@ test:
     - Test::Deep::Shallow
     - Test::Deep::Stack
     - Test::Deep::String
-    - Test::Deep::SubHash
-    - Test::Deep::SubHashElements
-    - Test::Deep::SubHashKeys
-    - Test::Deep::SubHashKeysOnly
-    - Test::Deep::SuperHash
-    - Test::Deep::SuperHashElements
-    - Test::Deep::SuperHashKeys
-    - Test::Deep::SuperHashKeysOnly
 
   # By default CPAN tests will be run while "building" (which just uses cpanm
   # to install)
@@ -96,7 +88,7 @@ test:
 
 about:
   home: http://github.com/rjbs/Test-Deep/
-  license: u
+  license: unknown
   summary: 'Extremely flexible deep comparison'
 
 # See

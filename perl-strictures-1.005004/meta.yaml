@@ -19,9 +19,15 @@ requirements:
   build:
     - perl
     - perl-test-simple
+    - perl-bareword-filehandles
+    - perl-multidimensional
+    - perl-indirect
 
   run:
     - perl
+    - perl-bareword-filehandles
+    - perl-multidimensional
+    - perl-indirect
 
 test:
   # Perl 'use' tests

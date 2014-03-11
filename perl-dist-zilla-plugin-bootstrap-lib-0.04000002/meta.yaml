@@ -27,7 +27,7 @@ requirements:
     - perl-moose
     - perl-path-tiny
     - perl-test-fatal
-    - perl-test-simple
+    - perl-test-simple 1.001002
 
   run:
     - perl

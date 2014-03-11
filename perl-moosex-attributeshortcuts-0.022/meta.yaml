@@ -44,9 +44,8 @@ requirements:
 
 test:
   # Perl 'use' tests
-  imports:
-    - MooseX::AttributeShortcuts
-    - MooseX::AttributeShortcuts::Trait::Attribute
+  # imports:
+  #   - MooseX::AttributeShortcuts
 
   # By default CPAN tests will be run while "building" (which just uses cpanm
   # to install)

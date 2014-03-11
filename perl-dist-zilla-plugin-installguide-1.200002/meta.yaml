@@ -49,7 +49,7 @@ test:
 
 about:
   home: http://metacpan.org/pod/Dist-Zilla-Plugin-InstallGuide
-  license: p
+  license: perl_5
   summary: 'Build an INSTALL file'
 
 # See

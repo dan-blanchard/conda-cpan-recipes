@@ -31,8 +31,6 @@ test:
     - Data::Dump::FilterContext
     - Data::Dump::Filtered
     - Data::Dump::Trace
-    - Data::Dump::Trace::Call
-    - Data::Dump::Trace::Wrapper
 
   # By default CPAN tests will be run while "building" (which just uses cpanm
   # to install)

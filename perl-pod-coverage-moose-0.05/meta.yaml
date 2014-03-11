@@ -56,7 +56,7 @@ test:
 
 about:
   home: https://github.com/moose/Pod-Coverage-Moose
-  license: p
+  license: perl_5
   summary: 'Pod::Coverage extension for Moose'
 
 # See

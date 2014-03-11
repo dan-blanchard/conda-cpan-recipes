@@ -59,7 +59,7 @@ test:
 
 about:
   home: https://github.com/rjbs/Dist-Zilla-Plugin-CheckPrereqsIndexed
-  license: p
+  license: perl_5
   summary: 'prevent a release if you have prereqs not found on CPAN'
 
 # See

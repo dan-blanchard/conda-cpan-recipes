@@ -70,7 +70,7 @@ test:
 
 about:
   home: http://metacpan.org/release/Dist-Zilla-Plugin-GitHub/
-  license: p
+  license: perl_5
   summary: 'Plugins to integrate Dist::Zilla with GitHub'
 
 # See

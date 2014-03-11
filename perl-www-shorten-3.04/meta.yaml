@@ -34,14 +34,6 @@ test:
   # Perl 'use' tests
   imports:
     - WWW::Shorten
-    - WWW::Shorten::LinkToolbot
-    - WWW::Shorten::Linkz
-    - WWW::Shorten::MakeAShorterLink
-    - WWW::Shorten::Metamark
-    - WWW::Shorten::TinyClick
-    - WWW::Shorten::TinyURL
-    - WWW::Shorten::UserAgent
-    - WWW::Shorten::generic
 
   # By default CPAN tests will be run while "building" (which just uses cpanm
   # to install)

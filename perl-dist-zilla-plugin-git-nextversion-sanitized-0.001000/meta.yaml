@@ -47,7 +47,7 @@ test:
 
 about:
   home: https://github.com/kentfredric/Dist-Zilla-Plugin-Git-NextVersion-Sanitized
-  license: p
+  license: perl_5
   summary: 'Sanitize versions handed to you by Git::NextVersion'
 
 # See

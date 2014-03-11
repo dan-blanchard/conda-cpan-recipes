@@ -57,7 +57,7 @@ test:
 
 about:
   home: https://github.com/moose/MooseX-Types-URI
-  license: p
+  license: perl_5
   summary: 'URI related types and coercions for Moose'
 
 # See

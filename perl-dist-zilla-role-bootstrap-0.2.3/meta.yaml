@@ -29,7 +29,7 @@ requirements:
     - perl-version
     - perl-moosex-attributeshortcuts
     - perl-lib
-    - perl-test-simple
+    - perl-test-simple 1.001002
 
   run:
     - perl

@@ -13,7 +13,8 @@ source:
 build:
   # If this is a new build for the same version, increment the build
   # number. If you do not include this key, it defaults to 0.
-  number: 1
+
+  string: pl_5.18.2_1
 
 requirements:
   build:
@@ -26,7 +27,6 @@ test:
   # Perl 'use' tests
   imports:
     - CPAN
-    - CPAN::Admin
     - CPAN::Author
     - CPAN::Bundle
     - CPAN::CacheMgr
@@ -35,21 +35,8 @@ test:
     - CPAN::DeferredCode
     - CPAN::Distribution
     - CPAN::Distroprefs
-    - CPAN::Distroprefs::Iterator
-    - CPAN::Distroprefs::Pref
-    - CPAN::Distroprefs::Result
-    - CPAN::Distroprefs::Result::Error
-    - CPAN::Distroprefs::Result::Fatal
-    - CPAN::Distroprefs::Result::Success
-    - CPAN::Distroprefs::Result::Warning
     - CPAN::Distrostatus
-    - CPAN::Eval
-    - CPAN::Exception::RecursiveDependency
-    - CPAN::Exception::blocked_urllist
-    - CPAN::Exception::yaml_not_installed
-    - CPAN::Exception::yaml_process_error
     - CPAN::FTP
-    - CPAN::FTP::netrc
     - CPAN::FirstTime
     - CPAN::HTTP::Client
     - CPAN::HTTP::Credentials
@@ -58,13 +45,11 @@ test:
     - CPAN::InfoObj
     - CPAN::Kwalify
     - CPAN::LWP::UserAgent
-    - CPAN::Mirrored::By
     - CPAN::Mirrors
     - CPAN::Module
     - CPAN::Nox
     - CPAN::Prompt
     - CPAN::Queue
-    - CPAN::Queue::Item
     - CPAN::Shell
     - CPAN::Tarzip
     - CPAN::URL

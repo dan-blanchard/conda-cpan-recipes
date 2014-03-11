@@ -33,8 +33,6 @@ test:
   # Perl 'use' tests
   imports:
     - Parse::CPAN::Packages::Fast
-    - Parse::CPAN::Packages::Fast::Distribution
-    - Parse::CPAN::Packages::Fast::Package
 
   # By default CPAN tests will be run while "building" (which just uses cpanm
   # to install)

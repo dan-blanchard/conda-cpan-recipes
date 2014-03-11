@@ -52,7 +52,7 @@ test:
 
 about:
   home: https://metacpan.org/module/Pod::Weaver::Section::Contributors
-  license: p
+  license: perl_5
   summary: 'a section listing contributors'
 
 # See

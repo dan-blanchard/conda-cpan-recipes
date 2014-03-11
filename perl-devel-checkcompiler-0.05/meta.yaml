@@ -52,7 +52,7 @@ test:
 
 about:
   home: https://github.com/tokuhirom/Devel-CheckCompiler
-  license: p
+  license: perl_5
   summary: "Check the compiler's availability"
 
 # See

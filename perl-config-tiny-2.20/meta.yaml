@@ -43,7 +43,7 @@ test:
 
 about:
   home: http://metacpan.org/pod/Config-Tiny
-  license: p
+  license: perl_5
   summary: 'Read/Write .ini style files with as little code as possible'
 
 # See

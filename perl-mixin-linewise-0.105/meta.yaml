@@ -36,10 +36,8 @@ requirements:
 
 test:
   # Perl 'use' tests
-  imports:
-    - Mixin::Linewise
-    - Mixin::Linewise::Readers
-    - Mixin::Linewise::Writers
+  # imports:
+  #   - Mixin::Linewise
 
   # By default CPAN tests will be run while "building" (which just uses cpanm
   # to install)

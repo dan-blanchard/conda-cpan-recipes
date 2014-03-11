@@ -45,7 +45,7 @@ test:
 
 about:
   home: https://github.com/sanko/readonly
-  license: p
+  license: perl_5
   summary: 'Facility for creating read-only scalars, arrays, hashes'
 
 # See

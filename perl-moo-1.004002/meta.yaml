@@ -43,12 +43,6 @@ test:
   # Perl 'use' tests
   imports:
     - Moo
-    - Moo::HandleMoose
-    - Moo::HandleMoose::FakeConstructor
-    - Moo::HandleMoose::FakeMetaClass
-    - Moo::Object
-    - Moo::Role
-    - Moo::sification
 
   # By default CPAN tests will be run while "building" (which just uses cpanm
   # to install)
@@ -62,7 +56,7 @@ test:
 
 about:
   home: http://metacpan.org/pod/Moo
-  license: p
+  license: perl_5
   summary: 'Minimalist Object Orientation (with Moose compatibility)'
 
 # See

@@ -49,7 +49,7 @@ test:
 
 about:
   home: http://metacpan.org/pod/AnyEvent
-  license: u
+  license: unknown
   summary: 'the DBI of event loop programming'
 
 # See

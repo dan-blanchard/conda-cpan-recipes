@@ -41,8 +41,8 @@ requirements:
 
 test:
   # Perl 'use' tests
-  imports:
-    - Test::Kwalitee
+  # imports:
+  #   - Test::Kwalitee
 
   # By default CPAN tests will be run while "building" (which just uses cpanm
   # to install)

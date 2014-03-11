@@ -54,7 +54,7 @@ test:
 
 about:
   home: https://github.com/kentfredric/Dist-Zilla-Plugin-Prereqs-MatchInstalled
-  license: p
+  license: perl_5
   summary: 'Depend on versions of modules the same as you have installed'
 
 # See
