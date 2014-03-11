@@ -189,9 +189,6 @@ test:
     - Dist::Zilla::App::Command::test
     - Dist::Zilla::App::Command::version
     - Dist::Zilla::App::Tester
-    - Dist::Zilla::App::Tester::Result
-    - Dist::Zilla::Chrome::Term
-    - Dist::Zilla::Chrome::Test
     - Dist::Zilla::Dist::Builder
     - Dist::Zilla::Dist::Minter
     - Dist::Zilla::File::FromCode
@@ -303,7 +300,6 @@ test:
     - Dist::Zilla::Stash::Rights
     - Dist::Zilla::Stash::User
     - Dist::Zilla::Tester
-    - Dist::Zilla::Tutorial
     - Dist::Zilla::Types
     - Dist::Zilla::Util
     - Dist::Zilla::Util::AuthorDeps

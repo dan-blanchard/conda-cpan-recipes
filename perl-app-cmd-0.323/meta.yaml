@@ -79,8 +79,6 @@ test:
     - App::Cmd::Subdispatch::DashedStyle
     - App::Cmd::Tester
     - App::Cmd::Tester::CaptureExternal
-    - App::Cmd::Tester::Exited
-    - App::Cmd::Tester::Result
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

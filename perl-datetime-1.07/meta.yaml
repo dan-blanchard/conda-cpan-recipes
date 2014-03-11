@@ -57,8 +57,6 @@ test:
     - DateTime::Duration
     - DateTime::Helpers
     - DateTime::Infinite
-    - DateTime::Infinite::Future
-    - DateTime::Infinite::Past
     - DateTime::LeapSecond
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe

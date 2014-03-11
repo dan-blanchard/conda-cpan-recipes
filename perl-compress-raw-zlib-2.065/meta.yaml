@@ -1,11 +1,11 @@
 package:
-  name: perl-log-dispatch
-  version: !!str 2.41
+  name: perl-compress-raw-zlib
+  version: !!str 2.065
 
 source:
-  fn: Log-Dispatch-2.41.tar.gz
-  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Log-Dispatch-2.41.tar.gz
-  md5: 85a384db37c7fe4e5db90c0bbc376da2
+  fn: Compress-Raw-Zlib-2.065.tar.gz
+  url: http://cpan.metacpan.org/authors/id/P/PM/PMQS/Compress-Raw-Zlib-2.065.tar.gz
+  md5: b9588cabfb3c3ab35a7f5284f47b80ee
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -25,33 +25,14 @@ requirements:
   build:
     - perl
     - perl-extutils-makemaker
-    - perl-class-load
-    - perl-sys-syslog
-    - perl-params-validate
-    - perl-file-temp
-    - perl-dist-checkconflicts
-    - perl-test-simple
 
   run:
     - perl
-    - perl-sys-syslog
-    - perl-dist-checkconflicts
-    - perl-params-validate
-    - perl-class-load
 
 test:
   # Perl 'use' tests
   imports:
-    - Log::Dispatch
-    - Log::Dispatch::Base
-    - Log::Dispatch::Code
-    - Log::Dispatch::Email
-    - Log::Dispatch::File
-    - Log::Dispatch::Handle
-    - Log::Dispatch::Null
-    - Log::Dispatch::Output
-    - Log::Dispatch::Screen
-    - Log::Dispatch::Syslog
+    - Compress::Raw::Zlib
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.
@@ -61,9 +42,9 @@ test:
     # - nose
 
 about:
-  home: http://metacpan.org/pod/Log-Dispatch
-  license: artistic_2
-  summary: 'Dispatches messages to one or more outputs'
+  home: http://metacpan.org/pod/Compress-Raw-Zlib
+  license: perl_5
+  summary: 'Low-Level Interface to zlib compression library'
 
 # See
 # http://docs.continuum.io/conda/build.html for

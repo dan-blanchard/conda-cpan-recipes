@@ -38,9 +38,6 @@ test:
   imports:
     - IO::Socket::SSL
     - IO::Socket::SSL::Intercept
-    - IO::Socket::SSL::SSL_Context
-    - IO::Socket::SSL::SSL_HANDLE
-    - IO::Socket::SSL::Session_Cache
     - IO::Socket::SSL::Utils
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe

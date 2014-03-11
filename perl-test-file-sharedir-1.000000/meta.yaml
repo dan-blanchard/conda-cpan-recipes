@@ -50,13 +50,7 @@ requirements:
 test:
   # Perl 'use' tests
   imports:
-    - Test::File::ShareDir
-    - Test::File::ShareDir::Dist
-    - Test::File::ShareDir::Module
-    - Test::File::ShareDir::Object::Dist
-    - Test::File::ShareDir::Object::Inc
-    - Test::File::ShareDir::Object::Module
-    - Test::File::ShareDir::TempDirObject
+    - "Test::File::ShareDir -share => { -dist => { 'My-Dist' => 'share/somefolder' }}"
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

@@ -34,7 +34,6 @@ test:
     - Pod::Simple
     - Pod::Simple::BlackBox
     - Pod::Simple::Checker
-    - Pod::Simple::Debug
     - Pod::Simple::DumpAsText
     - Pod::Simple::DumpAsXML
     - Pod::Simple::HTML

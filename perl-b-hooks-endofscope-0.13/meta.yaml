@@ -41,8 +41,6 @@ test:
   # Perl 'use' tests
   imports:
     - B::Hooks::EndOfScope
-    - B::Hooks::EndOfScope::PP
-    - B::Hooks::EndOfScope::XS
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

@@ -1,11 +1,11 @@
 package:
-  name: perl-log-dispatch
-  version: !!str 2.41
+  name: perl-module-pluggable
+  version: !!str 5.1
 
 source:
-  fn: Log-Dispatch-2.41.tar.gz
-  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Log-Dispatch-2.41.tar.gz
-  md5: 85a384db37c7fe4e5db90c0bbc376da2
+  fn: Module-Pluggable-5.1.tar.gz
+  url: http://cpan.metacpan.org/authors/id/S/SI/SIMONW/Module-Pluggable-5.1.tar.gz
+  md5: 1b71ed7a67ad8c048d1499540bc892ba
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -24,34 +24,21 @@ build:
 requirements:
   build:
     - perl
-    - perl-extutils-makemaker
-    - perl-class-load
-    - perl-sys-syslog
-    - perl-params-validate
-    - perl-file-temp
-    - perl-dist-checkconflicts
+    - perl-pathtools
+    - perl-module-build
+    - perl-if
     - perl-test-simple
 
   run:
     - perl
-    - perl-sys-syslog
-    - perl-dist-checkconflicts
-    - perl-params-validate
-    - perl-class-load
+    - perl-pathtools
+    - perl-if
 
 test:
   # Perl 'use' tests
   imports:
-    - Log::Dispatch
-    - Log::Dispatch::Base
-    - Log::Dispatch::Code
-    - Log::Dispatch::Email
-    - Log::Dispatch::File
-    - Log::Dispatch::Handle
-    - Log::Dispatch::Null
-    - Log::Dispatch::Output
-    - Log::Dispatch::Screen
-    - Log::Dispatch::Syslog
+    - Module::Pluggable
+    - Module::Pluggable::Object
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.
@@ -61,9 +48,9 @@ test:
     # - nose
 
 about:
-  home: http://metacpan.org/pod/Log-Dispatch
-  license: artistic_2
-  summary: 'Dispatches messages to one or more outputs'
+  home: http://metacpan.org/pod/Module-Pluggable
+  license: perl_5
+  summary: 'automatically give your module the ability to have plugins'
 
 # See
 # http://docs.continuum.io/conda/build.html for

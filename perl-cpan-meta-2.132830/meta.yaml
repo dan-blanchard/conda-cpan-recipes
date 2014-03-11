@@ -1,11 +1,11 @@
 package:
-  name: perl-log-dispatch
-  version: !!str 2.41
+  name: perl-cpan-meta
+  version: !!str 2.132830
 
 source:
-  fn: Log-Dispatch-2.41.tar.gz
-  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Log-Dispatch-2.41.tar.gz
-  md5: 85a384db37c7fe4e5db90c0bbc376da2
+  fn: CPAN-Meta-2.132830.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/CPAN-Meta-2.132830.tar.gz
+  md5: 93e8b95fea03835ff18d7b3b4c5267b5
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -24,34 +24,40 @@ build:
 requirements:
   build:
     - perl
+    - perl-pathtools
     - perl-extutils-makemaker
-    - perl-class-load
-    - perl-sys-syslog
-    - perl-params-validate
     - perl-file-temp
-    - perl-dist-checkconflicts
+    - perl-cpan-meta-requirements
+    - perl-data-dumper
+    - perl-io
+    - perl-carp
+    - perl-version
+    - perl-cpan-meta-yaml
+    - perl-json-pp
+    - perl-scalar-list-utils
+    - perl-parse-cpan-meta
     - perl-test-simple
 
   run:
     - perl
-    - perl-sys-syslog
-    - perl-dist-checkconflicts
-    - perl-params-validate
-    - perl-class-load
+    - perl-cpan-meta-requirements
+    - perl-json-pp
+    - perl-carp
+    - perl-version
+    - perl-cpan-meta-yaml
+    - perl-parse-cpan-meta
+    - perl-scalar-list-utils
 
 test:
   # Perl 'use' tests
   imports:
-    - Log::Dispatch
-    - Log::Dispatch::Base
-    - Log::Dispatch::Code
-    - Log::Dispatch::Email
-    - Log::Dispatch::File
-    - Log::Dispatch::Handle
-    - Log::Dispatch::Null
-    - Log::Dispatch::Output
-    - Log::Dispatch::Screen
-    - Log::Dispatch::Syslog
+    - CPAN::Meta
+    - CPAN::Meta::Converter
+    - CPAN::Meta::Feature
+    - CPAN::Meta::History
+    - CPAN::Meta::Prereqs
+    - CPAN::Meta::Spec
+    - CPAN::Meta::Validator
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.
@@ -61,9 +67,9 @@ test:
     # - nose
 
 about:
-  home: http://metacpan.org/pod/Log-Dispatch
-  license: artistic_2
-  summary: 'Dispatches messages to one or more outputs'
+  home: https://github.com/Perl-Toolchain-Gang/CPAN-Meta
+  license: perl_5
+  summary: 'the distribution metadata for a CPAN dist'
 
 # See
 # http://docs.continuum.io/conda/build.html for

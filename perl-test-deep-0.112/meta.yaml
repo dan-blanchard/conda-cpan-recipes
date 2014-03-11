@@ -81,14 +81,6 @@ test:
     - Test::Deep::Shallow
     - Test::Deep::Stack
     - Test::Deep::String
-    - Test::Deep::SubHash
-    - Test::Deep::SubHashElements
-    - Test::Deep::SubHashKeys
-    - Test::Deep::SubHashKeysOnly
-    - Test::Deep::SuperHash
-    - Test::Deep::SuperHashElements
-    - Test::Deep::SuperHashKeys
-    - Test::Deep::SuperHashKeysOnly
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

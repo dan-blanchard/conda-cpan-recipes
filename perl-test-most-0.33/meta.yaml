@@ -24,9 +24,19 @@ build:
 requirements:
   build:
     - perl
+    - perl-exception-class
+    - perl-test-deep
+    - perl-test-differences
+    - perl-test-exception
+    - perl-test-warn
 
   run:
     - perl
+    - perl-exception-class
+    - perl-test-deep
+    - perl-test-differences
+    - perl-test-exception
+    - perl-test-warn
 
 test:
   # Perl 'use' tests
