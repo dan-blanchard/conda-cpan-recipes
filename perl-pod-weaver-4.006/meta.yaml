@@ -19,7 +19,7 @@ build:
   # default to 0.
   #
   # NOTE: Build strings override build numbers.
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -44,7 +44,7 @@ requirements:
     - perl-datetime
     - perl-params-util
     - perl-log-dispatchouli
-    - perl-text-tabs+wrap
+    - perl-text-tabs-wrap
     - perl-string-formatter
 
   run:
@@ -55,7 +55,7 @@ requirements:
     - perl-module-runtime
     - perl-string-rewriteprefix
     - perl-moose
-    - perl-text-tabs+wrap
+    - perl-text-tabs-wrap
     - perl-namespace-autoclean
     - perl-config-mvp-reader-ini
     - perl-log-dispatchouli

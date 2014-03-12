@@ -19,7 +19,7 @@ build:
   # default to 0.
   #
   # NOTE: Build strings override build numbers.
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -99,7 +99,7 @@ requirements:
     - perl-dist-zilla-plugin-metaprovides-package
     - perl-dist-zilla-plugin-checkselfdependency
     - perl-dist-zilla-plugin-checkprereqsindexed
-    - perl-text-tabs+wrap
+    - perl-text-tabs-wrap
     - perl-dist-zilla-plugin-checkextratests
     - perl-dist-zilla-plugin-git-pushinitial
     - perl-dist-zilla-plugin-prereqs-authordeps
@@ -118,7 +118,7 @@ requirements:
     - perl-pod-markdown
     - perl-dist-zilla-plugin-test-minimumversion
     - perl-dist-zilla-plugin-checkchangeshascontent
-    - perl-text-tabs+wrap
+    - perl-text-tabs-wrap
     - perl-dist-zilla-plugin-installguide
     - perl-file-sharedir
     - perl-dist-zilla-plugin-copyfilesfromrelease

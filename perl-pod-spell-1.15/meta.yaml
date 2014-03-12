@@ -19,7 +19,7 @@ build:
   # default to 0.
   #
   # NOTE: Build strings override build numbers.
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -40,7 +40,7 @@ requirements:
     - perl-file-temp
     - perl-pod-parser
     - perl-file-sharedir-install
-    - perl-text-tabs+wrap
+    - perl-text-tabs-wrap
     - perl-test-simple
 
   run:
@@ -53,7 +53,7 @@ requirements:
     - perl-carp
     - perl-class-tiny
     - perl-pod-parser
-    - perl-text-tabs+wrap
+    - perl-text-tabs-wrap
 
 test:
   # Perl 'use' tests

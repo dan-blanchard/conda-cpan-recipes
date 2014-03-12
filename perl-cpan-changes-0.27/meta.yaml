@@ -19,20 +19,20 @@ build:
   # default to 0.
   #
   # NOTE: Build strings override build numbers.
-  number: 1
+  number: 2
 
 requirements:
   build:
     - perl
     - perl-extutils-makemaker
     - perl-version
-    - perl-text-tabs+wrap
+    - perl-text-tabs-wrap
     - perl-test-simple
 
   run:
     - perl
     - perl-version
-    - perl-text-tabs+wrap
+    - perl-text-tabs-wrap
 
 test:
   # Perl 'use' tests
