@@ -3,9 +3,9 @@ package:
   version: !!str 3.63
 
 source:
-  #fn: 
-  #url: 
-  #md5: 
+  #fn:
+  #url:
+  #md5:
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -32,15 +32,6 @@ test:
   # Perl 'use' tests
   imports:
     - CGI
-    - CGI::Apache
-    - CGI::Carp
-    - CGI::Cookie
-    - CGI::Fast
-    - CGI::Pretty
-    - CGI::Push
-    - CGI::Switch
-    - CGI::Util
-    - CGITempFile
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

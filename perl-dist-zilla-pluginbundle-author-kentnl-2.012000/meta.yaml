@@ -62,7 +62,7 @@ requirements:
     - perl-dist-zilla-plugin-eoltests
     - perl-dist-zilla-plugin-twitter
     - perl-dist-zilla-plugin-git
-    - perl-module-metadata
+    - perl-module-metadata 1.000019
     - perl-dist-zilla-plugin-test-minimumversion
     - perl-capture-tiny
     - perl-pathtools
@@ -134,7 +134,7 @@ requirements:
     - perl-moose
     - perl-dist-zilla-plugin-perltidy
     - perl-dist-zilla-util-emulatephase
-    - perl-version
+    - perl-version 0.9907
     - perl-dist-zilla-plugin-eoltests
     - perl-dist-zilla-plugin-podweaver
 

@@ -35,9 +35,6 @@ test:
   # Perl 'use' tests
   imports:
     - Hash::Util::FieldHash::Compat
-    - Hash::Util::FieldHash::Compat::Destroyer
-    - Hash::Util::FieldHash::Compat::Tie::FieldHash
-    - Hash::Util::FieldHash::Compat::Tie::IdHash
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

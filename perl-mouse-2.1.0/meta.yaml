@@ -58,13 +58,9 @@ test:
     - Mouse::Meta::Role::Method
     - Mouse::Meta::TypeConstraint
     - Mouse::Object
-    - Mouse::PurePerl
-    - Mouse::Role
     - Mouse::Spec
     - Mouse::TypeRegistry
     - Mouse::Util
-    - Mouse::Util::MetaRole
-    - Mouse::Util::TypeConstraints
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

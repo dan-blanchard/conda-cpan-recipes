@@ -1,0 +1,43 @@
+package:
+  name: perl-archive-extract
+  version: !!str 0.68
+
+source:
+  #fn: Archive-Extract-0.68.tar.gz
+  #url: http://cpan.metacpan.org/authors/id/B/BI/BINGOS/Archive-Extract-0.68.tar.gz
+  #md5: 8316c72e5df9808364157875bd48d887
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Archive-Extract
+  license: perl_5
+  summary: 'Generic archive extracting mechanism'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

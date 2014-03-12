@@ -31,14 +31,14 @@ requirements:
 
 test:
   # Perl 'use' tests
-  imports:
-    - Filter::Util::Call
-    - Filter::Util::Exec
-    - Filter::cpp
-    - Filter::decrypt
-    - Filter::exec
-    - Filter::sh
-    - Filter::tee
+  # imports:
+  #   - Filter::Util::Call
+  #   - Filter::Util::Exec
+  #   - Filter::cpp
+  #   - Filter::decrypt
+  #   - Filter::exec
+  #   - Filter::sh
+  #   - Filter::tee
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

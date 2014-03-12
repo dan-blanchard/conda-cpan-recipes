@@ -44,7 +44,6 @@ test:
   # Perl 'use' tests
   imports:
     - Module::ExtractUse
-    - Module::ExtractUse::Grammar
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

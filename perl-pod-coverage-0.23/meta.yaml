@@ -41,7 +41,6 @@ test:
     - Pod::Coverage
     - Pod::Coverage::CountParents
     - Pod::Coverage::ExportOnly
-    - Pod::Coverage::Extractor
     - Pod::Coverage::Overloader
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe

@@ -32,49 +32,6 @@ test:
   # Perl 'use' tests
   imports:
     - CPAN
-    - CPAN::Admin
-    - CPAN::Author
-    - CPAN::Bundle
-    - CPAN::CacheMgr
-    - CPAN::Complete
-    - CPAN::Debug
-    - CPAN::DeferredCode
-    - CPAN::Distribution
-    - CPAN::Distroprefs
-    - CPAN::Distroprefs::Iterator
-    - CPAN::Distroprefs::Pref
-    - CPAN::Distroprefs::Result
-    - CPAN::Distroprefs::Result::Error
-    - CPAN::Distroprefs::Result::Fatal
-    - CPAN::Distroprefs::Result::Success
-    - CPAN::Distroprefs::Result::Warning
-    - CPAN::Distrostatus
-    - CPAN::Eval
-    - CPAN::Exception::RecursiveDependency
-    - CPAN::Exception::blocked_urllist
-    - CPAN::Exception::yaml_not_installed
-    - CPAN::Exception::yaml_process_error
-    - CPAN::FTP
-    - CPAN::FTP::netrc
-    - CPAN::FirstTime
-    - CPAN::HTTP::Client
-    - CPAN::HTTP::Credentials
-    - CPAN::HandleConfig
-    - CPAN::Index
-    - CPAN::InfoObj
-    - CPAN::Kwalify
-    - CPAN::LWP::UserAgent
-    - CPAN::Mirrored::By
-    - CPAN::Mirrors
-    - CPAN::Module
-    - CPAN::Nox
-    - CPAN::Prompt
-    - CPAN::Queue
-    - CPAN::Queue::Item
-    - CPAN::Shell
-    - CPAN::Tarzip
-    - CPAN::URL
-    - CPAN::Version
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

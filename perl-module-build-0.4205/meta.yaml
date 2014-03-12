@@ -1,0 +1,101 @@
+package:
+  name: perl-module-build
+  version: !!str 0.4205
+
+source:
+  fn: Module-Build-0.4205.tar.gz
+  url: http://cpan.metacpan.org/authors/id/L/LE/LEONT/Module-Build-0.4205.tar.gz
+  md5: bfc8504e845131625308bd4389c69fbe
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-data-dumper
+    - perl-cpan-meta
+    - perl-perl-ostype
+    - perl-extutils-install
+    - perl-podlators
+    - perl-extutils-makemaker
+    - perl-module-metadata
+    - perl-version
+    - perl-getopt-long
+    - perl-extutils-parsexs
+    - perl-text-parsewords
+    - perl-file-temp
+    - perl-parse-cpan-meta
+    - perl-test-simple
+    - perl-pathtools
+    - perl-test-harness
+    - perl-extutils-cbuilder
+    - perl-text-abbrev
+    - perl-file-path
+    - perl-cpan-meta-yaml
+    - perl-extutils-manifest
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-test-harness
+    - perl-cpan-meta
+    - perl-perl-ostype
+    - perl-extutils-install
+    - perl-extutils-cbuilder
+    - perl-podlators
+    - perl-data-dumper
+    - perl-module-metadata
+    - perl-extutils-parsexs
+    - perl-text-abbrev
+    - perl-file-path
+    - perl-getopt-long
+    - perl-extutils-manifest
+    - perl-version
+    - perl-text-parsewords
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Module::Build
+    - Module::Build::Base
+    - Module::Build::Compat
+    - Module::Build::Config
+    - Module::Build::Cookbook
+    - Module::Build::Dumper
+    - Module::Build::ModuleInfo
+    - Module::Build::Notes
+    - Module::Build::PPMMaker
+    - Module::Build::Platform::Default
+    - Module::Build::Platform::MacOS
+    - Module::Build::Platform::Unix
+    - Module::Build::Platform::VMS
+    - Module::Build::Platform::VOS
+    - Module::Build::Platform::Windows
+    - Module::Build::Platform::aix
+    - Module::Build::Platform::cygwin
+    - Module::Build::Platform::darwin
+    - Module::Build::Platform::os2
+    - Module::Build::PodParser
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Module-Build
+  license: perl_5
+  summary: 'Build and install Perl modules'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

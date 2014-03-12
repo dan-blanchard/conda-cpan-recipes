@@ -43,6 +43,7 @@ requirements:
     - perl-scalar-list-utils
     - perl-autodie
     - perl-file-pushd
+    - perl-git-wrapper
 
   run:
     - perl
@@ -60,20 +61,20 @@ requirements:
     - perl-autodie
     - perl-file-homedir
     - perl-scalar-list-utils
+    - perl-git-wrapper
 
 test:
   # Perl 'use' tests
-  imports:
-    - Dist::Zilla::Plugin::ArchiveRelease
-    - Dist::Zilla::Plugin::GitVersionCheckCJM
-    - Dist::Zilla::Plugin::MakeMaker::Custom
-    - Dist::Zilla::Plugin::Metadata
-    - Dist::Zilla::Plugin::ModuleBuild::Custom
-    - Dist::Zilla::Plugin::RecommendedPrereqs
-    - Dist::Zilla::Plugin::Test::PrereqsFromMeta
-    - Dist::Zilla::Plugin::VersionFromModule
-    - Dist::Zilla::Role::HashDumper
-    - Dist::Zilla::Role::ModuleInfo
+  # imports:
+  #   - Dist::Zilla::Plugin::GitVersionCheckCJM
+  #   - Dist::Zilla::Plugin::MakeMaker::Custom
+  #   - Dist::Zilla::Plugin::Metadata
+  #   - Dist::Zilla::Plugin::ModuleBuild::Custom
+  #   - Dist::Zilla::Plugin::RecommendedPrereqs
+  #   - Dist::Zilla::Plugin::Test::PrereqsFromMeta
+  #   - Dist::Zilla::Plugin::VersionFromModule
+  #   - Dist::Zilla::Role::HashDumper
+  #   - Dist::Zilla::Role::ModuleInfo
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

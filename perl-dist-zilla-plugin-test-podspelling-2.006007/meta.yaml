@@ -49,7 +49,6 @@ requirements:
 test:
   # Perl 'use' tests
   imports:
-    - Dist::Zilla::Plugin::PodSpellingTests
     - Dist::Zilla::Plugin::Test::PodSpelling
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe

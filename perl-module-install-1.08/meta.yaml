@@ -32,7 +32,7 @@ requirements:
     - perl-par-dist
     - perl-archive-tar
     - perl-extutils-parsexs
-    - perl-parse-cpan-meta
+    - perl-parse-cpan-meta 1.4413
     - perl-test-simple
     - perl-pathtools
     - perl-extutils-makemaker
@@ -56,45 +56,12 @@ requirements:
     - perl-par-dist
     - perl-archive-tar
     - perl-extutils-parsexs
-    - perl-parse-cpan-meta
+    - perl-parse-cpan-meta 1.4413
 
 test:
   # Perl 'use' tests
   imports:
-    - Module::AutoInstall
-    - Module::Install
-    - Module::Install::Admin
-    - Module::Install::Admin::Bundle
-    - Module::Install::Admin::Compiler
-    - Module::Install::Admin::Find
-    - Module::Install::Admin::Include
-    - Module::Install::Admin::Makefile
-    - Module::Install::Admin::Manifest
-    - Module::Install::Admin::Metadata
-    - Module::Install::Admin::ScanDeps
-    - Module::Install::Admin::WriteAll
-    - Module::Install::AutoInstall
-    - Module::Install::Base
-    - Module::Install::Base::FakeAdmin
-    - Module::Install::Bundle
-    - Module::Install::Can
-    - Module::Install::Compiler
-    - Module::Install::DSL
-    - Module::Install::Deprecated
-    - Module::Install::External
-    - Module::Install::Fetch
-    - Module::Install::Include
-    - Module::Install::Inline
-    - Module::Install::MakeMaker
-    - Module::Install::Makefile
-    - Module::Install::Metadata
-    - Module::Install::PAR
-    - Module::Install::Run
-    - Module::Install::Scripts
-    - Module::Install::Share
-    - Module::Install::Win32
-    - Module::Install::With
-    - Module::Install::WriteAll
+    - inc::Module::Install
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

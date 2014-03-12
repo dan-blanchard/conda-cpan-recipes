@@ -34,11 +34,6 @@ test:
   # Perl 'use' tests
   imports:
     - Data::Dump
-    - Data::Dump::FilterContext
-    - Data::Dump::Filtered
-    - Data::Dump::Trace
-    - Data::Dump::Trace::Call
-    - Data::Dump::Trace::Wrapper
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.

@@ -1,0 +1,77 @@
+package:
+  name: perl-dist-zilla-plugin-doppelgaenger
+  version: !!str 0.007
+
+source:
+  fn: Dist-Zilla-Plugin-Doppelgaenger-0.007.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Dist-Zilla-Plugin-Doppelgaenger-0.007.tar.gz
+  md5: fcce81d4dd1f2bdf19183fad4e9e1e1b
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-path-class
+    - perl-moosex-types-perl
+    - perl-namespace-autoclean
+    - perl-moosex-types-uri
+    - perl-version
+    - perl-moose-autobox
+    - perl-test-simple
+    - perl-pathtools
+    - perl-http-tiny
+    - perl-extutils-makemaker
+    - perl-file-find-rule
+    - perl-json
+    - perl-archive-extract
+    - perl-moosex-types-path-class
+    - perl-moose
+    - perl-pod-strip
+    - perl-scalar-list-utils
+    - perl-file-pushd
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-http-tiny
+    - perl-path-class
+    - perl-moosex-types-perl
+    - perl-moose
+    - perl-file-find-rule
+    - perl-json
+    - perl-archive-extract
+    - perl-moosex-types-path-class
+    - perl-moosex-types-uri
+    - perl-moose-autobox
+    - perl-pod-strip
+    - perl-namespace-autoclean
+    - perl-file-pushd
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::Doppelgaenger
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/dagolden/Dist-Zilla-Plugin-Doppelgaenger
+  license: apache_2_0
+  summary: 'Creates an evil twin of a CPAN distribution'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

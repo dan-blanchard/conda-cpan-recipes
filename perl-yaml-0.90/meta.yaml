@@ -43,14 +43,7 @@ test:
     - YAML::Mo
     - YAML::Node
     - YAML::Tag
-    - YAML::Type::blessed
-    - YAML::Type::code
-    - YAML::Type::glob
-    - YAML::Type::ref
-    - YAML::Type::regexp
-    - YAML::Type::undef
     - YAML::Types
-    - YAML::Warning
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.
