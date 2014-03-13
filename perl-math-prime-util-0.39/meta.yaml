@@ -1,0 +1,71 @@
+package:
+  name: perl-math-prime-util
+  version: !!str 0.39
+
+source:
+  fn: Math-Prime-Util-0.39.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DANAJ/Math-Prime-Util-0.39.tar.gz
+  md5: 6194a55e4addf6feb52250f016f32869
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-bytes-random-secure
+    - perl-exporter
+    - perl-constant
+    - perl-base
+    - perl-carp
+    - perl-bignum
+    - perl-math-bigint
+    - perl-xsloader
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-bytes-random-secure
+    - perl-exporter
+    - perl-constant
+    - perl-base
+    - perl-carp
+    - perl-math-bigint
+    - perl-xsloader
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Math::Prime::Util
+    - Math::Prime::Util::ECAffinePoint
+    - Math::Prime::Util::ECProjectivePoint
+    - Math::Prime::Util::MemFree
+    - Math::Prime::Util::PP
+    - Math::Prime::Util::PPFE
+    - Math::Prime::Util::PrimalityProving
+    - Math::Prime::Util::PrimeArray
+    - Math::Prime::Util::PrimeIterator
+    - Math::Prime::Util::RandomPrimes
+    - Math::Prime::Util::ZetaBigFloat
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/danaj/Math-Prime-Util
+  license: perl_5
+  summary: 'Utilities related to prime numbers, including fast sieves and factoring'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

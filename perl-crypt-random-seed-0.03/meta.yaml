@@ -1,0 +1,55 @@
+package:
+  name: perl-crypt-random-seed
+  version: !!str 0.03
+
+source:
+  fn: Crypt-Random-Seed-0.03.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DANAJ/Crypt-Random-Seed-0.03.tar.gz
+  md5: 9bc5a69a8f1964065da7823e19b98da2
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-constant
+    - perl-extutils-makemaker
+    - perl-carp
+    - perl-crypt-random-tesha2
+    - perl-exporter
+    - perl-base
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-crypt-random-tesha2
+    - perl-base
+    - perl-exporter
+    - perl-carp
+    - perl-constant
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/danaj/Crypt-Random-Seed
+  license: perl_5
+  summary: 'Provide strong randomness for seeding'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
