@@ -1,0 +1,44 @@
+package:
+  name: perl-xml-generator
+  version: !!str 1.04
+
+source:
+  fn: XML-Generator-1.04.tar.gz
+  url: http://cpan.metacpan.org/authors/id/B/BH/BHOLZMAN/XML-Generator-1.04.tar.gz
+  md5: 1ea1e239bdf3fd6f762c484753776626
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/XML-Generator
+  license: unknown
+  summary: 'XML::Generator subclass for producing DOM trees instead of strings.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

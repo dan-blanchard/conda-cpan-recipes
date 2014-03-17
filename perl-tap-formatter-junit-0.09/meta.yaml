@@ -1,0 +1,58 @@
+package:
+  name: perl-tap-formatter-junit
+  version: !!str 0.09
+
+source:
+  fn: TAP-Formatter-JUnit-0.09.tar.gz
+  url: http://cpan.metacpan.org/authors/id/G/GT/GTERMARS/TAP-Formatter-JUnit-0.09.tar.gz
+  md5: dc3effb243dc69f80953f5ddb918213d
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-module-build
+    - perl-xml-generator
+    - perl-file-slurp
+    - perl-test-harness
+    - perl-test-differences
+    - perl-moose
+    - perl-moosex-nonmoose
+    - perl-io-stringy
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-file-slurp
+    - perl-moose
+    - perl-test-harness
+    - perl-xml-generator
+    - perl-moosex-nonmoose
+
+test:
+  # Perl 'use' tests
+  imports:
+    - TAP::Formatter::JUnit
+    
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/TAP-Formatter-JUnit
+  license: perl_5
+  summary: 'Harness output delegate for JUnit output'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
