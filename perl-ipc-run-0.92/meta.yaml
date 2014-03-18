@@ -1,0 +1,48 @@
+package:
+  name: perl-ipc-run
+  version: !!str 0.92
+
+source:
+  fn: IPC-Run-0.92.tar.gz
+  url: http://cpan.metacpan.org/authors/id/T/TO/TODDR/IPC-Run-0.92.tar.gz
+  md5: 9d209c8d4bda50bea5f5a09e03db173e
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-io-tty
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-io-tty
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/IPC-Run
+  license: perl_5
+  summary: 'system() and background procs w/ piping, redirs, ptys (Unix, Win32)'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

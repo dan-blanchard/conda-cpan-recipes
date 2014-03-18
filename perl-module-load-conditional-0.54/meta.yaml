@@ -1,0 +1,43 @@
+package:
+  name: perl-module-load-conditional
+  version: !!str 0.54
+
+source:
+  #fn: Module-Load-Conditional-0.54.tar.gz
+  #url: http://cpan.metacpan.org/authors/id/B/BI/BINGOS/Module-Load-Conditional-0.54.tar.gz
+  #md5: 626d90b25bd461388e4706ff7a631d72
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Module-Load-Conditional
+  license: perl_5
+  summary: 'Looking up module information / loading at runtime'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

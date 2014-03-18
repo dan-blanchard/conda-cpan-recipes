@@ -1,0 +1,56 @@
+package:
+  name: perl-git-repository-plugin-log
+  version: !!str 1.310
+
+source:
+  fn: Git-Repository-Plugin-Log-1.310.tar.gz
+  url: http://cpan.metacpan.org/authors/id/B/BO/BOOK/Git-Repository-Plugin-Log-1.310.tar.gz
+  md5: 9b289c5985a8bf655da5f22c07651234
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-carp
+    - perl-scalar-list-utils
+    - perl-file-temp
+    - perl-git-repository
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-carp
+    - perl-git-repository
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Git::Repository::Log
+    - Git::Repository::Log::Iterator
+    - Git::Repository::Plugin::Log
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Git-Repository-Plugin-Log
+  license: perl_5
+  summary: 'Add a log() method to Git::Repository'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
