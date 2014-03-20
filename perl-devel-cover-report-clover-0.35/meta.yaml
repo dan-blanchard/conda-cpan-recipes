@@ -1,0 +1,59 @@
+package:
+  name: perl-devel-cover-report-clover
+  version: !!str 0.35
+
+source:
+  fn: Devel-Cover-Report-Clover-0.35.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DB/DBARTLE/Devel-Cover-Report-Clover-0.35.tar.gz
+  md5: 73adc0d54a7dcc2c928adf099d7eb24a
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-file-which
+    - perl-module-build
+    - perl-test-exception
+    - perl-html-parser
+    - perl-template-toolkit
+    - perl-test-harness
+    - perl-test-mockobject
+    - perl-class-accessor
+    - perl-file-path
+    - perl-devel-cover
+    - perl-test-simple
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-devel-cover
+    - perl-html-parser
+    - perl-template-toolkit
+    - perl-class-accessor
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/captin411/devel-cover-report-clover
+  license: perl_5
+  summary: 'Backend for Clover reporting of coverage statistics'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

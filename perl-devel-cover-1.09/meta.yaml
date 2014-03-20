@@ -1,0 +1,73 @@
+package:
+  name: perl-devel-cover
+  version: !!str 1.09
+
+source:
+  fn: Devel-Cover-1.09.tar.gz
+  url: http://cpan.metacpan.org/authors/id/P/PJ/PJCJ/Devel-Cover-1.09.tar.gz
+  md5: f316b3f9e8a16ffe0619fcb52f106046
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-digest-md5
+    - perl-extutils-makemaker
+    - perl-test-warn
+    - perl-storable
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-digest-md5
+    - perl-storable
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Devel::Cover
+    - Devel::Cover::Annotation::Git
+    - Devel::Cover::Annotation::Random
+    - Devel::Cover::Annotation::Svk
+    - Devel::Cover::Branch
+    - Devel::Cover::Condition
+    - Devel::Cover::Condition_and_2
+    - Devel::Cover::Condition_and_3
+    - Devel::Cover::Condition_or_2
+    - Devel::Cover::Condition_or_3
+    - Devel::Cover::Condition_xor_4
+    - Devel::Cover::Criterion
+    - Devel::Cover::DB
+    - Devel::Cover::Html_Common
+    - Devel::Cover::Op
+    - Devel::Cover::Pod
+    - Devel::Cover::Statement
+    - Devel::Cover::Subroutine
+    - Devel::Cover::Test
+    - Devel::Cover::Time
+    - Devel::Cover::Truth_Table
+    - Devel::Cover::Util
+    - Devel::Cover::Web
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  requires:
+    # Put any additional test requirements here.  For example
+    - perl-pod-coverage
+
+about:
+  home: http://www.pjcj.net/perl.html
+  license: perl_5
+  summary: 'Code coverage metrics for Perl'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

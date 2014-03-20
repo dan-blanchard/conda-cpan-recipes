@@ -1,0 +1,45 @@
+package:
+  name: perl-appconfig
+  version: !!str 1.66
+
+source:
+  fn: AppConfig-1.66.tar.gz
+  url: http://cpan.metacpan.org/authors/id/A/AB/ABW/AppConfig-1.66.tar.gz
+  md5: 21aa4d1bf70a49a94c2dc9293389b3a0
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/AppConfig
+  license: unknown
+  summary: 'AppConfig is a bundle of Perl5 modules for reading configuration files and parsing command line arguments.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
