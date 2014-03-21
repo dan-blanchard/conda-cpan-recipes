@@ -19,7 +19,7 @@ build:
   # default to 0.
   #
   # NOTE: Build strings override build numbers.
-  number: 2
+  number: 3
 
 requirements:
   build:
