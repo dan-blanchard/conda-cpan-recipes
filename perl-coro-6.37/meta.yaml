@@ -1,0 +1,84 @@
+package:
+  name: perl-coro
+  version: !!str 6.37
+
+source:
+  fn: Coro-6.37.tar.gz
+  url: http://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/Coro-6.37.tar.gz
+  md5: ed83c1ae97fcb0380f89d00805c98524
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-anyevent
+    - perl-ev
+    - perl-scalar-list-utils
+    - perl-guard
+    - perl-common-sense
+    - perl-storable
+    - perl-io-aio
+    - perl-anyevent-aio
+    - perl-event
+    - perl-net-http
+
+  run:
+    - perl
+    - perl-common-sense
+    - perl-guard
+    - perl-anyevent
+    - perl-ev
+    - perl-io-aio
+    - perl-anyevent-aio
+    - perl-storable
+    - perl-scalar-list-utils
+    - perl-net-http
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Coro
+    - Coro::AIO
+    - Coro::AnyEvent
+    - Coro::Channel
+    - Coro::Debug
+    - Coro::Event
+    - Coro::EV
+    - Coro::Handle
+    - Coro::LWP
+    - Coro::MakeMaker
+    - Coro::RWLock
+    - Coro::Select
+    - Coro::Semaphore
+    - Coro::SemaphoreSet
+    - Coro::Signal
+    - Coro::Socket
+    - Coro::Specific
+    - Coro::State
+    - Coro::Storable
+    - Coro::Timer
+    - Coro::Util
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  requires:
+    # Put any additional test requirements here.  For example
+    - perl-event
+
+about:
+  home: http://metacpan.org/pod/Coro
+  license: unknown
+  summary: 'the only real threads in perl'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

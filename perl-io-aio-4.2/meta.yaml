@@ -1,0 +1,47 @@
+package:
+  name: perl-io-aio
+  version: !!str 4.2
+
+source:
+  fn: IO-AIO-4.2.tar.gz
+  url: http://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/IO-AIO-4.2.tar.gz
+  md5: 3200f5077e4687c3e6388688738a97f6
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-common-sense
+
+  run:
+    - perl
+    - perl-common-sense
+
+test:
+  # Perl 'use' tests
+  imports:
+    - IO::AIO
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/IO-AIO
+  license: unknown
+  summary: 'Asynchronous Input/Output'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

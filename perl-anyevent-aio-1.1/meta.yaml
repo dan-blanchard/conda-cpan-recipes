@@ -1,0 +1,48 @@
+package:
+  name: perl-anyevent-aio
+  version: !!str 1.1
+
+source:
+  fn: AnyEvent-AIO-1.1.tar.gz
+  url: http://cpan.metacpan.org/authors/id/M/ML/MLEHMANN/AnyEvent-AIO-1.1.tar.gz
+  md5: faf3a4fe3dcffb04d27fbbd2c08651b9
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-anyevent
+    - perl-io-aio
+
+  run:
+    - perl
+    - perl-anyevent
+    - perl-io-aio
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/AnyEvent-AIO
+  license: unknown
+  summary: 'truly asynchronous file and directory I/O'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
