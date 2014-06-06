@@ -1,0 +1,85 @@
+package:
+  name: perl-zmq-ffi
+  version: !!str 0.12
+
+source:
+  fn: ZMQ-FFI-0.12.tar.gz
+  url: http://cpan.metacpan.org/authors/id/C/CA/CALID/ZMQ-FFI-0.12.tar.gz
+  md5: cd31a31588cfe66d6bfa922081ada585
+  patches:
+    # List any patch files here
+    - util.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-test-exception
+    - perl-math-bigint
+    - perl-if
+    - perl-ffi-raw
+    - perl-exporter
+    - perl-math-int64
+    - perl-moo
+    - perl-ev
+    - perl-anyevent
+    - perl-sub-exporter
+    - perl-time-hires
+    - perl-try-tiny
+    - perl-scalar-list-utils
+    - perl-namespace-autoclean
+    - perl-carp
+    - perl-test-simple
+    - zeromq
+
+  run:
+    - perl
+    - perl-if
+    - perl-ffi-raw
+    - perl-exporter
+    - perl-math-int64
+    - perl-carp
+    - perl-sub-exporter
+    - perl-try-tiny
+    - perl-moo
+    - perl-namespace-autoclean
+    - zeromq
+
+test:
+  # Perl 'use' tests
+  imports:
+    - ZMQ::FFI
+    - ZMQ::FFI::Constants
+    - ZMQ::FFI::ContextBase
+    - ZMQ::FFI::ContextRole
+    - ZMQ::FFI::ErrorHandler
+    - ZMQ::FFI::ErrorHelper
+    - ZMQ::FFI::SocketBase
+    - ZMQ::FFI::SocketRole
+    - ZMQ::FFI::Util
+    - ZMQ::FFI::Versioner
+    - ZMQ::FFI::ZMQ2::Context
+    - ZMQ::FFI::ZMQ2::Socket
+    - ZMQ::FFI::ZMQ3::Context
+    - ZMQ::FFI::ZMQ3::Socket
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/ZMQ-FFI
+  license: perl_5
+  summary: 'zeromq bindings using libffi and FFI::Raw'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
