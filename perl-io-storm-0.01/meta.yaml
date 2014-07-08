@@ -1,0 +1,53 @@
+package:
+  name: perl-io-storm
+  version: !!str 0.01
+
+source:
+  fn: IO-Storm-0.01.tar.gz
+  url: http://cpan.metacpan.org/authors/id/G/GP/GPHAT/IO-Storm-0.01.tar.gz
+  md5: 8058ef24fbae115d08f4a93224e8b80f
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-moose
+    - perl-extutils-makemaker
+    - perl-json-xs
+    - perl-log-log4perl
+    - perl-io
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-moose
+    - perl-log-log4perl
+    - perl-json-xs
+    - perl-io
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/gphat/io-storm
+  license: perl_5
+  summary: "Perl support for Twitter's Storm"
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

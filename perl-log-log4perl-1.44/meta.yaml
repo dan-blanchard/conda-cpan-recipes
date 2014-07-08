@@ -1,0 +1,65 @@
+package:
+  name: perl-log-log4perl
+  version: !!str 1.44
+
+source:
+  fn: Log-Log4perl-1.44.tar.gz
+  url: http://cpan.metacpan.org/authors/id/M/MS/MSCHILLI/Log-Log4perl-1.44.tar.gz
+  md5: 4065a8b123badf07a3d6f57b48a0aa5c
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-file-path
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-file-path
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Log::Log4perl
+    - Log::Log4perl::Appender
+    - Log::Log4perl::Catalyst
+    - Log::Log4perl::Config
+    - Log::Log4perl::DateFormat
+    - Log::Log4perl::Filter
+    - Log::Log4perl::InternalDebug
+    - Log::Log4perl::JavaMap
+    - Log::Log4perl::Layout
+    - Log::Log4perl::Level
+    - Log::Log4perl::Logger
+    - Log::Log4perl::MDC
+    - Log::Log4perl::NDC
+    - Log::Log4perl::Resurrector
+    - Log::Log4perl::Util
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Log-Log4perl
+  license: unknown
+  summary: 'Log4j implementation for Perl'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
