@@ -1,11 +1,11 @@
 package:
   name: perl-io-storm
-  version: !!str 0.03
+  version: !!str 0.10
 
 source:
-  fn: IO-Storm-0.03.tar.gz
-  url: http://nlp.research.ets.org/~dblanchard/IO-Storm-0.03.tar.gz
-  md5: 3db647a3c5f6ae0364ce15de9d7b91ab
+  fn: IO-Storm-0.10.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DS/DSBLANCH/IO-Storm-0.10.tar.gz
+  md5: 2390097dc39eaabc1abb91df214ff810
 #  patches:
    # List any patch files here
    # - fix.patch
@@ -18,27 +18,34 @@ source:
 requirements:
   build:
     - perl
-    - perl-moo
     - perl-namespace-clean
     - perl-extutils-makemaker
-    - perl-json-xs
     - perl-log-log4perl
-    - perl-io
-    - perl-test-simple
-    - perl-test-output
     - perl-test-mockobject
+    - perl-json-xs
+    - perl-try-tiny
+    - perl-moo
+    - perl-test-output
+    - perl-test-simple
 
   run:
     - perl
-    - perl-moo
     - perl-namespace-clean
     - perl-log-log4perl
+    - perl-test-mockobject
     - perl-json-xs
-    - perl-io
+    - perl-try-tiny
+    - perl-moo
+    - perl-test-output
+    - perl-test-simple
 
 test:
   # Perl 'use' tests
-  # imports:
+  imports:
+    - IO::Storm
+    - IO::Storm::Bolt
+    - IO::Storm::Spout
+    - IO::Storm::Tuple
 
   # You can also put a file called run_test.pl (or run_test.py) in the recipe
   # that will be run at test time.
@@ -48,9 +55,9 @@ test:
     # - nose
 
 about:
-  home: https://github.com/dan-blanchard/io-storm
+  home: http://metacpan.org/pod/IO-Storm
   license: perl_5
-  summary: "Perl support for Apache Storm"
+  summary: 'IO::Storm allows you to write Bolts and Spouts for Storm in Perl.'
 
 # See
 # http://docs.continuum.io/conda/build.html for
