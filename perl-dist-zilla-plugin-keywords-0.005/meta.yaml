@@ -1,0 +1,66 @@
+package:
+  name: perl-dist-zilla-plugin-keywords
+  version: !!str 0.005
+
+source:
+  fn: Dist-Zilla-Plugin-Keywords-0.005.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-Keywords-0.005.tar.gz
+  md5: dddb1a738780b88da4239970c4c58834
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-moosex-types-common
+    - perl-namespace-autoclean
+    - perl-test-deep
+    - perl-moosex-types
+    - perl-moose
+    - perl-path-tiny
+    - perl-version
+    - perl-encode
+    - perl-module-build-tiny
+    - perl-test-deep-json
+    - perl-test-simple
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-moosex-types-common
+    - perl-namespace-autoclean
+    - perl-moosex-types
+    - perl-moose
+    - perl-encode
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::Keywords
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-Keywords
+  license: perl_5
+  summary: 'add keywords to metadata in your distribution'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

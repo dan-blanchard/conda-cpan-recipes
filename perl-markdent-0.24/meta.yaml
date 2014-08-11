@@ -1,0 +1,175 @@
+package:
+  name: perl-markdent
+  version: !!str 0.24
+
+source:
+  fn: Markdent-0.24.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Markdent-0.24.tar.gz
+  md5: 89159df57080f89fed80e97073c49b9b
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-data-dumper
+    - perl-tree-simple-visitorfactory
+    - perl-file-slurp
+    - perl-getopt-long-descriptive
+    - perl-digest-sha1
+    - perl-moosex-getopt
+    - perl-moosex-types
+    - perl-list-allutils
+    - perl-html-stream
+    - perl-class-load
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-lib
+    - perl-file-temp
+    - perl-namespace-autoclean
+    - perl-test-simple
+    - perl-moosex-role-parameterized
+    - perl-extutils-makemaker
+    - perl-tree-simple
+    - perl-moosex-strictconstructor
+    - perl-moose
+    - perl-moosex-params-validate
+    - perl-html-tidy
+    - perl-test-deep
+    - perl-test-differences
+    - perl-io
+    - perl-moosex-semiaffordanceaccessor
+    - perl-base
+    - perl-scalar-list-utils
+    - perl-exporter
+
+  run:
+    - perl
+    - perl-moosex-role-parameterized
+    - perl-moosex-params-validate
+    - perl-exporter
+    - perl-moosex-strictconstructor
+    - perl-moosex-semiaffordanceaccessor
+    - perl-file-slurp
+    - perl-getopt-long-descriptive
+    - perl-digest-sha1
+    - perl-io
+    - perl-moosex-types
+    - perl-moose
+    - perl-base
+    - perl-list-allutils
+    - perl-html-stream
+    - perl-class-load
+    - perl-try-tiny
+    - perl-tree-simple
+    - perl-moosex-getopt
+    - perl-namespace-autoclean
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Markdent
+    - Markdent::CLI
+    - Markdent::CapturedEvents
+    - Markdent::Dialect::GitHub::BlockParser
+    - Markdent::Dialect::GitHub::SpanParser
+    - Markdent::Dialect::Theory::BlockParser
+    - Markdent::Dialect::Theory::SpanParser
+    - Markdent::Event::AutoLink
+    - Markdent::Event::CodeBlock
+    - Markdent::Event::EndBlockquote
+    - Markdent::Event::EndCode
+    - Markdent::Event::EndDocument
+    - Markdent::Event::EndEmphasis
+    - Markdent::Event::EndHTMLTag
+    - Markdent::Event::EndHeader
+    - Markdent::Event::EndLink
+    - Markdent::Event::EndListItem
+    - Markdent::Event::EndOrderedList
+    - Markdent::Event::EndParagraph
+    - Markdent::Event::EndStrong
+    - Markdent::Event::EndTable
+    - Markdent::Event::EndTableBody
+    - Markdent::Event::EndTableCell
+    - Markdent::Event::EndTableHeader
+    - Markdent::Event::EndTableRow
+    - Markdent::Event::EndUnorderedList
+    - Markdent::Event::HTMLBlock
+    - Markdent::Event::HTMLComment
+    - Markdent::Event::HTMLCommentBlock
+    - Markdent::Event::HTMLEntity
+    - Markdent::Event::HTMLTag
+    - Markdent::Event::HorizontalRule
+    - Markdent::Event::Image
+    - Markdent::Event::LineBreak
+    - Markdent::Event::Preformatted
+    - Markdent::Event::StartBlockquote
+    - Markdent::Event::StartCode
+    - Markdent::Event::StartDocument
+    - Markdent::Event::StartEmphasis
+    - Markdent::Event::StartHTMLTag
+    - Markdent::Event::StartHeader
+    - Markdent::Event::StartLink
+    - Markdent::Event::StartListItem
+    - Markdent::Event::StartOrderedList
+    - Markdent::Event::StartParagraph
+    - Markdent::Event::StartStrong
+    - Markdent::Event::StartTable
+    - Markdent::Event::StartTableBody
+    - Markdent::Event::StartTableCell
+    - Markdent::Event::StartTableHeader
+    - Markdent::Event::StartTableRow
+    - Markdent::Event::StartUnorderedList
+    - Markdent::Event::Text
+    - Markdent::Handler::CaptureEvents
+    - Markdent::Handler::HTMLFilter
+    - Markdent::Handler::HTMLStream::Document
+    - Markdent::Handler::HTMLStream::Fragment
+    - Markdent::Handler::MinimalTree
+    - Markdent::Handler::Multiplexer
+    - Markdent::Handler::Null
+    - Markdent::Parser
+    - Markdent::Parser::BlockParser
+    - Markdent::Parser::SpanParser
+    - Markdent::Regexes
+    - Markdent::Role::AnyParser
+    - Markdent::Role::BalancedEvent
+    - Markdent::Role::BlockParser
+    - Markdent::Role::DebugPrinter
+    - Markdent::Role::Dialect::BlockParser
+    - Markdent::Role::Dialect::SpanParser
+    - Markdent::Role::Event
+    - Markdent::Role::EventAsText
+    - Markdent::Role::EventsAsMethods
+    - Markdent::Role::FilterHandler
+    - Markdent::Role::HTMLStream
+    - Markdent::Role::Handler
+    - Markdent::Role::Simple
+    - Markdent::Role::SpanParser
+    - Markdent::Simple::Document
+    - Markdent::Simple::Fragment
+    - Markdent::Types
+    - Markdent::Types::Internal
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/release/Markdent
+  license: perl_5
+  summary: 'An event-based Markdown parser toolkit'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,56 @@
+package:
+  name: perl-html-tidy
+  version: !!str 1.56
+
+source:
+  fn: HTML-Tidy-1.56.tar.gz
+  url: http://cpan.metacpan.org/authors/id/P/PE/PETDANCE/HTML-Tidy-1.56.tar.gz
+  md5: dd4c0909e93033512606abf2f4e65dae
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-alien-tidyp
+    - perl-extutils-makemaker
+    - perl-carp
+    - perl-exporter
+    - perl-test-simple
+    - perl-constant
+
+  run:
+    - perl
+    - perl-alien-tidyp
+    - perl-exporter
+    - perl-carp
+    - perl-constant
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - HTML::Tidy
+    - HTML::Tidy::Message
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://github.com/petdance/html-tidy
+  license: artistic_2
+  summary: '(X)HTML validation in a Perl object'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

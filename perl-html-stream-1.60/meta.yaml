@@ -1,0 +1,43 @@
+package:
+  name: perl-html-stream
+  version: !!str 1.60
+
+source:
+  fn: HTML-Stream-1.60.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DS/DSTAAL/HTML-Stream-1.60.tar.gz
+  md5: dfc0376eb1359568769e1c22891c24ea
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+
+  run:
+    - perl
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/HTML-Stream
+  license: unknown
+  summary: 'HTML output stream class, and some markup utilities'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

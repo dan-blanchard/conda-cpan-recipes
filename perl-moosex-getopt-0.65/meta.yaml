@@ -1,0 +1,82 @@
+package:
+  name: perl-moosex-getopt
+  version: !!str 0.65
+
+source:
+  fn: MooseX-Getopt-0.65.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Getopt-0.65.tar.gz
+  md5: ce34e21451bffbb0af727db9d9638cc6
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-moosex-role-parameterized
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-module-runtime
+    - perl-if
+    - perl-namespace-autoclean
+    - perl-getopt-long-descriptive
+    - perl-test-deep
+    - perl-test-trap
+    - perl-test-warnings
+    - perl-moose
+    - perl-path-tiny
+    - perl-carp
+    - perl-getopt-long
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-module-build-tiny
+    - perl-scalar-list-utils
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-moosex-role-parameterized
+    - perl-namespace-autoclean
+    - perl-getopt-long-descriptive
+    - perl-getopt-long
+    - perl-moose
+    - perl-carp
+    - perl-try-tiny
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - MooseX::Getopt
+    - MooseX::Getopt::Basic
+    - MooseX::Getopt::Dashes
+    - MooseX::Getopt::GLD
+    - MooseX::Getopt::Meta::Attribute
+    - MooseX::Getopt::Meta::Attribute::NoGetopt
+    - MooseX::Getopt::Meta::Attribute::Trait
+    - MooseX::Getopt::Meta::Attribute::Trait::NoGetopt
+    - MooseX::Getopt::OptionTypeMap
+    - MooseX::Getopt::ProcessedArgv
+    - MooseX::Getopt::Strict
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/moose/MooseX-Getopt
+  license: perl_5
+  summary: 'A Moose role for processing command line options'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

@@ -1,0 +1,57 @@
+package:
+  name: perl-alien-tidyp
+  version: !!str 1.4.7
+
+source:
+  fn: Alien-Tidyp-v1.4.7.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KM/KMX/Alien-Tidyp-v1.4.7.tar.gz
+  md5: 088475307ae61e4471051ee4d0c95413
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-file-fetch
+    - perl-extutils-cbuilder
+    - perl-file-sharedir
+    - perl-module-build
+    - perl-archive-extract
+    - perl-extutils-command
+    - perl-file-path
+    - perl-digest-sha
+    - perl-file-temp
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-file-sharedir
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Alien-Tidyp
+  license: perl_5
+  summary: 'Building, finding and using tidyp library - http://www.tidyp.com'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

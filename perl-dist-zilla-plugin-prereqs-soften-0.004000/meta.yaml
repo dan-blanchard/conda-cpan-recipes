@@ -1,0 +1,60 @@
+package:
+  name: perl-dist-zilla-plugin-prereqs-soften
+  version: !!str 0.004000
+
+source:
+  fn: Dist-Zilla-Plugin-Prereqs-Soften-0.004000.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KENTNL/Dist-Zilla-Plugin-Prereqs-Soften-0.004000.tar.gz
+  md5: fde38d629d9e7e35b90215da29a584c9
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-json
+    - perl-moosex-types
+    - perl-moose
+    - perl-path-tiny
+    - perl-version
+    - perl-test-fatal
+    - perl-lib
+    - perl-test-simple
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-moosex-types
+    - perl-dist-zilla
+    - perl-moose
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::Prereqs::Soften
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/kentfredric/Dist-Zilla-Plugin-Prereqs-Soften
+  license: perl_5
+  summary: 'Downgrade listed dependencies to recommendations if present.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

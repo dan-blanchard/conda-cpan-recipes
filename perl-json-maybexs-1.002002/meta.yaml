@@ -1,0 +1,51 @@
+package:
+  name: perl-json-maybexs
+  version: !!str 1.002002
+
+source:
+  fn: JSON-MaybeXS-1.002002.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/JSON-MaybeXS-1.002002.tar.gz
+  md5: cb8c66ece7518270ea31ffc4951d5f02
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-extutils-cbuilder
+    - perl-json-pp
+    - perl-file-temp
+    - perl-test-without-module
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-json-pp
+
+test:
+  # Perl 'use' tests
+  imports:
+    - JSON::MaybeXS
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/JSON-MaybeXS
+  license: perl_5
+  summary: 'use Cpanel::JSON::XS with a fallback to JSON::XS and JSON::PP'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

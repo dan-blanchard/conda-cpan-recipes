@@ -1,0 +1,65 @@
+package:
+  name: perl-markdown-pod
+  version: !!str 0.005
+
+source:
+  fn: Markdown-Pod-0.005.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KEEDI/Markdown-Pod-0.005.tar.gz
+  md5: 3659e3ce94ac2d3ae29ac21c5a552261
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-moosex-strictconstructor
+    - perl-moose
+    - perl-moosex-params-validate
+    - perl-exporter
+    - perl-getopt-long
+    - perl-moosex-semiaffordanceaccessor
+    - perl-markdent
+    - perl-scalar-list-utils
+    - perl-namespace-autoclean
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-moosex-strictconstructor
+    - perl-moosex-params-validate
+    - perl-namespace-autoclean
+    - perl-moosex-semiaffordanceaccessor
+    - perl-getopt-long
+    - perl-moose
+    - perl-markdent
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Markdown::Pod
+    - Markdown::Pod::Handler
+    - Markdown::Pod::script
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/keedi/Markdown-Pod
+  license: perl_5
+  summary: 'Convert Markdown to POD'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

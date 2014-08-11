@@ -1,0 +1,51 @@
+package:
+  name: perl-test-cpan-meta-json
+  version: !!str 0.15
+
+source:
+  fn: Test-CPAN-Meta-JSON-0.15.tar.gz
+  url: http://cpan.metacpan.org/authors/id/B/BA/BARBIE/Test-CPAN-Meta-JSON-0.15.tar.gz
+  md5: 284bb6e444d3771f59346edafc079055
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-json
+    - perl-io
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-json
+    - perl-io
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Test::CPAN::Meta::JSON
+    - Test::CPAN::Meta::JSON::Version
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Test-CPAN-Meta-JSON
+  license: artistic_2
+  summary: 'Validate your CPAN META.json files'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
