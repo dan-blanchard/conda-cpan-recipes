@@ -1,0 +1,84 @@
+package:
+  name: perl-date-manip
+  version: !!str 6.47
+
+source:
+  fn: Date-Manip-6.47.tar.gz
+  url: http://cpan.metacpan.org/authors/id/S/SB/SBECK/Date-Manip-6.47.tar.gz
+  md5: 39af8f366c5c05213b337e3e01fa5f12
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-io
+    - perl-test-simple
+    - perl-encode
+    - perl-carp
+    - perl-test-inter
+    - perl-module-build
+    - perl-storable
+
+  run:
+    - perl
+    - perl-encode
+    - perl-io
+    - perl-carp
+    - perl-storable
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Date::Manip
+    - Date::Manip::Base
+    - Date::Manip::DM5
+    - Date::Manip::DM5abbrevs
+    - Date::Manip::DM6
+    - Date::Manip::Date
+    - Date::Manip::Delta
+    - Date::Manip::Lang::catalan
+    - Date::Manip::Lang::danish
+    - Date::Manip::Lang::dutch
+    - Date::Manip::Lang::english
+    - Date::Manip::Lang::finnish
+    - Date::Manip::Lang::french
+    - Date::Manip::Lang::german
+    - Date::Manip::Lang::index
+    - Date::Manip::Lang::italian
+    - Date::Manip::Lang::norwegian
+    - Date::Manip::Lang::polish
+    - Date::Manip::Lang::portugue
+    - Date::Manip::Lang::romanian
+    - Date::Manip::Lang::russian
+    - Date::Manip::Lang::spanish
+    - Date::Manip::Lang::swedish
+    - Date::Manip::Lang::turkish
+    - Date::Manip::Obj
+    - Date::Manip::Recur
+    - Date::Manip::TZ
+    - Date::Manip::TZ_Base
+    - Date::Manip::TZdata
+    - Date::Manip::Zones
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Date-Manip
+  license: perl_5
+  summary: 'Date manipulation routines'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

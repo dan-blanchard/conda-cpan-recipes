@@ -1,0 +1,52 @@
+package:
+  name: perl-log-dispatch-filerotate
+  version: !!str 1.19
+
+source:
+  fn: Log-Dispatch-FileRotate-1.19.tar.gz
+  url: http://cpan.metacpan.org/authors/id/M/MA/MARKPF/Log-Dispatch-FileRotate-1.19.tar.gz
+  md5: 8fabfe387bb070580f7c97c18853ae25
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-params-validate
+    - perl-log-log4perl
+    - perl-date-manip
+    - perl-log-dispatch
+
+  run:
+    - perl
+    - perl-params-validate
+    - perl-log-log4perl
+    - perl-date-manip
+    - perl-log-dispatch
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Log::Dispatch::FileRotate
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Log-Dispatch-FileRotate
+  license: unknown
+  summary: 'Log to files that archive/rotate themselves'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
