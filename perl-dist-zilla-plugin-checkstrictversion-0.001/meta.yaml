@@ -1,0 +1,56 @@
+package:
+  name: perl-dist-zilla-plugin-checkstrictversion
+  version: !!str 0.001
+
+source:
+  fn: Dist-Zilla-Plugin-CheckStrictVersion-0.001.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Dist-Zilla-Plugin-CheckStrictVersion-0.001.tar.gz
+  md5: 205a80940a99a8750e98e9d0d25f25c5
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-version
+    - perl-test-simple
+    - perl-test-fatal
+    - perl-moose
+    - perl-version-next
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-moose
+    - perl-version
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::CheckStrictVersion
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/dagolden/Dist-Zilla-Plugin-CheckStrictVersion
+  license: apache_2_0
+  summary: 'BeforeRelease plugin to check for a strict version number'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

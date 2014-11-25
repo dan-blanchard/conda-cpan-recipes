@@ -1,0 +1,48 @@
+package:
+  name: perl-devel-lexalias
+  version: !!str 0.05
+
+source:
+  fn: Devel-LexAlias-0.05.tar.gz
+  url: http://cpan.metacpan.org/authors/id/R/RC/RCLAMP/Devel-LexAlias-0.05.tar.gz
+  md5: 1a4f70dff1a47b3eb96bdeac50db2ec5
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-test-simple
+    - perl-devel-caller
+
+  run:
+    - perl
+    - perl-devel-caller
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Devel-LexAlias
+  license: perl_5
+  summary: 'alias lexical variables'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

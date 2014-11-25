@@ -1,0 +1,55 @@
+package:
+  name: perl-pod-weaver-section-contributors
+  version: !!str 0.008
+
+source:
+  fn: Pod-Weaver-Section-Contributors-0.008.tar.gz
+  url: http://cpan.metacpan.org/authors/id/K/KE/KEEDI/Pod-Weaver-Section-Contributors-0.008.tar.gz
+  md5: 830e37c60131cc0eee294b1073fff17c
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-moose
+    - perl-extutils-makemaker
+    - perl-pod-elemental
+    - perl-list-moreutils
+    - perl-moose-autobox
+    - perl-pod-weaver
+
+  run:
+    - perl
+    - perl-moose
+    - perl-list-moreutils
+    - perl-pod-elemental
+    - perl-pod-weaver
+    - perl-moose-autobox
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Pod::Weaver::Section::Contributors
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://metacpan.org/module/Pod::Weaver::Section::Contributors
+  license: perl_5
+  summary: 'a section listing contributors'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

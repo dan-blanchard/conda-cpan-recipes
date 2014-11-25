@@ -1,0 +1,67 @@
+package:
+  name: perl-dist-zilla-plugin-test-notabs
+  version: !!str 0.08
+
+source:
+  fn: Dist-Zilla-Plugin-Test-NoTabs-0.08.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-Test-NoTabs-0.08.tar.gz
+  md5: f6c80f9c9d73ce5a02eb8ca3be7d4340
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-sub-exporter-formethods
+    - perl-if
+    - perl-test-notabs
+    - perl-namespace-autoclean
+    - perl-moose
+    - perl-path-tiny
+    - perl-data-section
+    - perl-version
+    - perl-scalar-list-utils
+    - perl-test-simple
+    - perl-file-pushd
+    - perl-module-build-tiny 0.036
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-data-section
+    - perl-sub-exporter-formethods
+    - perl-namespace-autoclean
+    - perl-moose
+    - perl-path-tiny
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::NoTabsTests
+    - Dist::Zilla::Plugin::Test::NoTabs
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-Test-NoTabs
+  license: perl_5
+  summary: "Release tests making sure hard tabs aren't used"
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

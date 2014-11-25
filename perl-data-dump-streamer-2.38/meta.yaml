@@ -1,0 +1,65 @@
+package:
+  name: perl-data-dump-streamer
+  version: !!str 2.38
+
+source:
+  fn: Data-Dump-Streamer-2.38.tar.gz
+  url: http://cpan.metacpan.org/authors/id/Y/YV/YVES/Data-Dump-Streamer-2.38.tar.gz
+  md5: ca6fa9ef3a29a9c423f78db3a4ff126a
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-base
+    - perl-module-build
+    - perl-extutils-cbuilder
+    - perl-exporter
+    - perl-data-dumper
+    - perl-io
+    - perl-text-abbrev
+    - perl-carp
+    - perl-text-balanced
+    - perl-extutils-makemaker
+    - perl-extutils-depends
+    - perl-b-utils
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-data-dumper
+    - perl-exporter
+    - perl-extutils-makemaker
+    - perl-io
+    - perl-text-abbrev
+    - perl-text-balanced
+    - perl-b-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Data::Dump::Streamer
+    - Data::Dump::Streamer::Deparser
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Data-Dump-Streamer
+  license: perl_5
+  summary: 'Accurately serialize a data structure as Perl code.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

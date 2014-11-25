@@ -1,0 +1,66 @@
+package:
+  name: perl-path-tiny
+  version: !!str 0.061
+
+source:
+  fn: Path-Tiny-0.061.tar.gz
+  url: https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.061.tar.gz
+  md5: b82cb206a44b7408b11b991001c45e49
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-exporter
+    - perl-constant
+    - perl-digest
+    - perl-carp
+    - perl-file-path
+    - perl-digest-sha
+    - perl-lib
+    - perl-file-temp
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-if
+    - perl-exporter
+    - perl-constant
+    - perl-carp
+    - perl-file-path
+    - perl-digest-sha
+    - perl-file-temp
+    - perl-digest
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Path::Tiny
+    - Path::Tiny::Error
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/dagolden/Path-Tiny
+  license: apache_2_0
+  summary: 'File path utility'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

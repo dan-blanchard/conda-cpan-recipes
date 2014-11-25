@@ -1,0 +1,65 @@
+package:
+  name: perl-moosex-object-pluggable
+  version: !!str 0.0013
+
+source:
+  fn: MooseX-Object-Pluggable-0.0013.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/MooseX-Object-Pluggable-0.0013.tar.gz
+  md5: ef047198af7e065cb3f02cf56daf8fdd
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-module-pluggable
+    - perl-extutils-makemaker
+    - perl-module-runtime
+    - perl-namespace-autoclean
+    - perl-moose
+    - perl-carp
+    - perl-version
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-module-build-tiny
+    - perl-lib
+    - perl-test-simple
+    - perl-scalar-list-utils
+
+  run:
+    - perl
+    - perl-module-pluggable
+    - perl-module-runtime
+    - perl-namespace-autoclean
+    - perl-moose
+    - perl-carp
+    - perl-try-tiny
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - MooseX::Object::Pluggable
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/moose/MooseX-Object-Pluggable
+  license: perl_5
+  summary: 'Make your classes pluggable'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

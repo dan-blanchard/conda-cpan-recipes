@@ -1,0 +1,62 @@
+package:
+  name: perl-dist-zilla-plugin-checkbin
+  version: !!str 0.007
+
+source:
+  fn: Dist-Zilla-Plugin-CheckBin-0.007.tar.gz
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-CheckBin-0.007.tar.gz
+  md5: 6861ff37d4c980f649dcbe2c0c343c18
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-if
+    - perl-namespace-autoclean
+    - perl-test-deep
+    - perl-moose
+    - perl-path-tiny
+    - perl-test-fatal
+    - perl-devel-checkbin
+    - perl-scalar-list-utils
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-moose
+    - perl-namespace-autoclean
+    - perl-scalar-list-utils
+    - perl-devel-checkbin
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::CheckBin
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-CheckBin
+  license: perl_5
+  summary: 'Require that our distribution has a particular command available'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

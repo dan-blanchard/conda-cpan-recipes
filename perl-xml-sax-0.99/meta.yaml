@@ -1,0 +1,50 @@
+package:
+  name: perl-xml-sax
+  version: !!str 0.99
+
+source:
+  fn: XML-SAX-0.99.tar.gz
+  url: http://cpan.metacpan.org/authors/id/G/GR/GRANTM/XML-SAX-0.99.tar.gz
+  md5: 290f5375ae87fdebfdb5bc3854019f24
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-xml-sax-base
+    - perl-xml-namespacesupport
+    - perl-file-temp
+    - perl-extutils-makemaker
+
+  run:
+    - perl
+    - perl-xml-sax-base
+    - perl-xml-namespacesupport
+    - perl-file-temp
+
+test:
+  # Perl 'use' tests
+  imports:
+    - XML::SAX
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/XML-SAX
+  license: unknown
+  summary: 'Simple API for XML'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

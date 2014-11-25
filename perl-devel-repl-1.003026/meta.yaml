@@ -1,0 +1,78 @@
+package:
+  name: perl-devel-repl
+  version: !!str 1.003026
+
+source:
+  fn: Devel-REPL-1.003026.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Devel-REPL-1.003026.tar.gz
+  md5: 2404861ed071ee7af1d4574d7a3b9b90
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-term-ansicolor
+    - perl-namespace-autoclean
+    - perl-moosex-object-pluggable
+    - perl-moosex-getopt
+    - perl-version
+    - perl-task-weaken
+    - perl-test-fatal
+    - perl-scalar-list-utils
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-term-readline
+    - perl-module-runtime
+    - perl-if
+    - perl-moose
+    - perl-time-hires
+    - perl-test-simple
+    - perl-file-homedir
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-term-readline
+    - perl-module-runtime
+    - perl-term-ansicolor
+    - perl-namespace-autoclean
+    - perl-moosex-object-pluggable
+    - perl-moosex-getopt
+    - perl-moose
+    - perl-task-weaken
+    - perl-time-hires
+    - perl-file-homedir
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Devel::REPL
+    - Devel::REPL::Error
+    - Devel::REPL::Meta::Plugin
+    - Devel::REPL::Plugin
+    - Devel::REPL::Profile
+    - Devel::REPL::Script
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Devel-REPL
+  license: perl_5
+  summary: 'a modern perl interactive shell'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

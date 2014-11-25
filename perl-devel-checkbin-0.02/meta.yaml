@@ -1,0 +1,54 @@
+package:
+  name: perl-devel-checkbin
+  version: !!str 0.02
+
+source:
+  fn: Devel-CheckBin-0.02.tar.gz
+  url: http://cpan.metacpan.org/authors/id/T/TO/TOKUHIROM/Devel-CheckBin-0.02.tar.gz
+  md5: aaa02a1262bc3eb3a7e5566590cb7814
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-module-build
+    - perl-cpan-meta
+    - perl-parent
+    - perl-exporter
+    - perl-file-temp
+    - perl-extutils-makemaker
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-extutils-makemaker
+    - perl-exporter
+    - perl-parent
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Devel::CheckBin
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/tokuhirom/Devel-CheckBin
+  license: perl_5
+  summary: 'check that a command is available'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
