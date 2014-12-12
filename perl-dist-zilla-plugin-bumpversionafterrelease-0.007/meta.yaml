@@ -1,0 +1,61 @@
+package:
+  name: perl-dist-zilla-plugin-bumpversionafterrelease
+  version: !!str 0.007
+
+source:
+  fn: Dist-Zilla-Plugin-BumpVersionAfterRelease-0.007.tar.gz
+  url: https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Dist-Zilla-Plugin-BumpVersionAfterRelease-0.007.tar.gz
+  md5: eeb5d8dbbc2817a3baadcfee8c191f56
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-dist-zilla
+    - perl-extutils-makemaker
+    - perl-moose
+    - perl-namespace-autoclean
+    - perl-path-tiny 0.061
+    - perl-version
+    - perl-test-fatal
+    - perl-version-next
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-path-tiny 0.061
+    - perl-namespace-autoclean
+    - perl-moose
+    - perl-version
+    - perl-version-next
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::BumpVersionAfterRelease
+    - Dist::Zilla::Plugin::RewriteVersion
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/dagolden/Dist-Zilla-Plugin-BumpVersionAfterRelease
+  license: apache_2_0
+  summary: 'Bump module versions after distribution release'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

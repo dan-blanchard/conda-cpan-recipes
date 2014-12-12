@@ -1,0 +1,75 @@
+package:
+  name: perl-www-mechanize
+  version: !!str 1.73
+
+source:
+  fn: WWW-Mechanize-1.73.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/WWW-Mechanize-1.73.tar.gz
+  md5: de0a9c528c12793c881151301bc14d1a
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-http-server-simple
+    - perl-html-parser
+    - perl-extutils-makemaker
+    - perl-http-message
+    - perl-html-form
+    - perl-uri
+    - perl-getopt-long
+    - perl-pod-usage
+    - perl-http-daemon
+    - perl-html-tree
+    - perl-test-warn
+    - perl-libwww-perl
+    - perl-file-temp
+    - perl-carp
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-http-server-simple
+    - perl-html-parser
+    - perl-uri
+    - perl-http-message
+    - perl-html-form
+    - perl-getopt-long
+    - perl-test-warn
+    - perl-http-daemon
+    - perl-html-tree
+    - perl-carp
+    - perl-libwww-perl
+    - perl-file-temp
+    - perl-pod-usage
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - WWW::Mechanize
+    - WWW::Mechanize::Image
+    - WWW::Mechanize::Link
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/bestpractical/www-mechanize
+  license: perl_5
+  summary: 'Handy web browsing in a Perl object'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

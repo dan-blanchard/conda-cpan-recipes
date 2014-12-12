@@ -1,0 +1,50 @@
+package:
+  name: perl-www-pastebin-pastebincom-create
+  version: !!str 1.003
+
+source:
+  fn: WWW-Pastebin-PastebinCom-Create-1.003.tar.gz
+  url: http://cpan.metacpan.org/authors/id/Z/ZO/ZOFFIX/WWW-Pastebin-PastebinCom-Create-1.003.tar.gz
+  md5: 9c8fec1d38e0afe3dbdf7d0d843a5796
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-www-mechanize
+    - perl-module-build
+    - perl-moo
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-www-mechanize
+    - perl-moo
+
+test:
+  # Perl 'use' tests
+  imports:
+    - WWW::Pastebin::PastebinCom::Create
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/WWW-Pastebin-PastebinCom-Create
+  license: artistic_2
+  summary: 'paste on www.pastebin.com without API keys'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

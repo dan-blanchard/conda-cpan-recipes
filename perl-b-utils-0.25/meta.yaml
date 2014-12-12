@@ -1,0 +1,55 @@
+package:
+  name: perl-b-utils
+  version: !!str 0.25
+
+source:
+  fn: B-Utils-0.25.tar.gz
+  url: http://cpan.metacpan.org/authors/id/J/JJ/JJORE/B-Utils-0.25.tar.gz
+  md5: a45b286d9a0281c98416f2bdf689b800
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-task-weaken
+    - perl-scalar-list-utils
+    - perl-extutils-cbuilder
+    - perl-exporter
+    - perl-test-simple
+    - perl-extutils-depends
+
+  run:
+    - perl
+    - perl-exporter
+    - perl-task-weaken
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - B::Utils
+    - B::Utils::Install::Files
+    - B::Utils::OP
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://search.cpan.org/dist/B-Utils
+  license: perl_5
+  summary: 'Helper functions for op tree manipulation'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

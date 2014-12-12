@@ -1,0 +1,58 @@
+package:
+  name: perl-html-tree
+  version: !!str 5.03
+
+source:
+  fn: HTML-Tree-5.03.tar.gz
+  url: http://cpan.metacpan.org/authors/id/C/CJ/CJM/HTML-Tree-5.03.tar.gz
+  md5: d9271d60b872ed6fbe68b2d0fe8c450e
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-html-parser
+    - perl-module-build
+    - perl-encode
+    - perl-exporter
+    - perl-html-tagset
+    - perl-base
+    - perl-carp
+    - perl-test-fatal
+    - perl-scalar-list-utils
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-html-parser
+    - perl-exporter
+    - perl-carp
+    - perl-html-tagset
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/HTML-Tree
+  license: perl_5
+  summary: 'Work with HTML in a DOM-like tree structure'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

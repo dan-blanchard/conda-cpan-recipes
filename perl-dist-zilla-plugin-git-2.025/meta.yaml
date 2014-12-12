@@ -1,0 +1,118 @@
+package:
+  name: perl-dist-zilla-plugin-git
+  version: !!str 2.025
+
+source:
+  fn: Dist-Zilla-Plugin-Git-2.025.tar.gz
+  url: http://cpan.metacpan.org/authors/id/C/CJ/CJM/Dist-Zilla-Plugin-Git-2.025.tar.gz
+  md5: 69993a22a25f9239b6a0f97cc6c3f10a
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-file-which
+    - perl-dist-zilla-plugin-config-git
+    - perl-git-wrapper
+    - perl-module-build
+    - perl-path-tiny
+    - perl-moosex-attributeshortcuts
+    - perl-lib
+    - perl-io
+    - perl-moose-autobox
+    - perl-pathtools
+    - perl-scalar-list-utils
+    - perl-file-copy-recursive
+    - perl-ipc-system-simple
+    - perl-version-next
+    - perl-log-dispatchouli
+    - perl-file-pushd
+    - perl-string-formatter
+    - perl-file-chdir
+    - perl-moosex-has-sugar
+    - perl-encode
+    - perl-namespace-autoclean
+    - perl-constant
+    - perl-moosex-types
+    - perl-list-allutils
+    - perl-version
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-module-runtime
+    - perl-devel-simpletrace
+    - perl-file-temp
+    - perl-test-simple
+    - perl-cpan-meta-requirements
+    - perl-moosex-types-path-tiny
+    - perl-exporter
+    - perl-cpan-meta-check
+    - perl-moose
+    - perl-file-path
+    - perl-datetime
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-dist-zilla-plugin-config-git
+    - perl-path-tiny
+    - perl-moosex-attributeshortcuts
+    - perl-moose-autobox
+    - perl-file-chdir
+    - perl-ipc-system-simple
+    - perl-version-next
+    - perl-string-formatter
+    - perl-pathtools
+    - perl-moosex-has-sugar
+    - perl-namespace-autoclean
+    - perl-constant
+    - perl-moosex-types
+    - perl-list-allutils
+    - perl-version
+    - perl-git-wrapper
+    - perl-try-tiny
+    - perl-file-temp
+    - perl-scalar-list-utils
+    - perl-module-runtime
+    - perl-moosex-types-path-tiny
+    - perl-moose
+    - perl-datetime
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::Git
+    - Dist::Zilla::Plugin::Git::Check
+    - Dist::Zilla::Plugin::Git::Commit
+    - Dist::Zilla::Plugin::Git::CommitBuild
+    - Dist::Zilla::Plugin::Git::GatherDir
+    - Dist::Zilla::Plugin::Git::Init
+    - Dist::Zilla::Plugin::Git::NextVersion
+    - Dist::Zilla::Plugin::Git::Push
+    - Dist::Zilla::Plugin::Git::Tag
+    - Dist::Zilla::PluginBundle::Git
+    - Dist::Zilla::Role::Git::DirtyFiles
+    - Dist::Zilla::Role::Git::Repo
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://search.cpan.org/dist/Dist-Zilla-Plugin-Git/
+  license: perl_5
+  summary: 'update your git repository after release'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

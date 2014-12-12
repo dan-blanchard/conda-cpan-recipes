@@ -1,0 +1,52 @@
+package:
+  name: perl-html-form
+  version: !!str 6.03
+
+source:
+  fn: HTML-Form-6.03.tar.gz
+  url: http://cpan.metacpan.org/authors/id/G/GA/GAAS/HTML-Form-6.03.tar.gz
+  md5: fa6c2680207ed4fef5ea2ef09c210614
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-html-parser
+    - perl-extutils-makemaker
+    - perl-http-message
+    - perl-uri
+    - perl-encode
+
+  run:
+    - perl
+    - perl-html-parser
+    - perl-uri
+    - perl-encode
+    - perl-http-message
+
+test:
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/HTML-Form
+  license: perl_5
+  summary: 'Class that represents an HTML form element'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

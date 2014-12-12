@@ -1,0 +1,47 @@
+package:
+  name: perl-sys-sigaction
+  version: !!str 0.21
+
+source:
+  fn: Sys-SigAction-0.21.tar.gz
+  url: http://cpan.metacpan.org/authors/id/L/LB/LBAXTER/Sys-SigAction-0.21.tar.gz
+  md5: 68a8f727b2763945dd06552899e3e8e4
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Sys::SigAction
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Sys-SigAction
+  license: perl_5
+  summary: 'Perl extension for Consistent Signal Handling'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

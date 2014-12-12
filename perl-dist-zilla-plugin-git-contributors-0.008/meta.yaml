@@ -1,0 +1,76 @@
+package:
+  name: perl-dist-zilla-plugin-git-contributors
+  version: !!str 0.008
+
+source:
+  fn: Dist-Zilla-Plugin-Git-Contributors-0.008.tar.gz
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-Git-Contributors-0.008.tar.gz
+  md5: 10ea806de1d85e4371a6691c74edd8f6
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-dist-zilla
+    - perl-safe-isa
+    - perl-data-dumper
+    - perl-unicode-collate
+    - perl-namespace-autoclean
+    - perl-parent
+    - perl-module-build-tiny 0.039
+    - perl-path-tiny
+    - perl-test-fatal
+    - perl-try-tiny
+    - perl-sort-versions
+    - perl-lib
+    - perl-test-simple
+    - perl-pathtools
+    - perl-extutils-makemaker
+    - perl-test-requires
+    - perl-if
+    - perl-exporter
+    - perl-test-deep
+    - perl-moose
+    - perl-scalar-list-utils
+    - perl-git-wrapper 0.035
+
+  run:
+    - perl
+    - perl-safe-isa
+    - perl-dist-zilla
+    - perl-data-dumper
+    - perl-unicode-collate
+    - perl-namespace-autoclean
+    - perl-moose
+    - perl-path-tiny
+    - perl-try-tiny
+    - perl-git-wrapper 0.035
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::Git::Contributors
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-Git-Contributors
+  license: perl_5
+  summary: 'Add contributor names from git to your distribution'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

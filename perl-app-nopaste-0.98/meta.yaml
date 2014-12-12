@@ -1,0 +1,82 @@
+package:
+  name: perl-app-nopaste
+  version: !!str 0.98
+
+source:
+  fn: App-Nopaste-0.98.tar.gz
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/App-Nopaste-0.98.tar.gz
+  md5: ad8be3f0cdeff08ccd812dcb8c304f3e
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-www-mechanize
+    - perl-libwww-perl
+    - perl-uri
+    - perl-module-pluggable
+    - perl-getopt-long-descriptive
+    - perl-class-load
+    - perl-file-temp
+    - perl-test-simple
+    - perl-pathtools
+    - perl-namespace-clean
+    - perl-extutils-makemaker
+    - perl-module-runtime
+    - perl-json-maybexs
+    - perl-exporter
+    - perl-base
+
+  run:
+    - perl
+    - perl-pathtools
+    - perl-www-mechanize
+    - perl-uri
+    - perl-namespace-clean
+    - perl-module-runtime
+    - perl-json-maybexs
+    - perl-exporter
+    - perl-getopt-long-descriptive
+    - perl-class-load
+    - perl-base
+    - perl-file-temp
+    - perl-module-pluggable
+
+test:
+  # Perl 'use' tests
+  imports:
+    - App::Nopaste
+    - App::Nopaste::Command
+    - App::Nopaste::Service
+    - App::Nopaste::Service::Codepeek
+    - App::Nopaste::Service::Debian
+    - App::Nopaste::Service::Gist
+    - App::Nopaste::Service::PastebinCom
+    - App::Nopaste::Service::Pastie
+    - App::Nopaste::Service::Shadowcat
+    - App::Nopaste::Service::Snitch
+    - App::Nopaste::Service::Ubuntu
+    - App::Nopaste::Service::ssh
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/App-Nopaste
+  license: perl_5
+  summary: 'Easy access to any pastebin'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

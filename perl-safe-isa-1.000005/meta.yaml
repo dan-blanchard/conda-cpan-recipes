@@ -1,0 +1,50 @@
+package:
+  name: perl-safe-isa
+  version: !!str 1.000005
+
+source:
+  fn: Safe-Isa-1.000005.tar.gz
+  url: http://cpan.metacpan.org/authors/id/E/ET/ETHER/Safe-Isa-1.000005.tar.gz
+  md5: 398246c348f404dbfc4e89dab2cbc02a
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-extutils-makemaker
+    - perl-scalar-list-utils
+    - perl-exporter
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-exporter
+    - perl-scalar-list-utils
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Safe::Isa
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/Safe-Isa
+  license: perl_5
+  summary: 'Call isa, can, does and DOES safely on things that may not be objects'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

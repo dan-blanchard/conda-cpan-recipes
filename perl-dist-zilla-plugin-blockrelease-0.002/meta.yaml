@@ -1,0 +1,58 @@
+package:
+  name: perl-dist-zilla-plugin-blockrelease
+  version: !!str 0.002
+
+source:
+  fn: Dist-Zilla-Plugin-BlockRelease-0.002.tar.gz
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/Dist-Zilla-Plugin-BlockRelease-0.002.tar.gz
+  md5: 9832133277d08bc501e5178941e59dea
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - perl
+    - perl-pathtools
+    - perl-dist-zilla
+    - perl-extutils-makemaker
+    - perl-if
+    - perl-namespace-autoclean
+    - perl-test-deep
+    - perl-module-build-tiny 0.039
+    - perl-moose
+    - perl-path-tiny
+    - perl-test-fatal
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-dist-zilla
+    - perl-moose
+    - perl-namespace-autoclean
+
+test:
+  # Perl 'use' tests
+  imports:
+    - Dist::Zilla::Plugin::BlockRelease
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/karenetheridge/Dist-Zilla-Plugin-BlockRelease
+  license: perl_5
+  summary: 'Prevent a release from occurring'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
