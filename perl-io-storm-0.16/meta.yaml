@@ -1,0 +1,49 @@
+package:
+  name: perl-io-storm
+  version: "0.16"
+
+source:
+  fn: IO-Storm-0.16.tar.gz
+  url: http://cpan.metacpan.org/authors/id/D/DS/DSBLANCH/IO-Storm-0.16.tar.gz
+  md5: 8ac3f583c6b3f379e9a5c0d4756b747b
+
+requirements:
+  build:
+    - perl
+    - perl-namespace-clean
+    - perl-extutils-makemaker
+    - perl-log-log4perl
+    - perl-test-mockobject
+    - perl-json-xs
+    - perl-try-tiny
+    - perl-moo
+    - perl-test-output
+    - perl-test-simple
+
+  run:
+    - perl
+    - perl-namespace-clean
+    - perl-log-log4perl
+    - perl-test-mockobject
+    - perl-json-xs
+    - perl-try-tiny
+    - perl-moo
+    - perl-test-output
+    - perl-test-simple
+
+test:
+  # Perl 'use' tests
+  imports:
+    - IO::Storm
+    - IO::Storm::Bolt
+    - IO::Storm::Spout
+    - IO::Storm::Tuple
+
+about:
+  home: http://metacpan.org/pod/IO-Storm
+  license: perl_5
+  summary: 'IO::Storm allows you to write Bolts and Spouts for Storm in Perl.'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
