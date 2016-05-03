@@ -1,0 +1,81 @@
+package:
+  name: perl-libwww-perl
+  version: "6.15"
+
+source:
+  fn: libwww-perl-6.15.tar.gz
+  url: https://cpan.metacpan.org/authors/id/E/ET/ETHER/libwww-perl-6.15.tar.gz
+  md5: 6888c9d8728cd6f3ea3c9754461c9f94
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaul
+requirements:
+  build:
+    - perl
+    - perl-html-parser
+    - perl-uri
+    - perl-encode-locale
+    - perl-encode
+    - perl-getopt-long
+    - perl-http-daemon
+    - perl-net-http
+    - perl-http-date
+    - perl-mime-base64
+    - perl-test-simple
+    - perl-http-negotiate
+    - perl-extutils-makemaker
+    - perl-www-robotrules
+    - perl-http-message
+    - perl-libnet
+    - perl-digest-md5
+    - perl-lwp-mediatypes
+    - perl-io
+    - perl-http-cookies
+    - perl-test
+    - perl-file-listing
+
+  run:
+    - perl
+    - perl-http-negotiate
+    - perl-html-parser
+    - perl-uri
+    - perl-encode-locale
+    - perl-www-robotrules
+    - perl-net-http
+    - perl-http-message
+    - perl-encode
+    - perl-http-cookies
+    - perl-lwp-mediatypes
+    - perl-io
+    - perl-http-daemon
+    - perl-digest-md5
+    - perl-libnet
+    - perl-mime-base64
+    - perl-http-date
+    - perl-file-listing
+
+test:
+  imports:
+    - LWP
+  # Perl 'use' tests
+  # imports:
+
+  # You can also put a file called run_test.pl (or run_test.py) in the recipe
+  # that will be run at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: http://metacpan.org/pod/libwww-perl
+  license: perl_5
+  summary: 'The World-Wide Web library for Perl'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
